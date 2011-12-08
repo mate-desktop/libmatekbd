@@ -19,6 +19,7 @@
 
 #include <memory.h>
 
+#include <gtk/gtk.h>
 #include <gdk/gdkkeysyms.h>
 #include <gdk/gdkx.h>
 #include <glib/gi18n.h>
@@ -227,23 +228,31 @@ matekbd_indicator_fill (MatekbdIndicator * gki)
 	}
 }
 
-static gboolean
-matekbd_indicator_key_pressed (GtkWidget *
-			    widget, GdkEventKey * event,
-			    MatekbdIndicator * gki)
+static gboolean matekbd_indicator_key_pressed(GtkWidget* widget, GdkEventKey* event, MatekbdIndicator* gki)
 {
-	switch (event->keyval) {
-	case GDK_KP_Enter:
-	case GDK_ISO_Enter:
-	case GDK_3270_Enter:
-	case GDK_Return:
-	case GDK_space:
-	case GDK_KP_Space:
-		matekbd_desktop_config_lock_next_group (&globals.cfg);
-		return TRUE;
-	default:
-		break;
+	switch (event->keyval)
+	{
+		#if GTK_CHECK_VERSION(3, 0, 0)
+			case GDK_KEY_KP_Enter:
+			case GDK_KEY_ISO_Enter:
+			case GDK_KEY_3270_Enter:
+			case GDK_KEY_Return:
+			case GDK_KEY_space:
+			case GDK_KEY_KP_Space:
+		#else
+			case GDK_KP_Enter:
+			case GDK_ISO_Enter:
+			case GDK_3270_Enter:
+			case GDK_Return:
+			case GDK_space:
+			case GDK_KP_Space:
+		#endif
+			matekbd_desktop_config_lock_next_group(&globals.cfg);
+			return TRUE;
+		default:
+			break;
 	}
+
 	return FALSE;
 }
 
@@ -524,7 +533,7 @@ matekbd_indicator_load_group_names (const gchar ** layout_ids,
 	if (!matekbd_desktop_config_load_group_descriptions
 	    (&globals.cfg, globals.registry, layout_ids, variant_ids,
 	     &globals.short_group_names, &globals.full_group_names)) {
-		/* We just populate no short names (remain NULL) - 
+		/* We just populate no short names (remain NULL) -
 		 * full names are going to be used anyway */
 		gint i, total_groups =
 		    xkl_engine_get_num_groups (globals.engine);
@@ -688,21 +697,21 @@ matekbd_indicator_scroll (GtkWidget * gki, GdkEventScroll * event)
 	return TRUE;
 }
 
-static void
-matekbd_indicator_init (MatekbdIndicator * gki)
+static void matekbd_indicator_init(MatekbdIndicator* gki)
 {
 	GtkWidget *def_drawing;
 	GtkNotebook *notebook;
 
-	if (!g_slist_length (globals.widget_instances))
-		matekbd_indicator_global_init ();
+	if (!g_slist_length(globals.widget_instances))
+	{
+		matekbd_indicator_global_init();
+	}
 
 	gki->priv = g_new0 (MatekbdIndicatorPrivate, 1);
 
 	notebook = GTK_NOTEBOOK (gki);
 
-	xkl_debug (100, "Initiating the widget startup process for %p\n",
-		   gki);
+	xkl_debug (100, "Initiating the widget startup process for %p\n", gki);
 
 	gtk_notebook_set_show_tabs (notebook, FALSE);
 	gtk_notebook_set_show_border (notebook, FALSE);
@@ -817,8 +826,10 @@ matekbd_indicator_global_init (void)
 	MateConfClient *mateconf_client;
 	XklConfigRec *xklrec = xkl_config_rec_new ();
 
-	globals.engine = xkl_engine_get_instance (GDK_DISPLAY ());
-	if (globals.engine == NULL) {
+	globals.engine = xkl_engine_get_instance(GDK_DISPLAY_XDISPLAY(gdk_display_get_default()));
+
+	if (globals.engine == NULL)
+	{
 		xkl_debug (0, "Libxklavier initialization error");
 		return;
 	}

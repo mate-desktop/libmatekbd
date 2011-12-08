@@ -305,21 +305,28 @@ CappletSetup (MatekbdIndicatorPluginsCapplet * gipc)
 	gtk_builder_connect_signals (builder, NULL);
 
 	g_object_set_data (G_OBJECT (capplet), "uiData", builder);
-	g_signal_connect_swapped (GTK_OBJECT (capplet),
-				  "destroy", G_CALLBACK (g_object_unref),
-				  builder);
-	g_signal_connect_swapped (G_OBJECT (capplet), "unrealize",
-				  G_CALLBACK (g_main_loop_quit), loop);
 
-	g_signal_connect (GTK_OBJECT (capplet),
-			  "response", G_CALLBACK (CappletResponse), NULL);
+	#if GTK_CHECK_VERSION(3, 0, 0)
+		g_signal_connect_swapped(G_OBJECT(capplet), "destroy", G_CALLBACK(g_object_unref), builder);
+	#else
+		g_signal_connect_swapped(GTK_OBJECT(capplet), "destroy", G_CALLBACK(g_object_unref), builder);
+	#endif
+
+	g_signal_connect_swapped (G_OBJECT (capplet), "unrealize", G_CALLBACK (g_main_loop_quit), loop);
+
+	#if GTK_CHECK_VERSION(3, 0, 0)
+		g_signal_connect(G_OBJECT(capplet), "response", G_CALLBACK(CappletResponse), NULL);
+	#else
+		g_signal_connect(GTK_OBJECT(capplet), "response", G_CALLBACK(CappletResponse), NULL);
+	#endif
+
 
 	button = GTK_WIDGET (gtk_builder_get_object (builder, "btnUp"));
 	g_signal_connect (button,  "clicked",
 				       G_CALLBACK
 				       (CappletPromotePlugin), gipc);
 	button = GTK_WIDGET (gtk_builder_get_object (builder, "btnDown"));
-	g_signal_connect (button, 
+	g_signal_connect (button,
 				       "clicked",
 				       G_CALLBACK
 				       (CappletDemotePlugin), gipc);
@@ -376,7 +383,7 @@ main (int argc, char **argv)
 	}
 	mateconf_error = NULL;
 	/*MatekbdIndicatorInstallGlibLogAppender(  ); */
-	gipc.engine = xkl_engine_get_instance (GDK_DISPLAY ());
+	gipc.engine = xkl_engine_get_instance (GDK_DISPLAY_XDISPLAY(gdk_display_get_default()));
 	gipc.config_registry =
 	    xkl_config_registry_get_instance (gipc.engine);
 

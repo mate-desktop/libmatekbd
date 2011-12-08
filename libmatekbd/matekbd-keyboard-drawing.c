@@ -1988,8 +1988,8 @@ matekbd_keyboard_drawing_init (MatekbdKeyboardDrawing * drawing)
 	gint opcode = 0, error = 0, major = 1, minor = 0;
 	gint mask;
 
-	drawing->display =
-	    GDK_DISPLAY_XDISPLAY (gdk_display_get_default ());
+	drawing->display = GDK_DISPLAY_XDISPLAY(gdk_display_get_default());
+
 	printf ("dpy: %p\n", (void *) drawing->display);
 
 	if (!XkbQueryExtension
@@ -2534,7 +2534,7 @@ matekbd_keyboard_drawing_new_dialog (gint group, gchar * group_name)
 	GdkRectangle *rect;
 	GError *error = NULL;
 	char title[128] = "";
-	XklEngine *engine = xkl_engine_get_instance (GDK_DISPLAY ());
+	XklEngine* engine = xkl_engine_get_instance(GDK_DISPLAY_XDISPLAY(gdk_display_get_default()));
 
 	builder = gtk_builder_new ();
 	gtk_builder_add_from_file (builder, UIDIR "/show-layout.ui",
@@ -2592,8 +2592,8 @@ matekbd_keyboard_drawing_new_dialog (gint group, gchar * group_name)
 			    NULL;
 		}
 
-		if (xkl_xkb_config_native_prepare
-		    (engine, xkl_data, &component_names)) {
+		if (xkl_xkb_config_native_prepare(engine, xkl_data, &component_names))
+		{
 			matekbd_keyboard_drawing_set_keyboard
 			    (MATEKBD_KEYBOARD_DRAWING (kbdraw),
 			     &component_names);
@@ -2601,20 +2601,24 @@ matekbd_keyboard_drawing_new_dialog (gint group, gchar * group_name)
 						       &component_names);
 		}
 	}
+
 	g_object_unref (G_OBJECT (xkl_data));
 
 	g_object_set_data (G_OBJECT (dialog), "builderData", builder);
-	g_signal_connect (G_OBJECT (dialog), "response",
-			  G_CALLBACK (show_layout_response), NULL);
+	g_signal_connect (G_OBJECT (dialog), "response", G_CALLBACK (show_layout_response), NULL);
 
 	rect = matekbd_preview_load_position ();
-	if (rect != NULL) {
+
+	if (rect != NULL)
+	{
 		gtk_window_move (GTK_WINDOW (dialog), rect->x, rect->y);
-		gtk_window_resize (GTK_WINDOW (dialog), rect->width,
-				   rect->height);
+		gtk_window_resize (GTK_WINDOW (dialog), rect->width, rect->height);
 		g_free (rect);
-	} else
+	}
+	else
+	{
 		gtk_window_resize (GTK_WINDOW (dialog), 700, 400);
+	}
 
 	gtk_window_set_resizable (GTK_WINDOW (dialog), TRUE);
 
@@ -2624,12 +2628,13 @@ matekbd_keyboard_drawing_new_dialog (gint group, gchar * group_name)
 
 	g_object_set_data (G_OBJECT (dialog), "kbdraw", kbdraw);
 
-	g_signal_connect_swapped (GTK_OBJECT (dialog), "destroy",
-				  G_CALLBACK (g_object_unref),
-				  g_object_get_data (G_OBJECT (dialog),
-						     "builderData"));
+	#if GTK_CHECK_VERSION(3, 0, 0)
+		g_signal_connect_swapped(G_OBJECT(dialog), "destroy", G_CALLBACK(g_object_unref),  g_object_get_data(G_OBJECT(dialog), "builderData"));
+	#else
+		g_signal_connect_swapped(GTK_OBJECT(dialog), "destroy", G_CALLBACK(g_object_unref),  g_object_get_data(G_OBJECT(dialog), "builderData"));
+	#endif
 
-	gtk_widget_show_all (dialog);
+	gtk_widget_show_all(dialog);
 
 	return dialog;
 }

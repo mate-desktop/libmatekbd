@@ -36,9 +36,11 @@ AC_MSG_RESULT([$with_gtk])
 case "$with_gtk" in
   2.0) GTK_API_VERSION=2.0
        GTK_REQUIRED=2.18
+       GDK_REQUIRED=2.18
        ;;
   3.0) GTK_API_VERSION=3.0
        GTK_REQUIRED=3.0.0
+       GDK_REQUIRED=3.0
        ;;
 esac
 
@@ -47,7 +49,7 @@ dnl *** Minimum library versions for libmatekbd                            ***
 dnl ***************************************************************************
 GLIB_REQUIRED=2.18
 MATECONF_REQUIRED=2.14.0
-GDK_REQUIRED=2.18
+
 LIBXKLAVIER_REQUIRED=5.0
 
 AC_SUBST([MATECONF_REQUIRED])
@@ -91,7 +93,7 @@ PKG_CHECK_MODULES(MATECONF, mateconf-2.0 >= $MATECONF_REQUIRED)
 AC_SUBST(MATECONF_CFLAGS)
 AC_SUBST(MATECONF_LIBS)
 
-PKG_CHECK_MODULES(GDK, gdk-2.0 >= $GDK_REQUIRED)
+PKG_CHECK_MODULES(GDK, gdk-$GTK_API_VERSION >= $GDK_REQUIRED)
 
 AC_SUBST(GDK_CFLAGS)
 AC_SUBST(GDK_LIBS)

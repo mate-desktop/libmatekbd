@@ -459,7 +459,7 @@ matekbd_status_load_group_names (const gchar ** layout_ids,
 	if (!matekbd_desktop_config_load_group_descriptions
 	    (&globals.cfg, globals.registry, layout_ids, variant_ids,
 	     &globals.short_group_names, &globals.full_group_names)) {
-		/* We just populate no short names (remain NULL) - 
+		/* We just populate no short names (remain NULL) -
 		 * full names are going to be used anyway */
 		gint i, total_groups =
 		    xkl_engine_get_num_groups (globals.engine);
@@ -771,7 +771,8 @@ matekbd_status_global_init (void)
 	MateConfClient *mateconf_client;
 	XklConfigRec *xklrec = xkl_config_rec_new ();
 
-	globals.engine = xkl_engine_get_instance (GDK_DISPLAY ());
+	globals.engine = xkl_engine_get_instance(GDK_DISPLAY_XDISPLAY(gdk_display_get_default()));
+
 	if (globals.engine == NULL) {
 		xkl_debug (0, "Libxklavier initialization error");
 		return;
