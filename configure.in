@@ -1,9 +1,9 @@
 dnl ***************************************************************************
 dnl *** configure.in for libmatekbd                                        ***
 dnl ***************************************************************************
-m4_define([libmatekbd_major_version], [2011])
-m4_define([libmatekbd_minor_version], [12])
-m4_define([libmatekbd_micro_version], [01])
+m4_define([libmatekbd_major_version], [1])
+m4_define([libmatekbd_minor_version], [1])
+m4_define([libmatekbd_micro_version], [0])
 m4_define([libmatekbd_version],[libmatekbd_major_version.libmatekbd_minor_version.libmatekbd_micro_version])
 
 AC_INIT([libmatekbd], [libmatekbd_version], [https://github.com/perberos/mate-desktop-environment])
@@ -48,7 +48,7 @@ dnl ***************************************************************************
 dnl *** Minimum library versions for libmatekbd                            ***
 dnl ***************************************************************************
 GLIB_REQUIRED=2.18
-MATECONF_REQUIRED=2.14.0
+MATECONF_REQUIRED=1.1.0
 
 LIBXKLAVIER_REQUIRED=5.0
 

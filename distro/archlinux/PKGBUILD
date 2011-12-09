@@ -1,5 +1,5 @@
 pkgname=libmatekbd
-pkgver=2011.12.01
+pkgver=1.1.0
 pkgrel=2
 pkgdesc="MATE keyboard library"
 arch=('i686' 'x86_64')
