@@ -109,7 +109,7 @@
 
 	* ta.po:  Tamil Translation updated
 
-2008-09-17  Gabor Kelemen  <kelemeng@mate.hu>
+2008-09-17  Gabor Kelemen  <kelemeng@gnome.hu>
 
 	* hu.po: Translation updated.
 
@@ -223,7 +223,7 @@
 	* pt_BR.po: Brazilian Portuguese translation updated by Fábio
 	Nogueira.
 
-2008-08-15  Priit Laes  <plaes at svn dot mate dot org>
+2008-08-15  Priit Laes  <plaes at svn dot gnome dot org>
 
 	* et.po: Translation updated by Ivar Smolin
 
@@ -276,7 +276,7 @@
 
 	* da.po Updated Danish translation
 
-2008-03-09  Gabor Kelemen  <kelemeng@mate.hu>
+2008-03-09  Gabor Kelemen  <kelemeng@gnome.hu>
 
 	* hu.po: Translation updated
 
@@ -435,7 +435,7 @@
 
 	* pt_BR.po: Updated Brazilian Portuguese translation.
 
-2007-12-27  Priit Laes  <plaes at svn dot mate dot org>
+2007-12-27  Priit Laes  <plaes at svn dot gnome dot org>
 
 	* et.po: Translation updated by Ivar Smolin echo
 2007-12-23  Jorge Gonzalez  <jorgegonz@svn.gnome.org>
@@ -455,7 +455,7 @@
 
 	* cs.po: Czech Translation by Petr Kovar.
 
-2007-11-14  Matej Urbančič  <mateju@svn.gnome.org>
+2007-11-14  Matej Urbančič  <gnomeju@svn.gnome.org>
 
 	* sl.po: Updated Slovenian translation.
 
@@ -471,7 +471,7 @@
 
 	* ar.po: Updated Arabic Translation by Khaled Hosny.
 
-2007-10-19  Matej Urbančič  <mateju@svn.gnome.org>
+2007-10-19  Matej Urbančič  <gnomeju@svn.gnome.org>
 
 	* sl.po, LINGUAS: Added Slovenian translation.
 
@@ -619,7 +619,7 @@
 
 	* ja.po: Updated Japanese translation.
 
-2007-04-09  Gabor Kelemen  <kelemeng@mate.hu>
+2007-04-09  Gabor Kelemen  <kelemeng@gnome.hu>
 
 	* hu.po: Translation updated.
 
@@ -746,7 +746,7 @@
 
 	* gl.po: Updated Galician Translation.
 
-2007-03-20  Gabor Kelemen  <kelemeng@mate.hu>
+2007-03-20  Gabor Kelemen  <kelemeng@gnome.hu>
 
 	* hu.po: Translation updated.
 
@@ -754,7 +754,7 @@
 
 	* it.po: Added Italian translation.
 
-2007-03-09  Gabor Kelemen  <kelemeng@mate.hu>
+2007-03-09  Gabor Kelemen  <kelemeng@gnome.hu>
 
 	* hu.po: Translation added.
 
