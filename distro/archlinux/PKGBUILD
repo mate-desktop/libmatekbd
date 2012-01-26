@@ -10,11 +10,11 @@ groups=('mate')
 url="http://matsusoft.com.ar/projects"
 options=('!emptydirs' '!libtool')
 install=libmatekbd.install
-source=(http://sourceforge.net/projects/matede/files/${pkgver}/${pkgname}.tar.gz/download)
-sha256sums=('16468d8e2977ff87d3da6d09555b4060b540f407f018f879256d7417e69a18d7')
+source=()
+sha256sums=()
 
 build() {
-    cd "${srcdir}/${pkgname}"
+	cd "${srcdir}/../../../"
     ./autogen.sh \
         --prefix=/usr \
         --sysconfdir=/etc \
@@ -23,7 +23,7 @@ build() {
 }
 
 package() {
-    cd "${srcdir}/${pkgname}"
+	cd "${srcdir}/../../../"
     make MATECONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1 DESTDIR="${pkgdir}" install
 
     install -m755 -d "${pkgdir}/usr/share/mateconf/schemas"
