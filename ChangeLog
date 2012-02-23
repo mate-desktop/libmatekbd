@@ -1,4 +1,228 @@
-2010-01-11 svu
+commit 436060f542b7575731be6f15aad369dda38381f7
+Author: Perberos <perberos@gmail.com>
+Date:   Thu Jan 26 09:11:16 2012 -0300
 
-	NO MORE EXPLICIT CHANGELOG. SEE GIT LOGS
+    changing pkgbuild source method
 
+ distro/archlinux/PKGBUILD |    8 ++++----
+ 1 files changed, 4 insertions(+), 4 deletions(-)
+
+commit 3c709dc41f653a2a5678141a1fec89b4eca60c23
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Mon Jan 9 21:19:08 2012 -0500
+
+    Changed mate.gr.jp to gnome.gr.jp as requested in Issue #86
+
+ po/ChangeLog |   18 +++++++++---------
+ po/ja.po     |    2 +-
+ 2 files changed, 10 insertions(+), 10 deletions(-)
+
+commit ebc577b4e0e3e24a614f35649f30f9db24f9e856
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Thu Dec 8 22:48:59 2011 -0500
+
+    updated version
+
+ configure.in              |    8 ++++----
+ distro/archlinux/PKGBUILD |    2 +-
+ distro/ubuntu/build       |    2 +-
+ 3 files changed, 6 insertions(+), 6 deletions(-)
+
+commit 46a8d42095a30a1b62b7f24658f4886941b54800
+Author: Perberos <perberos@gmail.com>
+Date:   Thu Dec 8 12:58:23 2011 -0300
+
+    GDK_ key constants was renamed to GDK_KEY_ on GTK+-3.0
+
+ INSTALL                                     |  291 -
+ Makefile.in                                 |  848 --
+ aclocal.m4                                  | 1864 ---
+ capplet/Makefile.in                         |  733 --
+ capplet/matekbd-indicator-plugins-capplet.c |   25 +-
+ config.guess                                | 1502 ---
+ config.h.in                                 |   89 -
+ config.sub                                  | 1714 ---
+ configure                                   |17314 ---------------------------
+ configure.in                                |    6 +-
+ depcomp                                     |  630 -
+ install-sh                                  |  520 -
+ libmatekbd/Makefile.in                      |  886 --
+ libmatekbd/matekbd-indicator.c              |   59 +-
+ libmatekbd/matekbd-keyboard-drawing.c       |   37 +-
+ libmatekbd/matekbd-status.c                 |    5 +-
+ ltmain.sh                                   | 9636 ---------------
+ m4/intltool.m4                              |  216 -
+ m4/libtool.m4                               | 7831 ------------
+ m4/ltoptions.m4                             |  369 -
+ m4/ltsugar.m4                               |  123 -
+ m4/ltversion.m4                             |   23 -
+ m4/lt~obsolete.m4                           |   98 -
+ missing                                     |  376 -
+ mkinstalldirs                               |  162 -
+ po/Makefile.in.in                           |  217 -
+ test/Makefile.in                            |  638 -
+ test/matekbd-indicator-test.c               |   45 +-
+ 28 files changed, 99 insertions(+), 46158 deletions(-)
+
+commit 731006ad7b3c6c47a52b8ef16e29e2d5ea9e1ea5
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Fri Dec 2 20:49:59 2011 -0500
+
+    Changed version to 2011.12.01
+
+ configure.in              |    4 ++--
+ distro/archlinux/PKGBUILD |    2 +-
+ distro/ubuntu/build       |    2 +-
+ 3 files changed, 4 insertions(+), 4 deletions(-)
+
+commit 916e2eafe251b44f9d0339282f5d00723899caec
+Author: Perberos <perberos@gmail.com>
+Date:   Thu Dec 1 20:53:10 2011 -0300
+
+    moving from https://github.com/perberos/mate-desktop-environment
+
+ AUTHORS                                            |    1 +
+ COPYING.LIB                                        |  481 +
+ ChangeLog                                          |    4 +
+ INSTALL                                            |  291 +
+ Makefile.am                                        |   22 +
+ Makefile.in                                        |  848 +
+ NEWS                                               |  107 +
+ aclocal.m4                                         | 1864 +++
+ autogen.sh                                         |   25 +
+ capplet/Makefile.am                                |   46 +
+ capplet/Makefile.in                                |  733 +
+ capplet/matekbd-indicator-plugins-add.c            |  207 +
+ capplet/matekbd-indicator-plugins-capplet.c        |  483 +
+ ...matekbd-indicator-plugins-capplet.desktop.in.in |   15 +
+ capplet/matekbd-indicator-plugins-capplet.h        |   63 +
+ capplet/matekbd-indicator-plugins.ui               |  255 +
+ capplet/matekbd-indicator-plugins_add.ui           |  142 +
+ config.guess                                       | 1502 ++
+ config.h.in                                        |   89 +
+ config.sub                                         | 1714 ++
+ configure                                          |17314 ++++++++++++++++++++
+ configure.in                                       |  138 +
+ depcomp                                            |  630 +
+ distro/archlinux/PKGBUILD                          |   32 +
+ distro/archlinux/libmatekbd.install                |   17 +
+ distro/ubuntu/build                                |   27 +
+ distro/ubuntu/postinst                             |    9 +
+ distro/ubuntu/postrm                               |    6 +
+ distro/ubuntu/preinst                              |    8 +
+ distro/ubuntu/prerm                                |   11 +
+ install-sh                                         |  520 +
+ libmatekbd.pc.in                                   |   11 +
+ libmatekbd/Makefile.am                             |  121 +
+ libmatekbd/Makefile.in                             |  886 +
+ ...esktop_mate_peripherals_keyboard_xkb.schemas.in |  277 +
+ libmatekbd/matekbd-config-private.h                |  102 +
+ libmatekbd/matekbd-desktop-config.c                |  403 +
+ libmatekbd/matekbd-desktop-config.h                |   92 +
+ libmatekbd/matekbd-indicator-config.c              |  445 +
+ libmatekbd/matekbd-indicator-config.h              |   94 +
+ libmatekbd/matekbd-indicator-marshal.list          |    1 +
+ libmatekbd/matekbd-indicator-plugin-manager.c      |  406 +
+ libmatekbd/matekbd-indicator-plugin-manager.h      |  116 +
+ libmatekbd/matekbd-indicator-plugin.h              |  125 +
+ libmatekbd/matekbd-indicator.c                     |  968 ++
+ libmatekbd/matekbd-indicator.h                     |   80 +
+ libmatekbd/matekbd-keyboard-config.c               |  827 +
+ libmatekbd/matekbd-keyboard-config.h               |  124 +
+ libmatekbd/matekbd-keyboard-drawing-marshal.list   |    2 +
+ libmatekbd/matekbd-keyboard-drawing.c              | 2635 +++
+ libmatekbd/matekbd-keyboard-drawing.h              |  214 +
+ libmatekbd/matekbd-status.c                        |  867 +
+ libmatekbd/matekbd-status.h                        |   72 +
+ libmatekbd/matekbd-util.c                          |  159 +
+ libmatekbd/matekbd-util.h                          |   33 +
+ libmatekbd/show-layout.ui                          |   83 +
+ libmatekbdui.pc.in                                 |   11 +
+ ltmain.sh                                          | 9636 +++++++++++
+ m4/intltool.m4                                     |  216 +
+ m4/libtool.m4                                      | 7831 +++++++++
+ m4/ltoptions.m4                                    |  369 +
+ m4/ltsugar.m4                                      |  123 +
+ m4/ltversion.m4                                    |   23 +
+ m4/lt~obsolete.m4                                  |   98 +
+ missing                                            |  376 +
+ mkinstalldirs                                      |  162 +
+ po/ChangeLog                                       |  772 +
+ po/LINGUAS                                         |   69 +
+ po/Makefile.in.in                                  |  217 +
+ po/POTFILES.in                                     |   16 +
+ po/POTFILES.skip                                   |    1 +
+ po/ar.po                                           |  323 +
+ po/as.po                                           |  249 +
+ po/ast.po                                          |  273 +
+ po/be@latin.po                                     |  261 +
+ po/bg.po                                           |  298 +
+ po/bn.po                                           |  286 +
+ po/bn_IN.po                                        |  251 +
+ po/ca.po                                           |  315 +
+ po/ca@valencia.po                                  |  301 +
+ po/cs.po                                           |  298 +
+ po/da.po                                           |  317 +
+ po/de.po                                           |  322 +
+ po/dz.po                                           |  243 +
+ po/el.po                                           |  311 +
+ po/en@shaw.po                                      |  286 +
+ po/en_GB.po                                        |  314 +
+ po/eo.po                                           |  297 +
+ po/es.po                                           |  301 +
+ po/et.po                                           |  236 +
+ po/eu.po                                           |  281 +
+ po/fi.po                                           |  300 +
+ po/fr.po                                           |  297 +
+ po/ga.po                                           |  257 +
+ po/gl.po                                           |  302 +
+ po/gu.po                                           |  250 +
+ po/he.po                                           |  312 +
+ po/hi.po                                           |  249 +
+ po/hu.po                                           |  300 +
+ po/id.po                                           |  297 +
+ po/it.po                                           |  302 +
+ po/ja.po                                           |  297 +
+ po/ka.po                                           |  233 +
+ po/kn.po                                           |  249 +
+ po/ko.po                                           |  278 +
+ po/lt.po                                           |  269 +
+ po/lv.po                                           |  288 +
+ po/mai.po                                          |  245 +
+ po/mk.po                                           |  262 +
+ po/ml.po                                           |  249 +
+ po/mr.po                                           |  248 +
+ po/ms.po                                           |  271 +
+ po/nb.po                                           |  294 +
+ po/nl.po                                           |  315 +
+ po/nn.po                                           |  256 +
+ po/oc.po                                           |  246 +
+ po/or.po                                           |  253 +
+ po/pa.po                                           |  297 +
+ po/pl.po                                           |  300 +
+ po/pt.po                                           |  312 +
+ po/pt_BR.po                                        |  316 +
+ po/ro.po                                           |  284 +
+ po/ru.po                                           |  305 +
+ po/si.po                                           |  244 +
+ po/sk.po                                           |  299 +
+ po/sl.po                                           |  312 +
+ po/sq.po                                           |  240 +
+ po/sr.po                                           |  322 +
+ po/sr@latin.po                                     |  322 +
+ po/sv.po                                           |  306 +
+ po/ta.po                                           |  302 +
+ po/te.po                                           |  250 +
+ po/th.po                                           |  292 +
+ po/tr.po                                           |  263 +
+ po/uk.po                                           |  299 +
+ po/vi.po                                           |  254 +
+ po/zh_CN.po                                        |  306 +
+ po/zh_HK.po                                        |  303 +
+ po/zh_TW.po                                        |  303 +
+ test/Makefile.am                                   |   25 +
+ test/Makefile.in                                   |  638 +
+ test/matekbd-indicator-test.c                      |   78 +
+ test/matekbd-keyboard-drawing-test.c               |  278 +
+ test/matekbd-status-test.c                         |   55 +
+ 144 files changed, 77054 insertions(+), 0 deletions(-)
