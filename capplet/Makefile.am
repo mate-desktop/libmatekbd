@@ -1,6 +1,6 @@
 bin_PROGRAMS = matekbd-indicator-plugins-capplet
 
-uidir="$(pkgdatadir)/ui"
+uidir = $(pkgdatadir)/ui
 ui_DATA = matekbd-indicator-plugins.ui \
 	matekbd-indicator-plugins_add.ui
 

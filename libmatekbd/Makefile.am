@@ -1,6 +1,6 @@
 lib_LTLIBRARIES = libmatekbd.la libmatekbdui.la
 
-uidir="$(pkgdatadir)/ui"
+uidir = $(pkgdatadir)/ui
 ui_DATA = show-layout.ui
 
 common_CFLAGS = \
