@@ -1,3 +1,45 @@
+commit 1d5fd9ac44c85562e391c9be0b77d03c2486674c
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Tue Jul 10 12:23:54 2012 +0200
+
+    sync translations with transifex
+
+ po/eu.po |  231 +++++++++++++++++++++++++++--------------------------
+ po/tr.po |  269 ++++++++++++++++++++++++++++++++++----------------------------
+ 2 files changed, 267 insertions(+), 233 deletions(-)
+
+commit efc767078c299c0ea67e890ab0ad46e36ea262aa
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Fri Jun 29 13:00:53 2012 +0200
+
+    add po gnome copyrights file
+
+ po/gnome-copyrights.txt |  732 +++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 732 insertions(+)
+
+commit a19eec274804668ed1c6d31ef153fbfe1c285a38
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Fri Apr 13 20:12:49 2012 +0200
+
+    drop wrong quotes in Makefiles (thanks to bickman2k)
+
+ capplet/Makefile.am    |    2 +-
+ libmatekbd/Makefile.am |    2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 484b6a0adf17cf27a2193f6a96e1f44f718261a3
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Wed Feb 22 20:51:56 2012 -0500
+
+    Preparing for 1.2 release
+
+ AUTHORS      |    8 ++-
+ ChangeLog    |  228 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+ README       |    1 +
+ autogen.sh   |    4 +-
+ configure.in |    2 +-
+ 5 files changed, 237 insertions(+), 6 deletions(-)
+
 commit 436060f542b7575731be6f15aad369dda38381f7
 Author: Perberos <perberos@gmail.com>
 Date:   Thu Jan 26 09:11:16 2012 -0300
@@ -5,7 +47,7 @@ Date:   Thu Jan 26 09:11:16 2012 -0300
     changing pkgbuild source method
 
  distro/archlinux/PKGBUILD |    8 ++++----
- 1 files changed, 4 insertions(+), 4 deletions(-)
+ 1 file changed, 4 insertions(+), 4 deletions(-)
 
 commit 3c709dc41f653a2a5678141a1fec89b4eca60c23
 Author: Steve Zesch <stevezesch2@gmail.com>
@@ -47,7 +89,7 @@ Date:   Thu Dec 8 12:58:23 2011 -0300
  depcomp                                     |  630 -
  install-sh                                  |  520 -
  libmatekbd/Makefile.in                      |  886 --
- libmatekbd/matekbd-indicator.c              |   59 +-
+ libmatekbd/matekbd-indicator.c              |   61 +-
  libmatekbd/matekbd-keyboard-drawing.c       |   37 +-
  libmatekbd/matekbd-status.c                 |    5 +-
  ltmain.sh                                   | 9636 ---------------
@@ -62,7 +104,7 @@ Date:   Thu Dec 8 12:58:23 2011 -0300
  po/Makefile.in.in                           |  217 -
  test/Makefile.in                            |  638 -
  test/matekbd-indicator-test.c               |   45 +-
- 28 files changed, 99 insertions(+), 46158 deletions(-)
+ 28 files changed, 100 insertions(+), 46159 deletions(-)
 
 commit 731006ad7b3c6c47a52b8ef16e29e2d5ea9e1ea5
 Author: Steve Zesch <stevezesch2@gmail.com>
@@ -225,4 +267,4 @@ Date:   Thu Dec 1 20:53:10 2011 -0300
  test/matekbd-indicator-test.c                      |   78 +
  test/matekbd-keyboard-drawing-test.c               |  278 +
  test/matekbd-status-test.c                         |   55 +
- 144 files changed, 77054 insertions(+), 0 deletions(-)
+ 144 files changed, 77054 insertions(+)
