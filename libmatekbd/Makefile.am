@@ -36,6 +36,8 @@ libmatekbd_la_LIBADD =  $(common_LIBADD)
 libmatekbdui_la_LDFLAGS = $(common_LDFLAGS)
 libmatekbdui_la_LIBADD = libmatekbd.la \
                            $(common_LIBADD) \
+                           $(GLIB_LIBS) \
+                           $(GMODULE_LIBS) \
                            $(GTK_LIBS)
 
 libmatekbd_la_SOURCES = \
