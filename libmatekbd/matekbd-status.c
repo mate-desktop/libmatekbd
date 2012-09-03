@@ -420,12 +420,13 @@ matekbd_status_reinit_ui (MatekbdStatus * gki)
 
 /* Should be called once for all widgets */
 static void
-matekbd_status_cfg_changed (MateConfClient * client,
-			 guint cnxn_id, MateConfEntry * entry)
+matekbd_status_cfg_changed (GSettings *settings,
+			    gchar     *key,
+			    gpointer   user_data)
 {
 	xkl_debug (100,
-		   "General configuration changed in MateConf - reiniting...\n");
-	matekbd_desktop_config_load_from_mateconf (&globals.cfg);
+		   "General configuration changed in settings - reiniting...\n");
+	matekbd_desktop_config_load_from_gsettings (&globals.cfg);
 	matekbd_desktop_config_activate (&globals.cfg);
 	ForAllIndicators () {
 		matekbd_status_reinit_ui (gki);
@@ -434,12 +435,13 @@ matekbd_status_cfg_changed (MateConfClient * client,
 
 /* Should be called once for all widgets */
 static void
-matekbd_status_ind_cfg_changed (MateConfClient * client,
-			     guint cnxn_id, MateConfEntry * entry)
+matekbd_status_ind_cfg_changed (GSettings *settings,
+				gchar     *key,
+				gpointer   user_data)
 {
 	xkl_debug (100,
-		   "Applet configuration changed in MateConf - reiniting...\n");
-	matekbd_indicator_config_load_from_mateconf (&globals.ind_cfg);
+		   "Applet configuration changed in settings - reiniting...\n");
+	matekbd_indicator_config_load_from_gsettings (&globals.ind_cfg);
 
 	matekbd_indicator_config_free_image_filenames (&globals.ind_cfg);
 	matekbd_indicator_config_load_image_filenames (&globals.ind_cfg,
@@ -768,7 +770,6 @@ matekbd_status_class_init (MatekbdStatusClass * klass)
 static void
 matekbd_status_global_init (void)
 {
-	MateConfClient *mateconf_client;
 	XklConfigRec *xklrec = xkl_config_rec_new ();
 
 	globals.engine = xkl_engine_get_instance(GDK_DISPLAY_XDISPLAY(gdk_display_get_default()));
@@ -777,8 +778,6 @@ matekbd_status_global_init (void)
 		xkl_debug (0, "Libxklavier initialization error");
 		return;
 	}
-
-	mateconf_client = mateconf_client_get_default ();
 
 	globals.state_changed_handler =
 	    g_signal_connect (globals.engine, "X-state-changed",
@@ -789,16 +788,11 @@ matekbd_status_global_init (void)
 			      G_CALLBACK (matekbd_status_kbd_cfg_callback),
 			      NULL);
 
-	matekbd_desktop_config_init (&globals.cfg, mateconf_client,
-				  globals.engine);
-	matekbd_keyboard_config_init (&globals.kbd_cfg, mateconf_client,
-				   globals.engine);
-	matekbd_indicator_config_init (&globals.ind_cfg, mateconf_client,
-				    globals.engine);
+	matekbd_desktop_config_init (&globals.cfg, globals.engine);
+	matekbd_keyboard_config_init (&globals.kbd_cfg, globals.engine);
+	matekbd_indicator_config_init (&globals.ind_cfg, globals.engine);
 
-	g_object_unref (mateconf_client);
-
-	matekbd_desktop_config_load_from_mateconf (&globals.cfg);
+	matekbd_desktop_config_load_from_gsettings (&globals.cfg);
 	matekbd_desktop_config_activate (&globals.cfg);
 
 	globals.registry =
@@ -809,7 +803,7 @@ matekbd_status_global_init (void)
 	matekbd_keyboard_config_load_from_x_current (&globals.kbd_cfg,
 						  xklrec);
 
-	matekbd_indicator_config_load_from_mateconf (&globals.ind_cfg);
+	matekbd_indicator_config_load_from_gsettings (&globals.ind_cfg);
 
 	matekbd_indicator_config_load_image_filenames (&globals.ind_cfg,
 						    &globals.kbd_cfg);
@@ -821,10 +815,10 @@ matekbd_status_global_init (void)
 	g_object_unref (G_OBJECT (xklrec));
 
 	matekbd_desktop_config_start_listen (&globals.cfg,
-					  (MateConfClientNotifyFunc)
+					  (GCallback)
 					  matekbd_status_cfg_changed, NULL);
 	matekbd_indicator_config_start_listen (&globals.ind_cfg,
-					    (MateConfClientNotifyFunc)
+					    (GCallback)
 					    matekbd_status_ind_cfg_changed,
 					    NULL);
 	matekbd_status_start_listen ();

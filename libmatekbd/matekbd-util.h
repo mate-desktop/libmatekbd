@@ -29,5 +29,8 @@ extern GdkRectangle *matekbd_preview_load_position (void);
 
 extern void matekbd_preview_save_position (GdkRectangle * rect);
 
+/* Missing in glib */
+extern gchar **matekbd_strv_append (gchar ** arr, gchar * element);
+
 
 #endif

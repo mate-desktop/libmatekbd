@@ -23,9 +23,8 @@
 #include "libmatekbd/matekbd-desktop-config.h"
 #include "libmatekbd/matekbd-keyboard-config.h"
 
-#define MATEKBD_CONFIG_KEY_PREFIX "/desktop/mate/peripherals/keyboard"
+#define MATEKBD_CONFIG_SCHEMA "org.mate.peripherals-keyboard-xkb"
 
-extern const gchar MATEKBD_PREVIEW_CONFIG_DIR[];
 extern const gchar MATEKBD_PREVIEW_CONFIG_KEY_X[];
 extern const gchar MATEKBD_PREVIEW_CONFIG_KEY_Y[];
 extern const gchar MATEKBD_PREVIEW_CONFIG_KEY_WIDTH[];
@@ -34,34 +33,13 @@ extern const gchar MATEKBD_PREVIEW_CONFIG_KEY_HEIGHT[];
 /**
  * General config functions (private)
  */
-extern void
- matekbd_desktop_config_add_listener (MateConfClient * conf_client,
-				   const gchar * key,
-				   MateConfClientNotifyFunc func,
-				   gpointer user_data, int *pid);
-
-
-extern void
- matekbd_desktop_config_remove_listener (MateConfClient * conf_client, int *pid);
-
 extern void matekbd_keyboard_config_model_set (MatekbdKeyboardConfig *
 					    kbd_config,
 					    const gchar * model_name);
 
-extern void matekbd_keyboard_config_layouts_reset (MatekbdKeyboardConfig *
-						kbd_config);
-extern void matekbd_keyboard_config_layouts_add (MatekbdKeyboardConfig *
+extern void matekbd_keyboard_config_options_set (MatekbdKeyboardConfig *
 					      kbd_config,
-					      const gchar * layout_name,
-					      const gchar * variant_name);
-
-extern void matekbd_keyboard_config_layouts_reset (MatekbdKeyboardConfig *
-						kbd_config);
-extern void matekbd_keyboard_config_options_reset (MatekbdKeyboardConfig *
-						kbd_config);
-
-extern void matekbd_keyboard_config_options_add (MatekbdKeyboardConfig *
-					      kbd_config,
+					      gint idx,
 					      const gchar * group_name,
 					      const gchar * option_name);
 extern gboolean matekbd_keyboard_config_options_is_set (MatekbdKeyboardConfig *
@@ -77,7 +55,7 @@ extern gboolean matekbd_keyboard_config_dump_settings (MatekbdKeyboardConfig *
 
 extern void matekbd_keyboard_config_start_listen (MatekbdKeyboardConfig *
 					       kbd_config,
-					       MateConfClientNotifyFunc func,
+					       GCallback func,
 					       gpointer user_data);
 
 extern void matekbd_keyboard_config_stop_listen (MatekbdKeyboardConfig *

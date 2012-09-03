@@ -27,7 +27,7 @@
 
 #include <libxklavier/xklavier.h>
 
-#include <mateconf/mateconf-client.h>
+#include <gio/gio.h>
 
 #include <matekbd-config-private.h>
 
@@ -47,70 +47,26 @@ matekbd_install_glib_log_appender (void)
 	xkl_set_log_appender (matekbd_log_appender);
 }
 
-#define MATEKBD_PREVIEW_CONFIG_KEY_PREFIX  MATEKBD_CONFIG_KEY_PREFIX "/preview"
+#define MATEKBD_PREVIEW_CONFIG_SCHEMA  MATEKBD_CONFIG_SCHEMA ".preview"
 
-const gchar MATEKBD_PREVIEW_CONFIG_DIR[] = MATEKBD_PREVIEW_CONFIG_KEY_PREFIX;
-const gchar MATEKBD_PREVIEW_CONFIG_KEY_X[] =
-    MATEKBD_PREVIEW_CONFIG_KEY_PREFIX "/x";
-const gchar MATEKBD_PREVIEW_CONFIG_KEY_Y[] =
-    MATEKBD_PREVIEW_CONFIG_KEY_PREFIX "/y";
-const gchar MATEKBD_PREVIEW_CONFIG_KEY_WIDTH[] =
-    MATEKBD_PREVIEW_CONFIG_KEY_PREFIX "/width";
-const gchar MATEKBD_PREVIEW_CONFIG_KEY_HEIGHT[] =
-    MATEKBD_PREVIEW_CONFIG_KEY_PREFIX "/height";
+const gchar MATEKBD_PREVIEW_CONFIG_KEY_X[] = "x";
+const gchar MATEKBD_PREVIEW_CONFIG_KEY_Y[] = "y";
+const gchar MATEKBD_PREVIEW_CONFIG_KEY_WIDTH[] = "width";
+const gchar MATEKBD_PREVIEW_CONFIG_KEY_HEIGHT[] = "height";
 
 GdkRectangle *
 matekbd_preview_load_position (void)
 {
-	GError *gerror = NULL;
 	GdkRectangle *rv = NULL;
 	gint x, y, w, h;
-	MateConfClient *conf_client = mateconf_client_get_default ();
+	GSettings* settings = g_settings_new (MATEKBD_PREVIEW_CONFIG_SCHEMA);
 
-	if (conf_client == NULL)
-		return NULL;
+	x = g_settings_get_int (settings, MATEKBD_PREVIEW_CONFIG_KEY_X);
+	y = g_settings_get_int (settings, MATEKBD_PREVIEW_CONFIG_KEY_Y);
+	w = g_settings_get_int (settings, MATEKBD_PREVIEW_CONFIG_KEY_WIDTH);
+	h = g_settings_get_int (settings, MATEKBD_PREVIEW_CONFIG_KEY_HEIGHT);
 
-	x = mateconf_client_get_int (conf_client,
-				  MATEKBD_PREVIEW_CONFIG_KEY_X, &gerror);
-	if (gerror != NULL) {
-		xkl_debug (0, "Error getting the preview x: %s\n",
-			   gerror->message);
-		g_error_free (gerror);
-		g_object_unref (G_OBJECT (conf_client));
-		return NULL;
-	}
-
-	y = mateconf_client_get_int (conf_client,
-				  MATEKBD_PREVIEW_CONFIG_KEY_Y, &gerror);
-	if (gerror != NULL) {
-		xkl_debug (0, "Error getting the preview y: %s\n",
-			   gerror->message);
-		g_error_free (gerror);
-		g_object_unref (G_OBJECT (conf_client));
-		return NULL;
-	}
-
-	w = mateconf_client_get_int (conf_client,
-				  MATEKBD_PREVIEW_CONFIG_KEY_WIDTH, &gerror);
-	if (gerror != NULL) {
-		xkl_debug (0, "Error getting the preview width: %s\n",
-			   gerror->message);
-		g_error_free (gerror);
-		g_object_unref (G_OBJECT (conf_client));
-		return NULL;
-	}
-
-	h = mateconf_client_get_int (conf_client,
-				  MATEKBD_PREVIEW_CONFIG_KEY_HEIGHT, &gerror);
-	if (gerror != NULL) {
-		xkl_debug (0, "Error getting the preview height: %s\n",
-			   gerror->message);
-		g_error_free (gerror);
-		g_object_unref (G_OBJECT (conf_client));
-		return NULL;
-	}
-
-	g_object_unref (G_OBJECT (conf_client));
+	g_object_unref (settings);
 
 	rv = g_new (GdkRectangle, 1);
 	if (x == -1 || y == -1 || w == -1 || h == -1) {
@@ -135,25 +91,35 @@ matekbd_preview_load_position (void)
 void
 matekbd_preview_save_position (GdkRectangle * rect)
 {
-	MateConfClient *conf_client = mateconf_client_get_default ();
-	MateConfChangeSet *cs;
-	GError *gerror = NULL;
+	GSettings* settings = g_settings_new (MATEKBD_PREVIEW_CONFIG_SCHEMA);
 
-	cs = mateconf_change_set_new ();
+	g_settings_delay (settings);
 
-	mateconf_change_set_set_int (cs, MATEKBD_PREVIEW_CONFIG_KEY_X, rect->x);
-	mateconf_change_set_set_int (cs, MATEKBD_PREVIEW_CONFIG_KEY_Y, rect->y);
-	mateconf_change_set_set_int (cs, MATEKBD_PREVIEW_CONFIG_KEY_WIDTH,
-				  rect->width);
-	mateconf_change_set_set_int (cs, MATEKBD_PREVIEW_CONFIG_KEY_HEIGHT,
-				  rect->height);
+	g_settings_set_int (settings, MATEKBD_PREVIEW_CONFIG_KEY_X, rect->x);
+	g_settings_set_int (settings, MATEKBD_PREVIEW_CONFIG_KEY_Y, rect->y);
+	g_settings_set_int (settings, MATEKBD_PREVIEW_CONFIG_KEY_WIDTH, rect->width);
+	g_settings_set_int (settings, MATEKBD_PREVIEW_CONFIG_KEY_HEIGHT, rect->height);
 
-	mateconf_client_commit_change_set (conf_client, cs, TRUE, &gerror);
-	if (gerror != NULL) {
-		g_warning ("Error saving preview configuration: %s\n",
-			   gerror->message);
-		g_error_free (gerror);
-	}
-	mateconf_change_set_unref (cs);
-	g_object_unref (G_OBJECT (conf_client));
+	g_settings_apply (settings);
+
+	g_object_unref (settings);
 }
+
+/**
+ * matekbd_strv_append:
+ *
+ * Returns: (transfer full) (array zero-terminated=1): Append string to strv array
+ */
+gchar **
+matekbd_strv_append (gchar ** arr, gchar * element)
+{
+	gint old_length = (arr == NULL) ? 0 : g_strv_length (arr);
+	gchar **new_arr = g_new0 (gchar *, old_length + 2);
+	if (arr != NULL) {
+		memcpy (new_arr, arr, old_length * sizeof (gchar *));
+		g_free (arr);
+	}
+	new_arr[old_length] = element;
+	return new_arr;
+}
+

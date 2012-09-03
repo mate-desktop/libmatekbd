@@ -22,10 +22,9 @@
 
 #include <X11/Xlib.h>
 #include <glib.h>
-#include <mateconf/mateconf-client.h>
+#include <gio/gio.h>
 #include <libxklavier/xklavier.h>
 
-extern const gchar MATEKBD_DESKTOP_CONFIG_DIR[];
 extern const gchar MATEKBD_DESKTOP_CONFIG_KEY_DEFAULT_GROUP[];
 extern const gchar MATEKBD_DESKTOP_CONFIG_KEY_GROUP_PER_WINDOW[];
 extern const gchar MATEKBD_DESKTOP_CONFIG_KEY_HANDLE_INDICATORS[];
@@ -42,7 +41,7 @@ typedef struct _MatekbdDesktopConfig {
 	gboolean load_extra_items;
 
 	/* private, transient */
-	MateConfClient *conf_client;
+	GSettings *settings;
 	int config_listener_id;
 	XklEngine *engine;
 } MatekbdDesktopConfig;
@@ -51,14 +50,13 @@ typedef struct _MatekbdDesktopConfig {
  * MatekbdDesktopConfig functions
  */
 extern void matekbd_desktop_config_init (MatekbdDesktopConfig * config,
-				      MateConfClient * conf_client,
 				      XklEngine * engine);
 extern void matekbd_desktop_config_term (MatekbdDesktopConfig * config);
 
-extern void matekbd_desktop_config_load_from_mateconf (MatekbdDesktopConfig *
+extern void matekbd_desktop_config_load_from_gsettings (MatekbdDesktopConfig *
 						 config);
 
-extern void matekbd_desktop_config_save_to_mateconf (MatekbdDesktopConfig * config);
+extern void matekbd_desktop_config_save_to_gsettings (MatekbdDesktopConfig * config);
 
 extern gboolean matekbd_desktop_config_activate (MatekbdDesktopConfig * config);
 
@@ -84,7 +82,7 @@ extern void matekbd_desktop_config_lock_prev_group (MatekbdDesktopConfig *
 extern void matekbd_desktop_config_restore_group (MatekbdDesktopConfig * config);
 
 extern void matekbd_desktop_config_start_listen (MatekbdDesktopConfig * config,
-					      MateConfClientNotifyFunc func,
+					      GCallback func,
 					      gpointer user_data);
 
 extern void matekbd_desktop_config_stop_listen (MatekbdDesktopConfig * config);

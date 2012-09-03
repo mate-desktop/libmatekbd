@@ -36,10 +36,8 @@ typedef struct _MatekbdIndicatorConfig {
 	gchar *foreground_color;
 	gchar *background_color;
 
-	GSList *enabled_plugins;
-
 	/* private, transient */
-	MateConfClient *conf_client;
+	GSettings *settings;
 	GSList *image_filenames;
 	GtkIconTheme *icon_theme;
 	int config_listener_id;
@@ -53,14 +51,13 @@ typedef struct _MatekbdIndicatorConfig {
  */
 extern void matekbd_indicator_config_init (MatekbdIndicatorConfig *
 					applet_config,
-					MateConfClient * conf_client,
 					XklEngine * engine);
 extern void matekbd_indicator_config_term (MatekbdIndicatorConfig *
 					applet_config);
 
-extern void matekbd_indicator_config_load_from_mateconf (MatekbdIndicatorConfig
+extern void matekbd_indicator_config_load_from_gsettings (MatekbdIndicatorConfig
 						   * applet_config);
-extern void matekbd_indicator_config_save_to_mateconf (MatekbdIndicatorConfig *
+extern void matekbd_indicator_config_save_to_gsettings (MatekbdIndicatorConfig *
 						 applet_config);
 
 extern void matekbd_indicator_config_refresh_style (MatekbdIndicatorConfig *
@@ -79,13 +76,13 @@ extern void matekbd_indicator_config_load_image_filenames (MatekbdIndicatorConfi
 extern void matekbd_indicator_config_free_image_filenames (MatekbdIndicatorConfig
 							* applet_config);
 
-/* Should be updated on Indicator/MateConf configuration change */
+/* Should be updated on Indicator/GSettings configuration change */
 extern void matekbd_indicator_config_activate (MatekbdIndicatorConfig *
 					    applet_config);
 
 extern void matekbd_indicator_config_start_listen (MatekbdIndicatorConfig *
 						applet_config,
-						MateConfClientNotifyFunc
+						GCallback
 						func, gpointer user_data);
 
 extern void matekbd_indicator_config_stop_listen (MatekbdIndicatorConfig *

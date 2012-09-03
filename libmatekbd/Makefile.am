@@ -6,11 +6,10 @@ ui_DATA = show-layout.ui
 common_CFLAGS = \
 	-I$(top_srcdir) -Wall 			\
 	$(GDK_CFLAGS)					\
-	$(MATECONF_CFLAGS)					\
+	$(GIO_CFLAGS)					\
 	$(LIBXKLAVIER_CFLAGS)				\
 	$(XLIB_CFLAGS)					\
 	-I$(top_srcdir)/intl				\
-	-DSYS_PLUGIN_DIR=\"$(libdir)/matekbd/\"	\
 	-DG_LOG_DOMAIN=\"MateKbdIndicator\"		\
 	-DDATADIR=\"$(datadir)\"			\
 	-DSYSCONFDIR=\"$(sysconfdir)\"			\
@@ -26,7 +25,7 @@ common_LDFLAGS = -version-info @VERSION_INFO@ -no-undefined
 
 common_LIBADD = \
 		$(GDK_LIBS) \
-		$(MATECONF_LIBS) \
+		$(GIO_LIBS) \
 		$(LIBXKLAVIER_LIBS) \
 		$(XLIB_LIBS)
 
@@ -50,7 +49,6 @@ libmatekbdui_la_SOURCES = \
                          matekbd-indicator.c \
                          matekbd-status.c \
                          matekbd-indicator-marshal.c \
-                         matekbd-indicator-plugin-manager.c \
                          matekbd-keyboard-drawing-marshal.c \
                          matekbd-keyboard-drawing.c
 
@@ -68,7 +66,6 @@ matekbdinc_HEADERS = \
                       matekbd-indicator.h \
                       matekbd-status.h \
                       matekbd-indicator-config.h \
-                      matekbd-indicator-plugin.h \
                       matekbd-keyboard-drawing.h \
                       matekbd-util.h
 
@@ -76,8 +73,7 @@ matekbdinc_HEADERS = \
 
 @INTLTOOL_SCHEMAS_RULE@
 
-noinst_HEADERS = matekbd-indicator-plugin-manager.h \
-                 $(extra_nih) \
+noinst_HEADERS = $(extra_nih) \
                  matekbd-config-private.h
 
 EXTRA_DIST = matekbd-indicator-marshal.list \
@@ -104,20 +100,5 @@ matekbd-keyboard-drawing-marshal.c: matekbd-keyboard-drawing-marshal.h
           && mv matekbd-keyboard-drawing-marshal.tmp matekbd-keyboard-drawing-marshal.c ) \
         || ( rm -f matekbd-keyboard-drawing-marshal.tmp && exit 1 )
 
-schemadir   = $(MATECONF_SCHEMA_FILE_DIR)
-schema_in_files= desktop_mate_peripherals_keyboard_xkb.schemas.in
-
-schema_DATA = $(schema_in_files:.schemas.in=.schemas)
-
-if MATECONF_SCHEMAS_INSTALL
-# don't do this if we are building in eg. rpm
-install-data-local:
-	if test -z "$(DESTDIR)" ; then \
-		for p in $(schema_DATA) ; do \
-			MATECONF_CONFIG_SOURCE=$(MATECONF_SCHEMA_CONFIG_SOURCE) $(MATECONFTOOL) --makefile-install-rule $$p; \
-		done \
-	fi
-else
-install-data-local:
-endif
-
+gsettings_SCHEMAS = org.mate.peripherals-keyboard-xkb.gschema.xml
+@GSETTINGS_RULES@

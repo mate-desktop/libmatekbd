@@ -25,26 +25,20 @@
 #include <X11/keysym.h>
 
 #include <glib/gi18n.h>
-
+#include <gio/gio.h>
 #include <matekbd-desktop-config.h>
 #include <matekbd-config-private.h>
 
 /**
  * MatekbdDesktopConfig
  */
-#define MATEKBD_DESKTOP_CONFIG_KEY_PREFIX  MATEKBD_CONFIG_KEY_PREFIX "/general"
+#define MATEKBD_DESKTOP_CONFIG_SCHEMA  MATEKBD_CONFIG_SCHEMA ".general"
 
-const gchar MATEKBD_DESKTOP_CONFIG_DIR[] = MATEKBD_DESKTOP_CONFIG_KEY_PREFIX;
-const gchar MATEKBD_DESKTOP_CONFIG_KEY_DEFAULT_GROUP[] =
-    MATEKBD_DESKTOP_CONFIG_KEY_PREFIX "/defaultGroup";
-const gchar MATEKBD_DESKTOP_CONFIG_KEY_GROUP_PER_WINDOW[] =
-    MATEKBD_DESKTOP_CONFIG_KEY_PREFIX "/groupPerWindow";
-const gchar MATEKBD_DESKTOP_CONFIG_KEY_HANDLE_INDICATORS[] =
-    MATEKBD_DESKTOP_CONFIG_KEY_PREFIX "/handleIndicators";
-const gchar MATEKBD_DESKTOP_CONFIG_KEY_LAYOUT_NAMES_AS_GROUP_NAMES[]
-    = MATEKBD_DESKTOP_CONFIG_KEY_PREFIX "/layoutNamesAsGroupNames";
-const gchar MATEKBD_DESKTOP_CONFIG_KEY_LOAD_EXTRA_ITEMS[]
-    = MATEKBD_DESKTOP_CONFIG_KEY_PREFIX "/loadExtraItems";
+const gchar MATEKBD_DESKTOP_CONFIG_KEY_DEFAULT_GROUP[] = "default-group";
+const gchar MATEKBD_DESKTOP_CONFIG_KEY_GROUP_PER_WINDOW[] = "group-per-window";
+const gchar MATEKBD_DESKTOP_CONFIG_KEY_HANDLE_INDICATORS[] = "handle-indicators";
+const gchar MATEKBD_DESKTOP_CONFIG_KEY_LAYOUT_NAMES_AS_GROUP_NAMES[] = "layout-names-as-group-names";
+const gchar MATEKBD_DESKTOP_CONFIG_KEY_LOAD_EXTRA_ITEMS[] = "load-extra-items";
 
 /**
  * static common functions
@@ -129,135 +123,54 @@ static gboolean
 	return TRUE;
 }
 
-void
-matekbd_desktop_config_add_listener (MateConfClient * conf_client,
-				  const gchar * key,
-				  MateConfClientNotifyFunc func,
-				  gpointer user_data, int *pid)
-{
-	GError *gerror = NULL;
-	xkl_debug (150, "Listening to [%s]\n", key);
-	*pid = mateconf_client_notify_add (conf_client,
-					key, func, user_data, NULL,
-					&gerror);
-	if (0 == *pid) {
-		g_warning ("Error listening for configuration: [%s]\n",
-			   gerror->message);
-		g_error_free (gerror);
-	}
-}
-
-void
-matekbd_desktop_config_remove_listener (MateConfClient * conf_client, int *pid)
-{
-	if (*pid != 0) {
-		mateconf_client_notify_remove (conf_client, *pid);
-		*pid = 0;
-	}
-}
-
 /**
  * extern MatekbdDesktopConfig config functions
  */
 void
 matekbd_desktop_config_init (MatekbdDesktopConfig * config,
-			  MateConfClient * conf_client, XklEngine * engine)
+			  XklEngine * engine)
 {
-	GError *gerror = NULL;
-
 	memset (config, 0, sizeof (*config));
-	config->conf_client = conf_client;
+	config->settings = g_settings_new (MATEKBD_CONFIG_SCHEMA);
 	config->engine = engine;
-	g_object_ref (config->conf_client);
-
-	mateconf_client_add_dir (config->conf_client,
-			      MATEKBD_DESKTOP_CONFIG_DIR,
-			      MATECONF_CLIENT_PRELOAD_NONE, &gerror);
-	if (gerror != NULL) {
-		g_warning ("err: %s\n", gerror->message);
-		g_error_free (gerror);
-		gerror = NULL;
-	}
 }
 
 void
 matekbd_desktop_config_term (MatekbdDesktopConfig * config)
 {
-	g_object_unref (config->conf_client);
-	config->conf_client = NULL;
+	g_object_unref (config->settings);
+	config->settings = NULL;
 }
 
 void
-matekbd_desktop_config_load_from_mateconf (MatekbdDesktopConfig * config)
+matekbd_desktop_config_load_from_gsettings (MatekbdDesktopConfig * config)
 {
-	GError *gerror = NULL;
-
 	config->group_per_app =
-	    mateconf_client_get_bool (config->conf_client,
-				   MATEKBD_DESKTOP_CONFIG_KEY_GROUP_PER_WINDOW,
-				   &gerror);
-	if (gerror != NULL) {
-		g_warning ("Error reading configuration:%s\n",
-			   gerror->message);
-		config->group_per_app = FALSE;
-		g_error_free (gerror);
-		gerror = NULL;
-	}
+	    g_settings_get_boolean (config->settings,
+				 MATEKBD_DESKTOP_CONFIG_KEY_GROUP_PER_WINDOW);
 	xkl_debug (150, "group_per_app: %d\n", config->group_per_app);
 
 	config->handle_indicators =
-	    mateconf_client_get_bool (config->conf_client,
-				   MATEKBD_DESKTOP_CONFIG_KEY_HANDLE_INDICATORS,
-				   &gerror);
-	if (gerror != NULL) {
-		g_warning ("Error reading configuration:%s\n",
-			   gerror->message);
-		config->handle_indicators = FALSE;
-		g_error_free (gerror);
-		gerror = NULL;
-	}
+	    g_settings_get_boolean (config->settings,
+				 MATEKBD_DESKTOP_CONFIG_KEY_HANDLE_INDICATORS);
 	xkl_debug (150, "handle_indicators: %d\n",
 		   config->handle_indicators);
 
 	config->layout_names_as_group_names =
-	    mateconf_client_get_bool (config->conf_client,
-				   MATEKBD_DESKTOP_CONFIG_KEY_LAYOUT_NAMES_AS_GROUP_NAMES,
-				   &gerror);
-	if (gerror != NULL) {
-		g_warning ("Error reading configuration:%s\n",
-			   gerror->message);
-		config->layout_names_as_group_names = TRUE;
-		g_error_free (gerror);
-		gerror = NULL;
-	}
+	    g_settings_get_boolean (config->settings,
+				   MATEKBD_DESKTOP_CONFIG_KEY_LAYOUT_NAMES_AS_GROUP_NAMES);
 	xkl_debug (150, "layout_names_as_group_names: %d\n",
 		   config->layout_names_as_group_names);
 
 	config->load_extra_items =
-	    mateconf_client_get_bool (config->conf_client,
-				   MATEKBD_DESKTOP_CONFIG_KEY_LOAD_EXTRA_ITEMS,
-				   &gerror);
-	if (gerror != NULL) {
-		g_warning ("Error reading configuration:%s\n",
-			   gerror->message);
-		config->load_extra_items = FALSE;
-		g_error_free (gerror);
-		gerror = NULL;
-	}
+	    g_settings_get_boolean (config->settings,
+				   MATEKBD_DESKTOP_CONFIG_KEY_LOAD_EXTRA_ITEMS);
 	xkl_debug (150, "load_extra_items: %d\n",
 		   config->load_extra_items);
 
 	config->default_group =
-	    mateconf_client_get_int (config->conf_client,
-				  MATEKBD_DESKTOP_CONFIG_KEY_DEFAULT_GROUP,
-				  &gerror);
-	if (gerror != NULL) {
-		g_warning ("Error reading configuration:%s\n",
-			   gerror->message);
-		config->default_group = -1;
-		g_error_free (gerror);
-		gerror = NULL;
-	}
+	    g_settings_get_int (config->settings,
+				  MATEKBD_DESKTOP_CONFIG_KEY_DEFAULT_GROUP);
 
 	if (config->default_group < -1
 	    || config->default_group >=
@@ -267,38 +180,27 @@ matekbd_desktop_config_load_from_mateconf (MatekbdDesktopConfig * config)
 }
 
 void
-matekbd_desktop_config_save_to_mateconf (MatekbdDesktopConfig * config)
+matekbd_desktop_config_save_to_gsettings (MatekbdDesktopConfig * config)
 {
-	MateConfChangeSet *cs;
-	GError *gerror = NULL;
+	g_settings_delay (config->settings);
 
-	cs = mateconf_change_set_new ();
+	g_settings_set_boolean (config->settings,
+			     MATEKBD_DESKTOP_CONFIG_KEY_GROUP_PER_WINDOW,
+			     config->group_per_app);
+	g_settings_set_boolean (config->settings,
+			     MATEKBD_DESKTOP_CONFIG_KEY_HANDLE_INDICATORS,
+			     config->handle_indicators);
+	g_settings_set_boolean (config->settings,
+			     MATEKBD_DESKTOP_CONFIG_KEY_LAYOUT_NAMES_AS_GROUP_NAMES,
+			     config->layout_names_as_group_names);
+	g_settings_set_boolean (config->settings,
+			     MATEKBD_DESKTOP_CONFIG_KEY_LOAD_EXTRA_ITEMS,
+			     config->load_extra_items);
+	g_settings_set_int (config->settings,
+			    MATEKBD_DESKTOP_CONFIG_KEY_DEFAULT_GROUP,
+			    config->default_group);
 
-	mateconf_change_set_set_bool (cs,
-				   MATEKBD_DESKTOP_CONFIG_KEY_GROUP_PER_WINDOW,
-				   config->group_per_app);
-	mateconf_change_set_set_bool (cs,
-				   MATEKBD_DESKTOP_CONFIG_KEY_HANDLE_INDICATORS,
-				   config->handle_indicators);
-	mateconf_change_set_set_bool (cs,
-				   MATEKBD_DESKTOP_CONFIG_KEY_LAYOUT_NAMES_AS_GROUP_NAMES,
-				   config->layout_names_as_group_names);
-	mateconf_change_set_set_bool (cs,
-				   MATEKBD_DESKTOP_CONFIG_KEY_LOAD_EXTRA_ITEMS,
-				   config->load_extra_items);
-	mateconf_change_set_set_int (cs,
-				  MATEKBD_DESKTOP_CONFIG_KEY_DEFAULT_GROUP,
-				  config->default_group);
-
-	mateconf_client_commit_change_set (config->conf_client, cs, TRUE,
-					&gerror);
-	if (gerror != NULL) {
-		g_warning ("Error saving active configuration: %s\n",
-			   gerror->message);
-		g_error_free (gerror);
-		gerror = NULL;
-	}
-	mateconf_change_set_unref (cs);
+	g_settings_apply (config->settings);
 }
 
 gboolean
@@ -339,20 +241,20 @@ matekbd_desktop_config_restore_group (MatekbdDesktopConfig * config)
 
 void
 matekbd_desktop_config_start_listen (MatekbdDesktopConfig * config,
-				  MateConfClientNotifyFunc func,
+				  GCallback func,
 				  gpointer user_data)
 {
-	matekbd_desktop_config_add_listener (config->conf_client,
-					  MATEKBD_DESKTOP_CONFIG_DIR, func,
-					  user_data,
-					  &config->config_listener_id);
+	config->config_listener_id =
+	    g_signal_connect (config->settings, "changed", func,
+			      user_data);
 }
 
 void
 matekbd_desktop_config_stop_listen (MatekbdDesktopConfig * config)
 {
-	matekbd_desktop_config_remove_listener (config->conf_client,
-					     &config->config_listener_id);
+	g_signal_handler_disconnect (config->settings,
+				    config->config_listener_id);
+	config->config_listener_id = 0;
 }
 
 gboolean

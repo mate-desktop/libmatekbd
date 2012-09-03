@@ -22,10 +22,9 @@
 
 #include <X11/Xlib.h>
 #include <glib.h>
-#include <mateconf/mateconf-client.h>
+#include <gio/gio.h>
 #include <libxklavier/xklavier.h>
 
-extern const gchar MATEKBD_KEYBOARD_CONFIG_DIR[];
 extern const gchar MATEKBD_KEYBOARD_CONFIG_KEY_MODEL[];
 extern const gchar MATEKBD_KEYBOARD_CONFIG_KEY_LAYOUTS[];
 extern const gchar MATEKBD_KEYBOARD_CONFIG_KEY_OPTIONS[];
@@ -35,11 +34,11 @@ extern const gchar MATEKBD_KEYBOARD_CONFIG_KEY_OPTIONS[];
  */
 typedef struct _MatekbdKeyboardConfig {
 	gchar *model;
-	GSList *layouts_variants;
-	GSList *options;
+	gchar **layouts_variants;
+	gchar **options;
 
 	/* private, transient */
-	MateConfClient *conf_client;
+	GSettings *settings;
 	int config_listener_id;
 	XklEngine *engine;
 } MatekbdKeyboardConfig;
@@ -48,16 +47,15 @@ typedef struct _MatekbdKeyboardConfig {
  * MatekbdKeyboardConfig functions
  */
 extern void matekbd_keyboard_config_init (MatekbdKeyboardConfig * kbd_config,
-				       MateConfClient * conf_client,
 				       XklEngine * engine);
 extern void matekbd_keyboard_config_term (MatekbdKeyboardConfig * kbd_config);
 
-extern void matekbd_keyboard_config_load_from_mateconf (MatekbdKeyboardConfig *
+extern void matekbd_keyboard_config_load_from_gsettings (MatekbdKeyboardConfig *
 						  kbd_config,
 						  MatekbdKeyboardConfig *
 						  kbd_config_default);
 
-extern void matekbd_keyboard_config_save_to_mateconf (MatekbdKeyboardConfig *
+extern void matekbd_keyboard_config_save_to_gsettings (MatekbdKeyboardConfig *
 						kbd_config);
 
 extern void matekbd_keyboard_config_load_from_x_initial (MatekbdKeyboardConfig *
@@ -70,7 +68,7 @@ extern void matekbd_keyboard_config_load_from_x_current (MatekbdKeyboardConfig *
 
 extern void matekbd_keyboard_config_start_listen (MatekbdKeyboardConfig *
 					       kbd_config,
-					       MateConfClientNotifyFunc func,
+					       GCallback func,
 					       gpointer user_data);
 
 extern void matekbd_keyboard_config_stop_listen (MatekbdKeyboardConfig *
@@ -112,10 +110,10 @@ extern const gchar *matekbd_keyboard_config_format_full_layout (const gchar
 extern gchar *matekbd_keyboard_config_to_string (const MatekbdKeyboardConfig *
 					      config);
 
-extern GSList
-    *matekbd_keyboard_config_add_default_switch_option_if_necessary (GSList *
+extern gchar
+    **matekbd_keyboard_config_add_default_switch_option_if_necessary (gchar ** 
 								  layouts_list,
-								  GSList *
+								  gchar ** 
 								  options_list,
 								  gboolean
 								  *

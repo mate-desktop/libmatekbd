@@ -30,8 +30,6 @@
 #include <matekbd-desktop-config.h>
 #include <matekbd-indicator-config.h>
 
-#include <matekbd-indicator-plugin-manager.h>
-
 typedef struct _gki_globals {
 	XklEngine *engine;
 	XklConfigRegistry *registry;
@@ -39,9 +37,6 @@ typedef struct _gki_globals {
 	MatekbdDesktopConfig cfg;
 	MatekbdIndicatorConfig ind_cfg;
 	MatekbdKeyboardConfig kbd_cfg;
-
-	MatekbdIndicatorPluginContainer plugin_container;
-	MatekbdIndicatorPluginManager plugin_manager;
 
 	const gchar *tooltips_format;
 	gchar **full_group_names;
@@ -206,7 +201,7 @@ matekbd_indicator_fill (MatekbdIndicator * gki)
 	GtkNotebook *notebook = GTK_NOTEBOOK (gki);
 
 	for (grp = 0; grp < total_groups; grp++) {
-		GtkWidget *page, *decorated_page = NULL;
+		GtkWidget *page;
 		gchar *full_group_name =
 		    (grp <
 		     g_strv_length (globals.full_group_names)) ?
@@ -215,13 +210,6 @@ matekbd_indicator_fill (MatekbdIndicator * gki)
 
 		if (page == NULL)
 			page = gtk_label_new ("");
-
-		decorated_page =
-		    matekbd_indicator_plugin_manager_decorate_widget
-		    (&globals.plugin_manager, page, grp,
-		     full_group_name, &globals.kbd_cfg);
-
-		page = decorated_page == NULL ? page : decorated_page;
 
 		gtk_notebook_append_page (notebook, page, NULL);
 		gtk_widget_show_all (page);
@@ -316,9 +304,8 @@ matekbd_indicator_extract_layout_name (int group, XklEngine * engine,
 	if (group < g_strv_length (short_group_names)) {
 		if (xkl_engine_get_features (engine) &
 		    XKLF_MULTIPLE_LAYOUTS_SUPPORTED) {
-			char *full_layout_name = (char *)
-			    g_slist_nth_data (kbd_cfg->layouts_variants,
-					      group);
+			char *full_layout_name =
+			    kbd_cfg->layouts_variants[group];
 			char *variant_name;
 			if (!matekbd_keyboard_config_split_items
 			    (full_layout_name, &layout_name,
@@ -494,12 +481,13 @@ matekbd_indicator_reinit_ui (MatekbdIndicator * gki)
 
 /* Should be called once for all widgets */
 static void
-matekbd_indicator_cfg_changed (MateConfClient * client,
-			    guint cnxn_id, MateConfEntry * entry)
+matekbd_indicator_cfg_changed (GSettings *settings,
+			       gchar     *key,
+			       gpointer   user_data)
 {
 	xkl_debug (100,
-		   "General configuration changed in MateConf - reiniting...\n");
-	matekbd_desktop_config_load_from_mateconf (&globals.cfg);
+		   "General configuration changed in GSettings - reiniting...\n");
+	matekbd_desktop_config_load_from_gsettings (&globals.cfg);
 	matekbd_desktop_config_activate (&globals.cfg);
 	ForAllIndicators () {
 		matekbd_indicator_reinit_ui (gki);
@@ -508,18 +496,15 @@ matekbd_indicator_cfg_changed (MateConfClient * client,
 
 /* Should be called once for all widgets */
 static void
-matekbd_indicator_ind_cfg_changed (MateConfClient * client,
-				guint cnxn_id, MateConfEntry * entry)
+matekbd_indicator_ind_cfg_changed (GSettings *settings,
+				   gchar     *key,
+				   gpointer   user_data)
 {
 	xkl_debug (100,
-		   "Applet configuration changed in MateConf - reiniting...\n");
-	matekbd_indicator_config_load_from_mateconf (&globals.ind_cfg);
+		   "Applet configuration changed in GSettings - reiniting...\n");
+	matekbd_indicator_config_load_from_gsettings (&globals.ind_cfg);
 	matekbd_indicator_update_images ();
 	matekbd_indicator_config_activate (&globals.ind_cfg);
-
-	matekbd_indicator_plugin_manager_toggle_plugins
-	    (&globals.plugin_manager, &globals.plugin_container,
-	     globals.ind_cfg.enabled_plugins);
 
 	ForAllIndicators () {
 		matekbd_indicator_reinit_ui (gki);
@@ -596,9 +581,6 @@ matekbd_indicator_state_callback (XklEngine * engine,
 
 	if (changeType == GROUP_CHANGED) {
 		ForAllIndicators () {
-			matekbd_indicator_plugin_manager_group_changed
-			    (&globals.plugin_manager, GTK_WIDGET (gki),
-			     group);
 			xkl_debug (200, "do repaint\n");
 			matekbd_indicator_set_current_page_for_group
 			    (gki, group);
@@ -776,15 +758,9 @@ matekbd_indicator_global_term (void)
 	matekbd_desktop_config_stop_listen (&globals.cfg);
 	matekbd_indicator_config_stop_listen (&globals.ind_cfg);
 
-	matekbd_indicator_plugin_manager_term_initialized_plugins
-	    (&globals.plugin_manager);
-	matekbd_indicator_plugin_manager_term (&globals.plugin_manager);
-
 	matekbd_indicator_config_term (&globals.ind_cfg);
 	matekbd_keyboard_config_term (&globals.kbd_cfg);
 	matekbd_desktop_config_term (&globals.cfg);
-
-	matekbd_indicator_plugin_container_term (&globals.plugin_container);
 
 	g_object_unref (G_OBJECT (globals.registry));
 	globals.registry = NULL;
@@ -823,7 +799,6 @@ matekbd_indicator_class_init (MatekbdIndicatorClass * klass)
 static void
 matekbd_indicator_global_init (void)
 {
-	MateConfClient *mateconf_client;
 	XklConfigRec *xklrec = xkl_config_rec_new ();
 
 	globals.engine = xkl_engine_get_instance(GDK_DISPLAY_XDISPLAY(gdk_display_get_default()));
@@ -834,8 +809,6 @@ matekbd_indicator_global_init (void)
 		return;
 	}
 
-	mateconf_client = mateconf_client_get_default ();
-
 	g_signal_connect (globals.engine, "X-state-changed",
 			  G_CALLBACK (matekbd_indicator_state_callback),
 			  NULL);
@@ -843,19 +816,11 @@ matekbd_indicator_global_init (void)
 			  G_CALLBACK (matekbd_indicator_kbd_cfg_callback),
 			  NULL);
 
-	matekbd_indicator_plugin_container_init (&globals.plugin_container,
-					      mateconf_client);
+	matekbd_desktop_config_init (&globals.cfg, globals.engine);
+	matekbd_keyboard_config_init (&globals.kbd_cfg, globals.engine);
+	matekbd_indicator_config_init (&globals.ind_cfg, globals.engine);
 
-	matekbd_desktop_config_init (&globals.cfg, mateconf_client,
-				  globals.engine);
-	matekbd_keyboard_config_init (&globals.kbd_cfg, mateconf_client,
-				   globals.engine);
-	matekbd_indicator_config_init (&globals.ind_cfg, mateconf_client,
-				    globals.engine);
-
-	g_object_unref (mateconf_client);
-
-	matekbd_desktop_config_load_from_mateconf (&globals.cfg);
+	matekbd_desktop_config_load_from_gsettings (&globals.cfg);
 	matekbd_desktop_config_activate (&globals.cfg);
 
 	globals.registry =
@@ -866,7 +831,7 @@ matekbd_indicator_global_init (void)
 	matekbd_keyboard_config_load_from_x_current (&globals.kbd_cfg,
 						  xklrec);
 
-	matekbd_indicator_config_load_from_mateconf (&globals.ind_cfg);
+	matekbd_indicator_config_load_from_gsettings (&globals.ind_cfg);
 	matekbd_indicator_update_images ();
 	matekbd_indicator_config_activate (&globals.ind_cfg);
 
@@ -875,16 +840,12 @@ matekbd_indicator_global_init (void)
 					 xklrec->variants);
 	g_object_unref (G_OBJECT (xklrec));
 
-	matekbd_indicator_plugin_manager_init (&globals.plugin_manager);
-	matekbd_indicator_plugin_manager_init_enabled_plugins
-	    (&globals.plugin_manager, &globals.plugin_container,
-	     globals.ind_cfg.enabled_plugins);
 	matekbd_desktop_config_start_listen (&globals.cfg,
-					  (MateConfClientNotifyFunc)
+					  (GCallback)
 					  matekbd_indicator_cfg_changed,
 					  NULL);
 	matekbd_indicator_config_start_listen (&globals.ind_cfg,
-					    (MateConfClientNotifyFunc)
+					    (GCallback)
 					    matekbd_indicator_ind_cfg_changed,
 					    NULL);
 	matekbd_indicator_start_listen ();
@@ -960,20 +921,4 @@ void
 matekbd_indicator_set_angle (MatekbdIndicator * gki, gdouble angle)
 {
 	gki->priv->angle = angle;
-}
-
-/* Plugin support */
-/* Preserve the plugin container functions during the linking */
-void
-matekbd_indicator_plugin_container_reinit_ui (MatekbdIndicatorPluginContainer *
-					   pc)
-{
-	ForAllIndicators () {
-		matekbd_indicator_reinit_ui (gki);
-	} NextIndicator ();
-}
-
-gchar **matekbd_indicator_plugin_load_localized_group_names
-    (MatekbdIndicatorPluginContainer * pc) {
-	return globals.full_group_names;
 }

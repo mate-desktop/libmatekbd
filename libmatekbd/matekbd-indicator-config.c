@@ -37,76 +37,32 @@
 /**
  * MatekbdIndicatorConfig
  */
-#define MATEKBD_INDICATOR_CONFIG_KEY_PREFIX  MATEKBD_CONFIG_KEY_PREFIX "/indicator"
+#define MATEKBD_INDICATOR_CONFIG_SCHEMA  MATEKBD_CONFIG_SCHEMA ".indicator"
 #define GTK_STYLE_PATH "*PanelWidget*"
 
-const gchar MATEKBD_INDICATOR_CONFIG_DIR[] = MATEKBD_INDICATOR_CONFIG_KEY_PREFIX;
-const gchar MATEKBD_INDICATOR_CONFIG_KEY_SHOW_FLAGS[] =
-    MATEKBD_INDICATOR_CONFIG_KEY_PREFIX "/showFlags";
-const gchar MATEKBD_INDICATOR_CONFIG_KEY_ENABLED_PLUGINS[] =
-    MATEKBD_INDICATOR_CONFIG_KEY_PREFIX "/enabledPlugins";
-const gchar MATEKBD_INDICATOR_CONFIG_KEY_SECONDARIES[] =
-    MATEKBD_INDICATOR_CONFIG_KEY_PREFIX "/secondary";
-const gchar MATEKBD_INDICATOR_CONFIG_KEY_FONT_FAMILY[] =
-    MATEKBD_INDICATOR_CONFIG_KEY_PREFIX "/fontFamily";
-const gchar MATEKBD_INDICATOR_CONFIG_KEY_FONT_SIZE[] =
-    MATEKBD_INDICATOR_CONFIG_KEY_PREFIX "/fontSize";
-const gchar MATEKBD_INDICATOR_CONFIG_KEY_FOREGROUND_COLOR[] =
-    MATEKBD_INDICATOR_CONFIG_KEY_PREFIX "/foregroundColor";
-const gchar MATEKBD_INDICATOR_CONFIG_KEY_BACKGROUND_COLOR[] =
-    MATEKBD_INDICATOR_CONFIG_KEY_PREFIX "/backgroundColor";
+const gchar MATEKBD_INDICATOR_CONFIG_KEY_SHOW_FLAGS[] = "show-flags";
+const gchar MATEKBD_INDICATOR_CONFIG_KEY_SECONDARIES[] = "secondary";
+const gchar MATEKBD_INDICATOR_CONFIG_KEY_FONT_FAMILY[] = "font-family";
+const gchar MATEKBD_INDICATOR_CONFIG_KEY_FONT_SIZE[] = "font-size";
+const gchar MATEKBD_INDICATOR_CONFIG_KEY_FOREGROUND_COLOR[] = "foreground-color";
+const gchar MATEKBD_INDICATOR_CONFIG_KEY_BACKGROUND_COLOR[] = "background-color";
 
-#define SYSTEM_FONT_MATECONF_ENTRY "/desktop/mate/interface/font_name"
+#define SYSTEM_FONT_SCHEMA "org.mate.interface"
+#define SYSTEM_FONT_KEY "font-name"
 
 /**
  * static applet config functions
  */
 static void
-matekbd_indicator_config_free_enabled_plugins (MatekbdIndicatorConfig *
-					    ind_config)
-{
-	GSList *plugin_node = ind_config->enabled_plugins;
-	if (plugin_node != NULL) {
-		do {
-			if (plugin_node->data != NULL) {
-				g_free (plugin_node->data);
-				plugin_node->data = NULL;
-			}
-			plugin_node = g_slist_next (plugin_node);
-		} while (plugin_node != NULL);
-		g_slist_free (ind_config->enabled_plugins);
-		ind_config->enabled_plugins = NULL;
-	}
-}
-
-static void
 matekbd_indicator_config_load_font (MatekbdIndicatorConfig * ind_config)
 {
-	GError *gerror = NULL;
-
 	ind_config->font_family =
-	    mateconf_client_get_string (ind_config->conf_client,
-				     MATEKBD_INDICATOR_CONFIG_KEY_FONT_FAMILY,
-				     &gerror);
-	if (gerror != NULL) {
-		g_warning ("Error reading configuration:%s\n",
-			   gerror->message);
-		ind_config->font_family = g_strdup ("Helvetica");
-		g_error_free (gerror);
-		gerror = NULL;
-	}
+	    g_settings_get_string (ind_config->settings,
+				   MATEKBD_INDICATOR_CONFIG_KEY_FONT_FAMILY);
 
 	ind_config->font_size =
-	    mateconf_client_get_int (ind_config->conf_client,
-				  MATEKBD_INDICATOR_CONFIG_KEY_FONT_SIZE,
-				  &gerror);
-	if (gerror != NULL) {
-		g_warning ("Error reading configuration:%s\n",
-			   gerror->message);
-		ind_config->font_size = 10;
-		g_error_free (gerror);
-		gerror = NULL;
-	}
+	    g_settings_get_int (ind_config->settings,
+				  MATEKBD_INDICATOR_CONFIG_KEY_FONT_SIZE);
 
 	if (ind_config->font_family == NULL ||
 	    ind_config->font_family[0] == '\0') {
@@ -135,18 +91,9 @@ matekbd_indicator_config_load_font (MatekbdIndicatorConfig * ind_config)
 static void
 matekbd_indicator_config_load_colors (MatekbdIndicatorConfig * ind_config)
 {
-	GError *gerror = NULL;
-
 	ind_config->foreground_color =
-	    mateconf_client_get_string (ind_config->conf_client,
-				     MATEKBD_INDICATOR_CONFIG_KEY_FOREGROUND_COLOR,
-				     &gerror);
-	if (gerror != NULL) {
-		g_warning ("Error reading configuration:%s\n",
-			   gerror->message);
-		g_error_free (gerror);
-		gerror = NULL;
-	}
+	    g_settings_get_string (ind_config->settings,
+				     MATEKBD_INDICATOR_CONFIG_KEY_FOREGROUND_COLOR);
 
 	if (ind_config->foreground_color == NULL ||
 	    ind_config->foreground_color[0] == '\0') {
@@ -175,15 +122,8 @@ matekbd_indicator_config_load_colors (MatekbdIndicatorConfig * ind_config)
 	}
 
 	ind_config->background_color =
-	    mateconf_client_get_string (ind_config->conf_client,
-				     MATEKBD_INDICATOR_CONFIG_KEY_BACKGROUND_COLOR,
-				     &gerror);
-	if (gerror != NULL) {
-		g_warning ("Error reading configuration:%s\n",
-			   gerror->message);
-		g_error_free (gerror);
-		gerror = NULL;
-	}
+	    g_settings_get_string (ind_config->settings,
+				     MATEKBD_INDICATOR_CONFIG_KEY_BACKGROUND_COLOR);
 }
 
 void
@@ -209,9 +149,9 @@ matekbd_indicator_config_get_images_file (MatekbdIndicatorConfig *
 		return NULL;
 
 	if ((kbd_config->layouts_variants != NULL) &&
-	    (g_slist_length (kbd_config->layouts_variants) > group)) {
-		char *full_layout_name = (char *)
-		    g_slist_nth_data (kbd_config->layouts_variants, group);
+	    (g_strv_length (kbd_config->layouts_variants) > group)) {
+		char *full_layout_name =
+		    kbd_config->layouts_variants[group];
 
 		if (full_layout_name != NULL) {
 			char *l, *v;
@@ -277,24 +217,13 @@ matekbd_indicator_config_free_image_filenames (MatekbdIndicatorConfig *
 
 void
 matekbd_indicator_config_init (MatekbdIndicatorConfig * ind_config,
-			    MateConfClient * conf_client, XklEngine * engine)
+			       XklEngine * engine)
 {
-	GError *gerror = NULL;
 	gchar *sp;
 
 	memset (ind_config, 0, sizeof (*ind_config));
-	ind_config->conf_client = conf_client;
+	ind_config->settings = g_settings_new (MATEKBD_INDICATOR_CONFIG_SCHEMA);
 	ind_config->engine = engine;
-	g_object_ref (ind_config->conf_client);
-
-	mateconf_client_add_dir (ind_config->conf_client,
-			      MATEKBD_INDICATOR_CONFIG_DIR,
-			      MATECONF_CLIENT_PRELOAD_NONE, &gerror);
-	if (gerror != NULL) {
-		g_warning ("err1:%s\n", gerror->message);
-		g_error_free (gerror);
-		gerror = NULL;
-	}
 
 	ind_config->icon_theme = gtk_icon_theme_get_default ();
 
@@ -336,86 +265,39 @@ matekbd_indicator_config_term (MatekbdIndicatorConfig * ind_config)
 
 	matekbd_indicator_config_free_image_filenames (ind_config);
 
-	matekbd_indicator_config_free_enabled_plugins (ind_config);
-	g_object_unref (ind_config->conf_client);
-	ind_config->conf_client = NULL;
+	g_object_unref (ind_config->settings);
+	ind_config->settings = NULL;
 }
 
 void
-matekbd_indicator_config_load_from_mateconf (MatekbdIndicatorConfig * ind_config)
+matekbd_indicator_config_load_from_gsettings (MatekbdIndicatorConfig * ind_config)
 {
-	GError *gerror = NULL;
-
 	ind_config->secondary_groups_mask =
-	    mateconf_client_get_int (ind_config->conf_client,
-				  MATEKBD_INDICATOR_CONFIG_KEY_SECONDARIES,
-				  &gerror);
-	if (gerror != NULL) {
-		g_warning ("Error reading configuration:%s\n",
-			   gerror->message);
-		ind_config->secondary_groups_mask = 0;
-		g_error_free (gerror);
-		gerror = NULL;
-	}
+	    g_settings_get_int (ind_config->settings,
+				MATEKBD_INDICATOR_CONFIG_KEY_SECONDARIES);
 
 	ind_config->show_flags =
-	    mateconf_client_get_bool (ind_config->conf_client,
-				   MATEKBD_INDICATOR_CONFIG_KEY_SHOW_FLAGS,
-				   &gerror);
-	if (gerror != NULL) {
-		g_warning ("Error reading kbdConfiguration:%s\n",
-			   gerror->message);
-		ind_config->show_flags = FALSE;
-		g_error_free (gerror);
-		gerror = NULL;
-	}
+	    g_settings_get_boolean (ind_config->settings,
+				 MATEKBD_INDICATOR_CONFIG_KEY_SHOW_FLAGS);
 
 	matekbd_indicator_config_load_font (ind_config);
 	matekbd_indicator_config_load_colors (ind_config);
 
-	matekbd_indicator_config_free_enabled_plugins (ind_config);
-	ind_config->enabled_plugins =
-	    mateconf_client_get_list (ind_config->conf_client,
-				   MATEKBD_INDICATOR_CONFIG_KEY_ENABLED_PLUGINS,
-				   MATECONF_VALUE_STRING, &gerror);
-
-	if (gerror != NULL) {
-		g_warning ("Error reading kbd_configuration:%s\n",
-			   gerror->message);
-		ind_config->enabled_plugins = NULL;
-		g_error_free (gerror);
-		gerror = NULL;
-	}
 }
 
 void
-matekbd_indicator_config_save_to_mateconf (MatekbdIndicatorConfig * ind_config)
+matekbd_indicator_config_save_to_gsettings (MatekbdIndicatorConfig * ind_config)
 {
-	MateConfChangeSet *cs;
-	GError *gerror = NULL;
+	g_settings_delay (ind_config->settings);
 
-	cs = mateconf_change_set_new ();
-
-	mateconf_change_set_set_int (cs,
+	g_settings_set_int (ind_config->settings,
 				  MATEKBD_INDICATOR_CONFIG_KEY_SECONDARIES,
 				  ind_config->secondary_groups_mask);
-	mateconf_change_set_set_bool (cs,
+	g_settings_set_boolean (ind_config->settings,
 				   MATEKBD_INDICATOR_CONFIG_KEY_SHOW_FLAGS,
 				   ind_config->show_flags);
-	mateconf_change_set_set_list (cs,
-				   MATEKBD_INDICATOR_CONFIG_KEY_ENABLED_PLUGINS,
-				   MATECONF_VALUE_STRING,
-				   ind_config->enabled_plugins);
 
-	mateconf_client_commit_change_set (ind_config->conf_client, cs,
-					TRUE, &gerror);
-	if (gerror != NULL) {
-		g_warning ("Error saving configuration: %s\n",
-			   gerror->message);
-		g_error_free (gerror);
-		gerror = NULL;
-	}
-	mateconf_change_set_unref (cs);
+	g_settings_apply (ind_config->settings);
 }
 
 void
@@ -428,18 +310,18 @@ matekbd_indicator_config_activate (MatekbdIndicatorConfig * ind_config)
 void
 matekbd_indicator_config_start_listen (MatekbdIndicatorConfig *
 				    ind_config,
-				    MateConfClientNotifyFunc func,
+				    GCallback func,
 				    gpointer user_data)
 {
-	matekbd_desktop_config_add_listener (ind_config->conf_client,
-					  MATEKBD_INDICATOR_CONFIG_DIR, func,
-					  user_data,
-					  &ind_config->config_listener_id);
+	ind_config->config_listener_id =
+	    g_signal_connect (ind_config->settings, "changed", func,
+			      user_data);
 }
 
 void
 matekbd_indicator_config_stop_listen (MatekbdIndicatorConfig * ind_config)
 {
-	matekbd_desktop_config_remove_listener (ind_config->conf_client,
-					     &ind_config->config_listener_id);
+	g_signal_handler_disconnect (ind_config->settings,
+				     ind_config->config_listener_id);
+	ind_config->config_listener_id = 0;
 }

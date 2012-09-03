@@ -6,6 +6,6 @@ includedir=@includedir@
 Name: libmatekbd
 Description: MATE keyboard shared library
 Version: @VERSION@
-Requires: gmodule-export-2.0 gdk-2.0 >= @GDK_REQUIRED@ mateconf-2.0 >= @MATECONF_REQUIRED@ libxklavier >= @LIBXKLAVIER_REQUIRED@
+Requires: gmodule-export-2.0 gdk-2.0 >= @GDK_REQUIRED@ gio-2.0 >= @GIO_REQUIRED@ libxklavier >= @LIBXKLAVIER_REQUIRED@
 Libs: -L${libdir} -lmatekbd
 Cflags: -I${includedir}
