@@ -131,7 +131,7 @@ matekbd_desktop_config_init (MatekbdDesktopConfig * config,
 			  XklEngine * engine)
 {
 	memset (config, 0, sizeof (*config));
-	config->settings = g_settings_new (MATEKBD_CONFIG_SCHEMA);
+	config->settings = g_settings_new (MATEKBD_DESKTOP_CONFIG_SCHEMA);
 	config->engine = engine;
 }
 
