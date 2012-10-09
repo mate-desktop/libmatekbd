@@ -57,7 +57,7 @@ BUILT_SOURCES = matekbd-indicator-marshal.c \
         matekbd-keyboard-drawing-marshal.c            \
         matekbd-keyboard-drawing-marshal.h
 
-CLEANFILES = $(BUILT_SOURCES) $(schema_DATA)
+CLEANFILES = $(BUILT_SOURCES)
 
 matekbdincdir = $(includedir)/libmatekbd
 matekbdinc_HEADERS = \
@@ -71,14 +71,19 @@ matekbdinc_HEADERS = \
 
 @INTLTOOL_DESKTOP_RULE@
 
-@INTLTOOL_SCHEMAS_RULE@
-
 noinst_HEADERS = $(extra_nih) \
                  matekbd-config-private.h
 
+@INTLTOOL_XML_NOMERGE_RULE@
+gsettings_SCHEMAS = org.mate.peripherals-keyboard-xkb.gschema.xml
+@GSETTINGS_RULES@
+
+%.gschema.xml.in: %.gschema.xml.in.in Makefile
+	$(AM_V_GEN) $(SED) -e 's^\@datadir\@^$(datadir)^g' -e 's^\@GETTEXT_PACKAGE\@^$(GETTEXT_PACKAGE)^g' < $< > $@
+
 EXTRA_DIST = matekbd-indicator-marshal.list \
              matekbd-keyboard-drawing-marshal.list \
-             $(schema_in_files) $(ui_DATA)
+             $(gsettings_SCHEMAS) $(ui_DATA)
 
 GLIB_GENMARSHAL = $(shell pkg-config --variable=glib_genmarshal glib-2.0)
 
@@ -99,6 +104,3 @@ matekbd-keyboard-drawing-marshal.c: matekbd-keyboard-drawing-marshal.h
                             --body > matekbd-keyboard-drawing-marshal.tmp \
           && mv matekbd-keyboard-drawing-marshal.tmp matekbd-keyboard-drawing-marshal.c ) \
         || ( rm -f matekbd-keyboard-drawing-marshal.tmp && exit 1 )
-
-gsettings_SCHEMAS = org.mate.peripherals-keyboard-xkb.gschema.xml
-@GSETTINGS_RULES@
