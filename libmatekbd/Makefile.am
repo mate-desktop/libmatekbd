@@ -81,9 +81,12 @@ gsettings_SCHEMAS = org.mate.peripherals-keyboard-xkb.gschema.xml
 %.gschema.xml.in: %.gschema.xml.in.in Makefile
 	$(AM_V_GEN) $(SED) -e 's^\@datadir\@^$(datadir)^g' -e 's^\@GETTEXT_PACKAGE\@^$(GETTEXT_PACKAGE)^g' < $< > $@
 
+convertdir = $(datadir)/MateConf/gsettings
+convert_DATA = matekbd.convert
+
 EXTRA_DIST = matekbd-indicator-marshal.list \
              matekbd-keyboard-drawing-marshal.list \
-             $(gsettings_SCHEMAS) $(ui_DATA)
+             $(gsettings_SCHEMAS) $(convert_DATA) $(ui_DATA)
 
 GLIB_GENMARSHAL = $(shell pkg-config --variable=glib_genmarshal glib-2.0)
 
