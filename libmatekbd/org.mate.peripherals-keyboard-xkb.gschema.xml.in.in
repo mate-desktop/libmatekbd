@@ -1,11 +1,11 @@
 <schemalist gettext-domain="@GETTEXT_PACKAGE@">
-  <schema id="org.mate.peripherals-keyboard-xkb" path="/desktop/mate/peripherals/keyboard/">
+  <schema id="org.mate.peripherals-keyboard-xkb" path="/org/mate/desktop/peripherals/keyboard/">
     <child name="kbd" schema="org.mate.peripherals-keyboard-xkb.kbd"/>
     <child name="general" schema="org.mate.peripherals-keyboard-xkb.general"/>
     <child name="preview" schema="org.mate.peripherals-keyboard-xkb.preview"/>
     <child name="indicator" schema="org.mate.peripherals-keyboard-xkb.indicator"/>
   </schema>
-  <schema id="org.mate.peripherals-keyboard-xkb.kbd" path="/desktop/mate/peripherals/keyboard/kbd/">
+  <schema id="org.mate.peripherals-keyboard-xkb.kbd" path="/org/mate/desktop/peripherals/keyboard/kbd/">
     <key name="model" type="s">
       <default>''</default>
       <_summary>Keyboard model</_summary>
@@ -22,7 +22,7 @@
       <_description>Keyboard options</_description>
     </key>
   </schema>
-  <schema id="org.mate.peripherals-keyboard-xkb.general" path="/desktop/mate/peripherals/keyboard/general/">
+  <schema id="org.mate.peripherals-keyboard-xkb.general" path="/org/mate/desktop/peripherals/keyboard/general/">
     <key name="update-handlers" type="as">
       <default>[]</default>
       <_summary>Keyboard Update Handlers</_summary>
@@ -64,7 +64,7 @@
       <_description>Suppress the "X sysconfig changed" warning message</_description>
     </key>
   </schema>
-  <schema id="org.mate.peripherals-keyboard-xkb.preview" path="/desktop/mate/peripherals/keyboard/preview/">
+  <schema id="org.mate.peripherals-keyboard-xkb.preview" path="/org/mate/desktop/peripherals/keyboard/preview/">
     <key name="x" type="i">
       <default>-1</default>
       <_summary>The Keyboard Preview, X offset</_summary>
@@ -86,7 +86,7 @@
       <_description>The Keyboard Preview, height</_description>
     </key>
   </schema>
-  <schema id="org.mate.peripherals-keyboard-xkb.indicator" path="/desktop/mate/peripherals/keyboard/indicator/">
+  <schema id="org.mate.peripherals-keyboard-xkb.indicator" path="/org/mate/desktop/peripherals/keyboard/indicator/">
     <key name="secondary" type="i">
       <default>0</default>
       <_summary>Secondary groups</_summary>
