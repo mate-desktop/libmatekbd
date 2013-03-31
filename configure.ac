@@ -2,11 +2,11 @@ dnl ***************************************************************************
 dnl *** configure.in for libmatekbd                                        ***
 dnl ***************************************************************************
 m4_define([libmatekbd_major_version], [1])
-m4_define([libmatekbd_minor_version], [5])
-m4_define([libmatekbd_micro_version], [1])
+m4_define([libmatekbd_minor_version], [6])
+m4_define([libmatekbd_micro_version], [0])
 m4_define([libmatekbd_version],[libmatekbd_major_version.libmatekbd_minor_version.libmatekbd_micro_version])
 
-AC_INIT([libmatekbd], [libmatekbd_version], [https://github.com/perberos/mate-desktop-environment])
+AC_INIT([libmatekbd], [libmatekbd_version], [https://github.com/mate-desktop/libmatekbd])
 AC_PREREQ(2.59)
 
 VERSION_INFO=6:0:2
