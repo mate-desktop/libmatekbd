@@ -49,6 +49,11 @@ main (int argc, char **argv)
 
 	icon = matekbd_status_new ();
 
+        if (icon == NULL)
+	{
+		return 1;
+	}
+
 	gtk_main ();
 
 	return 0;

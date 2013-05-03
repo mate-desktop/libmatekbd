@@ -472,10 +472,10 @@ matekbd_status_load_group_names (const gchar ** layout_ids,
 
 		if (xkl_engine_get_features (globals.engine) &
 		    XKLF_MULTIPLE_LAYOUTS_SUPPORTED) {
-			GSList *lst = globals.kbd_cfg.layouts_variants;
-			for (i = 0; lst; lst = lst->next, i++) {
+			gchar **lst = globals.kbd_cfg.layouts_variants;
+			for (i = 0; *lst; lst++, i++) {
 				globals.full_group_names[i] =
-				    g_strdup ((char *) lst->data);
+				    g_strdup ((char *) *lst);
 			}
 		} else {
 			for (i = total_groups; --i >= 0;) {
