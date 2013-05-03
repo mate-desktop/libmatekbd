@@ -202,12 +202,6 @@ matekbd_indicator_fill (MatekbdIndicator * gki)
 
 	for (grp = 0; grp < total_groups; grp++) {
 		GtkWidget *page;
-#if 0
-		gchar *full_group_name =
-		    (grp <
-		     g_strv_length (globals.full_group_names)) ?
-		    globals.full_group_names[grp] : "?";
-#endif
 		page = matekbd_indicator_prepare_drawing (gki, grp);
 
 		if (page == NULL)
