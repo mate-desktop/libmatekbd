@@ -86,7 +86,9 @@ convert_DATA = matekbd.convert
 
 EXTRA_DIST = matekbd-indicator-marshal.list \
              matekbd-keyboard-drawing-marshal.list \
-             $(gsettings_SCHEMAS) $(convert_DATA) $(ui_DATA)
+             $(gsettings_SCHEMAS).in.in $(convert_DATA) $(ui_DATA)
+
+DISTCLEANFILES = $(gsettings_SCHEMAS).in $(gsettings_SCHEMAS)
 
 GLIB_GENMARSHAL = $(shell pkg-config --variable=glib_genmarshal glib-2.0)
 
