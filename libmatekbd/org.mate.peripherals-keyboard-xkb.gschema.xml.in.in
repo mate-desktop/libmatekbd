@@ -63,12 +63,12 @@
       <_summary>Suppress the "X sysconfig changed" warning message</_summary>
       <_description>Suppress the "X sysconfig changed" warning message</_description>
     </key>
-    <key name="disable-indicator" type="b>
+    <key name="disable-indicator" type="b">
       <default>false</default>
       <_summary>Allow to disable the keyboard indicator tray icon</_summary>
       <_description>Allow to disable the keyboard indicator tray icon</_description>
     </key>
-    <key name="duplicate-leds" type="b>
+    <key name="duplicate-leds" type="b">
       <default>false</default>
       <_summary>Show keyboard leds indicator</_summary>
       <_description>Show keyboard leds indicator</_description>
