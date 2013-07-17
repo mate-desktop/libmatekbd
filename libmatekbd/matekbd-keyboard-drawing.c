@@ -21,6 +21,9 @@
 #include <gtk/gtk.h>
 #include <gdk/gdkx.h>
 #include <gdk/gdkkeysyms.h>
+#if GTK_CHECK_VERSION (3, 0, 0)
+#include <gdk/gdkkeysyms-compat.h>
+#endif
 #include <X11/XKBlib.h>
 #include <X11/extensions/XKBgeom.h>
 #include <stdlib.h>
@@ -1301,10 +1304,22 @@ static gboolean
 create_cairo (MatekbdKeyboardDrawing * drawing)
 {
 	GtkStateType state;
-	if (drawing == NULL || drawing->pixmap == NULL)
+	if (drawing == NULL)
 		return FALSE;
+#if GTK_CHECK_VERSION (3, 0, 0)
+	if (drawing->surface == NULL)
+		return FALSE;
+#else
+	if (drawing->pixmap == NULL)
+		return FALSE;
+#endif
+
 	drawing->renderContext->cr =
+#if GTK_CHECK_VERSION (3, 0, 0)
+	    cairo_create (drawing->surface);
+#else
 	    gdk_cairo_create (GDK_DRAWABLE (drawing->pixmap));
+#endif
 
 	state = gtk_widget_get_state (GTK_WIDGET (drawing));
 	drawing->renderContext->dark_color =
@@ -1332,9 +1347,15 @@ draw_keyboard (MatekbdKeyboardDrawing * drawing)
 
 	gtk_widget_get_allocation (GTK_WIDGET (drawing), &allocation);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	drawing->surface =
+	    gdk_window_create_similar_surface (gtk_widget_get_window (GTK_WIDGET (drawing)),
+	                                       CAIRO_CONTENT_COLOR, allocation.width, allocation.height);
+#else
 	drawing->pixmap =
 	    gdk_pixmap_new (gtk_widget_get_window (GTK_WIDGET (drawing)),
 			    allocation.width, allocation.height, -1);
+#endif
 
 	if (create_cairo (drawing)) {
 	        /* blank background */
@@ -1381,17 +1402,33 @@ free_render_context (MatekbdKeyboardDrawing * drawing)
 
 static gboolean
 expose_event (GtkWidget * widget,
-	      GdkEventExpose * event, MatekbdKeyboardDrawing * drawing)
+#if GTK_CHECK_VERSION (3, 0, 0)
+	      cairo_t *cr,
+#else
+	      GdkEventExpose * event,
+#endif
+	      MatekbdKeyboardDrawing * drawing)
 {
 	GtkAllocation allocation;
+
+#if !GTK_CHECK_VERSION (3, 0, 0)
         cairo_t *cr;
+#endif
 
 	if (!drawing->xkb)
 		return FALSE;
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	if (drawing->surface == NULL)
+#else
 	if (drawing->pixmap == NULL)
+#endif
 		return FALSE;
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+        cairo_set_source_surface (cr, drawing->surface, 0, 0);
+        cairo_paint (cr);
+#else
         cr = gdk_cairo_create (event->window);
         gdk_cairo_region (cr, event->region);
         cairo_clip (cr);
@@ -1400,13 +1437,22 @@ expose_event (GtkWidget * widget,
         cairo_paint (cr);
 
         cairo_destroy (cr);
+#endif
 
 	if (gtk_widget_has_focus (widget)) {
 		gtk_widget_get_allocation (widget, &allocation);
 		gtk_paint_focus (gtk_widget_get_style (widget),
+#if GTK_CHECK_VERSION (3, 0, 0)
+				 cr,
+#else
 				 gtk_widget_get_window (widget),
+#endif
 				 gtk_widget_get_state (widget),
+#if GTK_CHECK_VERSION (3, 0, 0)
+				 widget, "keyboard-drawing",
+#else
 				 &event->area, widget, "keyboard-drawing",
+#endif
 				 0, 0, allocation.width,
 				 allocation.height);
 	}
@@ -1469,10 +1515,17 @@ size_allocate (GtkWidget * widget,
 {
 	MatekbdKeyboardDrawingRenderContext *context = drawing->renderContext;
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	if (drawing->surface) {
+		cairo_surface_destroy (drawing->surface);
+		drawing->surface = NULL;
+	}
+#else
 	if (drawing->pixmap) {
 		g_object_unref (drawing->pixmap);
 		drawing->pixmap = NULL;
 	}
+#endif
 
 	if (!context_setup_scaling (context, drawing,
 				    allocation->width, allocation->height,
@@ -1973,7 +2026,13 @@ destroy (MatekbdKeyboardDrawing * drawing)
 		drawing->idle_redraw = 0;
 	}
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	if (drawing->surface != NULL) {
+		cairo_surface_destroy (drawing->surface);
+	}
+#else
 	g_object_unref (drawing->pixmap);
+#endif
 }
 
 static void
@@ -2010,7 +2069,11 @@ matekbd_keyboard_drawing_init (MatekbdKeyboardDrawing * drawing)
 		drawing->screen_num =
 		    gdk_screen_get_number (gdk_screen_get_default ());
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	drawing->surface = NULL;
+#else
 	drawing->pixmap = NULL;
+#endif
 	alloc_render_context (drawing);
 
 	drawing->keyboard_items = NULL;
@@ -2071,7 +2134,11 @@ matekbd_keyboard_drawing_init (MatekbdKeyboardDrawing * drawing)
 			       GDK_EXPOSURE_MASK | GDK_KEY_PRESS_MASK |
 			       GDK_KEY_RELEASE_MASK | GDK_BUTTON_PRESS_MASK
 			       | GDK_FOCUS_CHANGE_MASK);
+#if GTK_CHECK_VERSION (3, 0, 0)
+	g_signal_connect (G_OBJECT (drawing), "draw",
+#else
 	g_signal_connect (G_OBJECT (drawing), "expose-event",
+#endif
 			  G_CALLBACK (expose_event), drawing);
 	g_signal_connect_after (G_OBJECT (drawing), "key-press-event",
 				G_CALLBACK (key_event), drawing);
@@ -2154,24 +2221,6 @@ matekbd_keyboard_drawing_set_mods (MatekbdKeyboardDrawing * drawing, guint mods)
 		drawing->mods = mods;
 		gtk_widget_queue_draw (GTK_WIDGET (drawing));
 	}
-}
-
-/* returns a pixbuf with the keyboard drawing at the current pixel size
- * (which can then be saved to disk, etc) */
-GdkPixbuf *
-matekbd_keyboard_drawing_get_pixbuf (MatekbdKeyboardDrawing * drawing)
-{
-	MatekbdKeyboardDrawingRenderContext *context = drawing->renderContext;
-
-	if (drawing->pixmap == NULL)
-		draw_keyboard (drawing);
-
-	return gdk_pixbuf_get_from_drawable (NULL, drawing->pixmap, NULL,
-					     0, 0, 0, 0,
-					     xkb_to_pixmap_coord (context,
-								  drawing->xkb->geom->width_mm),
-					     xkb_to_pixmap_coord (context,
-								  drawing->xkb->geom->height_mm));
 }
 
 /**
@@ -2417,7 +2466,7 @@ matekbd_keyboard_drawing_draw_page (GtkPrintOperation * operation,
 	gdouble dpi_y = gtk_print_context_get_dpi_y (context);
 	gchar *header;
 
-	gtk_print_operation_set_unit (operation, GTK_PIXELS);
+	gtk_print_operation_set_unit (operation, GTK_UNIT_PIXEL);
 
 	header = g_strdup_printf
 	    (_("Keyboard layout \"%s\"\n"

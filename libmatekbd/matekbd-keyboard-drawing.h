@@ -125,7 +125,11 @@ struct _MatekbdKeyboardDrawing {
 
 	GtkDrawingArea parent;
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	cairo_surface_t *surface;
+#else
 	GdkPixmap *pixmap;
+#endif
 	XkbDescRec *xkb;
 	gboolean xkbOnDisplay;
 	guint l3mod;
@@ -171,8 +175,6 @@ struct _MatekbdKeyboardDrawingClass {
 GType matekbd_keyboard_drawing_get_type (void);
 GtkWidget *matekbd_keyboard_drawing_new (void);
 
-GdkPixbuf *matekbd_keyboard_drawing_get_pixbuf (MatekbdKeyboardDrawing *
-					     kbdrawing);
 gboolean matekbd_keyboard_drawing_render (MatekbdKeyboardDrawing * kbdrawing,
 				       cairo_t * cr,
 				       PangoLayout * layout,

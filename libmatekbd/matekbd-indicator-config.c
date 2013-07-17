@@ -172,7 +172,11 @@ matekbd_indicator_config_get_images_file (MatekbdIndicatorConfig *
 	if (icon_info != NULL) {
 		image_file =
 		    g_strdup (gtk_icon_info_get_filename (icon_info));
+#if GTK_CHECK_VERSION (3, 8, 0)
+		g_object_unref (icon_info);
+#else
 		gtk_icon_info_free (icon_info);
+#endif
 	}
 
 	return image_file;
