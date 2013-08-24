@@ -43,7 +43,6 @@
 const gchar MATEKBD_INDICATOR_CONFIG_KEY_SHOW_FLAGS[] = "show-flags";
 const gchar MATEKBD_INDICATOR_CONFIG_KEY_SECONDARIES[] = "secondary";
 const gchar MATEKBD_INDICATOR_CONFIG_KEY_FONT_FAMILY[] = "font-family";
-const gchar MATEKBD_INDICATOR_CONFIG_KEY_FONT_SIZE[] = "font-size";
 const gchar MATEKBD_INDICATOR_CONFIG_KEY_FOREGROUND_COLOR[] = "foreground-color";
 const gchar MATEKBD_INDICATOR_CONFIG_KEY_BACKGROUND_COLOR[] = "background-color";
 
@@ -60,10 +59,6 @@ matekbd_indicator_config_load_font (MatekbdIndicatorConfig * ind_config)
 	    g_settings_get_string (ind_config->settings,
 				   MATEKBD_INDICATOR_CONFIG_KEY_FONT_FAMILY);
 
-	ind_config->font_size =
-	    g_settings_get_int (ind_config->settings,
-				  MATEKBD_INDICATOR_CONFIG_KEY_FONT_SIZE);
-
 	if (ind_config->font_family == NULL ||
 	    ind_config->font_family[0] == '\0') {
 		PangoFontDescription *fd = NULL;
@@ -76,15 +71,10 @@ matekbd_indicator_config_load_font (MatekbdIndicatorConfig * ind_config)
 			fd = style->font_desc;
 		if (fd != NULL) {
 			ind_config->font_family =
-			    g_strdup (pango_font_description_get_family
-				      (fd));
-			ind_config->font_size =
-			    pango_font_description_get_size (fd) /
-			    PANGO_SCALE;
+			    g_strdup (pango_font_description_to_string(fd));
 		}
 	}
-	xkl_debug (150, "font: [%s], size %d\n", ind_config->font_family,
-		   ind_config->font_size);
+	xkl_debug (150, "font: [%s]\n", ind_config->font_family);
 
 }
 
