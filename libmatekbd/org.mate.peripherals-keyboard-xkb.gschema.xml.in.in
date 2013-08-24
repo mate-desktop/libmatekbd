@@ -107,23 +107,18 @@
     </key>
     <key name="font-family" type="s">
       <default>''</default>
-      <_summary>The font family</_summary>
-      <_description>The font family for the layout indicator</_description>
-    </key>
-    <key name="font-size" type="i">
-      <default>10</default>
-      <_summary>The font size</_summary>
-      <_description>The font size for the layout indicator</_description>
+      <_summary>The font</_summary>
+      <_description>The font for the layout indicator. This should be in "[FAMILY-LIST] [STYLE-OPTIONS] [SIZE]" format.</_description>
     </key>
     <key name="foreground-color" type="s">
       <default>''</default>
       <_summary>The foreground color</_summary>
-      <_description>The foreground color for the layout indicator</_description>
+      <_description>The foreground color for the layout indicator. This should be in "R G B" format, for example "255 0 0".</_description>
     </key>
     <key name="background-color" type="s">
       <default>''</default>
       <_summary>The background color</_summary>
-      <_description>The background color for the layout indicator</_description>
+      <_description>The background color for the layout indicator. This should be in "R G B" format, for example "255 0 0".</_description>
     </key>
   </schema>
 </schemalist>
