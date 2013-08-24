@@ -23,6 +23,5 @@ height = /desktop/mate/peripherals/keyboard/preview/height
 secondary = /desktop/mate/peripherals/keyboard/indicator/secondary
 show-flags = /desktop/mate/peripherals/keyboard/indicator/showFlags
 font-family = /desktop/mate/peripherals/keyboard/indicator/fontFamily
-font-size = /desktop/mate/peripherals/keyboard/indicator/fontSize
 foreground-color = /desktop/mate/peripherals/keyboard/indicator/foregroundColor
 background-color = /desktop/mate/peripherals/keyboard/indicator/backgroundColor

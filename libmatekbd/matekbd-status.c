@@ -183,22 +183,6 @@ matekbd_status_render_cairo (cairo_t * cr, int group)
 		}
 	}
 
-	if (globals.ind_cfg.font_family != NULL &&
-	    globals.ind_cfg.font_family[0] != 0) {
-		cairo_select_font_face (cr, globals.ind_cfg.font_family,
-					CAIRO_FONT_SLANT_NORMAL,
-					CAIRO_FONT_WEIGHT_NORMAL);
-	}
-
-	pfd = pango_font_description_new ();
-	pango_font_description_set_family (pfd,
-					   globals.ind_cfg.font_family);
-	pango_font_description_set_style (pfd, PANGO_STYLE_NORMAL);
-	pango_font_description_set_weight (pfd, PANGO_WEIGHT_NORMAL);
-	pango_font_description_set_size (pfd,
-					 globals.ind_cfg.font_size *
-					 PANGO_SCALE);
-
 	pcc = pango_cairo_create_context (cr);
 
 	fo = cairo_font_options_copy (gdk_screen_get_font_options
@@ -229,6 +213,8 @@ matekbd_status_render_cairo (cairo_t * cr, int group)
 	pango_layout_set_text (pl, lbl_title, -1);
 
 	g_free (lbl_title);
+
+	pfd = pango_font_description_from_string (globals.ind_cfg.font_family);
 
 	pango_layout_set_font_description (pl, pfd);
 	pango_layout_get_size (pl, &lwidth, &lheight);

@@ -32,7 +32,6 @@ typedef struct _MatekbdIndicatorConfig {
 	gboolean show_flags;
 
 	gchar *font_family;
-	int font_size;
 	gchar *foreground_color;
 	gchar *background_color;
 
