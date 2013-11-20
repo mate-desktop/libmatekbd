@@ -52,6 +52,14 @@ static guint matekbd_keyboard_drawing_signals[NUM_SIGNALS] = { 0 };
 static void matekbd_keyboard_drawing_set_mods (MatekbdKeyboardDrawing * drawing,
 					    guint mods);
 
+extern gboolean xkl_xkb_config_native_prepare (XklEngine * engine,
+					      const XklConfigRec * data,
+					      gpointer component_names);
+
+extern void xkl_xkb_config_native_cleanup (XklEngine * engine,
+					  gpointer component_names);
+
+
 static gint
 xkb_to_pixmap_coord (MatekbdKeyboardDrawingRenderContext * context, gint n)
 {
