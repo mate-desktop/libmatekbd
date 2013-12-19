@@ -44,8 +44,8 @@ typedef struct _MatekbdIndicatorConfig {
 } MatekbdIndicatorConfig;
 
 /**
- * MatekbdIndicatorConfig functions - 
- * some of them require MatekbdKeyboardConfig as well - 
+ * MatekbdIndicatorConfig functions -
+ * some of them require MatekbdKeyboardConfig as well -
  * for loading approptiate images
  */
 extern void matekbd_indicator_config_init (MatekbdIndicatorConfig *

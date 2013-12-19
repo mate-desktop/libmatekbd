@@ -10,7 +10,7 @@ DISTCLEANFILES = \
   intltool-extract \
   intltool-merge \
   intltool-update
- 
+
 EXTRA_DIST = \
         libmatekbd.pc.in \
         libmatekbdui.pc.in \

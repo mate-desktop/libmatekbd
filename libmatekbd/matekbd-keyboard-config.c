@@ -590,7 +590,7 @@ matekbd_keyboard_config_model_set (MatekbdKeyboardConfig * kbd_config,
 
 void
 matekbd_keyboard_config_options_set (MatekbdKeyboardConfig * kbd_config,
-				  gint idx, 
+				  gint idx,
 				  const gchar * group_name,
 				  const gchar * option_name)
 {

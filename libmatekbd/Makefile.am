@@ -13,7 +13,7 @@ common_CFLAGS = \
 	-DG_LOG_DOMAIN=\"MateKbdIndicator\"		\
 	-DDATADIR=\"$(datadir)\"			\
 	-DSYSCONFDIR=\"$(sysconfdir)\"			\
-	-DLIBDIR=\"$(libdir)\"				
+	-DLIBDIR=\"$(libdir)\"
 
 libmatekbd_la_CFLAGS = $(common_CFLAGS)
 
@@ -103,7 +103,7 @@ matekbd-keyboard-drawing-marshal.h: matekbd-keyboard-drawing-marshal.list
                             --header > matekbd-keyboard-drawing-marshal.tmp \
           && mv matekbd-keyboard-drawing-marshal.tmp matekbd-keyboard-drawing-marshal.h ) \
         || ( rm -f matekbd-keyboard-drawing-marshal.tmp && exit 1 )
- 
+
 matekbd-keyboard-drawing-marshal.c: matekbd-keyboard-drawing-marshal.h
 	$(AM_V_GEN)( $(GLIB_GENMARSHAL) --prefix=matekbd_keyboard_drawing $(srcdir)/matekbd-keyboard-drawing-marshal.list \
                             --body > matekbd-keyboard-drawing-marshal.tmp \
