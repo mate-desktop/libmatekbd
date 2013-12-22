@@ -111,9 +111,9 @@ extern gchar *matekbd_keyboard_config_to_string (const MatekbdKeyboardConfig *
 					      config);
 
 extern gchar
-    **matekbd_keyboard_config_add_default_switch_option_if_necessary (gchar ** 
+    **matekbd_keyboard_config_add_default_switch_option_if_necessary (gchar **
 								  layouts_list,
-								  gchar ** 
+								  gchar **
 								  options_list,
 								  gboolean
 								  *

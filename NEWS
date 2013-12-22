@@ -23,7 +23,7 @@ GNOME
 2.31.1:
 	A number of translations updated.
 	Several crashers fixed.
-	Provided API for handling the default group switcher. Changed the 
+	Provided API for handling the default group switcher. Changed the
 	default value to be "grp:shift_caps_toggle".
 
 2.30.0:
@@ -81,16 +81,16 @@ GNOME
 	Keyboard drawing printing functions moved to libmatekbd, from g-c-c
 
 2.21.4:
-	Render keyboard to cairo, making printing possible. 
-	Build tests optionally. 
+	Render keyboard to cairo, making printing possible.
+	Build tests optionally.
 	Use GOption instead of popt.
 	Cygwin build fixes
 
 2.21.1:
-	Updated scheme translation of base.xml in xkeyboard config causes a 
-	chain of changes upstack. Stupid and overenginered dbus client-server 
+	Updated scheme translation of base.xml in xkeyboard config causes a
+	chain of changes upstack. Stupid and overenginered dbus client-server
 	is gone!
-	There is no API breakage - but libxklavier and xkeyboard-config from 
+	There is no API breakage - but libxklavier and xkeyboard-config from
 	CVS are recommended: otherwise the translation would not work.
 	Some rendering fixes in MatekbdKeyboardDrawing widget
 
