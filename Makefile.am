@@ -4,7 +4,7 @@ endif
 
 SUBDIRS = libmatekbd $(TEST) po
 
-ACLOCAL_AMFLAGS = -I m4
+ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
 DISTCLEANFILES = \
   intltool-extract \
