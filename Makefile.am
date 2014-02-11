@@ -12,6 +12,7 @@ DISTCLEANFILES = \
   intltool-update
 
 EXTRA_DIST = \
+        autogen.sh \
         libmatekbd.pc.in \
         libmatekbdui.pc.in \
         intltool-extract.in \
