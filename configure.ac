@@ -3,7 +3,7 @@ dnl *** configure.in for libmatekbd                                        ***
 dnl ***************************************************************************
 m4_define([libmatekbd_major_version], [1])
 m4_define([libmatekbd_minor_version], [7])
-m4_define([libmatekbd_micro_version], [2])
+m4_define([libmatekbd_micro_version], [90])
 m4_define([libmatekbd_version],[libmatekbd_major_version.libmatekbd_minor_version.libmatekbd_micro_version])
 
 AC_INIT([libmatekbd], [libmatekbd_version], [https://github.com/mate-desktop/libmatekbd])
