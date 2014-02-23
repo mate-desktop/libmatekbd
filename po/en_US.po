@@ -3,31 +3,29 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Fábio Nogueira <deb-user-ba@ubuntu.com>, 2008
-# Pygmalion, 2014
-# Washington Lins <washington-lins@uol.com.br>, 2007
+# cpatrick08 <cpatrick08@rocketmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-06-29 12:49+0200\n"
-"PO-Revision-Date: 2014-02-20 21:30+0000\n"
-"Last-Translator: Pygmalion\n"
-"Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/MATE/language/pt_BR/)\n"
+"PO-Revision-Date: 2014-02-20 21:32+0000\n"
+"Last-Translator: cpatrick08 <cpatrick08@rocketmail.com>\n"
+"Language-Team: English (United States) (http://www.transifex.com/projects/p/MATE/language/en_US/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../libmatekbd/matekbd-indicator.c:120 ../libmatekbd/matekbd-status.c:323
 #, c-format
 msgid "There was an error loading an image: %s"
-msgstr "Houve um erro ao carregar uma imagem: %s"
+msgstr "There was an error loading an image: %s"
 
 #: ../libmatekbd/matekbd-indicator.c:729 ../libmatekbd/matekbd-status.c:656
 msgid "XKB initialization error"
-msgstr "Erro de inicialização do XKB"
+msgstr "XKB initialization error"
 
 #: ../libmatekbd/matekbd-keyboard-drawing.c:2423
 #, c-format
@@ -35,257 +33,257 @@ msgid ""
 "Keyboard layout \"%s\"\n"
 "Copyright &#169; X.Org Foundation and XKeyboardConfig contributors\n"
 "For licensing see package metadata"
-msgstr "Disposição de teclado \"%s\"\nCopyright &#169; X.Org Foundation e colaboradores do XKeyboardConfig\nPara a licença, veja os metadados do pacote"
+msgstr "Keyboard layout \"%s\"\nCopyright &#169; X.Org Foundation and XKeyboardConfig contributors\nFor licensing see package metadata"
 
 #: ../libmatekbd/matekbd-keyboard-drawing.c:2510
 msgid "Unknown"
-msgstr "Desconhecido"
+msgstr "Unknown"
 
 #: ../libmatekbd/matekbd-keyboard-drawing.c:2555
 #, c-format
 msgid "Keyboard Layout \"%s\""
-msgstr "Disposição de teclado \"%s\""
+msgstr "Keyboard Layout \"%s\""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:757
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
-msgstr[0] "disposição \"%s\""
-msgstr[1] "disposições \"%s\""
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:776
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
-msgstr[0] "opção \"%s\""
-msgstr[1] "opções \"%s\""
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:784
 #, c-format
 msgid "model \"%s\", %s and %s"
-msgstr "modelo \"%s\", %s e %s"
+msgstr "model \"%s\", %s and %s"
 
 #: ../libmatekbd/matekbd-keyboard-config.c:785
 msgid "no layout"
-msgstr "sem disposição"
+msgstr "no layout"
 
 #: ../libmatekbd/matekbd-keyboard-config.c:786
 msgid "no options"
-msgstr "sem opções"
+msgstr "no options"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:1
 msgid "Keyboard model"
-msgstr "Modelo do teclado"
+msgstr "Keyboard model"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:2
 msgid "keyboard model"
-msgstr "modelo do teclado"
+msgstr "keyboard model"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:3
 msgid "Keyboard layout"
-msgstr "Disposição do teclado"
+msgstr "Keyboard layout"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:4
 msgid "keyboard layout"
-msgstr "disposição do teclado"
+msgstr "keyboard layout"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:5
 msgid "Keyboard options"
-msgstr "Opções do teclado"
+msgstr "Keyboard options"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:6
 msgid "Keyboard Update Handlers"
-msgstr "Manipuladores de Atualização do Teclado"
+msgstr "Keyboard Update Handlers"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:7
 msgid ""
 "A collection of scripts to run whenever the keyboard state is reloaded. "
 "Useful for re-applying xmodmap based adjustments"
-msgstr "Uma coleção de scripts para executar quando o estado do teclado for recarregado. Útil para reaplicar ajustes baseados no xmodmap"
+msgstr "A collection of scripts to run whenever the keyboard state is reloaded. Useful for re-applying xmodmap based adjustments"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:8
 msgid "modmap file list"
-msgstr "lista de arquivos modmap"
+msgstr "modmap file list"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:9
 msgid "A list of modmap files available in the $HOME directory."
-msgstr "Uma lista de arquivos modmap disponíveis no diretório $HOME."
+msgstr "A list of modmap files available in the $HOME directory."
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:10
 msgid "Default group, assigned on window creation"
-msgstr "Grupo padrão, designado durante a criação da janela"
+msgstr "Default group, assigned on window creation"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:11
 msgid "Keep and manage separate group per window"
-msgstr "Manter e gerenciar grupo separado por janela"
+msgstr "Keep and manage separate group per window"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:12
 msgid "Save/restore indicators together with layout groups"
-msgstr "Salvar/restaurar indicadores com grupos de disposição"
+msgstr "Save/restore indicators together with layout groups"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:13
 msgid "Show layout names instead of group names"
-msgstr "Mostrar nomes de disposição em vez de grupos"
+msgstr "Show layout names instead of group names"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:14
 msgid ""
 "Show layout names instead of group names (only for versions of XFree "
 "supporting multiple layouts)"
-msgstr "Mostra nomes de disposição (\"layout\") em vez de nomes de grupo (apenas para versões do XFree com suporte a múltiplas disposições)"
+msgstr "Show layout names instead of group names (only for versions of XFree supporting multiple layouts)"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:15
 msgid "Load extra configuration items"
-msgstr "Carregar itens de configuração extra"
+msgstr "Load extra configuration items"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:16
 msgid "Load exotic, rarely used layouts and options"
-msgstr "Carregar opções e disposições exóticas, raramente usadas"
+msgstr "Load exotic, rarely used layouts and options"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:17
 msgid "Suppress the \"X sysconfig changed\" warning message"
-msgstr "Suprimir a mensagem de aviso \"sysconfig do X mudou\""
+msgstr "Suppress the \"X sysconfig changed\" warning message"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:18
 msgid "The Keyboard Preview, X offset"
-msgstr "Visualização do Teclado, deslocamento X"
+msgstr "The Keyboard Preview, X offset"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:19
 msgid "The Keyboard Preview, Y offset"
-msgstr "Visualização do Teclado, deslocamento Y"
+msgstr "The Keyboard Preview, Y offset"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:20
 msgid "The Keyboard Preview, width"
-msgstr "Visualização do Teclado, largura"
+msgstr "The Keyboard Preview, width"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:21
 msgid "The Keyboard Preview, height"
-msgstr "Visualização do Teclado, altura"
+msgstr "The Keyboard Preview, height"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:22
 msgid "Secondary groups"
-msgstr "Grupos secundários"
+msgstr "Secondary groups"
 
 #. TRANSLATORS: real national flags
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:24
 msgid "Show flags in the applet"
-msgstr "Mostrar bandeiras no miniaplicativo"
+msgstr "Show flags in the applet"
 
 #. TRANSLATORS: real national flags
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:26
 msgid "Show flags in the applet to indicate the current layout"
-msgstr "Mostrar bandeiras no miniaplicativo para indicar a disposição atual"
+msgstr "Show flags in the applet to indicate the current layout"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:27
 msgid "The font family"
-msgstr "A família da fonte"
+msgstr "The font family"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:28
 msgid "The font family for the layout indicator"
-msgstr "A família da fonte para o indicador de disposição"
+msgstr "The font family for the layout indicator"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:29
 msgid "The font size"
-msgstr "O tamanho da fonte"
+msgstr "The font size"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:30
 msgid "The font size for the layout indicator"
-msgstr "O tamanho da fonte para o indicador de disposição"
+msgstr "The font size for the layout indicator"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:31
 msgid "The foreground color"
-msgstr "A cor do primeiro plano"
+msgstr "The foreground color"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:32
 msgid "The foreground color for the layout indicator"
-msgstr "A cor do primeiro plano para o indicador de disposição"
+msgstr "The foreground color for the layout indicator"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:33
 msgid "The background color"
-msgstr "A cor do plano de fundo"
+msgstr "The background color"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:34
 msgid "The background color for the layout indicator"
-msgstr "A cor do plano de fundo para o indicador de disposição"
+msgstr "The background color for the layout indicator"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:35
 msgid "The list of enabled Keyboard Indicator plugins"
-msgstr "A lista de plug-ins Indicadores de Teclado habilitados"
+msgstr "The list of enabled Keyboard Indicator plugins"
 
 #: ../libmatekbd/show-layout.ui.h:1
 msgid "Keyboard Layout"
-msgstr "Disposição do Teclado"
+msgstr "Keyboard Layout"
 
 #: ../capplet/matekbd-indicator-plugins.ui.h:1
 msgid "Keyboard Indicator Plugins"
-msgstr "Plug-ins Indicadores de Teclado"
+msgstr "Keyboard Indicator Plugins"
 
 #: ../capplet/matekbd-indicator-plugins.ui.h:2
 msgid "Active _plugins:"
-msgstr "_Plug-ins ativos:"
+msgstr "Active _plugins:"
 
 #: ../capplet/matekbd-indicator-plugins.ui.h:3
 msgid "The list of active plugins"
-msgstr "A lista de plug-ins ativos"
+msgstr "The list of active plugins"
 
 #: ../capplet/matekbd-indicator-plugins.ui.h:4
 msgid "Activate more plugins"
-msgstr "Ativar mais plug-ins"
+msgstr "Activate more plugins"
 
 #: ../capplet/matekbd-indicator-plugins.ui.h:5
 msgid "Deactivate selected plugin"
-msgstr "Desativar o plug-in selecionado"
+msgstr "Deactivate selected plugin"
 
 #: ../capplet/matekbd-indicator-plugins.ui.h:6
 msgid "Increase the plugin priority"
-msgstr "Aumentar a prioridade do plug-in"
+msgstr "Increase the plugin priority"
 
 #: ../capplet/matekbd-indicator-plugins.ui.h:7
 msgid "Decrease the plugin priority"
-msgstr "Diminuir a prioridade do plug-in"
+msgstr "Decrease the plugin priority"
 
 #: ../capplet/matekbd-indicator-plugins.ui.h:8
 msgid "Configure the selected plugin"
-msgstr "Configurar o plug-in selecionado"
+msgstr "Configure the selected plugin"
 
 #: ../capplet/matekbd-indicator-plugins.ui.h:9
 msgid "Close the dialog"
-msgstr "Fechar a caixa de diálogo"
+msgstr "Close the dialog"
 
 #: ../capplet/matekbd-indicator-plugins_add.ui.h:1
 msgid "Add Plugin"
-msgstr "Adicionar Plug-in"
+msgstr "Add Plugin"
 
 #: ../capplet/matekbd-indicator-plugins_add.ui.h:2
 msgid "_Available plugins:"
-msgstr "Plug-ins _disponíveis:"
+msgstr "_Available plugins:"
 
 #: ../capplet/matekbd-indicator-plugins-capplet.c:118
 #: ../capplet/matekbd-indicator-plugins-add.c:106
 msgid "No description."
-msgstr "Sem descrição."
+msgstr "No description."
 
 #: ../capplet/matekbd-indicator-plugins-capplet.c:256
 msgid "Unable to open help file"
-msgstr "Não foi possível abrir arquivo de ajuda"
+msgstr "Unable to open help file"
 
 #: ../capplet/matekbd-indicator-plugins-capplet.c:379
 #, c-format
 msgid "Failed to init MateConf: %s\n"
-msgstr "Falha ao iniciar MateConf: %s\n"
+msgstr "Failed to init MateConf: %s\n"
 
 #: ../capplet/matekbd-indicator-plugins-capplet.desktop.in.in.h:1
 msgid "Keyboard Indicator plugins"
-msgstr "Plug-ins Indicadores de Teclado"
+msgstr "Keyboard Indicator plugins"
 
 #: ../capplet/matekbd-indicator-plugins-capplet.desktop.in.in.h:2
 msgid "Enable/disable installed plugins"
-msgstr "Habilitar/desabilitar plug-ins instalados"
+msgstr "Enable/disable installed plugins"
 
 #: ../test/matekbd-indicator-test.c:55
 #, c-format
 msgid "Keyboard Indicator Test (%s)"
-msgstr "Teste de indicador de teclado (%s)"
+msgstr "Keyboard Indicator Test (%s)"
 
 #: ../test/matekbd-indicator-test.c:63
 msgid "Indicator:"
-msgstr "Indicador:"
+msgstr "Indicator:"
