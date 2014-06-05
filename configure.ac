@@ -20,9 +20,6 @@ AC_CONFIG_MACRO_DIR(m4)
 dnl ----------------------------------------------------------------------------
 dnl GTK library version
 dnl ----------------------------------------------------------------------------
-GTK_API_VERSION=2.0
-GTK_REQUIRED=2.18
-
 AC_MSG_CHECKING([which gtk+ version to compile against])
 AC_ARG_WITH([gtk],
   [AS_HELP_STRING([--with-gtk=2.0|3.0],[which gtk+ version to compile against (default: 2.0)])],
@@ -35,8 +32,8 @@ AC_MSG_RESULT([$with_gtk])
 
 case "$with_gtk" in
   2.0) GTK_API_VERSION=2.0
-       GTK_REQUIRED=2.18
-       GDK_REQUIRED=2.18
+       GTK_REQUIRED=2.24
+       GDK_REQUIRED=2.24
        ;;
   3.0) GTK_API_VERSION=3.0
        GTK_REQUIRED=3.0.0
@@ -47,7 +44,7 @@ esac
 dnl ***************************************************************************
 dnl *** Minimum library versions for libmatekbd                            ***
 dnl ***************************************************************************
-GLIB_REQUIRED=2.18
+GLIB_REQUIRED=2.36
 GIO_REQUIRED=2.25.0
 
 LIBXKLAVIER_REQUIRED=5.0
