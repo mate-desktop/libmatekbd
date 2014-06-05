@@ -21,9 +21,6 @@
 #include <gtk/gtk.h>
 #include <gdk/gdkx.h>
 #include <gdk/gdkkeysyms.h>
-#if GTK_CHECK_VERSION (3, 0, 0)
-#include <gdk/gdkkeysyms-compat.h>
-#endif
 #include <X11/XKBlib.h>
 #include <X11/extensions/XKBgeom.h>
 #include <stdlib.h>
@@ -631,147 +628,147 @@ set_key_label_in_layout (MatekbdKeyboardDrawingRenderContext * context,
 	PangoLayout *layout = context->layout;
 
 	switch (keyval) {
-	case GDK_Scroll_Lock:
+	case GDK_KEY_Scroll_Lock:
 		pango_layout_set_text (layout, "Scroll\nLock", -1);
 		break;
 
-	case GDK_space:
+	case GDK_KEY_space:
 		pango_layout_set_text (layout, "", -1);
 		break;
 
-	case GDK_Sys_Req:
+	case GDK_KEY_Sys_Req:
 		pango_layout_set_text (layout, "Sys Rq", -1);
 		break;
 
-	case GDK_Page_Up:
+	case GDK_KEY_Page_Up:
 		pango_layout_set_text (layout, "Page\nUp", -1);
 		break;
 
-	case GDK_Page_Down:
+	case GDK_KEY_Page_Down:
 		pango_layout_set_text (layout, "Page\nDown", -1);
 		break;
 
-	case GDK_Num_Lock:
+	case GDK_KEY_Num_Lock:
 		pango_layout_set_text (layout, "Num\nLock", -1);
 		break;
 
-	case GDK_KP_Page_Up:
+	case GDK_KEY_KP_Page_Up:
 		pango_layout_set_text (layout, "Pg Up", -1);
 		break;
 
-	case GDK_KP_Page_Down:
+	case GDK_KEY_KP_Page_Down:
 		pango_layout_set_text (layout, "Pg Dn", -1);
 		break;
 
-	case GDK_KP_Home:
+	case GDK_KEY_KP_Home:
 		pango_layout_set_text (layout, "Home", -1);
 		break;
 
-	case GDK_KP_Left:
+	case GDK_KEY_KP_Left:
 		pango_layout_set_text (layout, "Left", -1);
 		break;
 
-	case GDK_KP_End:
+	case GDK_KEY_KP_End:
 		pango_layout_set_text (layout, "End", -1);
 		break;
 
-	case GDK_KP_Up:
+	case GDK_KEY_KP_Up:
 		pango_layout_set_text (layout, "Up", -1);
 		break;
 
-	case GDK_KP_Begin:
+	case GDK_KEY_KP_Begin:
 		pango_layout_set_text (layout, "Begin", -1);
 		break;
 
-	case GDK_KP_Right:
+	case GDK_KEY_KP_Right:
 		pango_layout_set_text (layout, "Right", -1);
 		break;
 
-	case GDK_KP_Enter:
+	case GDK_KEY_KP_Enter:
 		pango_layout_set_text (layout, "Enter", -1);
 		break;
 
-	case GDK_KP_Down:
+	case GDK_KEY_KP_Down:
 		pango_layout_set_text (layout, "Down", -1);
 		break;
 
-	case GDK_KP_Insert:
+	case GDK_KEY_KP_Insert:
 		pango_layout_set_text (layout, "Ins", -1);
 		break;
 
-	case GDK_KP_Delete:
+	case GDK_KEY_KP_Delete:
 		pango_layout_set_text (layout, "Del", -1);
 		break;
 
-	case GDK_dead_grave:
+	case GDK_KEY_dead_grave:
 		pango_layout_set_text (layout, "ˋ", -1);
 		break;
 
-	case GDK_dead_acute:
+	case GDK_KEY_dead_acute:
 		pango_layout_set_text (layout, "ˊ", -1);
 		break;
 
-	case GDK_dead_circumflex:
+	case GDK_KEY_dead_circumflex:
 		pango_layout_set_text (layout, "ˆ", -1);
 		break;
 
-	case GDK_dead_tilde:
+	case GDK_KEY_dead_tilde:
 		pango_layout_set_text (layout, "~", -1);
 		break;
 
-	case GDK_dead_macron:
+	case GDK_KEY_dead_macron:
 		pango_layout_set_text (layout, "ˉ", -1);
 		break;
 
-	case GDK_dead_breve:
+	case GDK_KEY_dead_breve:
 		pango_layout_set_text (layout, "˘", -1);
 		break;
 
-	case GDK_dead_abovedot:
+	case GDK_KEY_dead_abovedot:
 		pango_layout_set_text (layout, "˙", -1);
 		break;
 
-	case GDK_dead_diaeresis:
+	case GDK_KEY_dead_diaeresis:
 		pango_layout_set_text (layout, "¨", -1);
 		break;
 
-	case GDK_dead_abovering:
+	case GDK_KEY_dead_abovering:
 		pango_layout_set_text (layout, "˚", -1);
 		break;
 
-	case GDK_dead_doubleacute:
+	case GDK_KEY_dead_doubleacute:
 		pango_layout_set_text (layout, "˝", -1);
 		break;
 
-	case GDK_dead_caron:
+	case GDK_KEY_dead_caron:
 		pango_layout_set_text (layout, "ˇ", -1);
 		break;
 
-	case GDK_dead_cedilla:
+	case GDK_KEY_dead_cedilla:
 		pango_layout_set_text (layout, "¸", -1);
 		break;
 
-	case GDK_dead_ogonek:
+	case GDK_KEY_dead_ogonek:
 		pango_layout_set_text (layout, "˛", -1);
 		break;
 
-		/* case GDK_dead_iota:
-		 * case GDK_dead_voiced_sound:
-		 * case GDK_dead_semivoiced_sound: */
+		/* case GDK_KEY_dead_iota:
+		 * case GDK_KEY_dead_voiced_sound:
+		 * case GDK_KEY_dead_semivoiced_sound: */
 
-	case GDK_dead_belowdot:
+	case GDK_KEY_dead_belowdot:
 		pango_layout_set_text (layout, " ̣", -1);
 		break;
 
-	case GDK_horizconnector:
+	case GDK_KEY_horizconnector:
 		pango_layout_set_text (layout, "horiz\nconn", -1);
 		break;
 
-	case GDK_Mode_switch:
+	case GDK_KEY_Mode_switch:
 		pango_layout_set_text (layout, "AltGr", -1);
 		break;
 
-	case GDK_Multi_key:
+	case GDK_KEY_Multi_key:
 		pango_layout_set_text (layout, "Compose", -1);
 		break;
 

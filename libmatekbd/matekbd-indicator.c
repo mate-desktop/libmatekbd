@@ -216,21 +216,12 @@ static gboolean matekbd_indicator_key_pressed(GtkWidget* widget, GdkEventKey* ev
 {
 	switch (event->keyval)
 	{
-		#if GTK_CHECK_VERSION(3, 0, 0)
 			case GDK_KEY_KP_Enter:
 			case GDK_KEY_ISO_Enter:
 			case GDK_KEY_3270_Enter:
 			case GDK_KEY_Return:
 			case GDK_KEY_space:
 			case GDK_KEY_KP_Space:
-		#else
-			case GDK_KP_Enter:
-			case GDK_ISO_Enter:
-			case GDK_3270_Enter:
-			case GDK_Return:
-			case GDK_space:
-			case GDK_KP_Space:
-		#endif
 			matekbd_desktop_config_lock_next_group(&globals.cfg);
 			return TRUE;
 		default:
