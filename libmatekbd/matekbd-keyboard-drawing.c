@@ -2105,7 +2105,7 @@ matekbd_keyboard_drawing_init (MatekbdKeyboardDrawing * drawing)
 
 	XkbGetNames (drawing->display, XkbAllNamesMask, drawing->xkb);
 	drawing->l3mod = XkbKeysymToModifiers (drawing->display,
-					       GDK_ISO_Level3_Shift);
+					       GDK_KEY_ISO_Level3_Shift);
 
 	drawing->xkbOnDisplay = TRUE;
 
