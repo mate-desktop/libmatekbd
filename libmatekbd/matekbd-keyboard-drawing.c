@@ -21,6 +21,9 @@
 #include <gtk/gtk.h>
 #include <gdk/gdkx.h>
 #include <gdk/gdkkeysyms.h>
+#if GTK_CHECK_VERSION(3, 0, 0)
+#include <gdk/gdkkeysyms-compat.h>
+#endif
 #include <X11/XKBlib.h>
 #include <X11/extensions/XKBgeom.h>
 #include <stdlib.h>
