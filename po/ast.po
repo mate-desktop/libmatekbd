@@ -1,16 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# Xuacu Saturio <xuacusk8@gmail.com>, 2013.
+# Ḷḷumex03 <l.lumex03.tornes@gmail.com>, 2014
+# Xuacu Saturio <xuacusk8@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
-"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-06-29 12:49+0200\n"
-"PO-Revision-Date: 2013-01-25 04:16+0000\n"
-"Last-Translator: Xuacu Saturio <xuacusk8@gmail.com>\n"
+"PO-Revision-Date: 2014-06-13 07:46+0000\n"
+"Last-Translator: Ḷḷumex03 <l.lumex03.tornes@gmail.com>\n"
 "Language-Team: Asturian (http://www.transifex.com/projects/p/MATE/language/ast/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,7 +22,7 @@ msgstr ""
 #: ../libmatekbd/matekbd-indicator.c:120 ../libmatekbd/matekbd-status.c:323
 #, c-format
 msgid "There was an error loading an image: %s"
-msgstr "Hebo un fallu al cargar una imaxe: %s"
+msgstr "Hebo un fallu cargando una imaxe: %s"
 
 #: ../libmatekbd/matekbd-indicator.c:729 ../libmatekbd/matekbd-status.c:656
 msgid "XKB initialization error"
@@ -33,7 +34,7 @@ msgid ""
 "Keyboard layout \"%s\"\n"
 "Copyright &#169; X.Org Foundation and XKeyboardConfig contributors\n"
 "For licensing see package metadata"
-msgstr "Distribución de tecláu «%s»\nCopyright &#169; la Fundación X.Org y los contribuyidores de XKeyboardConfig\nPa la llicencia llee los metadatos del paquete"
+msgstr "Distribución de tecláu «%s»\nCopyright &#169; la Fundación X.Org y los contribuyidores de XKeyboardConfig\nPa la llicencia mira los metadatos del paquete"
 
 #: ../libmatekbd/matekbd-keyboard-drawing.c:2510
 msgid "Unknown"
@@ -115,7 +116,7 @@ msgstr "Grupu por defeutu, asignáu durante la creación de la ventana"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:11
 msgid "Keep and manage separate group per window"
-msgstr "Caltenga y alministre grupos separtaos per ventana"
+msgstr "Caltien y alministra grupos separtaos per ventana"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:12
 msgid "Save/restore indicators together with layout groups"
@@ -123,13 +124,13 @@ msgstr "Guardar/restaurar indicadores xunto colos grupos d'esquemes"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:13
 msgid "Show layout names instead of group names"
-msgstr "Amuesa nomes de los esquemes n'arróu de nomes de los grupos"
+msgstr "Amuesa nomes de los esquemes en cuantes de nomes de los grupos"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:14
 msgid ""
 "Show layout names instead of group names (only for versions of XFree "
 "supporting multiple layouts)"
-msgstr "Amuesa los nomes de los esquemes n'arróu de nomes de los grupos (namái pa versiones de XFree que sofiten esquemes múltiples)"
+msgstr "Amuesa los nomes de los esquemes encuantes de nomes de los grupos (namái pa versiones de XFree que sofiten esquemes múltiples)"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:15
 msgid "Load extra configuration items"
@@ -166,12 +167,12 @@ msgstr "Grupos secundarios"
 #. TRANSLATORS: real national flags
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:24
 msgid "Show flags in the applet"
-msgstr "Amuesa banderes na miniaplicación"
+msgstr "Amuesa banderes na applet"
 
 #. TRANSLATORS: real national flags
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:26
 msgid "Show flags in the applet to indicate the current layout"
-msgstr "Amuesa banderes na miniaplicación pa indicar l'esquema actual"
+msgstr "Amuesa banderes na applet pa indicar l'esquema actual"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:27
 msgid "The font family"
@@ -199,7 +200,7 @@ msgstr "El color del primer planu pal indicador de distribución"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:33
 msgid "The background color"
-msgstr "El color del fondu"
+msgstr "El color de fondu"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:34
 msgid "The background color for the layout indicator"
@@ -264,12 +265,12 @@ msgstr "Ensin descripción."
 
 #: ../capplet/matekbd-indicator-plugins-capplet.c:256
 msgid "Unable to open help file"
-msgstr "Nun pudo abrise'l ficheru d'aida"
+msgstr "Nun pudo abrise'l ficheru d'ayuda"
 
 #: ../capplet/matekbd-indicator-plugins-capplet.c:379
 #, c-format
 msgid "Failed to init MateConf: %s\n"
-msgstr "Fallu nel aniciu de MateConf: %s\n"
+msgstr "Fallu al aniciar de MateConf: %s\n"
 
 #: ../capplet/matekbd-indicator-plugins-capplet.desktop.in.in.h:1
 msgid "Keyboard Indicator plugins"
@@ -277,12 +278,12 @@ msgstr "Complementos del indicador de tecláu"
 
 #: ../capplet/matekbd-indicator-plugins-capplet.desktop.in.in.h:2
 msgid "Enable/disable installed plugins"
-msgstr "Activa/Desactiva plugins instalaos"
+msgstr "Activa/Desactiva complementos instalaos"
 
 #: ../test/matekbd-indicator-test.c:55
 #, c-format
 msgid "Keyboard Indicator Test (%s)"
-msgstr "Preba del indicador de tecláu (%s)"
+msgstr "Prueba del indicador de tecláu (%s)"
 
 #: ../test/matekbd-indicator-test.c:63
 msgid "Indicator:"

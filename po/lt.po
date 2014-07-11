@@ -1,44 +1,51 @@
-# translation of libmatekbd.HEAD.po to Lithuanian
-# Copyright (C) 2007, 2008 Free Software Foundation, Inc.
-# This file is distributed under the same license as the libmatekbd package.
-#
-# Gintautas Miliauskas <gintas@akl.lt>, 2007, 2008.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Gintautas Miliauskas <gintas@akl.lt>, 2007, 2008
+# brennus <jonas.ska@gmail.com>, 2014
 msgid ""
 msgstr ""
-"Project-Id-Version: libmatekbd.HEAD\n"
+"Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-16 21:21+0300\n"
-"PO-Revision-Date: 2008-08-24 23:48-0400\n"
-"Last-Translator: Gintautas Miliauskas <gintas@akl.lt>\n"
-"Language-Team: Lithuanian <mate-lt@lists.akl.lt>\n"
+"POT-Creation-Date: 2012-06-29 12:49+0200\n"
+"PO-Revision-Date: 2014-05-15 19:25+0000\n"
+"Last-Translator: brennus <jonas.ska@gmail.com>\n"
+"Language-Team: Lithuanian (http://www.transifex.com/projects/p/MATE/language/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%"
-"100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: KBabel 1.11.4\n"
+"Language: lt\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2376
+#: ../libmatekbd/matekbd-indicator.c:120 ../libmatekbd/matekbd-status.c:323
+#, c-format
+msgid "There was an error loading an image: %s"
+msgstr "Įvyko klaida įkeliant paveikslėlį: %s"
+
+#: ../libmatekbd/matekbd-indicator.c:729 ../libmatekbd/matekbd-status.c:656
+msgid "XKB initialization error"
+msgstr "XKB inicializavimo klaida"
+
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2423
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
 "Copyright &#169; X.Org Foundation and XKeyboardConfig contributors\n"
 "For licensing see package metadata"
-msgstr ""
-"Klaviatūros išdėstymas \"%s\"\n"
-"Autorinės teisės &#169; X.Org Foundation ir XKeyboardConfig kontributoriai\n"
-"Licencija paketo metaduomenyse"
+msgstr "Klaviatūros išdėstymas \"%s\"\nAutorinės teisės &#169; X.Org Foundation ir XKeyboardConfig kontributoriai\nLicencija paketo metaduomenyse"
 
-#: ../libmatekbd/matekbd-indicator.c:611
-msgid "XKB initialization error"
-msgstr "XKB inicializavimo klaida"
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2510
+msgid "Unknown"
+msgstr "Nežinoma"
 
-#: ../libmatekbd/matekbd-indicator-config.c:161
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2555
 #, c-format
-msgid "There was an error loading an image: %s"
-msgstr "Įvyko klaida įkeliant paveikslėlį: %s"
+msgid "Keyboard Layout \"%s\""
+msgstr "Klaviatūros išdėstymas \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:752
+#: ../libmatekbd/matekbd-keyboard-config.c:757
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
@@ -46,7 +53,7 @@ msgstr[0] "išdėstymas \"%s\""
 msgstr[1] "išdėstymai \"%s\""
 msgstr[2] "išdėstymai \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:771
+#: ../libmatekbd/matekbd-keyboard-config.c:776
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
@@ -54,90 +61,86 @@ msgstr[0] "parinktis \"%s\""
 msgstr[1] "parinktys \"%s\""
 msgstr[2] "parinktys \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:779
+#: ../libmatekbd/matekbd-keyboard-config.c:784
 #, c-format
 msgid "model \"%s\", %s and %s"
 msgstr "modelis \"%s\", %s ir %s"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:780
+#: ../libmatekbd/matekbd-keyboard-config.c:785
 msgid "no layout"
 msgstr "nėra išdėstymo"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:781
+#: ../libmatekbd/matekbd-keyboard-config.c:786
 msgid "no options"
 msgstr "nėra parinkčių"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:1
-msgid ""
-"A collection of scripts to run whenever the keyboard state is reloaded. "
-"Useful for re-applying xmodmap based adjustments"
-msgstr ""
-"Scenarijų, įvykdomų klaviatūros būsenai pasikeitus, rinkinys. Naudingas "
-"xmodmap pagrįstiems pataisymams."
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:2
-msgid "A list of modmap files available in the $HOME directory."
-msgstr "Modmap failų $HOME aplanke sąrašas."
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:3
-msgid "Default group, assigned on window creation"
-msgstr "Standartinė grupė, priskiriama naujiems langams"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:4
-msgid "Keep and manage separate group per window"
-msgstr "Valdyti grupes kiekvienam langui atskirai"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:5
-msgid "Keyboard Update Handlers"
-msgstr "Klaviatūros atnaujinimo valdikliai"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:6
-msgid "Keyboard layout"
-msgstr "Klaviatūros išdėstymas"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:7
 msgid "Keyboard model"
 msgstr "Klaviatūros modelis"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:8
+#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:2
+msgid "keyboard model"
+msgstr "klaviatūros modelis"
+
+#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:3
+msgid "Keyboard layout"
+msgstr "Klaviatūros išdėstymas"
+
+#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:4
+msgid "keyboard layout"
+msgstr "klaviatūros išdėstymas"
+
+#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:5
 msgid "Keyboard options"
 msgstr "Klaviatūros parinktys"
 
+#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:6
+msgid "Keyboard Update Handlers"
+msgstr "Klaviatūros atnaujinimo valdikliai"
+
+#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:7
+msgid ""
+"A collection of scripts to run whenever the keyboard state is reloaded. "
+"Useful for re-applying xmodmap based adjustments"
+msgstr "Scenarijų, įvykdomų klaviatūros būsenai pasikeitus, rinkinys. Naudingas xmodmap pagrįstiems pataisymams."
+
+#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:8
+msgid "modmap file list"
+msgstr "modmap failų sąrašas"
+
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:9
-msgid "Load exotic, rarely used layouts and options"
-msgstr ""
+msgid "A list of modmap files available in the $HOME directory."
+msgstr "Modmap failų $HOME aplanke sąrašas."
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:10
-msgid "Load extra configuration items"
-msgstr ""
+msgid "Default group, assigned on window creation"
+msgstr "Standartinė grupė, priskiriama naujiems langams"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:11
+msgid "Keep and manage separate group per window"
+msgstr "Valdyti grupes kiekvienam langui atskirai"
+
+#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:12
 msgid "Save/restore indicators together with layout groups"
 msgstr "Įrašymo/skaitymo indikatoriai kartu su išdėstymo grupėmis"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:12
-msgid "Secondary groups"
-msgstr "Antrinės grupės"
-
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:13
-msgid "Show flags in the applet"
-msgstr "Rodyti savybes įtaise"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:14
-msgid "Show flags in the applet to indicate the current layout"
-msgstr "Rodyti savybes, rodančias pasirinktą išdėstymą, įtaise"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:15
 msgid "Show layout names instead of group names"
 msgstr "Rodyti išdėstymų vardus vietoje grupių vardų"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:16
+#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:14
 msgid ""
 "Show layout names instead of group names (only for versions of XFree "
 "supporting multiple layouts)"
+msgstr "Rodyti išdėstymų vardus vietoje grupių vardų (tik XFree versijoms, palaikančioms kelis išdėstymus)"
+
+#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:15
+msgid "Load extra configuration items"
 msgstr ""
-"Rodyti išdėstymų vardus vietoje grupių vardų (tik XFree versijoms, "
-"palaikančioms kelis išdėstymus)"
+
+#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:16
+msgid "Load exotic, rarely used layouts and options"
+msgstr ""
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:17
 msgid "Suppress the \"X sysconfig changed\" warning message"
@@ -152,64 +155,102 @@ msgid "The Keyboard Preview, Y offset"
 msgstr "Klaviatūros vaizdas, Y poslinkis"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:20
-msgid "The Keyboard Preview, height"
-msgstr "Klaviatūros vaizdas, aukštis"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:21
 msgid "The Keyboard Preview, width"
 msgstr "Klaviatūros vaizdas, plotis"
 
+#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:21
+msgid "The Keyboard Preview, height"
+msgstr "Klaviatūros vaizdas, aukštis"
+
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:22
+msgid "Secondary groups"
+msgstr "Antrinės grupės"
+
+#. TRANSLATORS: real national flags
+#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:24
+msgid "Show flags in the applet"
+msgstr "Rodyti savybes įtaise"
+
+#. TRANSLATORS: real national flags
+#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:26
+msgid "Show flags in the applet to indicate the current layout"
+msgstr "Rodyti savybes, rodančias pasirinktą išdėstymą, įtaise"
+
+#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:27
+msgid "The font family"
+msgstr "Šrifto šeima"
+
+#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:28
+msgid "The font family for the layout indicator"
+msgstr ""
+
+#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:29
+msgid "The font size"
+msgstr "Šrifto dydis"
+
+#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:30
+msgid "The font size for the layout indicator"
+msgstr ""
+
+#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:31
+msgid "The foreground color"
+msgstr ""
+
+#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:32
+msgid "The foreground color for the layout indicator"
+msgstr ""
+
+#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:33
+msgid "The background color"
+msgstr "Fono spalva"
+
+#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:34
+msgid "The background color for the layout indicator"
+msgstr ""
+
+#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:35
 msgid "The list of enabled Keyboard Indicator plugins"
 msgstr "Įjungtų klaviatūros indikatoriaus įskiepių sąrašas"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:23
-msgid "keyboard layout"
-msgstr "klaviatūros išdėstymas"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:24
-msgid "keyboard model"
-msgstr "klaviatūros modelis"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:25
-msgid "modmap file list"
-msgstr "modmap failų sąrašas"
+#: ../libmatekbd/show-layout.ui.h:1
+msgid "Keyboard Layout"
+msgstr "Klaviatūros išdėstymas"
 
 #: ../capplet/matekbd-indicator-plugins.ui.h:1
-msgid "Activate more plugins"
-msgstr "Įjungti daugiau įskiepių"
+msgid "Keyboard Indicator Plugins"
+msgstr "Klaviatūros indikatoriaus įskiepiai"
 
 #: ../capplet/matekbd-indicator-plugins.ui.h:2
 msgid "Active _plugins:"
 msgstr "Aktyvūs į_skiepiai:"
 
 #: ../capplet/matekbd-indicator-plugins.ui.h:3
-msgid "Close the dialog"
-msgstr "Užverti dialogą"
+msgid "The list of active plugins"
+msgstr "Aktyvių įskiepių sąrašas"
 
 #: ../capplet/matekbd-indicator-plugins.ui.h:4
-msgid "Configure the selected plugin"
-msgstr "Konfigūruoti pasirinktą įskiepį"
+msgid "Activate more plugins"
+msgstr "Įjungti daugiau įskiepių"
 
 #: ../capplet/matekbd-indicator-plugins.ui.h:5
 msgid "Deactivate selected plugin"
 msgstr "Atjungti pažymėtą įskiepį"
 
 #: ../capplet/matekbd-indicator-plugins.ui.h:6
-msgid "Decrease the plugin priority"
-msgstr "Sumažinti įskiepio prioritetą"
-
-#: ../capplet/matekbd-indicator-plugins.ui.h:7
 msgid "Increase the plugin priority"
 msgstr "Padidinti įskiepio prioritetą"
 
+#: ../capplet/matekbd-indicator-plugins.ui.h:7
+msgid "Decrease the plugin priority"
+msgstr "Sumažinti įskiepio prioritetą"
+
 #: ../capplet/matekbd-indicator-plugins.ui.h:8
-msgid "Keyboard Indicator Plugins"
-msgstr "Klaviatūros indikatoriaus įskiepiai"
+msgid "Configure the selected plugin"
+msgstr "Konfigūruoti pasirinktą įskiepį"
 
 #: ../capplet/matekbd-indicator-plugins.ui.h:9
-msgid "The list of active plugins"
-msgstr "Aktyvių įskiepių sąrašas"
+msgid "Close the dialog"
+msgstr "Užverti dialogą"
 
 #: ../capplet/matekbd-indicator-plugins_add.ui.h:1
 msgid "Add Plugin"
@@ -228,42 +269,24 @@ msgstr "Aprašymo nėra."
 msgid "Unable to open help file"
 msgstr "Nepavyko atverti žinyno failo"
 
-#: ../capplet/matekbd-indicator-plugins-capplet.c:372
+#: ../capplet/matekbd-indicator-plugins-capplet.c:379
 #, c-format
 msgid "Failed to init MateConf: %s\n"
 msgstr "Nepavyko paleisti MateConf: %s\n"
 
 #: ../capplet/matekbd-indicator-plugins-capplet.desktop.in.in.h:1
-msgid "Enable/disable installed plugins"
-msgstr "Įjungti/išjungti įdiegtus įskiepius"
-
-#: ../capplet/matekbd-indicator-plugins-capplet.desktop.in.in.h:2
 msgid "Keyboard Indicator plugins"
 msgstr "Klaviatūros indikatoriaus įskiepiai"
 
-#: ../test/matekbd-indicator-test.c:57
+#: ../capplet/matekbd-indicator-plugins-capplet.desktop.in.in.h:2
+msgid "Enable/disable installed plugins"
+msgstr "Įjungti/išjungti įdiegtus įskiepius"
+
+#: ../test/matekbd-indicator-test.c:55
 #, c-format
 msgid "Keyboard Indicator Test (%s)"
 msgstr "Klaviatūros indikatoriaus testas (%s)"
 
-#: ../test/matekbd-indicator-test.c:66
+#: ../test/matekbd-indicator-test.c:63
 msgid "Indicator:"
 msgstr "Indikatorius:"
-
-#~ msgid ""
-#~ "Keyboard settings in mateconf will be overridden from the system ASAP "
-#~ "(deprecated)"
-#~ msgstr ""
-#~ "Klaviatūroros nustatymai mateconf bus perrašyti sistemos kiek galima "
-#~ "greičiau (nebenaudotina)."
-
-#~ msgid ""
-#~ "Very soon, keyboard settings in mateconf will be overridden (from the system "
-#~ "configuration) This key has been deprecated since MATE 2.12, please "
-#~ "unset the model, layouts and options keys to get the default system "
-#~ "configuration."
-#~ msgstr ""
-#~ "Greitai klaviatūros nustatymai mateconf bus perrašyti (iš sistemos "
-#~ "konfigūracijos). Šis raktas nebenaudotinas nuo MATE 2.12. Ištrinkite "
-#~ "modelio, išdėstymų ir parinkčių raktus, jei norite sistemos "
-#~ "konfigūracijos."
