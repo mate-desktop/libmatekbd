@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-06-29 12:49+0200\n"
-"PO-Revision-Date: 2014-08-03 06:55+0000\n"
+"PO-Revision-Date: 2014-08-20 06:52+0000\n"
 "Last-Translator: Ivar Smolin <okul@linux.ee>\n"
 "Language-Team: Estonian (http://www.transifex.com/projects/p/MATE/language/et/)\n"
 "MIME-Version: 1.0\n"
@@ -135,7 +135,7 @@ msgstr "Grupinimede asemel paigutuste nimede näitamine (ainult mitme paugutuse 
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:15
 msgid "Load extra configuration items"
-msgstr "Seadistuste lisavalikute laadimine"
+msgstr "Sätete lisavalikute laadimine"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:16
 msgid "Load exotic, rarely used layouts and options"
@@ -245,7 +245,7 @@ msgstr "Plugina tähtsuse vähendamine"
 
 #: ../capplet/matekbd-indicator-plugins.ui.h:8
 msgid "Configure the selected plugin"
-msgstr "Valitud plugina seadistamine"
+msgstr "Valitud plugina sätete määramine"
 
 #: ../capplet/matekbd-indicator-plugins.ui.h:9
 msgid "Close the dialog"
