@@ -90,7 +90,7 @@ static gboolean
 			*lld = g_strdup ("");
 		}
 
-		if (*pv != NULL) {
+		if (pv != NULL && *pv != NULL) {
 			g_snprintf (item->name, sizeof item->name, "%s",
 				    *pv);
 			if (xkl_config_registry_find_variant
@@ -115,7 +115,7 @@ static gboolean
 
 		pl++;
 
-		if (*pv != NULL)
+		if (pv != NULL && *pv != NULL)
 			pv++;
 	}
 
