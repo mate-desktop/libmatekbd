@@ -807,6 +807,15 @@ matekbd_indicator_global_init (void)
 	matekbd_keyboard_config_init (&globals.kbd_cfg, globals.engine);
 	matekbd_indicator_config_init (&globals.ind_cfg, globals.engine);
 
+	matekbd_desktop_config_start_listen (&globals.cfg,
+					  (GCallback)
+					  matekbd_indicator_cfg_changed,
+					  NULL);
+	matekbd_indicator_config_start_listen (&globals.ind_cfg,
+					    (GCallback)
+					    matekbd_indicator_ind_cfg_changed,
+					    NULL);
+
 	matekbd_desktop_config_load_from_gsettings (&globals.cfg);
 	matekbd_desktop_config_activate (&globals.cfg);
 
@@ -827,14 +836,6 @@ matekbd_indicator_global_init (void)
 					 xklrec->variants);
 	g_object_unref (G_OBJECT (xklrec));
 
-	matekbd_desktop_config_start_listen (&globals.cfg,
-					  (GCallback)
-					  matekbd_indicator_cfg_changed,
-					  NULL);
-	matekbd_indicator_config_start_listen (&globals.ind_cfg,
-					    (GCallback)
-					    matekbd_indicator_ind_cfg_changed,
-					    NULL);
 	matekbd_indicator_start_listen ();
 
 	xkl_debug (100, "*** Inited globals *** \n");
