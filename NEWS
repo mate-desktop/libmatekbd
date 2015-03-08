@@ -1,6 +1,9 @@
 MATE
 ====
 
+1.8.1
+	Fix issues with GLib >= 2.43
+
 1.8.0
 	Improved indicator font customization
 	GTK3 support
