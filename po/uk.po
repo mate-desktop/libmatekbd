@@ -1,18 +1,18 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # wanderlust <wanderlust@ukr.net>, 2009
-# zubr139 <zubr139@ukr.net>, 2012
-# Koljan1970 <Stuartlittle1970@gmail.com>, 2013
+# zubr139, 2012
+# Микола Ткач <Stuartlittle1970@gmail.com>, 2013,2015
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
-"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-06-29 12:49+0200\n"
-"PO-Revision-Date: 2013-06-21 17:58+0000\n"
-"Last-Translator: Koljan1970 <Stuartlittle1970@gmail.com>\n"
+"PO-Revision-Date: 2015-05-08 15:56+0000\n"
+"Last-Translator: Микола Ткач <Stuartlittle1970@gmail.com>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/projects/p/MATE/language/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,7 +35,7 @@ msgid ""
 "Keyboard layout \"%s\"\n"
 "Copyright &#169; X.Org Foundation and XKeyboardConfig contributors\n"
 "For licensing see package metadata"
-msgstr "Розкладка клавіатури \"%s\"\nАвторське право &#169; X.Org Foundation та помічники у написанні XKeyboardConfig\nЛіцензійні умови викладені у метаданих"
+msgstr "Розкладка клавіятури \"%s\"\nАвторське право &#169; X.Org Foundation та помічники у написанні XKeyboardConfig\nЛіцензійні умови викладені у метаданих"
 
 #: ../libmatekbd/matekbd-keyboard-drawing.c:2510
 msgid "Unknown"
@@ -44,7 +44,7 @@ msgstr "Невідомо"
 #: ../libmatekbd/matekbd-keyboard-drawing.c:2555
 #, c-format
 msgid "Keyboard Layout \"%s\""
-msgstr "Розкладка клавіатури \"%s\""
+msgstr "Розкладка клавіятури \"%s\""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:757
 #, c-format
@@ -77,41 +77,41 @@ msgstr "немає параметрів"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:1
 msgid "Keyboard model"
-msgstr "Модель клавіатури"
+msgstr "Модель клавіятури"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:2
 msgid "keyboard model"
-msgstr "модель клавіатури"
+msgstr "модель клавіятури"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:3
 msgid "Keyboard layout"
-msgstr "Розкладка клавіатури"
+msgstr "Розкладка клавіятури"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:4
 msgid "keyboard layout"
-msgstr "розкладка клавіатури"
+msgstr "розкладка клавіятури"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:5
 msgid "Keyboard options"
-msgstr "Додаткові параметри клавіатури"
+msgstr "Додаткові параметри клавіятури"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:6
 msgid "Keyboard Update Handlers"
-msgstr "Обробники оновлення клавіатури"
+msgstr "Обробники оновлення клавіятури"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:7
 msgid ""
 "A collection of scripts to run whenever the keyboard state is reloaded. "
 "Useful for re-applying xmodmap based adjustments"
-msgstr "Колекція сценаріїв, що запускаються при перезавантаженні стану клавіатури. Корисно для повторного накладання корекцій на основі xmodmap"
+msgstr "Колекція сценаріїв, що запускаються при перезавантаженні стану клавіятури. Корисно для повторного накладання корекцій на основі xmodmap"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:8
 msgid "modmap file list"
-msgstr "список файлів modmap"
+msgstr "перелік файлів modmap"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:9
 msgid "A list of modmap files available in the $HOME directory."
-msgstr "Список файлів modmap, що доступні у каталозі $HOME."
+msgstr "Перелік файлів modmap, що доступні у каталозі $HOME."
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:10
 msgid "Default group, assigned on window creation"
@@ -127,13 +127,13 @@ msgstr "Зберігати/відновлювати індикатори раз�
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:13
 msgid "Show layout names instead of group names"
-msgstr "Показувати назви розкладок замість назва груп"
+msgstr "Показувати назви розкладок замість назв груп"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:14
 msgid ""
 "Show layout names instead of group names (only for versions of XFree "
 "supporting multiple layouts)"
-msgstr "Показувати назви замість груп назв (лише для версій XFree, які підтримують декілька розкладок)"
+msgstr "Показувати назви замість назв груп (лише для версій XFree, які підтримують декілька розкладок)"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:15
 msgid "Load extra configuration items"
@@ -153,7 +153,7 @@ msgstr "Попередній перегляд, зсув по X"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:19
 msgid "The Keyboard Preview, Y offset"
-msgstr "Попередній перегляд, зсув по X"
+msgstr "Попередній перегляд, зсув по Y"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:20
 msgid "The Keyboard Preview, width"
@@ -211,15 +211,15 @@ msgstr "Колір тла для індикатора розкладки"
 
 #: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:35
 msgid "The list of enabled Keyboard Indicator plugins"
-msgstr "Список модулів для індикатора клавіатури"
+msgstr "Перелік модулів для індикатора клавіятури"
 
 #: ../libmatekbd/show-layout.ui.h:1
 msgid "Keyboard Layout"
-msgstr "Розкладка клавіатури"
+msgstr "Розкладка клавіятури"
 
 #: ../capplet/matekbd-indicator-plugins.ui.h:1
 msgid "Keyboard Indicator Plugins"
-msgstr "Модулі індикатора клавіатури"
+msgstr "Модулі індикатора клавіятури"
 
 #: ../capplet/matekbd-indicator-plugins.ui.h:2
 msgid "Active _plugins:"
@@ -227,7 +227,7 @@ msgstr "Активні _модулі:"
 
 #: ../capplet/matekbd-indicator-plugins.ui.h:3
 msgid "The list of active plugins"
-msgstr "Список активних модулів"
+msgstr "Перелік активних модулів"
 
 #: ../capplet/matekbd-indicator-plugins.ui.h:4
 msgid "Activate more plugins"
@@ -239,11 +239,11 @@ msgstr "Деактивувати вибраний модуль"
 
 #: ../capplet/matekbd-indicator-plugins.ui.h:6
 msgid "Increase the plugin priority"
-msgstr "Збільшити пріоритет модуля"
+msgstr "Збільшити пріоритет модулю"
 
 #: ../capplet/matekbd-indicator-plugins.ui.h:7
 msgid "Decrease the plugin priority"
-msgstr "Зменшити пріоритет модуля"
+msgstr "Зменшити пріоритет модулю"
 
 #: ../capplet/matekbd-indicator-plugins.ui.h:8
 msgid "Configure the selected plugin"
@@ -251,7 +251,7 @@ msgstr "Налаштувати вибраний модуль"
 
 #: ../capplet/matekbd-indicator-plugins.ui.h:9
 msgid "Close the dialog"
-msgstr "Закрити діалогове вікно"
+msgstr "Закрити діялоґове вікно"
 
 #: ../capplet/matekbd-indicator-plugins_add.ui.h:1
 msgid "Add Plugin"
@@ -277,7 +277,7 @@ msgstr "Помилка ініціалізації MateConf: %s\n"
 
 #: ../capplet/matekbd-indicator-plugins-capplet.desktop.in.in.h:1
 msgid "Keyboard Indicator plugins"
-msgstr "Модулі розширення клавіатурного індикатора"
+msgstr "Модулі розширення клавіятурного індикатора"
 
 #: ../capplet/matekbd-indicator-plugins-capplet.desktop.in.in.h:2
 msgid "Enable/disable installed plugins"
@@ -286,7 +286,7 @@ msgstr "Увімкнути/вимкнути встановлені модулі"
 #: ../test/matekbd-indicator-test.c:55
 #, c-format
 msgid "Keyboard Indicator Test (%s)"
-msgstr "Перевірка індикатора клавіатури (%s)"
+msgstr "Перевірка індикатора клавіятури (%s)"
 
 #: ../test/matekbd-indicator-test.c:63
 msgid "Indicator:"

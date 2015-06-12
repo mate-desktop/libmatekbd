@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-06-29 12:49+0200\n"
-"PO-Revision-Date: 2015-01-10 00:54+0000\n"
+"PO-Revision-Date: 2015-06-05 17:16+0000\n"
 "Last-Translator: Lasse Liehu <larso@gmx.com>\n"
 "Language-Team: Finnish (http://www.transifex.com/projects/p/MATE/language/fi/)\n"
 "MIME-Version: 1.0\n"
@@ -38,12 +38,12 @@ msgstr "Näppäinasettelu ”%s”\nTekijänoikeudet &#169; X.Org Foundation ja 
 
 #: ../libmatekbd/matekbd-keyboard-drawing.c:2510
 msgid "Unknown"
-msgstr ""
+msgstr "Tuntematon"
 
 #: ../libmatekbd/matekbd-keyboard-drawing.c:2555
 #, c-format
 msgid "Keyboard Layout \"%s\""
-msgstr ""
+msgstr "Näppäimistöasettelu ”%s”"
 
 #: ../libmatekbd/matekbd-keyboard-config.c:757
 #, c-format
@@ -212,7 +212,7 @@ msgstr "Luettelo käytössä olevista näppäimistön huomautusliitännäisistä
 
 #: ../libmatekbd/show-layout.ui.h:1
 msgid "Keyboard Layout"
-msgstr ""
+msgstr "Näppäimistöasettelu"
 
 #: ../capplet/matekbd-indicator-plugins.ui.h:1
 msgid "Keyboard Indicator Plugins"
