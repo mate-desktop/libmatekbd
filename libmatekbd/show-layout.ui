@@ -42,18 +42,6 @@
               </object>
             </child>
             <child>
-              <object class="GtkButton" id="btnHelp">
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="can_default">True</property>
-                <property name="label">gtk-help</property>
-                <property name="use_stock">True</property>
-              </object>
-              <packing>
-                <property name="position">1</property>
-              </packing>
-            </child>
-            <child>
               <object class="GtkButton" id="btnClose">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>

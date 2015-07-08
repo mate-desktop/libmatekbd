@@ -2538,11 +2538,6 @@ show_layout_response (GtkWidget * dialog, gint resp)
 	const gchar *groupName;
 
 	switch (resp) {
-	case GTK_RESPONSE_HELP:
-		gtk_show_uri (gtk_widget_get_screen (GTK_WIDGET (dialog)),
-			      "ghelp:gswitchit?layout-view",
-			      gtk_get_current_event_time (), NULL);
-		return;
 	case GTK_RESPONSE_CLOSE:
 		gtk_window_get_position (GTK_WINDOW (dialog), &rect.x,
 					 &rect.y);
