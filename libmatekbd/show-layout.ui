@@ -65,7 +65,6 @@
     </child>
     <action-widgets>
       <action-widget response="2">btnPrint</action-widget>
-      <action-widget response="-11">btnHelp</action-widget>
       <action-widget response="-7">btnClose</action-widget>
     </action-widgets>
   </object>
