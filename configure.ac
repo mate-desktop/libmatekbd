@@ -60,7 +60,6 @@ dnl ***************************************************************************
 MATE_COMMON_INIT
 MATE_COMPILE_WARNINGS
 
-AC_ISC_POSIX
 AC_PROG_CC
 AC_STDC_HEADERS
 AM_PROG_LIBTOOL
