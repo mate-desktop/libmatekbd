@@ -1003,6 +1003,31 @@ draw_key_label (MatekbdKeyboardDrawingRenderContext * context,
 	}
 }
 
+/**
+   The x offset is calculated for complex shapes. It is the rightmost of the vertical lines in the outline
+ */
+static gint
+calc_origin_offset_x (XkbOutlineRec * outline)
+{
+	gint rv = 0;
+	gint i;
+	if (outline->num_points < 3)
+		return 0;
+	XkbPointPtr point = outline->points;
+	for (i = outline->num_points; --i > 0;) {
+		gint x1 = point->x;
+		gint y1 = point++->y;
+		gint x2 = point->x;
+		gint y2 = point->y;
+
+		/*vertical, bottom to top (clock-wise), on the left */
+		if ((x1 == x2) && (y1 > y2) && (x1 > rv)) {
+			rv = x1;
+		}
+	}
+	return rv;
+}
+
 /* groups are from 0-3 */
 static void
 draw_key (MatekbdKeyboardDrawingRenderContext * context,
@@ -1010,6 +1035,8 @@ draw_key (MatekbdKeyboardDrawingRenderContext * context,
 {
 	XkbShapeRec *shape;
 	GdkColor *color;
+	XkbOutlineRec *outline;
+	int origin_offset_x;
 	/* gint i; */
 
 	if (!drawing->xkb)
@@ -1038,9 +1065,9 @@ draw_key (MatekbdKeyboardDrawingRenderContext * context,
 #endif
 
 	/* draw the primary outline */
-	draw_outline (context,
-		      shape->primary ? shape->primary : shape->outlines,
-		      color, key->angle, key->origin_x, key->origin_y);
+	outline = shape->primary ? shape->primary : shape->outlines;
+	draw_outline (context, outline, color, key->angle, key->origin_x,
+		      key->origin_y);
 #if 0
 	/* don't draw other outlines for now, since
 	 * the text placement does not take them into account
@@ -1054,8 +1081,9 @@ draw_key (MatekbdKeyboardDrawingRenderContext * context,
 	}
 #endif
 
+	origin_offset_x = calc_origin_offset_x (outline);
 	draw_key_label (context, drawing, key->keycode, key->angle,
-			key->origin_x, key->origin_y,
+			key->origin_x + origin_offset_x, key->origin_y,
 			shape->bounds.x2, shape->bounds.y2);
 }
 
