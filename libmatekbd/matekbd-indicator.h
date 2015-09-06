@@ -34,7 +34,7 @@ extern "C" {
 
 #define MATEKBD_TYPE_INDICATOR             (matekbd_indicator_get_type ())
 #define MATEKBD_INDICATOR(obj)             (G_TYPE_CHECK_INSTANCE_CAST ((obj), MATEKBD_TYPE_INDICATOR, MatekbdIndicator))
-#define MATEKBD_INDCATOR_CLASS(obj)       (G_TYPE_CHECK_CLASS_CAST ((obj), MATEKBD_TYPE_INDICATOR,  MatekbdIndicatorClass))
+#define MATEKBD_INDICATOR_CLASS(obj)       (G_TYPE_CHECK_CLASS_CAST ((obj), MATEKBD_TYPE_INDICATOR,  MatekbdIndicatorClass))
 #define MATEKBD_IS_INDICATOR(obj)          (G_TYPE_CHECK_INSTANCE_TYPE ((obj), MATEKBD_TYPE_INDICATOR))
 #define MATEKBD_IS_INDICATOR_CLASS(obj)    (G_TYPE_CHECK_CLASS_TYPE ((obj), MATEKBD_TYPE_INDICATOR))
 #define MATEKBD_INDICATOR_GET_CLASS(obj)   (G_TYPE_INSTANCE_GET_CLASS ((obj), MATEKBD_TYPE_INDICATOR, MatekbdIndicatorClass))
