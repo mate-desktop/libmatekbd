@@ -1461,8 +1461,6 @@ expose_event (GtkWidget *widget,
 	      MatekbdKeyboardDrawing *drawing)
 #endif
 {
-	GtkAllocation allocation;
-
 #if !GTK_CHECK_VERSION (3, 0, 0)
         cairo_t *cr;
 #endif
@@ -1490,24 +1488,6 @@ expose_event (GtkWidget *widget,
 
 	cairo_destroy (cr);
 #endif
-
-	if (gtk_widget_has_focus (widget)) {
-		gtk_widget_get_allocation (widget, &allocation);
-		gtk_paint_focus (gtk_widget_get_style (widget),
-#if GTK_CHECK_VERSION (3, 0, 0)
-				 cr,
-#else
-				 gtk_widget_get_window (widget),
-#endif
-				 gtk_widget_get_state (widget),
-#if GTK_CHECK_VERSION (3, 0, 0)
-				 widget, "keyboard-drawing",
-#else
-				 &event->area, widget, "keyboard-drawing",
-#endif
-				 0, 0, allocation.width,
-				 allocation.height);
-	}
 
 	return FALSE;
 }
