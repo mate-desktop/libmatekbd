@@ -1406,13 +1406,15 @@ free_render_context (MatekbdKeyboardDrawing * drawing)
 }
 
 static gboolean
-expose_event (GtkWidget * widget,
 #if GTK_CHECK_VERSION (3, 0, 0)
-	      cairo_t *cr,
+draw (GtkWidget *widget,
+      cairo_t *cr,
+      MatekbdKeyboardDrawing *drawing)
 #else
-	      GdkEventExpose * event,
+expose_event (GtkWidget *widget,
+	      GdkEventExpose *event,
+	      MatekbdKeyboardDrawing *drawing)
 #endif
-	      MatekbdKeyboardDrawing * drawing)
 {
 	GtkAllocation allocation;
 
@@ -2141,10 +2143,11 @@ matekbd_keyboard_drawing_init (MatekbdKeyboardDrawing * drawing)
 			       | GDK_FOCUS_CHANGE_MASK);
 #if GTK_CHECK_VERSION (3, 0, 0)
 	g_signal_connect (G_OBJECT (drawing), "draw",
+			  G_CALLBACK (draw), drawing);
 #else
 	g_signal_connect (G_OBJECT (drawing), "expose-event",
-#endif
 			  G_CALLBACK (expose_event), drawing);
+#endif
 	g_signal_connect_after (G_OBJECT (drawing), "key-press-event",
 				G_CALLBACK (key_event), drawing);
 	g_signal_connect_after (G_OBJECT (drawing), "key-release-event",
