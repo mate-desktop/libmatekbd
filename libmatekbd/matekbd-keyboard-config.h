@@ -32,7 +32,8 @@ extern const gchar MATEKBD_KEYBOARD_CONFIG_KEY_OPTIONS[];
 /*
  * Keyboard Configuration
  */
-typedef struct _MatekbdKeyboardConfig {
+typedef struct _MatekbdKeyboardConfig MatekbdKeyboardConfig;
+struct _MatekbdKeyboardConfig {
 	gchar *model;
 	gchar **layouts_variants;
 	gchar **options;
@@ -41,7 +42,7 @@ typedef struct _MatekbdKeyboardConfig {
 	GSettings *settings;
 	int config_listener_id;
 	XklEngine *engine;
-} MatekbdKeyboardConfig;
+};
 
 /**
  * MatekbdKeyboardConfig functions

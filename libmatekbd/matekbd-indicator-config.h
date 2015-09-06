@@ -27,7 +27,8 @@
 /*
  * Indicator configuration
  */
-typedef struct _MatekbdIndicatorConfig {
+typedef struct _MatekbdIndicatorConfig MatekbdIndicatorConfig;
+struct _MatekbdIndicatorConfig {
 	int secondary_groups_mask;
 	gboolean show_flags;
 
@@ -41,7 +42,7 @@ typedef struct _MatekbdIndicatorConfig {
 	GtkIconTheme *icon_theme;
 	int config_listener_id;
 	XklEngine *engine;
-} MatekbdIndicatorConfig;
+};
 
 /**
  * MatekbdIndicatorConfig functions -

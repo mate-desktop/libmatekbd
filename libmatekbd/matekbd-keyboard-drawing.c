@@ -2230,7 +2230,7 @@ matekbd_keyboard_drawing_set_mods (MatekbdKeyboardDrawing * drawing, guint mods)
 
 /**
  * matekbd_keyboard_drawing_render:
- * @drawing: keyboard layout to render
+ * @kbdrawing: keyboard layout to render
  * @cr:        Cairo context to render to
  * @layout:    Pango layout to use to render text
  * @x:         left coordinate (pixels) of region to render in
@@ -2245,7 +2245,7 @@ matekbd_keyboard_drawing_set_mods (MatekbdKeyboardDrawing * drawing, guint mods)
  * @returns:   %TRUE on success, %FALSE on failure
  */
 gboolean
-matekbd_keyboard_drawing_render (MatekbdKeyboardDrawing * drawing,
+matekbd_keyboard_drawing_render (MatekbdKeyboardDrawing * kbdrawing,
 			      cairo_t * cr,
 			      PangoLayout * layout,
 			      double x, double y,
@@ -2254,22 +2254,22 @@ matekbd_keyboard_drawing_render (MatekbdKeyboardDrawing * drawing,
 {
 	MatekbdKeyboardDrawingRenderContext context = {
 		cr,
-		drawing->renderContext->angle,
+		kbdrawing->renderContext->angle,
 		layout,
 		pango_font_description_copy (gtk_widget_get_style
 					     (GTK_WIDGET
-					      (drawing))->font_desc),
+					      (kbdrawing))->font_desc),
 		1, 1,
-		&gtk_widget_get_style (GTK_WIDGET (drawing))->dark
-		    [gtk_widget_get_state (GTK_WIDGET (drawing))]
+		&gtk_widget_get_style (GTK_WIDGET (kbdrawing))->dark
+		    [gtk_widget_get_state (GTK_WIDGET (kbdrawing))]
 	};
 
-	if (!context_setup_scaling (&context, drawing, width, height,
+	if (!context_setup_scaling (&context, kbdrawing, width, height,
 				    dpi_x, dpi_y))
 		return FALSE;
 	cairo_translate (cr, x, y);
 
-	draw_keyboard_to_context (&context, drawing);
+	draw_keyboard_to_context (&context, kbdrawing);
 
 	pango_font_description_free (context.font_desc);
 

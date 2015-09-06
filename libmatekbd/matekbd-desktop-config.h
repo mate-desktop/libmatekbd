@@ -33,7 +33,8 @@ extern const gchar MATEKBD_DESKTOP_CONFIG_KEY_LAYOUT_NAMES_AS_GROUP_NAMES[];
 /*
  * General configuration
  */
-typedef struct _MatekbdDesktopConfig {
+typedef struct _MatekbdDesktopConfig MatekbdDesktopConfig;
+struct _MatekbdDesktopConfig {
 	gint default_group;
 	gboolean group_per_app;
 	gboolean handle_indicators;
@@ -44,7 +45,7 @@ typedef struct _MatekbdDesktopConfig {
 	GSettings *settings;
 	int config_listener_id;
 	XklEngine *engine;
-} MatekbdDesktopConfig;
+};
 
 /**
  * MatekbdDesktopConfig functions
