@@ -75,7 +75,7 @@ AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE", [Gettext package])
 
 AM_GLIB_GNU_GETTEXT
 
-IT_PROG_INTLTOOL([0.35.0])
+IT_PROG_INTLTOOL([0.50.1])
 
 # *****************************************************************************
 
@@ -130,5 +130,6 @@ libmatekbd.pc
 libmatekbdui.pc
 po/Makefile.in
 libmatekbd/Makefile
+libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml
 test/Makefile
 ])

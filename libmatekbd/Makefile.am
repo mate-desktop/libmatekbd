@@ -75,20 +75,20 @@ noinst_HEADERS = $(extra_nih) \
                  matekbd-config-private.h
 
 @INTLTOOL_XML_NOMERGE_RULE@
-gsettings_SCHEMAS = org.mate.peripherals-keyboard-xkb.gschema.xml
+gsettingsschema_in_files = org.mate.peripherals-keyboard-xkb.gschema.xml.in
+gsettings_SCHEMAS = $(gsettingsschema_in_files:.xml.in=.xml)
 @GSETTINGS_RULES@
-
-%.gschema.xml.in: %.gschema.xml.in.in Makefile
-	$(AM_V_GEN) $(SED) -e 's^\@datadir\@^$(datadir)^g' -e 's^\@GETTEXT_PACKAGE\@^$(GETTEXT_PACKAGE)^g' < $< > $@
 
 convertdir = $(datadir)/MateConf/gsettings
 convert_DATA = matekbd.convert
 
 EXTRA_DIST = matekbd-indicator-marshal.list \
              matekbd-keyboard-drawing-marshal.list \
-             $(gsettings_SCHEMAS).in.in $(convert_DATA) $(ui_DATA)
+             $(gsettingsschema_in_files) \
+	     $(convert_DATA) \
+	     $(ui_DATA)
 
-DISTCLEANFILES = $(gsettings_SCHEMAS).in $(gsettings_SCHEMAS)
+DISTCLEANFILES = $(gsettings_SCHEMAS)
 
 GLIB_GENMARSHAL = $(shell pkg-config --variable=glib_genmarshal glib-2.0)
 

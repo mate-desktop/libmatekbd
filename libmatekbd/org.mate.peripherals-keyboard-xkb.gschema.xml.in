@@ -1,0 +1,124 @@
+<schemalist gettext-domain="@GETTEXT_PACKAGE@">
+  <schema id="org.mate.peripherals-keyboard-xkb" path="/org/mate/desktop/peripherals/keyboard/">
+    <child name="kbd" schema="org.mate.peripherals-keyboard-xkb.kbd"/>
+    <child name="general" schema="org.mate.peripherals-keyboard-xkb.general"/>
+    <child name="preview" schema="org.mate.peripherals-keyboard-xkb.preview"/>
+    <child name="indicator" schema="org.mate.peripherals-keyboard-xkb.indicator"/>
+  </schema>
+  <schema id="org.mate.peripherals-keyboard-xkb.kbd" path="/org/mate/desktop/peripherals/keyboard/kbd/">
+    <key name="model" type="s">
+      <default>''</default>
+      <summary>Keyboard model</summary>
+      <description>keyboard model</description>
+    </key>
+    <key name="layouts" type="as">
+      <default>[]</default>
+      <summary>Keyboard layout</summary>
+      <description>keyboard layout</description>
+    </key>
+    <key name="options" type="as">
+      <default>[]</default>
+      <summary>Keyboard options</summary>
+      <description>Keyboard options</description>
+    </key>
+  </schema>
+  <schema id="org.mate.peripherals-keyboard-xkb.general" path="/org/mate/desktop/peripherals/keyboard/general/">
+    <key name="update-handlers" type="as">
+      <default>[]</default>
+      <summary>Keyboard Update Handlers</summary>
+      <description>A collection of scripts to run whenever the keyboard state is reloaded.  Useful for re-applying xmodmap based adjustments</description>
+    </key>
+    <key name="known-file-list" type="as">
+      <default>[]</default>
+      <summary>modmap file list</summary>
+      <description>A list of modmap files available in the $HOME directory.</description>
+    </key>
+    <key name="default-group" type="i">
+      <default>-1</default>
+      <summary>Default group, assigned on window creation</summary>
+      <description>Default group, assigned on window creation</description>
+    </key>
+    <key name="group-per-window" type="b">
+      <default>true</default>
+      <summary>Keep and manage separate group per window</summary>
+      <description>Keep and manage separate group per window</description>
+    </key>
+    <key name="handle-indicators" type="b">
+      <default>false</default>
+      <summary>Save/restore indicators together with layout groups</summary>
+      <description>Save/restore indicators together with layout groups</description>
+    </key>
+    <key name="layout-names-as-group-names" type="b">
+      <default>true</default>
+      <summary>Show layout names instead of group names</summary>
+      <description>Show layout names instead of group names (only for versions of XFree supporting multiple layouts)</description>
+    </key>
+    <key name="load-extra-items" type="b">
+      <default>false</default>
+      <summary>Load extra configuration items</summary>
+      <description>Load exotic, rarely used layouts and options</description>
+    </key>
+    <key name="disable-sysconfig-changed-warning" type="b">
+      <default>false</default>
+      <summary>Suppress the "X sysconfig changed" warning message</summary>
+      <description>Suppress the "X sysconfig changed" warning message</description>
+    </key>
+    <key name="disable-indicator" type="b">
+      <default>false</default>
+      <summary>Allow to disable the keyboard indicator tray icon</summary>
+      <description>Allow to disable the keyboard indicator tray icon</description>
+    </key>
+    <key name="duplicate-leds" type="b">
+      <default>false</default>
+      <summary>Show keyboard leds indicator</summary>
+      <description>Show keyboard leds indicator</description>
+    </key>
+  </schema>
+  <schema id="org.mate.peripherals-keyboard-xkb.preview" path="/org/mate/desktop/peripherals/keyboard/preview/">
+    <key name="x" type="i">
+      <default>-1</default>
+      <summary>The Keyboard Preview, X offset</summary>
+      <description>The Keyboard Preview, X offset</description>
+    </key>
+    <key name="y" type="i">
+      <default>-1</default>
+      <summary>The Keyboard Preview, Y offset</summary>
+      <description>The Keyboard Preview, Y offset</description>
+    </key>
+    <key name="width" type="i">
+      <default>-1</default>
+      <summary>The Keyboard Preview, width</summary>
+      <description>The Keyboard Preview, width</description>
+    </key>
+    <key name="height" type="i">
+      <default>-1</default>
+      <summary>The Keyboard Preview, height</summary>
+      <description>The Keyboard Preview, height</description>
+    </key>
+  </schema>
+  <schema id="org.mate.peripherals-keyboard-xkb.indicator" path="/org/mate/desktop/peripherals/keyboard/indicator/">
+    <key name="secondary" type="i">
+      <default>0</default>
+      <summary>Secondary groups</summary>
+      <description>Secondary groups</description>
+    </key>
+    <key name="show-flags" type="b">
+      <default>false</default>
+    </key>
+    <key name="font-family" type="s">
+      <default>''</default>
+      <summary>The font</summary>
+      <description>The font for the layout indicator. This should be in "[FAMILY-LIST] [STYLE-OPTIONS] [SIZE]" format.</description>
+    </key>
+    <key name="foreground-color" type="s">
+      <default>''</default>
+      <summary>The foreground color</summary>
+      <description>The foreground color for the layout indicator. This should be in "R G B" format, for example "255 0 0".</description>
+    </key>
+    <key name="background-color" type="s">
+      <default>''</default>
+      <summary>The background color</summary>
+      <description>The background color for the layout indicator. This should be in "R G B" format, for example "255 0 0".</description>
+    </key>
+  </schema>
+</schemalist>
