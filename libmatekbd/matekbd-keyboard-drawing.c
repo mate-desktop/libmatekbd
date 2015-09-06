@@ -1353,20 +1353,11 @@ create_cairo (MatekbdKeyboardDrawing * drawing)
 	GtkStateType state;
 	if (drawing == NULL)
 		return FALSE;
-#if GTK_CHECK_VERSION (3, 0, 0)
 	if (drawing->surface == NULL)
 		return FALSE;
-#else
-	if (drawing->pixmap == NULL)
-		return FALSE;
-#endif
 
 	drawing->renderContext->cr =
-#if GTK_CHECK_VERSION (3, 0, 0)
 	    cairo_create (drawing->surface);
-#else
-	    gdk_cairo_create (GDK_DRAWABLE (drawing->pixmap));
-#endif
 
 	state = gtk_widget_get_state (GTK_WIDGET (drawing));
 	drawing->renderContext->dark_color =
@@ -1394,18 +1385,12 @@ draw_keyboard (MatekbdKeyboardDrawing * drawing)
 
 	gtk_widget_get_allocation (GTK_WIDGET (drawing), &allocation);
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 	drawing->surface =
 	    gdk_window_create_similar_surface (gtk_widget_get_window
 					       (GTK_WIDGET (drawing)),
 					       CAIRO_CONTENT_COLOR,
 					       allocation.width,
 					       allocation.height);
-#else
-	drawing->pixmap =
-	    gdk_pixmap_new (gtk_widget_get_window (GTK_WIDGET (drawing)),
-			    allocation.width, allocation.height, -1);
-#endif
 
 	if (create_cairo (drawing)) {
 	        /* blank background */
@@ -1462,32 +1447,17 @@ expose_event (GtkWidget *widget,
 #endif
 {
 #if !GTK_CHECK_VERSION (3, 0, 0)
-        cairo_t *cr;
+        cairo_t *cr = gdk_cairo_create (event->window);
 #endif
 
 	if (!drawing->xkb)
 		return FALSE;
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 	if (drawing->surface == NULL)
-#else
-	if (drawing->pixmap == NULL)
-#endif
 		return FALSE;
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 	cairo_set_source_surface (cr, drawing->surface, 0, 0);
 	cairo_paint (cr);
-#else
-	cr = gdk_cairo_create (event->window);
-	gdk_cairo_region (cr, event->region);
-	cairo_clip (cr);
-
-	gdk_cairo_set_source_pixmap (cr, drawing->pixmap, 0, 0);
-	cairo_paint (cr);
-
-	cairo_destroy (cr);
-#endif
 
 	return FALSE;
 }
@@ -1547,17 +1517,10 @@ size_allocate (GtkWidget * widget,
 {
 	MatekbdKeyboardDrawingRenderContext *context = drawing->renderContext;
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 	if (drawing->surface) {
 		cairo_surface_destroy (drawing->surface);
 		drawing->surface = NULL;
 	}
-#else
-	if (drawing->pixmap) {
-		g_object_unref (drawing->pixmap);
-		drawing->pixmap = NULL;
-	}
-#endif
 
 	if (!context_setup_scaling (context, drawing,
 				    allocation->width, allocation->height,
@@ -2058,13 +2021,9 @@ destroy (MatekbdKeyboardDrawing * drawing)
 		drawing->idle_redraw = 0;
 	}
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 	if (drawing->surface != NULL) {
 		cairo_surface_destroy (drawing->surface);
 	}
-#else
-	g_object_unref (drawing->pixmap);
-#endif
 }
 
 static void
@@ -2101,11 +2060,7 @@ matekbd_keyboard_drawing_init (MatekbdKeyboardDrawing * drawing)
 		drawing->screen_num =
 		    gdk_screen_get_number (gdk_screen_get_default ());
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 	drawing->surface = NULL;
-#else
-	drawing->pixmap = NULL;
-#endif
 	alloc_render_context (drawing);
 
 	drawing->keyboard_items = NULL;

@@ -125,11 +125,7 @@ struct _MatekbdKeyboardDrawing {
 
 	GtkDrawingArea parent;
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 	cairo_surface_t *surface;
-#else
-	GdkPixmap *pixmap;
-#endif
 	XkbDescRec *xkb;
 	gboolean xkbOnDisplay;
 	guint l3mod;
