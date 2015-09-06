@@ -826,6 +826,10 @@ matekbd_status_get_xkl_engine ()
 	return globals.engine;
 }
 
+/**
+ * matekbd_status_get_group_names:
+ * Returns: (transfer none) (array zero-terminated=1): List of group names
+ */
 gchar **
 matekbd_status_get_group_names ()
 {

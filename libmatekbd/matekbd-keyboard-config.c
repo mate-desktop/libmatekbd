@@ -635,6 +635,10 @@ matekbd_keyboard_config_activate (MatekbdKeyboardConfig * kbd_config)
 	return rv;
 }
 
+/**
+ * matekbd_keyboard_config_start_listen:
+ * @func: (scope notified): a function to call when settings are changed
+ */
 void
 matekbd_keyboard_config_start_listen (MatekbdKeyboardConfig * kbd_config,
 				   GCallback func,

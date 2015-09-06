@@ -239,6 +239,10 @@ matekbd_desktop_config_restore_group (MatekbdDesktopConfig * config)
 	xkl_engine_lock_group (config->engine, group);
 }
 
+/**
+ * matekbd_desktop_config_start_listen:
+ * @func: (scope notified): a function to call when settings are changed
+ */
 void
 matekbd_desktop_config_start_listen (MatekbdDesktopConfig * config,
 				  GCallback func,

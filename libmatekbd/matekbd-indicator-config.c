@@ -301,6 +301,10 @@ matekbd_indicator_config_activate (MatekbdIndicatorConfig * ind_config)
 					      ind_config->secondary_groups_mask);
 }
 
+/**
+ * matekbd_indicator_config_start_listen:
+ * @func: (scope notified): a function to call when settings are changed
+ */
 void
 matekbd_indicator_config_start_listen (MatekbdIndicatorConfig *
 				    ind_config,
