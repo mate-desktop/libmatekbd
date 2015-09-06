@@ -6,6 +6,8 @@ SUBDIRS = libmatekbd $(TEST) po
 
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
+DISTCHECK_CONFIGURE_FLAGS = --enable-introspection
+
 DISTCLEANFILES = \
   intltool-extract \
   intltool-merge \

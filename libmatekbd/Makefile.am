@@ -4,7 +4,7 @@ uidir = $(pkgdatadir)/ui
 ui_DATA = show-layout.ui
 
 common_CFLAGS = \
-	-I$(top_srcdir) -Wall 			\
+	-I$(top_srcdir)					\
 	$(GDK_CFLAGS)					\
 	$(GIO_CFLAGS)					\
 	$(LIBXKLAVIER_CFLAGS)				\
@@ -109,3 +109,30 @@ matekbd-keyboard-drawing-marshal.c: matekbd-keyboard-drawing-marshal.h
                             --body > matekbd-keyboard-drawing-marshal.tmp \
           && mv matekbd-keyboard-drawing-marshal.tmp matekbd-keyboard-drawing-marshal.c ) \
         || ( rm -f matekbd-keyboard-drawing-marshal.tmp && exit 1 )
+
+
+-include $(INTROSPECTION_MAKEFILE)
+INTROSPECTION_GIRS =
+INTROSPECTION_SCANNER_ARGS = --add-include-path=$(srcdir) --warn-all
+INTROSPECTION_COMPILER_ARGS = --includedir=$(srcdir)
+
+if HAVE_INTROSPECTION
+introspection_sources = $(matekbdinc_HEADERS) \
+        $(libmatekbd_la_SOURCES) \
+        $(libmatekbdui_la_SOURCES)
+
+Matekbd-1.0.gir: libmatekbd.la libmatekbdui.la
+Matekbd_1_0_gir_INCLUDES = GObject-2.0 Gtk-$(GTK_API_VERSION) xlib-2.0
+Matekbd_1_0_gir_CFLAGS = $(libmatekbdui_la_CFLAGS)
+Matekbd_1_0_gir_LIBS = libmatekbd.la libmatekbdui.la
+Matekbd_1_0_gir_FILES = $(introspection_sources)
+INTROSPECTION_GIRS += Matekbd-1.0.gir
+
+girdir = $(datadir)/gir-1.0
+gir_DATA = $(INTROSPECTION_GIRS)
+
+typelibdir = $(libdir)/girepository-1.0
+typelib_DATA = $(INTROSPECTION_GIRS:.gir=.typelib)
+
+CLEANFILES = $(gir_DATA) $(typelib_DATA)
+endif

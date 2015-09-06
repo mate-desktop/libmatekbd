@@ -40,6 +40,7 @@ case "$with_gtk" in
        GDK_REQUIRED=3.0
        ;;
 esac
+AC_SUBST([GTK_API_VERSION])
 
 dnl ***************************************************************************
 dnl *** Minimum library versions for libmatekbd                            ***
@@ -123,6 +124,8 @@ AC_ARG_ENABLE([tests],
 AM_CONDITIONAL(BUILD_TESTS, test "$enable_tests" = "yes")
 
 AC_SEARCH_LIBS([sqrt], [m])
+
+GOBJECT_INTROSPECTION_CHECK([0.6.7])
 
 AC_OUTPUT([
 Makefile
