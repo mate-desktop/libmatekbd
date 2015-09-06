@@ -26,7 +26,7 @@
 #include <stdlib.h>
 #include <memory.h>
 #include <math.h>
-#include <glib/gi18n.h>
+#include <glib/gi18n-lib.h>
 #include <libxklavier/xklavier.h>
 
 #include <matekbd-keyboard-drawing.h>

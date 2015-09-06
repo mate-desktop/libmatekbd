@@ -24,7 +24,7 @@
 #include <stdlib.h>
 #include <X11/keysym.h>
 
-#include <glib/gi18n.h>
+#include <glib/gi18n-lib.h>
 #include <gio/gio.h>
 #include <matekbd-desktop-config.h>
 #include <matekbd-config-private.h>
