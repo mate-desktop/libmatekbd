@@ -619,14 +619,14 @@ find_keycode (MatekbdKeyboardDrawing * drawing, gchar * key_name)
 }
 
 static void
-set_markup(MatekbdKeyboardDrawingRenderContext * context,
-		     gchar *txt)
+set_markup (MatekbdKeyboardDrawingRenderContext * context, gchar *txt)
 {
 	PangoLayout *layout = context->layout;
-	txt = strcmp("<", txt) ? txt : "&lt;";
-	txt = strcmp("&", txt) ? txt : "&amp;";
+	txt = strcmp ("<", txt) ? txt : "&lt;";
+	txt = strcmp ("&", txt) ? txt : "&amp;";
 	if (g_utf8_strlen (txt, -1) > 1) {
-		gchar* buf = g_strdup_printf ("<span size=\"x-small\">%s</span>", txt);
+		gchar* buf =
+		    g_strdup_printf ("<span size=\"x-small\">%s</span>", txt);
 		pango_layout_set_markup (layout, buf, -1);
 		g_free (buf);
 	} else {
@@ -795,8 +795,7 @@ set_key_label_in_layout (MatekbdKeyboardDrawingRenderContext * context,
 			gchar *name = gdk_keyval_name (keyval);
 			if (name) {
 				set_markup (context, name);
-			}
-			else
+			} else
 				set_markup (context, "");
 		}
 	}
@@ -1011,9 +1010,9 @@ calc_origin_offset_x (XkbOutlineRec * outline)
 {
 	gint rv = 0;
 	gint i;
+	XkbPointPtr point = outline->points;
 	if (outline->num_points < 3)
 		return 0;
-	XkbPointPtr point = outline->points;
 	for (i = outline->num_points; --i > 0;) {
 		gint x1 = point->x;
 		gint y1 = point++->y;
@@ -1397,8 +1396,11 @@ draw_keyboard (MatekbdKeyboardDrawing * drawing)
 
 #if GTK_CHECK_VERSION (3, 0, 0)
 	drawing->surface =
-	    gdk_window_create_similar_surface (gtk_widget_get_window (GTK_WIDGET (drawing)),
-	                                       CAIRO_CONTENT_COLOR, allocation.width, allocation.height);
+	    gdk_window_create_similar_surface (gtk_widget_get_window
+					       (GTK_WIDGET (drawing)),
+					       CAIRO_CONTENT_COLOR,
+					       allocation.width,
+					       allocation.height);
 #else
 	drawing->pixmap =
 	    gdk_pixmap_new (gtk_widget_get_window (GTK_WIDGET (drawing)),
@@ -1476,17 +1478,17 @@ expose_event (GtkWidget *widget,
 		return FALSE;
 
 #if GTK_CHECK_VERSION (3, 0, 0)
-        cairo_set_source_surface (cr, drawing->surface, 0, 0);
-        cairo_paint (cr);
+	cairo_set_source_surface (cr, drawing->surface, 0, 0);
+	cairo_paint (cr);
 #else
-        cr = gdk_cairo_create (event->window);
-        gdk_cairo_region (cr, event->region);
-        cairo_clip (cr);
+	cr = gdk_cairo_create (event->window);
+	gdk_cairo_region (cr, event->region);
+	cairo_clip (cr);
 
-        gdk_cairo_set_source_pixmap (cr, drawing->pixmap, 0, 0);
-        cairo_paint (cr);
+	gdk_cairo_set_source_pixmap (cr, drawing->pixmap, 0, 0);
+	cairo_paint (cr);
 
-        cairo_destroy (cr);
+	cairo_destroy (cr);
 #endif
 
 	if (gtk_widget_has_focus (widget)) {
