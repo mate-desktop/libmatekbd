@@ -68,13 +68,13 @@ static gboolean
 	pv = variant_ids;
 	total_layouts = g_strv_length ((char **) layout_ids);
 	sld = *short_layout_descriptions =
-	    g_new0 (char *, total_layouts + 1);
+	    g_new0 (gchar *, total_layouts + 1);
 	lld = *long_layout_descriptions =
-	    g_new0 (char *, total_layouts + 1);
+	    g_new0 (gchar *, total_layouts + 1);
 	svd = *short_variant_descriptions =
-	    g_new0 (char *, total_layouts + 1);
+	    g_new0 (gchar *, total_layouts + 1);
 	lvd = *long_variant_descriptions =
-	    g_new0 (char *, total_layouts + 1);
+	    g_new0 (gchar *, total_layouts + 1);
 
 	while (pl != NULL && *pl != NULL) {
 

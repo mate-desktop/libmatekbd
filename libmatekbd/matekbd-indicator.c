@@ -510,7 +510,7 @@ matekbd_indicator_load_group_names (const gchar ** layout_ids,
 		gint i, total_groups =
 		    xkl_engine_get_num_groups (globals.engine);
 		globals.full_group_names =
-		    g_new0 (char *, total_groups + 1);
+		    g_new0 (gchar *, total_groups + 1);
 
 		if (xkl_engine_get_features (globals.engine) &
 		    XKLF_MULTIPLE_LAYOUTS_SUPPORTED) {
