@@ -16,13 +16,14 @@
  * Free Software Foundation, Inc., 51 Franklin St, Fifth Floor,
  * Boston, MA 02110-1301, USA.
  */
+#include <config.h>
 
 #include <memory.h>
 
 #include <gtk/gtk.h>
 #include <gdk/gdkkeysyms.h>
 #include <gdk/gdkx.h>
-#include <glib/gi18n.h>
+#include <glib/gi18n-lib.h>
 
 #include <matekbd-indicator.h>
 #include <matekbd-indicator-marshal.h>
