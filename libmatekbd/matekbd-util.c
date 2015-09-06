@@ -54,6 +54,10 @@ const gchar MATEKBD_PREVIEW_CONFIG_KEY_Y[] = "y";
 const gchar MATEKBD_PREVIEW_CONFIG_KEY_WIDTH[] = "width";
 const gchar MATEKBD_PREVIEW_CONFIG_KEY_HEIGHT[] = "height";
 
+/**
+ * matekbd_preview_load_position:
+ * Returns: (transfer full): A rectangle to use
+ */
 GdkRectangle *
 matekbd_preview_load_position (void)
 {
