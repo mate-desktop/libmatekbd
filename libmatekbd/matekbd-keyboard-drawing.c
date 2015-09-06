@@ -618,6 +618,21 @@ find_keycode (MatekbdKeyboardDrawing * drawing, gchar * key_name)
 	return INVALID_KEYCODE;
 }
 
+static void
+set_markup(MatekbdKeyboardDrawingRenderContext * context,
+		     gchar *txt)
+{
+	PangoLayout *layout = context->layout;
+	txt = strcmp("<", txt) ? txt : "&lt;";
+	txt = strcmp("&", txt) ? txt : "&amp;";
+	if (g_utf8_strlen (txt, -1) > 1) {
+		gchar* buf = g_strdup_printf ("<span size=\"x-small\">%s</span>", txt);
+		pango_layout_set_markup (layout, buf, -1);
+		g_free (buf);
+	} else {
+		pango_layout_set_markup (layout, txt, -1);
+	}
+}
 
 static void
 set_key_label_in_layout (MatekbdKeyboardDrawingRenderContext * context,
@@ -625,131 +640,130 @@ set_key_label_in_layout (MatekbdKeyboardDrawingRenderContext * context,
 {
 	gchar buf[5];
 	gunichar uc;
-	PangoLayout *layout = context->layout;
 
 	switch (keyval) {
 	case GDK_KEY_Scroll_Lock:
-		pango_layout_set_text (layout, "Scroll\nLock", -1);
+		set_markup (context, "Scroll\nLock");
 		break;
 
 	case GDK_KEY_space:
-		pango_layout_set_text (layout, "", -1);
+		set_markup (context, "");
 		break;
 
 	case GDK_KEY_Sys_Req:
-		pango_layout_set_text (layout, "Sys Rq", -1);
+		set_markup (context, "Sys Rq");
 		break;
 
 	case GDK_KEY_Page_Up:
-		pango_layout_set_text (layout, "Page\nUp", -1);
+		set_markup (context, "Page\nUp");
 		break;
 
 	case GDK_KEY_Page_Down:
-		pango_layout_set_text (layout, "Page\nDown", -1);
+		set_markup (context, "Page\nDown");
 		break;
 
 	case GDK_KEY_Num_Lock:
-		pango_layout_set_text (layout, "Num\nLock", -1);
+		set_markup (context, "Num\nLock");
 		break;
 
 	case GDK_KEY_KP_Page_Up:
-		pango_layout_set_text (layout, "Pg Up", -1);
+		set_markup (context, "Pg Up");
 		break;
 
 	case GDK_KEY_KP_Page_Down:
-		pango_layout_set_text (layout, "Pg Dn", -1);
+		set_markup (context, "Pg Dn");
 		break;
 
 	case GDK_KEY_KP_Home:
-		pango_layout_set_text (layout, "Home", -1);
+		set_markup (context, "Home");
 		break;
 
 	case GDK_KEY_KP_Left:
-		pango_layout_set_text (layout, "Left", -1);
+		set_markup (context, "Left");
 		break;
 
 	case GDK_KEY_KP_End:
-		pango_layout_set_text (layout, "End", -1);
+		set_markup (context, "End");
 		break;
 
 	case GDK_KEY_KP_Up:
-		pango_layout_set_text (layout, "Up", -1);
+		set_markup (context, "Up");
 		break;
 
 	case GDK_KEY_KP_Begin:
-		pango_layout_set_text (layout, "Begin", -1);
+		set_markup (context, "Begin");
 		break;
 
 	case GDK_KEY_KP_Right:
-		pango_layout_set_text (layout, "Right", -1);
+		set_markup (context, "Right");
 		break;
 
 	case GDK_KEY_KP_Enter:
-		pango_layout_set_text (layout, "Enter", -1);
+		set_markup (context, "Enter");
 		break;
 
 	case GDK_KEY_KP_Down:
-		pango_layout_set_text (layout, "Down", -1);
+		set_markup (context, "Down");
 		break;
 
 	case GDK_KEY_KP_Insert:
-		pango_layout_set_text (layout, "Ins", -1);
+		set_markup (context, "Ins");
 		break;
 
 	case GDK_KEY_KP_Delete:
-		pango_layout_set_text (layout, "Del", -1);
+		set_markup (context, "Del");
 		break;
 
 	case GDK_KEY_dead_grave:
-		pango_layout_set_text (layout, "ˋ", -1);
+		set_markup (context, "ˋ");
 		break;
 
 	case GDK_KEY_dead_acute:
-		pango_layout_set_text (layout, "ˊ", -1);
+		set_markup (context, "ˊ");
 		break;
 
 	case GDK_KEY_dead_circumflex:
-		pango_layout_set_text (layout, "ˆ", -1);
+		set_markup (context, "ˆ");
 		break;
 
 	case GDK_KEY_dead_tilde:
-		pango_layout_set_text (layout, "~", -1);
+		set_markup (context, "~");
 		break;
 
 	case GDK_KEY_dead_macron:
-		pango_layout_set_text (layout, "ˉ", -1);
+		set_markup (context, "ˉ");
 		break;
 
 	case GDK_KEY_dead_breve:
-		pango_layout_set_text (layout, "˘", -1);
+		set_markup (context, "˘");
 		break;
 
 	case GDK_KEY_dead_abovedot:
-		pango_layout_set_text (layout, "˙", -1);
+		set_markup (context, "˙");
 		break;
 
 	case GDK_KEY_dead_diaeresis:
-		pango_layout_set_text (layout, "¨", -1);
+		set_markup (context, "¨");
 		break;
 
 	case GDK_KEY_dead_abovering:
-		pango_layout_set_text (layout, "˚", -1);
+		set_markup (context, "˚");
 		break;
 
 	case GDK_KEY_dead_doubleacute:
-		pango_layout_set_text (layout, "˝", -1);
+		set_markup (context, "˝");
 		break;
 
 	case GDK_KEY_dead_caron:
-		pango_layout_set_text (layout, "ˇ", -1);
+		set_markup (context, "ˇ");
 		break;
 
 	case GDK_KEY_dead_cedilla:
-		pango_layout_set_text (layout, "¸", -1);
+		set_markup (context, "¸");
 		break;
 
 	case GDK_KEY_dead_ogonek:
-		pango_layout_set_text (layout, "˛", -1);
+		set_markup (context, "˛");
 		break;
 
 		/* case GDK_KEY_dead_iota:
@@ -757,32 +771,33 @@ set_key_label_in_layout (MatekbdKeyboardDrawingRenderContext * context,
 		 * case GDK_KEY_dead_semivoiced_sound: */
 
 	case GDK_KEY_dead_belowdot:
-		pango_layout_set_text (layout, " ̣", -1);
+		set_markup (context, " ̣");
 		break;
 
 	case GDK_KEY_horizconnector:
-		pango_layout_set_text (layout, "horiz\nconn", -1);
+		set_markup (context, "horiz\nconn");
 		break;
 
 	case GDK_KEY_Mode_switch:
-		pango_layout_set_text (layout, "AltGr", -1);
+		set_markup (context, "AltGr");
 		break;
 
 	case GDK_KEY_Multi_key:
-		pango_layout_set_text (layout, "Compose", -1);
+		set_markup (context, "Compose");
 		break;
 
 	default:
 		uc = gdk_keyval_to_unicode (keyval);
 		if (uc != 0 && g_unichar_isgraph (uc)) {
 			buf[g_unichar_to_utf8 (uc, buf)] = '\0';
-			pango_layout_set_text (layout, buf, -1);
+			set_markup (context, buf);
 		} else {
 			gchar *name = gdk_keyval_name (keyval);
-			if (name)
-				pango_layout_set_text (layout, name, -1);
+			if (name) {
+				set_markup (context, name);
+			}
 			else
-				pango_layout_set_text (layout, "", -1);
+				set_markup (context, "");
 		}
 	}
 }
@@ -1143,7 +1158,7 @@ draw_text_doodad (MatekbdKeyboardDrawingRenderContext * context,
 	y = xkb_to_pixmap_coord (context,
 				 doodad->origin_y + text_doodad->top);
 
-	pango_layout_set_text (context->layout, text_doodad->text, -1);
+	set_markup (context, text_doodad->text);
 	draw_pango_layout (context, drawing, doodad->angle, x, y);
 }
 
