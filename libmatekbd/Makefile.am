@@ -112,7 +112,7 @@ matekbd-keyboard-drawing-marshal.c: matekbd-keyboard-drawing-marshal.h
 
 
 -include $(INTROSPECTION_MAKEFILE)
-INTROSPECTION_GIRS =
+INTROSPECTION_GIRS = Matekbd-1.0.gir
 INTROSPECTION_SCANNER_ARGS = --add-include-path=$(srcdir) --warn-all
 INTROSPECTION_COMPILER_ARGS = --includedir=$(srcdir)
 
@@ -126,7 +126,6 @@ Matekbd_1_0_gir_INCLUDES = GObject-2.0 Gtk-$(GTK_API_VERSION) xlib-2.0
 Matekbd_1_0_gir_CFLAGS = $(libmatekbdui_la_CFLAGS)
 Matekbd_1_0_gir_LIBS = libmatekbd.la libmatekbdui.la
 Matekbd_1_0_gir_FILES = $(introspection_sources)
-INTROSPECTION_GIRS += Matekbd-1.0.gir
 
 girdir = $(datadir)/gir-1.0
 gir_DATA = $(INTROSPECTION_GIRS)
@@ -134,5 +133,5 @@ gir_DATA = $(INTROSPECTION_GIRS)
 typelibdir = $(libdir)/girepository-1.0
 typelib_DATA = $(INTROSPECTION_GIRS:.gir=.typelib)
 
-CLEANFILES = $(gir_DATA) $(typelib_DATA)
+CLEANFILES += $(gir_DATA) $(typelib_DATA)
 endif
