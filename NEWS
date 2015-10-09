@@ -1,6 +1,15 @@
 MATE
 ====
 
+1.11.0
+    Add GObject introspection
+    Retrieve strings directly from gschema (requires intltool 0.50.1)
+    Layout view/print dialog: remove useless Help button
+    Layout view/print dialog: some UI fixes
+    Some GTK+3 fixes
+    Some more fixes and cleanups
+    Translations update
+
 1.10.0
 	Bugfixes
 
