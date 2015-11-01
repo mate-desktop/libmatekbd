@@ -10,26 +10,26 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-29 12:49+0200\n"
-"PO-Revision-Date: 2014-06-01 05:13+0000\n"
-"Last-Translator: Vaibhav S Dalvi <vaibhav.dlv@gmail.com>\n"
-"Language-Team: Marathi (http://www.transifex.com/projects/p/MATE/language/mr/)\n"
+"POT-Creation-Date: 2015-09-09 12:55+0200\n"
+"PO-Revision-Date: 2015-09-06 18:41+0000\n"
+"Last-Translator: infirit <inactive+infirit@transifex.com>\n"
+"Language-Team: Marathi (http://www.transifex.com/mate/MATE/language/mr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: mr\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../libmatekbd/matekbd-indicator.c:120 ../libmatekbd/matekbd-status.c:323
+#: ../libmatekbd/matekbd-indicator.c:116 ../libmatekbd/matekbd-status.c:310
 #, c-format
 msgid "There was an error loading an image: %s"
 msgstr "प्रतिमा दाखल करतेवेळी त्रुटी: %s"
 
-#: ../libmatekbd/matekbd-indicator.c:729 ../libmatekbd/matekbd-status.c:656
+#: ../libmatekbd/matekbd-indicator.c:699 ../libmatekbd/matekbd-status.c:645
 msgid "XKB initialization error"
 msgstr "XKB सुरू करतेवेळी त्रुटी"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2423
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2460
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
@@ -37,249 +37,175 @@ msgid ""
 "For licensing see package metadata"
 msgstr "कळफलक मांडणी \"%s\"\nसर्वहक्काधीकर &#169; X.Org Foundation व XKeyboardConfig सहमभागी\nसंकुल मेटामाहिती करीता परवाना पहा"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2510
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2542
 msgid "Unknown"
 msgstr "अपरिचीत"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2555
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2587
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "कळफलक मांडणी \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:757
+#: ../libmatekbd/matekbd-keyboard-config.c:719
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
 msgstr[0] "मांडणी \"%s\""
 msgstr[1] "मांडणी \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:776
+#: ../libmatekbd/matekbd-keyboard-config.c:737
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
 msgstr[0] "पर्याय \"%s\""
 msgstr[1] "पर्याय \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:784
+#: ../libmatekbd/matekbd-keyboard-config.c:745
 #, c-format
 msgid "model \"%s\", %s and %s"
 msgstr "प्रारूप \"%s\", %s व %s"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:785
+#: ../libmatekbd/matekbd-keyboard-config.c:746
 msgid "no layout"
 msgstr "मांडणी नाही"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:786
+#: ../libmatekbd/matekbd-keyboard-config.c:747
 msgid "no options"
 msgstr "पर्याय नाही"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:1
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:1
 msgid "Keyboard model"
 msgstr "कळफलक मॉडेल"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:2
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:2
 msgid "keyboard model"
 msgstr "कळफलक प्रारूप"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:3
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:3
 msgid "Keyboard layout"
 msgstr "कळफलक मांडणी"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:4
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:4
 msgid "keyboard layout"
 msgstr "कळफलक मांडणी"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:5
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:5
 msgid "Keyboard options"
 msgstr "कळफलक पर्याय"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:6
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:6
 msgid "Keyboard Update Handlers"
 msgstr "कळफलक अद्ययावत हातळणी"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:7
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:7
 msgid ""
 "A collection of scripts to run whenever the keyboard state is reloaded. "
 "Useful for re-applying xmodmap based adjustments"
 msgstr "कळफलक स्थिती पुनःदाखल केल्यास चालविण्याजोगी लिपींचा संच. xmodmap आधारीत तडजोड पुनःवापरणी करीता फायदेशीर ठरते"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:8
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:8
 msgid "modmap file list"
 msgstr "modmap फाइल यादी"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:9
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:9
 msgid "A list of modmap files available in the $HOME directory."
 msgstr "modmap फाइलीची यादी $HOME संचयीकेमध्ये उपलब्ध आहे."
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:10
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:10
 msgid "Default group, assigned on window creation"
 msgstr "चौकट निर्माण केल्यावर मुलभूत गटाची, नेमणूक केली जाते"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:11
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:11
 msgid "Keep and manage separate group per window"
 msgstr "प्रत्येक चौकटीकरीता स्वतंत्र गट ठेवा व नियंत्रीत करा"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:12
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:12
 msgid "Save/restore indicators together with layout groups"
 msgstr "मांडणी गटासह सूचक संचयन/पुनःसंचयन करा"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:13
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:13
 msgid "Show layout names instead of group names"
 msgstr "गटातील नावं ऐवजी मांडणीतील नावं दर्शवा"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:14
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:14
 msgid ""
 "Show layout names instead of group names (only for versions of XFree "
 "supporting multiple layouts)"
 msgstr "गटातील नावं ऐवजी मांडणीतील नावं दर्शवा (फक्त XFree बहु मांडणी समर्थीत आवृत्तीं करीता)"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:15
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:15
 msgid "Load extra configuration items"
 msgstr "अगाऊ संरचना घटके लोड करा"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:16
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:16
 msgid "Load exotic, rarely used layouts and options"
 msgstr "एक्जॉटीक, क्वचीत वापरलेली मांडणी व पर्याय लोड करा"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:17
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:17
 msgid "Suppress the \"X sysconfig changed\" warning message"
 msgstr "\"X sysconfig बदलले\" सावधानता संदेश दुर्लक्ष करा"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:18
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:18
+msgid "Allow to disable the keyboard indicator tray icon"
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:19
+msgid "Show keyboard leds indicator"
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:20
 msgid "The Keyboard Preview, X offset"
 msgstr "कळफलक पूर्वदृश्य, X ऑफसेट"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:19
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:21
 msgid "The Keyboard Preview, Y offset"
 msgstr "कळफलक पूर्वदृश्य, Y ऑफसेट"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:20
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:22
 msgid "The Keyboard Preview, width"
 msgstr "कळफलक पूर्वदृश्य, रुंदी"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:21
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:23
 msgid "The Keyboard Preview, height"
 msgstr "कळफलक पूर्वदृश्य, उंची"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:22
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:24
 msgid "Secondary groups"
 msgstr "दुय्यम गट"
 
-#. TRANSLATORS: real national flags
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:24
-msgid "Show flags in the applet"
-msgstr "ऐपलेट मधील बाबी दर्शवा"
-
-#. TRANSLATORS: real national flags
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:26
-msgid "Show flags in the applet to indicate the current layout"
-msgstr "सद्य मांडणी सूचीत करण्यासाठी ऐपलेटमधील बाबी दर्शवा"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:27
-msgid "The font family"
-msgstr "फॉन्ट परिवार"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:28
-msgid "The font family for the layout indicator"
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:25
+msgid "The font"
 msgstr ""
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:29
-msgid "The font size"
-msgstr "फॉन्ट आकार"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:30
-msgid "The font size for the layout indicator"
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:26
+msgid ""
+"The font for the layout indicator. This should be in \"[FAMILY-LIST] [STYLE-"
+"OPTIONS] [SIZE]\" format."
 msgstr ""
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:31
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:27
 msgid "The foreground color"
 msgstr "शिर्षकाचे पृष्ठभूमी रंग"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:32
-msgid "The foreground color for the layout indicator"
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:28
+msgid ""
+"The foreground color for the layout indicator. This should be in \"R G B\" "
+"format, for example \"255 0 0\"."
 msgstr ""
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:33
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:29
 msgid "The background color"
 msgstr "पार्श्वभूमी रंग"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:34
-msgid "The background color for the layout indicator"
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:30
+msgid ""
+"The background color for the layout indicator. This should be in \"R G B\" "
+"format, for example \"255 0 0\"."
 msgstr ""
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:35
-msgid "The list of enabled Keyboard Indicator plugins"
-msgstr "उपलब्ध कळफलक सूचक प्लगईनची यादी"
 
 #: ../libmatekbd/show-layout.ui.h:1
 msgid "Keyboard Layout"
 msgstr "कळफलक मांडणी"
-
-#: ../capplet/matekbd-indicator-plugins.ui.h:1
-msgid "Keyboard Indicator Plugins"
-msgstr "कलफलक सूचक प्लगईन"
-
-#: ../capplet/matekbd-indicator-plugins.ui.h:2
-msgid "Active _plugins:"
-msgstr "सक्रीय प्लगईन (_p):"
-
-#: ../capplet/matekbd-indicator-plugins.ui.h:3
-msgid "The list of active plugins"
-msgstr "सक्रीय प्लगईनची यादी"
-
-#: ../capplet/matekbd-indicator-plugins.ui.h:4
-msgid "Activate more plugins"
-msgstr "अधिक प्लगईन सक्रीय करा"
-
-#: ../capplet/matekbd-indicator-plugins.ui.h:5
-msgid "Deactivate selected plugin"
-msgstr "निवडलेले प्लगईन सक्रीय करू नका"
-
-#: ../capplet/matekbd-indicator-plugins.ui.h:6
-msgid "Increase the plugin priority"
-msgstr "प्लगईनचे प्राधान्य वाढवा"
-
-#: ../capplet/matekbd-indicator-plugins.ui.h:7
-msgid "Decrease the plugin priority"
-msgstr "प्लगईनचे प्राधान्य कमी करा"
-
-#: ../capplet/matekbd-indicator-plugins.ui.h:8
-msgid "Configure the selected plugin"
-msgstr "निवडलेल्या प्लगईनची संयोजन करा"
-
-#: ../capplet/matekbd-indicator-plugins.ui.h:9
-msgid "Close the dialog"
-msgstr "संवाद बंद करा"
-
-#: ../capplet/matekbd-indicator-plugins_add.ui.h:1
-msgid "Add Plugin"
-msgstr "प्लगईन जोडा"
-
-#: ../capplet/matekbd-indicator-plugins_add.ui.h:2
-msgid "_Available plugins:"
-msgstr "उपलब्ध प्लगईन (_A):"
-
-#: ../capplet/matekbd-indicator-plugins-capplet.c:118
-#: ../capplet/matekbd-indicator-plugins-add.c:106
-msgid "No description."
-msgstr "वर्णन नाही."
-
-#: ../capplet/matekbd-indicator-plugins-capplet.c:256
-msgid "Unable to open help file"
-msgstr "मदत फाइल उघडण्यास अपयशी"
-
-#: ../capplet/matekbd-indicator-plugins-capplet.c:379
-#, c-format
-msgid "Failed to init MateConf: %s\n"
-msgstr "MateConf सुरू करण्यास अपयशी: %s\n"
-
-#: ../capplet/matekbd-indicator-plugins-capplet.desktop.in.in.h:1
-msgid "Keyboard Indicator plugins"
-msgstr "कळफलक सूचक प्लगईन"
-
-#: ../capplet/matekbd-indicator-plugins-capplet.desktop.in.in.h:2
-msgid "Enable/disable installed plugins"
-msgstr "प्रतिष्ठापीत प्लगईन कार्यान्वीत/अकार्यान्वीत करा"
 
 #: ../test/matekbd-indicator-test.c:55
 #, c-format

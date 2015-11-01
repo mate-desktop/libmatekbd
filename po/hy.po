@@ -3,29 +3,29 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Gil Forcada <gilforcada@guifi.net>, 2007, 2008, 2009, 2010
+# Siranush <ss.m.95@mail.ru>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-09 12:55+0200\n"
-"PO-Revision-Date: 2015-09-06 18:41+0000\n"
-"Last-Translator: infirit <inactive+infirit@transifex.com>\n"
-"Language-Team: Catalan (Valencian) (http://www.transifex.com/mate/MATE/language/ca@valencia/)\n"
+"PO-Revision-Date: 2015-09-25 15:08+0000\n"
+"Last-Translator: Siranush <ss.m.95@mail.ru>\n"
+"Language-Team: Armenian (http://www.transifex.com/mate/MATE/language/hy/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ca@valencia\n"
+"Language: hy\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../libmatekbd/matekbd-indicator.c:116 ../libmatekbd/matekbd-status.c:310
 #, c-format
 msgid "There was an error loading an image: %s"
-msgstr "S'ha produït un error en carregar una imatge: %s"
+msgstr "Պատկերի բեռնման ժամանակ տեղի է  ունեցել սխալ: %s"
 
 #: ../libmatekbd/matekbd-indicator.c:699 ../libmatekbd/matekbd-status.c:645
 msgid "XKB initialization error"
-msgstr "Error d'inicialització de l'XKB"
+msgstr "XKB սկզբնարժեքավորման սխալ"
 
 #: ../libmatekbd/matekbd-keyboard-drawing.c:2460
 #, c-format
@@ -33,183 +33,183 @@ msgid ""
 "Keyboard layout \"%s\"\n"
 "Copyright &#169; X.Org Foundation and XKeyboardConfig contributors\n"
 "For licensing see package metadata"
-msgstr "Disposició de teclat «%s»\nCopyright &#169; la Fundació X.Org i els col·laboradors del XKeyboardConfig\nVegeu les metadades del paquet per a la llicència"
+msgstr "Ստեղնաշարի դասավորություն \"%s\"\nՀեղինակային իրավունք &#169; X.Org Հիմնադրամ և XKeyboardConfig ջակիցներ\nԼիցենզավորման համար տես մետատվյալների փաթեթը"
 
 #: ../libmatekbd/matekbd-keyboard-drawing.c:2542
 msgid "Unknown"
-msgstr ""
+msgstr "Անհայտ"
 
 #: ../libmatekbd/matekbd-keyboard-drawing.c:2587
 #, c-format
 msgid "Keyboard Layout \"%s\""
-msgstr ""
+msgstr "Ստեղնաշարի Դասավորություն \"%s\""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:719
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
-msgstr[0] "«%s» disposició"
-msgstr[1] "«%s» disposicions"
+msgstr[0] "Դասավորություն \"%s\""
+msgstr[1] "Դասավորություններ \"%s\""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:737
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
-msgstr[0] "«%s» opció"
-msgstr[1] "«%s» opcions"
+msgstr[0] "տարբերակ \"%s\""
+msgstr[1] "տարբերակներ \"%s\""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:745
 #, c-format
 msgid "model \"%s\", %s and %s"
-msgstr "model «%s, %s i %s»"
+msgstr "մոդել \"%s\", %s և %s"
 
 #: ../libmatekbd/matekbd-keyboard-config.c:746
 msgid "no layout"
-msgstr "no hi ha disposició"
+msgstr "նախագիծ չկա"
 
 #: ../libmatekbd/matekbd-keyboard-config.c:747
 msgid "no options"
-msgstr "no hi ha opcions"
+msgstr "ընտրանքներ չկան"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:1
 msgid "Keyboard model"
-msgstr "Model del teclat"
+msgstr "Ստեղնաշարի մոդելը"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:2
 msgid "keyboard model"
-msgstr "Model del teclat"
+msgstr "ստեղնաշարի մոդել"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:3
 msgid "Keyboard layout"
-msgstr "Disposició del teclat"
+msgstr "Ստեղնաշարի դասավորություն"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:4
 msgid "keyboard layout"
-msgstr "Disposició del teclat"
+msgstr "ստեղնաշարի դասավորություն"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:5
 msgid "Keyboard options"
-msgstr "Opcions del teclat"
+msgstr "Ստեղնաշարի տարբերակները"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:6
 msgid "Keyboard Update Handlers"
-msgstr "Gestors d'actualització del teclat"
+msgstr "Ստեղնաշարը Թարմացնել Մշակման ծրագրով"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:7
 msgid ""
 "A collection of scripts to run whenever the keyboard state is reloaded. "
 "Useful for re-applying xmodmap based adjustments"
-msgstr "Una col·lecció d'scripts per executar en qualsevol moment que es recarregui l'estat del teclat. Útil per tornar a aplicar ajustaments basats en xmodmap"
+msgstr ""
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:8
 msgid "modmap file list"
-msgstr "llista de fitxers del modmap"
+msgstr "modmap ֆայլի ցանկ"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:9
 msgid "A list of modmap files available in the $HOME directory."
-msgstr "Una llista de fitxers del modmap disponibles en el directori d'inici."
+msgstr "modmap ֆայլերի ցանկը հասանելի է $Սկիզբ տեղեկատուին."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:10
 msgid "Default group, assigned on window creation"
-msgstr "Grup predeterminat, s'assigna en la creació d'una finestra"
+msgstr ""
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:11
 msgid "Keep and manage separate group per window"
-msgstr "Mantén i gestiona un grup separat per finestra"
+msgstr ""
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:12
 msgid "Save/restore indicators together with layout groups"
-msgstr "Alça/restaura els indicadors juntament amb els grups de disposició"
+msgstr ""
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:13
 msgid "Show layout names instead of group names"
-msgstr "Mostra els noms de les disposicions en comptes dels noms de grup"
+msgstr "Խմբի անունները փոխարեն ցույց տալ անունների դասավորությունը"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:14
 msgid ""
 "Show layout names instead of group names (only for versions of XFree "
 "supporting multiple layouts)"
-msgstr "Mostra els noms de les disposicions en comptes dels noms de grup (només per a les versions del XFree que permeten múltiples disposicions)"
+msgstr ""
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:15
 msgid "Load extra configuration items"
-msgstr "Carrega elements de configuració extra"
+msgstr "Բեռնելու լրացուցիչ կոնֆիգուրացիայի տարրեր"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:16
 msgid "Load exotic, rarely used layouts and options"
-msgstr "Carrega disposicions i opcions utilitzades rarament i exòtiques"
+msgstr "Բեռնելու էկզոտիկ, հազվադեպ գտագործված դասավորություն  և տարբերակներ"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:17
 msgid "Suppress the \"X sysconfig changed\" warning message"
-msgstr "Suprimeix el missatge d'avís «ha canviat el X sysconfig»"
+msgstr ""
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:18
 msgid "Allow to disable the keyboard indicator tray icon"
-msgstr ""
+msgstr "Թույլատրիր ստեղնաշարին ցուցիչի սկուտեղի պատկերակը արգելափակել"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:19
 msgid "Show keyboard leds indicator"
-msgstr ""
+msgstr "Ցույց տուր ստեղնաշարի leds ցուցանիշը"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:20
 msgid "The Keyboard Preview, X offset"
-msgstr "La previsualització del teclat, desplaçament horitzontal"
+msgstr "Ստեղնաշարի նախնական դիտում, X հավասարակշռում"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:21
 msgid "The Keyboard Preview, Y offset"
-msgstr "La previsualització del teclat, desplaçament vertical"
+msgstr "Ստեղնաշարի նախնական դիտում, Y հավասարակշռում"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:22
 msgid "The Keyboard Preview, width"
-msgstr "La previsualització del teclat, amplada"
+msgstr "Ստեղնաշարի նախնական դիտում, լայնությունը"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:23
 msgid "The Keyboard Preview, height"
-msgstr "La previsualització del teclat, alçada"
+msgstr "Ստեղնաշարի նախնական դիտում, բարձրությունը"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:24
 msgid "Secondary groups"
-msgstr "Grups secundaris"
+msgstr "Երկրորդական խմբեր"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:25
 msgid "The font"
-msgstr ""
+msgstr "Տառատեսակը"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:26
 msgid ""
 "The font for the layout indicator. This should be in \"[FAMILY-LIST] [STYLE-"
 "OPTIONS] [SIZE]\" format."
-msgstr ""
+msgstr "Դասավորությունը ցուցանիշի տառատեսակ։Սա պետք է լինի\"[FAMILY-LIST] [STYLE-OPTIONS] [SIZE]\" ձևաչափում։"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:27
 msgid "The foreground color"
-msgstr "El color de primer pla"
+msgstr "Առաջնահերթային գույնը"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:28
 msgid ""
 "The foreground color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
-msgstr ""
+msgstr "Դասավորության ցուցանիշի առաջնային գույնը.Սա պետք է լինի է «R G B» ձևաչափով, օրինակ, «255 0 0»."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:29
 msgid "The background color"
-msgstr "El color de fons"
+msgstr "Ֆոնի գույնը"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:30
 msgid ""
 "The background color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
-msgstr ""
+msgstr "Դասավորության ցուցանիշի ֆոնի գույնը.Սա պետք է լինի է «R G B» ձևաչափով, օրինակ, «255 0 0»."
 
 #: ../libmatekbd/show-layout.ui.h:1
 msgid "Keyboard Layout"
-msgstr ""
+msgstr "Ստեղնաշարի Դասավորություն"
 
 #: ../test/matekbd-indicator-test.c:55
 #, c-format
 msgid "Keyboard Indicator Test (%s)"
-msgstr "Prova de l'indicador del teclat (%s)"
+msgstr "Ստեղնաշարի ցուցիչ թեստը (%s)"
 
 #: ../test/matekbd-indicator-test.c:63
 msgid "Indicator:"
-msgstr "Indicador:"
+msgstr "Ցուցանիշ:"

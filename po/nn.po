@@ -1,256 +1,216 @@
-# Norwegian translation of control-center (nynorsk dialect).
-# Copyright (C) 1999-2005 Free Software Foundation, Inc.
-# Kjartan Maraas <kmaraas@gnome.org>, 1999-2006.
-# Terance Edward Sola <terance@lyse.net>, 2005.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
 # Eskild Hustvedt <i18n@zerodogg.org>, 2007, 2008
-#
+# Terance Edward Sola <terance@lyse.net>, 2005
 msgid ""
 msgstr ""
-"Project-Id-Version: libmatekbd 2.15.x\n"
+"Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-04-04 13:39+0200\n"
-"PO-Revision-Date: 2008-04-04 13:40+0200\n"
-"Last-Translator: Eskild Hustvedt <eskildh@gnome.org>\n"
-"Language-Team: Norwegian Nynorsk <i18n-no@lister.ping.uio.no>\n"
+"POT-Creation-Date: 2015-09-09 12:55+0200\n"
+"PO-Revision-Date: 2015-09-06 18:41+0000\n"
+"Last-Translator: infirit <inactive+infirit@transifex.com>\n"
+"Language-Team: Norwegian Nynorsk (http://www.transifex.com/mate/MATE/language/nn/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8-bit\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nn\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2380
+#: ../libmatekbd/matekbd-indicator.c:116 ../libmatekbd/matekbd-status.c:310
+#, c-format
+msgid "There was an error loading an image: %s"
+msgstr "Det oppsto ein feil under lasting av bilete: %s"
+
+#: ../libmatekbd/matekbd-indicator.c:699 ../libmatekbd/matekbd-status.c:645
+msgid "XKB initialization error"
+msgstr "Feil ved klargjering av XKB"
+
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2460
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
 "Copyright &#169; X.Org Foundation and XKeyboardConfig contributors\n"
 "For licensing see package metadata"
-msgstr "Tastaturutforming «%s»\n"
-"Copyright &#169; X.Org foundation og XKeyboardConfig bidragsytarar\n"
-"For lisensinformasjon sjå metadata om pakka."
+msgstr "Tastaturutforming «%s»\nCopyright &#169; X.Org foundation og XKeyboardConfig bidragsytarar\nFor lisensinformasjon sjå metadata om pakka."
 
-#: ../libmatekbd/matekbd-indicator.c:617
-msgid "XKB initialization error"
-msgstr "Feil ved klargjering av XKB"
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2542
+msgid "Unknown"
+msgstr ""
 
-#: ../libmatekbd/matekbd-indicator-config.c:161
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2587
 #, c-format
-msgid "There was an error loading an image: %s"
-msgstr "Det oppsto ein feil under lasting av bilete: %s"
+msgid "Keyboard Layout \"%s\""
+msgstr ""
 
-#. Translators: The count is related to the number of options. The %s
-#. * format specifier should not be modified, left "as is".
-#: ../libmatekbd/matekbd-keyboard-config.c:796
+#: ../libmatekbd/matekbd-keyboard-config.c:719
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
 msgstr[0] "utforming «%s»"
 msgstr[1] "utformingar «%s»"
 
-#. Translators: The count is related to the number of options. The %s
-#. * format specifier should not be modified, left "as is".
-#: ../libmatekbd/matekbd-keyboard-config.c:813
+#: ../libmatekbd/matekbd-keyboard-config.c:737
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
 msgstr[0] "alternativ «%s»"
 msgstr[1] "alternativ «%s»"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:821
+#: ../libmatekbd/matekbd-keyboard-config.c:745
 #, c-format
 msgid "model \"%s\", %s and %s"
 msgstr "modell «%s», %s og %s"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:822
+#: ../libmatekbd/matekbd-keyboard-config.c:746
 msgid "no layout"
 msgstr "inga utforming"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:823
+#: ../libmatekbd/matekbd-keyboard-config.c:747
 msgid "no options"
 msgstr "inga alternativ"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:1
-msgid ""
-"A collection of scripts to run whenever the keyboard state is reloaded. "
-"Useful for re-applying xmodmap based adjustments"
-msgstr ""
-"Ein samling skript som køyrast når tastaturtilstanden skal lastas på nytt. "
-"Nyttig for å leggja inn xmodmap-baserte justeringar på nytt"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:2
-msgid "A list of modmap files available in the $HOME directory."
-msgstr "Ei liste over modmap-filer som finst i mappa $HOME."
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:3
-msgid "Default group, assigned on window creation"
-msgstr "Forvald gruppe, tildelt ved oppretting av vindauge"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:4
-msgid "Keep and manage separate group per window"
-msgstr "Behald og handter separate grupper per vindauge"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:5
-msgid "Keyboard Update Handlers"
-msgstr "Tastaturoppdatering"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:6
-msgid "Keyboard layout"
-msgstr "Tastaturutforming"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:7
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:1
 msgid "Keyboard model"
 msgstr "Tastaturmodell"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:8
-msgid "Keyboard options"
-msgstr "Alternativ for tastatur"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:9
-msgid ""
-"Keyboard settings in mateconf will be overridden from the system ASAP "
-"(deprecated)"
-msgstr "Tastaturinnstillingar i mateconf overstyrast frå systemet ASAP. (Utfases)"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:10
-msgid "Save/restore indicators together with layout groups"
-msgstr "Lagre/gjenopprett indikatorar saman med utformingsgrupper"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:11
-msgid "Secondary groups"
-msgstr "Sekundære grupper"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:12
-msgid "Show flags in the applet"
-msgstr "Vis flagg i panelprogrammet"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:13
-msgid "Show flags in the applet to indicate the current layout"
-msgstr "Vis flagg for å indikere aktiv utforming i panelprogrammet"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:14
-msgid "Show layout names instead of group names"
-msgstr "Vis namn på utforming i staden for gruppenamn"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:15
-msgid ""
-"Show layout names instead of group names (only for versions of XFree "
-"supporting multiple layouts)"
-msgstr ""
-"Vis namn på utforming i staden for gruppenamn (berre for versjonar av XFree "
-"som støttar fleire utformingar)"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:16
-msgid "Suppress the \"X sysconfig changed\" warning message"
-msgstr "Ikkje vis advarsel om «X oppsettet er endret»"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:17
-msgid "The Keyboard Preview, X offset"
-msgstr "Førehandsvising av tastatur, X-avstand"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:18
-msgid "The Keyboard Preview, Y offset"
-msgstr "Førehandsvising av tastatur, Y-avstand"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:19
-msgid "The Keyboard Preview, height"
-msgstr "Førehandsvising av tastatur, storleik"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:20
-msgid "The Keyboard Preview, width"
-msgstr "Førehandsvising av tastatur, breidd"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:21
-msgid "The list of enabled Keyboard Indicator plugins"
-msgstr "Liste med tillegg for tastaturindikatoren som er slått på."
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:22
-msgid ""
-"Very soon, keyboard settings in mateconf will be overridden (from the system "
-"configuration) This key has been deprecated since MATE 2.12, please unset "
-"the model, layouts and options keys to get the default system configuration."
-msgstr ""
-"Tastaturinnstillingar i mateconf vil verta overstyrt frå systemoppsettet i nær "
-"framtid. Denne nøkkelen er under utfasing frå MATE 2.12. Vennligst fjern "
-"verdiene for modell, utforming og alternative tastar for å ta i bruk forvald "
-"systemkonfigurasjon."
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:23
-msgid "keyboard layout"
-msgstr "tastaturutforming"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:24
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:2
 msgid "keyboard model"
 msgstr "tastaturmodell"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:25
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:3
+msgid "Keyboard layout"
+msgstr "Tastaturutforming"
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:4
+msgid "keyboard layout"
+msgstr "tastaturutforming"
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:5
+msgid "Keyboard options"
+msgstr "Alternativ for tastatur"
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:6
+msgid "Keyboard Update Handlers"
+msgstr "Tastaturoppdatering"
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:7
+msgid ""
+"A collection of scripts to run whenever the keyboard state is reloaded. "
+"Useful for re-applying xmodmap based adjustments"
+msgstr "Ein samling skript som køyrast når tastaturtilstanden skal lastas på nytt. Nyttig for å leggja inn xmodmap-baserte justeringar på nytt"
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:8
 msgid "modmap file list"
 msgstr "liste over modmap-filer"
 
-#: ../capplet/matekbd-indicator-plugins.glade.h:1
-msgid "Activate more plugins"
-msgstr "Slå på fleire tillegg"
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:9
+msgid "A list of modmap files available in the $HOME directory."
+msgstr "Ei liste over modmap-filer som finst i mappa $HOME."
 
-#: ../capplet/matekbd-indicator-plugins.glade.h:2
-msgid "Active _plugins:"
-msgstr "Slå på tille_gg"
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:10
+msgid "Default group, assigned on window creation"
+msgstr "Forvald gruppe, tildelt ved oppretting av vindauge"
 
-#: ../capplet/matekbd-indicator-plugins.glade.h:3
-msgid "Add Plugin"
-msgstr "Legg til tillegg"
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:11
+msgid "Keep and manage separate group per window"
+msgstr "Behald og handter separate grupper per vindauge"
 
-#: ../capplet/matekbd-indicator-plugins.glade.h:4
-msgid "Close the dialog"
-msgstr "Lukk dialogen"
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:12
+msgid "Save/restore indicators together with layout groups"
+msgstr "Lagre/gjenopprett indikatorar saman med utformingsgrupper"
 
-#: ../capplet/matekbd-indicator-plugins.glade.h:5
-msgid "Configure the selected plugin"
-msgstr "Set opp vald tillegg"
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:13
+msgid "Show layout names instead of group names"
+msgstr "Vis namn på utforming i staden for gruppenamn"
 
-#: ../capplet/matekbd-indicator-plugins.glade.h:6
-msgid "Deactivate selected plugin"
-msgstr "Slå av vald tillegg"
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:14
+msgid ""
+"Show layout names instead of group names (only for versions of XFree "
+"supporting multiple layouts)"
+msgstr "Vis namn på utforming i staden for gruppenamn (berre for versjonar av XFree som støttar fleire utformingar)"
 
-#: ../capplet/matekbd-indicator-plugins.glade.h:7
-msgid "Decrease the plugin priority"
-msgstr "Set lågare prioritet for tillegget"
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:15
+msgid "Load extra configuration items"
+msgstr ""
 
-#: ../capplet/matekbd-indicator-plugins.glade.h:8
-msgid "Increase the plugin priority"
-msgstr "Set høgare prioritet for tillegget"
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:16
+msgid "Load exotic, rarely used layouts and options"
+msgstr ""
 
-#: ../capplet/matekbd-indicator-plugins.glade.h:9
-msgid "Keyboard Indicator Plugins"
-msgstr "Tillegg for tastaturindikator"
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:17
+msgid "Suppress the \"X sysconfig changed\" warning message"
+msgstr "Ikkje vis advarsel om «X oppsettet er endret»"
 
-#: ../capplet/matekbd-indicator-plugins.glade.h:10
-msgid "The list of active plugins"
-msgstr "Liste med aktive tillegg"
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:18
+msgid "Allow to disable the keyboard indicator tray icon"
+msgstr ""
 
-#: ../capplet/matekbd-indicator-plugins.glade.h:11
-msgid "_Available plugins:"
-msgstr "_Tilgjengelege tillegg:"
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:19
+msgid "Show keyboard leds indicator"
+msgstr ""
 
-#: ../capplet/matekbd-indicator-plugins-capplet.c:122
-#: ../capplet/matekbd-indicator-plugins-add.c:106
-msgid "No description."
-msgstr "Inga skildring."
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:20
+msgid "The Keyboard Preview, X offset"
+msgstr "Førehandsvising av tastatur, X-avstand"
 
-#: ../capplet/matekbd-indicator-plugins-capplet.c:343
-#, c-format
-msgid "Failed to init MateConf: %s\n"
-msgstr "Klarte ikkje å starta MateConf: %s\n"
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:21
+msgid "The Keyboard Preview, Y offset"
+msgstr "Førehandsvising av tastatur, Y-avstand"
 
-#: ../capplet/matekbd-indicator-plugins-capplet.desktop.in.in.h:1
-msgid "Enable/disable installed plugins"
-msgstr "Slå av/på installerte tillegg"
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:22
+msgid "The Keyboard Preview, width"
+msgstr "Førehandsvising av tastatur, breidd"
 
-#: ../capplet/matekbd-indicator-plugins-capplet.desktop.in.in.h:2
-msgid "Keyboard Indicator plugins"
-msgstr "Tillegg for tastaturindikator"
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:23
+msgid "The Keyboard Preview, height"
+msgstr "Førehandsvising av tastatur, storleik"
 
-#: ../test/matekbd-indicator-test.c:59
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:24
+msgid "Secondary groups"
+msgstr "Sekundære grupper"
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:25
+msgid "The font"
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:26
+msgid ""
+"The font for the layout indicator. This should be in \"[FAMILY-LIST] [STYLE-"
+"OPTIONS] [SIZE]\" format."
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:27
+msgid "The foreground color"
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:28
+msgid ""
+"The foreground color for the layout indicator. This should be in \"R G B\" "
+"format, for example \"255 0 0\"."
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:29
+msgid "The background color"
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:30
+msgid ""
+"The background color for the layout indicator. This should be in \"R G B\" "
+"format, for example \"255 0 0\"."
+msgstr ""
+
+#: ../libmatekbd/show-layout.ui.h:1
+msgid "Keyboard Layout"
+msgstr ""
+
+#: ../test/matekbd-indicator-test.c:55
 #, c-format
 msgid "Keyboard Indicator Test (%s)"
 msgstr "Test av tastaturindikator (%s)"
 
-#: ../test/matekbd-indicator-test.c:68
+#: ../test/matekbd-indicator-test.c:63
 msgid "Indicator:"
 msgstr "Indikator:"

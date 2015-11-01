@@ -1,23 +1,32 @@
-# Translation of oc.po to Occitan
-# Occitan translation of libmatekbd.
-# Copyright (C) 2007 Free Software Foundation, Inc.
-# This file is distributed under the same license as the libmatekbd package.
-#
-# Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>, 2006-2008
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: oc\n"
+"Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-07 10:22+0100\n"
-"PO-Revision-Date: 2007-11-20 14:32+0100\n"
-"Last-Translator: Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>\n"
-"Language-Team: Occitan <ubuntu-l10n-oci@lists.ubuntu.com>\n"
+"POT-Creation-Date: 2015-09-09 12:55+0200\n"
+"PO-Revision-Date: 2015-09-06 18:41+0000\n"
+"Last-Translator: infirit <inactive+infirit@transifex.com>\n"
+"Language-Team: Occitan (post 1500) (http://www.transifex.com/mate/MATE/language/oc/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: oc\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2380
+#: ../libmatekbd/matekbd-indicator.c:116 ../libmatekbd/matekbd-status.c:310
+#, c-format
+msgid "There was an error loading an image: %s"
+msgstr ""
+
+#: ../libmatekbd/matekbd-indicator.c:699 ../libmatekbd/matekbd-status.c:645
+msgid "XKB initialization error"
+msgstr ""
+
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2460
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
@@ -25,222 +34,181 @@ msgid ""
 "For licensing see package metadata"
 msgstr ""
 
-#: ../libmatekbd/matekbd-indicator.c:617
-msgid "XKB initialization error"
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2542
+msgid "Unknown"
 msgstr ""
 
-#: ../libmatekbd/matekbd-indicator-config.c:161
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2587
 #, c-format
-msgid "There was an error loading an image: %s"
+msgid "Keyboard Layout \"%s\""
 msgstr ""
 
-#. Translators: The count is related to the number of options. The %s
-#. * format specifier should not be modified, left "as is".
-#: ../libmatekbd/matekbd-keyboard-config.c:796
+#: ../libmatekbd/matekbd-keyboard-config.c:719
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
 msgstr[0] ""
 msgstr[1] ""
 
-#. Translators: The count is related to the number of options. The %s
-#. * format specifier should not be modified, left "as is".
-#: ../libmatekbd/matekbd-keyboard-config.c:813
+#: ../libmatekbd/matekbd-keyboard-config.c:737
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
 msgstr[0] "opcion \"%s\""
 msgstr[1] "opcions \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:821
+#: ../libmatekbd/matekbd-keyboard-config.c:745
 #, c-format
 msgid "model \"%s\", %s and %s"
 msgstr "modèl \"%s\", %s e %s"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:822
+#: ../libmatekbd/matekbd-keyboard-config.c:746
 msgid "no layout"
 msgstr ""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:823
+#: ../libmatekbd/matekbd-keyboard-config.c:747
 msgid "no options"
 msgstr "pas cap d'opcions"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:1
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:1
+msgid "Keyboard model"
+msgstr "Modèl del clavièr"
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:2
+msgid "keyboard model"
+msgstr "modèl del clavièr"
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:3
+msgid "Keyboard layout"
+msgstr "Dispausicion del clavièr"
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:4
+msgid "keyboard layout"
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:5
+msgid "Keyboard options"
+msgstr "Opcions del clavièr"
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:6
+msgid "Keyboard Update Handlers"
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:7
 msgid ""
 "A collection of scripts to run whenever the keyboard state is reloaded. "
 "Useful for re-applying xmodmap based adjustments"
 msgstr ""
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:2
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:8
+msgid "modmap file list"
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:9
 msgid "A list of modmap files available in the $HOME directory."
 msgstr ""
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:3
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:10
 msgid "Default group, assigned on window creation"
 msgstr ""
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:4
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:11
 msgid "Keep and manage separate group per window"
 msgstr ""
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:5
-msgid "Keyboard Update Handlers"
-msgstr ""
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:6
-msgid "Keyboard layout"
-msgstr "Dispausicion del clavièr"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:7
-msgid "Keyboard model"
-msgstr "Modèl del clavièr"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:8
-msgid "Keyboard options"
-msgstr "Opcions del clavièr"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:9
-msgid ""
-"Keyboard settings in mateconf will be overridden from the system ASAP "
-"(deprecated)"
-msgstr ""
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:10
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:12
 msgid "Save/restore indicators together with layout groups"
 msgstr ""
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:11
-msgid "Secondary groups"
-msgstr "Grops segondaris"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:12
-msgid "Show flags in the applet"
-msgstr "Visualizar las bandièras dins l'applet"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:13
-msgid "Show flags in the applet to indicate the current layout"
-msgstr "Visualizar las bandièras dins l'applet per indicar lo clavièr actiu"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:14
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:13
 msgid "Show layout names instead of group names"
 msgstr ""
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:15
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:14
 msgid ""
 "Show layout names instead of group names (only for versions of XFree "
 "supporting multiple layouts)"
 msgstr ""
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:16
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:15
+msgid "Load extra configuration items"
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:16
+msgid "Load exotic, rarely used layouts and options"
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:17
 msgid "Suppress the \"X sysconfig changed\" warning message"
 msgstr ""
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:17
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:18
+msgid "Allow to disable the keyboard indicator tray icon"
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:19
+msgid "Show keyboard leds indicator"
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:20
 msgid "The Keyboard Preview, X offset"
 msgstr ""
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:18
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:21
 msgid "The Keyboard Preview, Y offset"
 msgstr ""
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:19
-msgid "The Keyboard Preview, height"
-msgstr ""
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:20
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:22
 msgid "The Keyboard Preview, width"
 msgstr ""
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:21
-msgid "The list of enabled Keyboard Indicator plugins"
-msgstr "La lista dels ajustons abilitats per l'indicador de clavièr"
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:23
+msgid "The Keyboard Preview, height"
+msgstr ""
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:22
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:24
+msgid "Secondary groups"
+msgstr "Grops segondaris"
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:25
+msgid "The font"
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:26
 msgid ""
-"Very soon, keyboard settings in mateconf will be overridden (from the system "
-"configuration) This key has been deprecated since MATE 2.12, please unset "
-"the model, layouts and options keys to get the default system configuration."
+"The font for the layout indicator. This should be in \"[FAMILY-LIST] [STYLE-"
+"OPTIONS] [SIZE]\" format."
 msgstr ""
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:23
-msgid "keyboard layout"
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:27
+msgid "The foreground color"
 msgstr ""
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:24
-msgid "keyboard model"
-msgstr "modèl del clavièr"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:25
-msgid "modmap file list"
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:28
+msgid ""
+"The foreground color for the layout indicator. This should be in \"R G B\" "
+"format, for example \"255 0 0\"."
 msgstr ""
 
-#: ../capplet/matekbd-indicator-plugins.glade.h:1
-msgid "Activate more plugins"
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:29
+msgid "The background color"
 msgstr ""
 
-#: ../capplet/matekbd-indicator-plugins.glade.h:2
-msgid "Active _plugins:"
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:30
+msgid ""
+"The background color for the layout indicator. This should be in \"R G B\" "
+"format, for example \"255 0 0\"."
 msgstr ""
 
-#: ../capplet/matekbd-indicator-plugins.glade.h:3
-msgid "Add Plugin"
+#: ../libmatekbd/show-layout.ui.h:1
+msgid "Keyboard Layout"
 msgstr ""
 
-#: ../capplet/matekbd-indicator-plugins.glade.h:4
-msgid "Close the dialog"
-msgstr ""
-
-#: ../capplet/matekbd-indicator-plugins.glade.h:5
-msgid "Configure the selected plugin"
-msgstr ""
-
-#: ../capplet/matekbd-indicator-plugins.glade.h:6
-msgid "Deactivate selected plugin"
-msgstr ""
-
-#: ../capplet/matekbd-indicator-plugins.glade.h:7
-msgid "Decrease the plugin priority"
-msgstr ""
-
-#: ../capplet/matekbd-indicator-plugins.glade.h:8
-msgid "Increase the plugin priority"
-msgstr ""
-
-#: ../capplet/matekbd-indicator-plugins.glade.h:9
-msgid "Keyboard Indicator Plugins"
-msgstr ""
-
-#: ../capplet/matekbd-indicator-plugins.glade.h:10
-msgid "The list of active plugins"
-msgstr ""
-
-#: ../capplet/matekbd-indicator-plugins.glade.h:11
-msgid "_Available plugins:"
-msgstr ""
-
-#: ../capplet/matekbd-indicator-plugins-capplet.c:122
-#: ../capplet/matekbd-indicator-plugins-add.c:106
-msgid "No description."
-msgstr "Pas cap de descripcion."
-
-#: ../capplet/matekbd-indicator-plugins-capplet.c:344
-#, c-format
-msgid "Failed to init MateConf: %s\n"
-msgstr ""
-
-#: ../capplet/matekbd-indicator-plugins-capplet.desktop.in.in.h:1
-msgid "Enable/disable installed plugins"
-msgstr ""
-
-#: ../capplet/matekbd-indicator-plugins-capplet.desktop.in.in.h:2
-msgid "Keyboard Indicator plugins"
-msgstr ""
-
-#: ../test/matekbd-indicator-test.c:59
+#: ../test/matekbd-indicator-test.c:55
 #, c-format
 msgid "Keyboard Indicator Test (%s)"
 msgstr ""
 
-#: ../test/matekbd-indicator-test.c:68
+#: ../test/matekbd-indicator-test.c:63
 msgid "Indicator:"
 msgstr ""

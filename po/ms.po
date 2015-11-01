@@ -3,32 +3,32 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# abuyop <abuyop@gmail.com>, 2013
+# abuyop <abuyop@gmail.com>, 2013,2015
 # Puretech <terjemah.puretech@gmail.com>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-29 12:49+0200\n"
-"PO-Revision-Date: 2013-08-13 03:10+0000\n"
+"POT-Creation-Date: 2015-09-09 12:55+0200\n"
+"PO-Revision-Date: 2015-09-30 21:29+0000\n"
 "Last-Translator: abuyop <abuyop@gmail.com>\n"
-"Language-Team: Malay (http://www.transifex.com/projects/p/MATE/language/ms/)\n"
+"Language-Team: Malay (http://www.transifex.com/mate/MATE/language/ms/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ms\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../libmatekbd/matekbd-indicator.c:120 ../libmatekbd/matekbd-status.c:323
+#: ../libmatekbd/matekbd-indicator.c:116 ../libmatekbd/matekbd-status.c:310
 #, c-format
 msgid "There was an error loading an image: %s"
 msgstr "Terdapat ralat memuatkan imej: %s"
 
-#: ../libmatekbd/matekbd-indicator.c:729 ../libmatekbd/matekbd-status.c:656
+#: ../libmatekbd/matekbd-indicator.c:699 ../libmatekbd/matekbd-status.c:645
 msgid "XKB initialization error"
 msgstr "Ralat pengawalan XKB"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2423
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2460
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
@@ -36,247 +36,173 @@ msgid ""
 "For licensing see package metadata"
 msgstr "Bentangan papan kekunci \"%s\"\nHakcipta &#169; penyumbang X.Org Foundation dan XKeyboardConfig\nUntuk pelesenan lihat data meta pakej"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2510
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2542
 msgid "Unknown"
 msgstr "Tidak diketahui"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2555
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2587
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "Bentangan Papan Kekunci \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:757
+#: ../libmatekbd/matekbd-keyboard-config.c:719
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
 msgstr[0] "bentangan \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:776
+#: ../libmatekbd/matekbd-keyboard-config.c:737
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
 msgstr[0] "pilihan \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:784
+#: ../libmatekbd/matekbd-keyboard-config.c:745
 #, c-format
 msgid "model \"%s\", %s and %s"
 msgstr "model \"%s\", %s dan %s"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:785
+#: ../libmatekbd/matekbd-keyboard-config.c:746
 msgid "no layout"
 msgstr "tiada bentangan"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:786
+#: ../libmatekbd/matekbd-keyboard-config.c:747
 msgid "no options"
 msgstr "tiada pilihan"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:1
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:1
 msgid "Keyboard model"
 msgstr "Model papan kekunci"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:2
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:2
 msgid "keyboard model"
 msgstr "model papan kekunci"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:3
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:3
 msgid "Keyboard layout"
 msgstr "Bentangan papan kekunci"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:4
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:4
 msgid "keyboard layout"
 msgstr "bentangan papan kekunci"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:5
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:5
 msgid "Keyboard options"
 msgstr "Pilihan papan kekunci"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:6
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:6
 msgid "Keyboard Update Handlers"
 msgstr "Pengendali Kemaskini Papan Kekunci"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:7
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:7
 msgid ""
 "A collection of scripts to run whenever the keyboard state is reloaded. "
 "Useful for re-applying xmodmap based adjustments"
 msgstr "Koleksi skrip untuk dijalankan bila keadaan papan kekunci dimuat semula. Berguna untuk melaksanakan semula pelarasan berasaskan xmodmap"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:8
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:8
 msgid "modmap file list"
 msgstr "senarai fail modmap"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:9
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:9
 msgid "A list of modmap files available in the $HOME directory."
 msgstr "Senarai fail modmap yang terdapat dalam direktori $HOME."
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:10
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:10
 msgid "Default group, assigned on window creation"
 msgstr "Kumpulan lalai, diumpuk pada penciptaan tetingkap"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:11
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:11
 msgid "Keep and manage separate group per window"
 msgstr "Jaga dan urus kumpulan berasingan per tetingkap"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:12
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:12
 msgid "Save/restore indicators together with layout groups"
 msgstr "Simpan/pulih penunjuk bersama-sama dengan kumpulan bentangan"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:13
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:13
 msgid "Show layout names instead of group names"
 msgstr "Tunjuk bentangan selain dari nama kumpulan"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:14
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:14
 msgid ""
 "Show layout names instead of group names (only for versions of XFree "
 "supporting multiple layouts)"
 msgstr "Tunjuk nama bentangan selain dari nama kumpulan (hanya untuk versi XFree yang menyokong bentangan berbilang)"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:15
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:15
 msgid "Load extra configuration items"
 msgstr "Muatkan item konfigurasi tambahan"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:16
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:16
 msgid "Load exotic, rarely used layouts and options"
 msgstr "Muatkan bentangan dan pilihan eksotik dan yang jarang digunakan"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:17
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:17
 msgid "Suppress the \"X sysconfig changed\" warning message"
 msgstr "Paksa mesej amaran  \"X sysconfig changed\""
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:18
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:18
+msgid "Allow to disable the keyboard indicator tray icon"
+msgstr "Benar pelumpuhan ikon talam penunjuk papan kekunci"
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:19
+msgid "Show keyboard leds indicator"
+msgstr "Tunjuk penunjuk led papan kekunci"
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:20
 msgid "The Keyboard Preview, X offset"
 msgstr "Pratonton Papan Kekunci, ofset X"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:19
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:21
 msgid "The Keyboard Preview, Y offset"
 msgstr "Pratonton Papan Kekunci, ofset Y"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:20
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:22
 msgid "The Keyboard Preview, width"
 msgstr "Pratonton Papan Kekunci, lebar"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:21
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:23
 msgid "The Keyboard Preview, height"
 msgstr "Pratonton Papan Kekunci, tinggi"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:22
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:24
 msgid "Secondary groups"
 msgstr "Kumpulan sekunder"
 
-#. TRANSLATORS: real national flags
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:24
-msgid "Show flags in the applet"
-msgstr "Tunjuk bendera pada applet"
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:25
+msgid "The font"
+msgstr "Fon"
 
-#. TRANSLATORS: real national flags
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:26
-msgid "Show flags in the applet to indicate the current layout"
-msgstr "Tunjuk bendera dalam aplet untuk menunjukkan bentangan semasa"
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:26
+msgid ""
+"The font for the layout indicator. This should be in \"[FAMILY-LIST] [STYLE-"
+"OPTIONS] [SIZE]\" format."
+msgstr "Fon untuk penunjuk bentangan. Ia seharusnya dalam format \"[FAMILY-LIST] [STYLE-OPTIONS] [SIZE]\"."
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:27
-msgid "The font family"
-msgstr "Keluarga fon"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:28
-msgid "The font family for the layout indicator"
-msgstr "Keluarga fon untuk penunjuk bentangan"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:29
-msgid "The font size"
-msgstr "Saiz fon"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:30
-msgid "The font size for the layout indicator"
-msgstr "Saiz fon untuk penunjuk bentangan"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:31
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:27
 msgid "The foreground color"
 msgstr "Warna latar hadapan"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:32
-msgid "The foreground color for the layout indicator"
-msgstr "Warna latar hadapan untuk penunjuk bentangan"
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:28
+msgid ""
+"The foreground color for the layout indicator. This should be in \"R G B\" "
+"format, for example \"255 0 0\"."
+msgstr "Warna latar hadapan penunjuk bentangan. Ia seharusnya dalam format \"R G B\", sebagai contoh \"255 0 0\"."
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:33
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:29
 msgid "The background color"
 msgstr "Warna latar belakang"
 
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:34
-msgid "The background color for the layout indicator"
-msgstr "Warna latar belakang untuk penunjuk bentangan"
-
-#: ../libmatekbd/desktop_mate_peripherals_keyboard_xkb.schemas.in.h:35
-msgid "The list of enabled Keyboard Indicator plugins"
-msgstr "Senarai pemalam Penunjuk Papan Kekunci dibenarkan"
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:30
+msgid ""
+"The background color for the layout indicator. This should be in \"R G B\" "
+"format, for example \"255 0 0\"."
+msgstr "Warna latar belakang penunjuk bentangan. Ia seharusnya dalam format \"R G B\", sebagai contoh \"255 0 0\"."
 
 #: ../libmatekbd/show-layout.ui.h:1
 msgid "Keyboard Layout"
 msgstr "Bentangan Papan Kekunci"
-
-#: ../capplet/matekbd-indicator-plugins.ui.h:1
-msgid "Keyboard Indicator Plugins"
-msgstr "Pemalam Pemalam Papan Kekunci"
-
-#: ../capplet/matekbd-indicator-plugins.ui.h:2
-msgid "Active _plugins:"
-msgstr "Pemalam _aktif:"
-
-#: ../capplet/matekbd-indicator-plugins.ui.h:3
-msgid "The list of active plugins"
-msgstr "Senarai pemalam aktif"
-
-#: ../capplet/matekbd-indicator-plugins.ui.h:4
-msgid "Activate more plugins"
-msgstr "Aktifkan lagi pemalam"
-
-#: ../capplet/matekbd-indicator-plugins.ui.h:5
-msgid "Deactivate selected plugin"
-msgstr "Nyahaktifkan pemalam terpilih"
-
-#: ../capplet/matekbd-indicator-plugins.ui.h:6
-msgid "Increase the plugin priority"
-msgstr "Tingkatkan keutamaan pemalam"
-
-#: ../capplet/matekbd-indicator-plugins.ui.h:7
-msgid "Decrease the plugin priority"
-msgstr "Kurangkan keutamaan pemalam"
-
-#: ../capplet/matekbd-indicator-plugins.ui.h:8
-msgid "Configure the selected plugin"
-msgstr "Konfigur pemalam terpilih"
-
-#: ../capplet/matekbd-indicator-plugins.ui.h:9
-msgid "Close the dialog"
-msgstr "Tutup dialog"
-
-#: ../capplet/matekbd-indicator-plugins_add.ui.h:1
-msgid "Add Plugin"
-msgstr "Tambah Pemalam"
-
-#: ../capplet/matekbd-indicator-plugins_add.ui.h:2
-msgid "_Available plugins:"
-msgstr "_Pemalam tersedia:"
-
-#: ../capplet/matekbd-indicator-plugins-capplet.c:118
-#: ../capplet/matekbd-indicator-plugins-add.c:106
-msgid "No description."
-msgstr "Tiada keterangan."
-
-#: ../capplet/matekbd-indicator-plugins-capplet.c:256
-msgid "Unable to open help file"
-msgstr "Tidak boleh buka fail bantuan"
-
-#: ../capplet/matekbd-indicator-plugins-capplet.c:379
-#, c-format
-msgid "Failed to init MateConf: %s\n"
-msgstr "Gagal untuk awalkan MateConf: %s\n"
-
-#: ../capplet/matekbd-indicator-plugins-capplet.desktop.in.in.h:1
-msgid "Keyboard Indicator plugins"
-msgstr "Pemalam Penunjuk papan kekunci"
-
-#: ../capplet/matekbd-indicator-plugins-capplet.desktop.in.in.h:2
-msgid "Enable/disable installed plugins"
-msgstr "Benar/lumpuhkan pemalam terpasang"
 
 #: ../test/matekbd-indicator-test.c:55
 #, c-format
