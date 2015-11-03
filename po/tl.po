@@ -1,0 +1,214 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: MATE Desktop Environment\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-09 12:55+0200\n"
+"PO-Revision-Date: 2015-09-06 18:41+0000\n"
+"Last-Translator: infirit <inactive+infirit@transifex.com>\n"
+"Language-Team: Tagalog (http://www.transifex.com/mate/MATE/language/tl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: tl\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../libmatekbd/matekbd-indicator.c:116 ../libmatekbd/matekbd-status.c:310
+#, c-format
+msgid "There was an error loading an image: %s"
+msgstr ""
+
+#: ../libmatekbd/matekbd-indicator.c:699 ../libmatekbd/matekbd-status.c:645
+msgid "XKB initialization error"
+msgstr ""
+
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2460
+#, c-format
+msgid ""
+"Keyboard layout \"%s\"\n"
+"Copyright &#169; X.Org Foundation and XKeyboardConfig contributors\n"
+"For licensing see package metadata"
+msgstr ""
+
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2542
+msgid "Unknown"
+msgstr ""
+
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2587
+#, c-format
+msgid "Keyboard Layout \"%s\""
+msgstr ""
+
+#: ../libmatekbd/matekbd-keyboard-config.c:719
+#, c-format
+msgid "layout \"%s\""
+msgid_plural "layouts \"%s\""
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../libmatekbd/matekbd-keyboard-config.c:737
+#, c-format
+msgid "option \"%s\""
+msgid_plural "options \"%s\""
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../libmatekbd/matekbd-keyboard-config.c:745
+#, c-format
+msgid "model \"%s\", %s and %s"
+msgstr ""
+
+#: ../libmatekbd/matekbd-keyboard-config.c:746
+msgid "no layout"
+msgstr ""
+
+#: ../libmatekbd/matekbd-keyboard-config.c:747
+msgid "no options"
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:1
+msgid "Keyboard model"
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:2
+msgid "keyboard model"
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:3
+msgid "Keyboard layout"
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:4
+msgid "keyboard layout"
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:5
+msgid "Keyboard options"
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:6
+msgid "Keyboard Update Handlers"
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:7
+msgid ""
+"A collection of scripts to run whenever the keyboard state is reloaded. "
+"Useful for re-applying xmodmap based adjustments"
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:8
+msgid "modmap file list"
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:9
+msgid "A list of modmap files available in the $HOME directory."
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:10
+msgid "Default group, assigned on window creation"
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:11
+msgid "Keep and manage separate group per window"
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:12
+msgid "Save/restore indicators together with layout groups"
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:13
+msgid "Show layout names instead of group names"
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:14
+msgid ""
+"Show layout names instead of group names (only for versions of XFree "
+"supporting multiple layouts)"
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:15
+msgid "Load extra configuration items"
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:16
+msgid "Load exotic, rarely used layouts and options"
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:17
+msgid "Suppress the \"X sysconfig changed\" warning message"
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:18
+msgid "Allow to disable the keyboard indicator tray icon"
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:19
+msgid "Show keyboard leds indicator"
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:20
+msgid "The Keyboard Preview, X offset"
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:21
+msgid "The Keyboard Preview, Y offset"
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:22
+msgid "The Keyboard Preview, width"
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:23
+msgid "The Keyboard Preview, height"
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:24
+msgid "Secondary groups"
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:25
+msgid "The font"
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:26
+msgid ""
+"The font for the layout indicator. This should be in \"[FAMILY-LIST] [STYLE-"
+"OPTIONS] [SIZE]\" format."
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:27
+msgid "The foreground color"
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:28
+msgid ""
+"The foreground color for the layout indicator. This should be in \"R G B\" "
+"format, for example \"255 0 0\"."
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:29
+msgid "The background color"
+msgstr ""
+
+#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:30
+msgid ""
+"The background color for the layout indicator. This should be in \"R G B\" "
+"format, for example \"255 0 0\"."
+msgstr ""
+
+#: ../libmatekbd/show-layout.ui.h:1
+msgid "Keyboard Layout"
+msgstr ""
+
+#: ../test/matekbd-indicator-test.c:55
+#, c-format
+msgid "Keyboard Indicator Test (%s)"
+msgstr ""
+
+#: ../test/matekbd-indicator-test.c:63
+msgid "Indicator:"
+msgstr ""
