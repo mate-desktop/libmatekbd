@@ -1002,8 +1002,8 @@ draw_key_label (MatekbdKeyboardDrawingRenderContext * context,
 	}
 }
 
-/**
-   The x offset is calculated for complex shapes. It is the rightmost of the vertical lines in the outline
+/*
+ * The x offset is calculated for complex shapes. It is the rightmost of the vertical lines in the outline
  */
 static gint
 calc_origin_offset_x (XkbOutlineRec * outline)
@@ -2225,7 +2225,7 @@ matekbd_keyboard_drawing_set_mods (MatekbdKeyboardDrawing * drawing, guint mods)
  * from e.g. a GtkWidget or a GtkPrintContext.  @cr and @layout may be modified
  * by the function but will not be unreffed.
  *
- * @returns:   %TRUE on success, %FALSE on failure
+ * Returns: %TRUE on success, %FALSE on failure
  */
 gboolean
 matekbd_keyboard_drawing_render (MatekbdKeyboardDrawing * kbdrawing,

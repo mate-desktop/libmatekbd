@@ -865,6 +865,11 @@ matekbd_indicator_set_tooltips_format (const gchar format[])
 	NextIndicator ()
 }
 
+/**
+ * matekbd_indicator_get_xkl_engine:
+ *
+ * Returns: (transfer none): The engine shared by all MatekbdIndicator objects
+ */
 XklEngine *
 matekbd_indicator_get_xkl_engine ()
 {
@@ -873,6 +878,7 @@ matekbd_indicator_get_xkl_engine ()
 
 /**
  * matekbd_indicator_get_group_names:
+ *
  * Returns: (transfer none) (array zero-terminated=1): List of group names
  */
 gchar **

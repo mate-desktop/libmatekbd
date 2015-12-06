@@ -30,7 +30,7 @@
 #include <matekbd-config-private.h>
 #include <matekbd-util.h>
 
-/**
+/*
  * MatekbdKeyboardConfig
  */
 #define MATEKBD_KEYBOARD_CONFIG_SCHEMA MATEKBD_CONFIG_SCHEMA ".kbd"
@@ -48,7 +48,7 @@ const gchar *MATEKBD_KEYBOARD_CONFIG_ACTIVE[] = {
 	MATEKBD_KEYBOARD_CONFIG_KEY_OPTIONS
 };
 
-/**
+/*
  * static common functions
  */
 
@@ -124,7 +124,7 @@ matekbd_keyboard_config_get_lv_descriptions (XklConfigRegistry *
 	return *layout_descr != NULL;
 }
 
-/**
+/*
  * extern common functions
  */
 const gchar *
@@ -178,7 +178,7 @@ matekbd_keyboard_config_split_items (const gchar * merged, gchar ** parent,
 	return TRUE;
 }
 
-/**
+/*
  * static MatekbdKeyboardConfig functions
  */
 static void
@@ -403,7 +403,7 @@ matekbd_keyboard_config_save_params (MatekbdKeyboardConfig * kbd_config,
 	}
 }
 
-/**
+/*
  * extern MatekbdKeyboardConfig config functions
  */
 void
@@ -637,7 +637,8 @@ matekbd_keyboard_config_activate (MatekbdKeyboardConfig * kbd_config)
 
 /**
  * matekbd_keyboard_config_start_listen:
- * @func: (scope notified): a function to call when settings are changed
+ *
+ * Func: (scope notified): a function to call when settings are changed
  */
 void
 matekbd_keyboard_config_start_listen (MatekbdKeyboardConfig * kbd_config,

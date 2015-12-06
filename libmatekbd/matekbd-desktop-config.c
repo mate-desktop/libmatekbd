@@ -30,7 +30,7 @@
 #include <matekbd-config-private.h>
 
 /**
- * MatekbdDesktopConfig
+ * MatekbdDesktopConfig:
  */
 #define MATEKBD_DESKTOP_CONFIG_SCHEMA  MATEKBD_CONFIG_SCHEMA ".general"
 
@@ -40,7 +40,7 @@ const gchar MATEKBD_DESKTOP_CONFIG_KEY_HANDLE_INDICATORS[] = "handle-indicators"
 const gchar MATEKBD_DESKTOP_CONFIG_KEY_LAYOUT_NAMES_AS_GROUP_NAMES[] = "layout-names-as-group-names";
 const gchar MATEKBD_DESKTOP_CONFIG_KEY_LOAD_EXTRA_ITEMS[] = "load-extra-items";
 
-/**
+/*
  * static common functions
  */
 
@@ -123,7 +123,7 @@ static gboolean
 	return TRUE;
 }
 
-/**
+/*
  * extern MatekbdDesktopConfig config functions
  */
 void

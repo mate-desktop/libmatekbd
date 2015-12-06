@@ -44,7 +44,7 @@ struct _MatekbdIndicatorConfig {
 	XklEngine *engine;
 };
 
-/**
+/*
  * MatekbdIndicatorConfig functions -
  * some of them require MatekbdKeyboardConfig as well -
  * for loading approptiate images

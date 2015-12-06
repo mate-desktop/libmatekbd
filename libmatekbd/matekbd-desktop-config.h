@@ -47,7 +47,7 @@ struct _MatekbdDesktopConfig {
 	XklEngine *engine;
 };
 
-/**
+/*
  * MatekbdDesktopConfig functions
  */
 extern void matekbd_desktop_config_init (MatekbdDesktopConfig * config,

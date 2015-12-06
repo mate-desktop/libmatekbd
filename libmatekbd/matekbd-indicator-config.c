@@ -35,7 +35,7 @@
 #include <matekbd-config-private.h>
 
 /**
- * MatekbdIndicatorConfig
+ * MatekbdIndicatorConfig:
  */
 #define MATEKBD_INDICATOR_CONFIG_SCHEMA  MATEKBD_CONFIG_SCHEMA ".indicator"
 #define GTK_STYLE_PATH "*PanelWidget*"
@@ -49,7 +49,7 @@ const gchar MATEKBD_INDICATOR_CONFIG_KEY_BACKGROUND_COLOR[] = "background-color"
 #define SYSTEM_FONT_SCHEMA "org.mate.interface"
 #define SYSTEM_FONT_KEY "font-name"
 
-/**
+/*
  * static applet config functions
  */
 static void

@@ -44,7 +44,7 @@ struct _MatekbdKeyboardConfig {
 	XklEngine *engine;
 };
 
-/**
+/*
  * MatekbdKeyboardConfig functions
  */
 extern void matekbd_keyboard_config_init (MatekbdKeyboardConfig * kbd_config,
