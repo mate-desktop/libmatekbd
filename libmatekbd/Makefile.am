@@ -79,14 +79,10 @@ gsettingsschema_in_files = org.mate.peripherals-keyboard-xkb.gschema.xml.in
 gsettings_SCHEMAS = $(gsettingsschema_in_files:.xml.in=.xml)
 @GSETTINGS_RULES@
 
-convertdir = $(datadir)/MateConf/gsettings
-convert_DATA = matekbd.convert
-
 EXTRA_DIST = matekbd-indicator-marshal.list \
              matekbd-keyboard-drawing-marshal.list \
              $(gsettingsschema_in_files) \
-	     $(convert_DATA) \
-	     $(ui_DATA)
+             $(ui_DATA)
 
 DISTCLEANFILES = $(gsettings_SCHEMAS)
 
