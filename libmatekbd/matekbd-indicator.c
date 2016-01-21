@@ -687,7 +687,7 @@ static void matekbd_indicator_init(MatekbdIndicator* gki)
 	gtk_notebook_set_show_border (notebook, FALSE);
 
 	def_drawing =
-	    gtk_image_new_from_stock (GTK_STOCK_STOP,
+	    gtk_image_new_from_icon_name ("process-stop",
 				      GTK_ICON_SIZE_BUTTON);
 
 	gtk_notebook_append_page (notebook, def_drawing,
