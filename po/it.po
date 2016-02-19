@@ -3,14 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Giuseppe Pignataro <rogepix@gmail.com>, 2015
+# Marco Bartolucci <nap.84@live.it>, 2016
 # Milo Casagrande <milo@ubuntu.com>, 2009, 2010
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-09 12:55+0200\n"
-"PO-Revision-Date: 2015-09-06 18:41+0000\n"
-"Last-Translator: infirit <inactive+infirit@transifex.com>\n"
+"PO-Revision-Date: 2016-01-25 18:11+0000\n"
+"Last-Translator: Marco Bartolucci <nap.84@live.it>\n"
 "Language-Team: Italian (http://www.transifex.com/mate/MATE/language/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -42,7 +44,7 @@ msgstr "Sconosciuta"
 #: ../libmatekbd/matekbd-keyboard-drawing.c:2587
 #, c-format
 msgid "Keyboard Layout \"%s\""
-msgstr "Disposizione tastiera «%s»"
+msgstr "Disposizione Tastiera «%s»"
 
 #: ../libmatekbd/matekbd-keyboard-config.c:719
 #, c-format
@@ -77,7 +79,7 @@ msgstr "Modello tastiera"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:2
 msgid "keyboard model"
-msgstr "Modello tastiera"
+msgstr "modello tastiera"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:3
 msgid "Keyboard layout"
@@ -85,7 +87,7 @@ msgstr "Disposizione tastiera"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:4
 msgid "keyboard layout"
-msgstr "Disposizione tastiera"
+msgstr "disposizione tastiera"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:5
 msgid "Keyboard options"
@@ -93,13 +95,13 @@ msgstr "Opzioni tastiera"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:6
 msgid "Keyboard Update Handlers"
-msgstr "Gestori aggiornamento tastiera"
+msgstr "Gestori Aggiornamento Tastiera"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:7
 msgid ""
 "A collection of scripts to run whenever the keyboard state is reloaded. "
 "Useful for re-applying xmodmap based adjustments"
-msgstr "Una raccolta di script da eseguire quando lo stato della tastiera viene ricaricato. Utile per ri-applicare regolazioni basate su xmodmap"
+msgstr "Una raccolta di script da eseguire quando lo stato della tastiera viene ricaricato. Utile per riapplicare regolazioni basate su xmodmap"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:8
 msgid "modmap file list"
@@ -145,11 +147,11 @@ msgstr "Sopprime il messaggio di avvertimento \"configurazione di sistema di X c
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:18
 msgid "Allow to disable the keyboard indicator tray icon"
-msgstr ""
+msgstr "Consente di disabilitare l'icona dell'indicatore della tastiera nell'area di notifica"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:19
 msgid "Show keyboard leds indicator"
-msgstr ""
+msgstr "Visualizza indicatore led della tastiera"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:20
 msgid "The Keyboard Preview, X offset"
@@ -169,17 +171,17 @@ msgstr "L'anteprima di tastiera, altezza"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:24
 msgid "Secondary groups"
-msgstr "Gruppo secondario"
+msgstr "Gruppi secondari"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:25
 msgid "The font"
-msgstr ""
+msgstr "Il carattere"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:26
 msgid ""
 "The font for the layout indicator. This should be in \"[FAMILY-LIST] [STYLE-"
 "OPTIONS] [SIZE]\" format."
-msgstr ""
+msgstr "Il carattere per l'indicatore della disposizione. Deve essere nel formato \"[FAMILY-LIST] [STYLE-OPTIONS] [SIZE]\"."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:27
 msgid "The foreground color"
@@ -189,7 +191,7 @@ msgstr "Il colore di primo piano"
 msgid ""
 "The foreground color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
-msgstr ""
+msgstr "Il colore di primo piano per l'indicatore della disposizione. Deve essere nel formato \"R G B\", ad esempio \"255 0 0\"."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:29
 msgid "The background color"
@@ -199,16 +201,16 @@ msgstr "Il colore di sfondo"
 msgid ""
 "The background color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
-msgstr ""
+msgstr "Il colore di sfondo per l'indicatore della disposizione. Deve essere nel formato \"R G B\", ad esempio \"255 0 0\"."
 
 #: ../libmatekbd/show-layout.ui.h:1
 msgid "Keyboard Layout"
-msgstr "Disposizione tastiera"
+msgstr "Disposizione Tastiera"
 
 #: ../test/matekbd-indicator-test.c:55
 #, c-format
 msgid "Keyboard Indicator Test (%s)"
-msgstr "Test indicatore tastiera (%s)"
+msgstr "Test Indicatore Tastiera (%s)"
 
 #: ../test/matekbd-indicator-test.c:63
 msgid "Indicator:"

@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Joe Hansen <joedalton2@yahoo.dk>, 2015
+# Joe Hansen <joedalton2@yahoo.dk>, 2015-2016
 # Kenneth Nielsen <k.nielsen81@gmail.com>, 2008
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-09 12:55+0200\n"
-"PO-Revision-Date: 2015-09-11 19:04+0000\n"
+"PO-Revision-Date: 2016-02-13 10:12+0000\n"
 "Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
 "Language-Team: Danish (http://www.transifex.com/mate/MATE/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -34,7 +34,7 @@ msgid ""
 "Keyboard layout \"%s\"\n"
 "Copyright &#169; X.Org Foundation and XKeyboardConfig contributors\n"
 "For licensing see package metadata"
-msgstr "Tastetur-udlægning \"%s\"\nCopyright &#169; X.Org Foundation og XKeyboardConfig-bidragydere\nLicensen findes i pakkens metadata"
+msgstr "Tastetur-udlægning »%s«\nOphavsret &#169; X.Org Foundation og XKeyboardConfig-bidragydere\nLicensen findes i pakkens metadata"
 
 #: ../libmatekbd/matekbd-keyboard-drawing.c:2542
 msgid "Unknown"
@@ -43,26 +43,26 @@ msgstr "Ukendt"
 #: ../libmatekbd/matekbd-keyboard-drawing.c:2587
 #, c-format
 msgid "Keyboard Layout \"%s\""
-msgstr "Tastaturlayout \"%s\""
+msgstr "Tastaturlayout »%s«"
 
 #: ../libmatekbd/matekbd-keyboard-config.c:719
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
-msgstr[0] "layout \"%s\""
-msgstr[1] "layout \"%s\""
+msgstr[0] "layout »%s«"
+msgstr[1] "layout »%s«"
 
 #: ../libmatekbd/matekbd-keyboard-config.c:737
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
-msgstr[0] "indstilling \"%s\""
-msgstr[1] "indstillinger \"%s\""
+msgstr[0] "indstilling »%s«"
+msgstr[1] "indstillinger »%s«"
 
 #: ../libmatekbd/matekbd-keyboard-config.c:745
 #, c-format
 msgid "model \"%s\", %s and %s"
-msgstr "model \"%s\", %s og %s"
+msgstr "model »%s«, %s og %s"
 
 #: ../libmatekbd/matekbd-keyboard-config.c:746
 msgid "no layout"
@@ -116,7 +116,7 @@ msgstr "Standardgruppe - tildelt ved vinduesoprettelse"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:11
 msgid "Keep and manage separate group per window"
-msgstr "Bevar og håndtér separat gruppe for hvert vindue"
+msgstr "Bevar og håndter separat gruppe for hvert vindue"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:12
 msgid "Save/restore indicators together with layout groups"
@@ -142,7 +142,7 @@ msgstr "Indlæs eksotiske, sjældent brugte layout og indstillinger"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:17
 msgid "Suppress the \"X sysconfig changed\" warning message"
-msgstr "Undertryk advarslen \"X sysconfig changed\""
+msgstr "Undertryk advarslen »X sysconfig changed«"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:18
 msgid "Allow to disable the keyboard indicator tray icon"
