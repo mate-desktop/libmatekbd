@@ -164,6 +164,7 @@ main (gint argc, gchar ** argv)
 	gint monitor;
 	GdkRectangle rect;
 	GOptionContext *context;
+	GError *error = NULL;
 
 	MatekbdKeyboardDrawingGroupLevel groupLevels[4] =
 	    { {0, 0}, {1, 0}, {0, 1}, {1, 1} };
@@ -174,7 +175,11 @@ main (gint argc, gchar ** argv)
 
 	context = g_option_context_new ("kbdraw");
 	g_option_context_add_main_entries (context, options, NULL);
-	g_option_context_parse (context, &argc, &argv, NULL);
+	if (!g_option_context_parse (context, &argc, &argv, &error)) {
+		g_message ("option parsing failed: %s", error->message);
+		g_option_context_free (context);
+		exit (EXIT_FAILURE);
+	}
 	g_option_context_free (context);
 
 	if (program_version) {
