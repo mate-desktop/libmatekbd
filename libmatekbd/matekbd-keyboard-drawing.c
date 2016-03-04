@@ -1584,6 +1584,8 @@ unpress_keys (MatekbdKeyboardDrawing * drawing)
 {
 	gint i;
 
+	drawing->timeout = 0;
+
 	if (!drawing->xkb)
 		return FALSE;
 
@@ -1610,7 +1612,7 @@ focus_event (GtkWidget * widget,
 	if (event->in && drawing->timeout > 0) {
 		g_source_remove (drawing->timeout);
 		drawing->timeout = 0;
-	} else
+	} else if (drawing->timeout == 0)
 		drawing->timeout =
 		    g_timeout_add (120, (GSourceFunc) unpress_keys,
 				   drawing);
