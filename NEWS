@@ -1,7 +1,9 @@
 1.13.0
-    drop MateConf migration script
-    reduce introspection build warnings
-    fix some gtk3 dprecations    
+    Drop MateConf migration script
+    Reduce introspection build warnings
+    Fix some GTK+3 deprecations
+    Some more fixes and cleanups
+    Translations update
 
 1.12.1
     Translations update
