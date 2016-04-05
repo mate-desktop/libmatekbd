@@ -1,9 +1,10 @@
-1.13.0
+1.14.0
     Drop MateConf migration script
     Reduce introspection build warnings
     Fix some GTK+3 deprecations
     Some more fixes and cleanups
     Translations update
+    Fix Changelog generation
 
 1.12.1
     Translations update
