@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-09 12:55+0200\n"
-"PO-Revision-Date: 2015-09-25 15:08+0000\n"
+"PO-Revision-Date: 2015-12-06 16:18+0000\n"
 "Last-Translator: Siranush <ss.m.95@mail.ru>\n"
 "Language-Team: Armenian (http://www.transifex.com/mate/MATE/language/hy/)\n"
 "MIME-Version: 1.0\n"
@@ -99,7 +99,7 @@ msgstr "Ստեղնաշարը Թարմացնել Մշակման ծրագրով"
 msgid ""
 "A collection of scripts to run whenever the keyboard state is reloaded. "
 "Useful for re-applying xmodmap based adjustments"
-msgstr ""
+msgstr "Ինտերպրետացվող ծրագրի հավաքածուն գործարկել, երբ որ ստեղնաշարը վերբեռնված է։ Օգտակարության համար կրկին դիմել xmodmap վրա հիմնված ճշգրտումներին։"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:8
 msgid "modmap file list"
@@ -111,15 +111,15 @@ msgstr "modmap ֆայլերի ցանկը հասանելի է $Սկիզբ տեղ�
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:10
 msgid "Default group, assigned on window creation"
-msgstr ""
+msgstr "Հիմնական խումբը նախատեսված է ստեղծվող պատուհանի վրա"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:11
 msgid "Keep and manage separate group per window"
-msgstr ""
+msgstr "Պահպանել և կառավարել առանձին խումբը մեկ պատուհանի"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:12
 msgid "Save/restore indicators together with layout groups"
-msgstr ""
+msgstr "Պահպանել/վերականգնել ցուցանիշները խմբերի դասավորության հետ միասին"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:13
 msgid "Show layout names instead of group names"
@@ -129,7 +129,7 @@ msgstr "Խմբի անունները փոխարեն ցույց տալ անուն�
 msgid ""
 "Show layout names instead of group names (only for versions of XFree "
 "supporting multiple layouts)"
-msgstr ""
+msgstr "Ցույց տալ խմբերի անուներ դասավորության անուների փոխարեն (միայն XFree տարբերակների համար աջակցող բազմաթիվ դասավորություններ)"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:15
 msgid "Load extra configuration items"
@@ -141,7 +141,7 @@ msgstr "Բեռնելու էկզոտիկ, հազվադեպ գտագործված �
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:17
 msgid "Suppress the \"X sysconfig changed\" warning message"
-msgstr ""
+msgstr "Ճնշել \"X sysconfig changed\" նախազգուշացում հաղորդագրությունը"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:18
 msgid "Allow to disable the keyboard indicator tray icon"

@@ -6,13 +6,13 @@
 # Džiugas Grėbliūnas <dziugas.grebliunas@gmail.com>, 2014
 # Gintautas Miliauskas <gintas@akl.lt>, 2007, 2008
 # brennus <jonas.ska@gmail.com>, 2014
-# Moo, 2015
+# Moo, 2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-09 12:55+0200\n"
-"PO-Revision-Date: 2015-10-21 18:15+0000\n"
+"PO-Revision-Date: 2016-03-09 21:50+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/mate/MATE/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -112,7 +112,7 @@ msgstr "modmap failų sąrašas"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:9
 msgid "A list of modmap files available in the $HOME directory."
-msgstr "Modmap failų $HOME aplanke sąrašas."
+msgstr "Modmap failų $HOME kataloge sąrašas."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:10
 msgid "Default group, assigned on window creation"
@@ -150,11 +150,11 @@ msgstr "Išjungti \"X sistemos konfigūracija pasikeitė\" įspėjimo pranešim�
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:18
 msgid "Allow to disable the keyboard indicator tray icon"
-msgstr ""
+msgstr "Leisti išjungti klaviatūros indikatoriaus dėklo piktogramą"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:19
 msgid "Show keyboard leds indicator"
-msgstr ""
+msgstr "Rodyti klaviatūros šviesos diodų indikatorių"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:20
 msgid "The Keyboard Preview, X offset"
@@ -184,7 +184,7 @@ msgstr "Šriftas"
 msgid ""
 "The font for the layout indicator. This should be in \"[FAMILY-LIST] [STYLE-"
 "OPTIONS] [SIZE]\" format."
-msgstr ""
+msgstr "Išdėstymų indikatoriaus šriftas. Tai turėtų būti nurodyta \"[ŠEIMOS-SĄRAŠAS] [STILIAUS-PARINKTYS] [DYDIS]\" formatu."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:27
 msgid "The foreground color"
@@ -194,7 +194,7 @@ msgstr "Priekinio plano spalva"
 msgid ""
 "The foreground color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
-msgstr ""
+msgstr "Išdėstymų indikatoriaus priekinio plano spalva. Tai turėtų būti nurodyta \"R G B\" formatu, pavyzdžiui, \"255 0 0\"."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:29
 msgid "The background color"
@@ -204,7 +204,7 @@ msgstr "Fono spalva"
 msgid ""
 "The background color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
-msgstr ""
+msgstr "Išdėstymų indikatoriaus fono spalva. Tai turėtų būti nurodyta \"R G B\" formatu, pavyzdžiui, \"255 0 0\"."
 
 #: ../libmatekbd/show-layout.ui.h:1
 msgid "Keyboard Layout"

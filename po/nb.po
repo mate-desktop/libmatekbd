@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Allan Nordhøy <epost@anotheragency.no>, 2016
 # Terance Edward Sola <terance@lyse.net>, 2005
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-09 12:55+0200\n"
-"PO-Revision-Date: 2015-09-06 18:41+0000\n"
-"Last-Translator: infirit <inactive+infirit@transifex.com>\n"
+"PO-Revision-Date: 2016-03-25 19:59+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål (http://www.transifex.com/mate/MATE/language/nb/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -145,11 +146,11 @@ msgstr "Ikke vis advarsel om «X konfigurasjonen er endret»"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:18
 msgid "Allow to disable the keyboard indicator tray icon"
-msgstr ""
+msgstr "Tillat å skru av statusminiatyrbilde for tastaturindikator"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:19
 msgid "Show keyboard leds indicator"
-msgstr ""
+msgstr "Vis tastaturLED-indikator"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:20
 msgid "The Keyboard Preview, X offset"
@@ -173,13 +174,13 @@ msgstr "Sekundære grupper"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:25
 msgid "The font"
-msgstr ""
+msgstr "Skrifttypen"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:26
 msgid ""
 "The font for the layout indicator. This should be in \"[FAMILY-LIST] [STYLE-"
 "OPTIONS] [SIZE]\" format."
-msgstr ""
+msgstr "Skrifttypen for layoutindikator. skal være i formatet »[FAMILIE-LISTE] [STIL-TILVALG] [STR]«."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:27
 msgid "The foreground color"
@@ -189,7 +190,7 @@ msgstr "Forgrunnsfarge"
 msgid ""
 "The foreground color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
-msgstr ""
+msgstr "Forgrunnsfargen til utseende-indikatoren. Dette skal være i \"R G B\"-format, for eksempel \"255 0 0\"."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:29
 msgid "The background color"
@@ -199,7 +200,7 @@ msgstr "Bakgrunnsfarge"
 msgid ""
 "The background color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
-msgstr ""
+msgstr "Bakgrunnsfargen til utseende-indikatoren. Dette skal være i \"R G B\"-format, for eksempel \"255 0 0\"."
 
 #: ../libmatekbd/show-layout.ui.h:1
 msgid "Keyboard Layout"

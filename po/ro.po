@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-09 12:55+0200\n"
-"PO-Revision-Date: 2015-10-20 23:06+0000\n"
+"PO-Revision-Date: 2015-11-03 17:49+0000\n"
 "Last-Translator: Daniel <danny34ever@yahoo.com>\n"
 "Language-Team: Romanian (http://www.transifex.com/mate/MATE/language/ro/)\n"
 "MIME-Version: 1.0\n"
@@ -69,7 +69,7 @@ msgstr "model „%s”, %s și %s"
 
 #: ../libmatekbd/matekbd-keyboard-config.c:746
 msgid "no layout"
-msgstr "fără aranjament"
+msgstr "niciun aranjament"
 
 #: ../libmatekbd/matekbd-keyboard-config.c:747
 msgid "no options"
@@ -183,7 +183,7 @@ msgstr "Fontul"
 msgid ""
 "The font for the layout indicator. This should be in \"[FAMILY-LIST] [STYLE-"
 "OPTIONS] [SIZE]\" format."
-msgstr ""
+msgstr "Fontul pentru indicatorul aranjament. Acesta ar trebui să fie în formatul „[FAMILY-LIST] [STYLE-OPTIONS] [SIZE]”."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:27
 msgid "The foreground color"
@@ -193,7 +193,7 @@ msgstr "Culoarea de prim-plan"
 msgid ""
 "The foreground color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
-msgstr ""
+msgstr "Culoarea de prim plan pentru indicatorul aranjament. Aceasta ar trebui să fie în formatul „Roșu Verde Albastru”, de exemplu „255 0 0”."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:29
 msgid "The background color"
@@ -203,7 +203,7 @@ msgstr "Culoarea de fundal"
 msgid ""
 "The background color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
-msgstr ""
+msgstr "Culoarea de fundal pentru indicatorul aranjament. Aceasta ar trebui să fie în formatul „Roșu Verde Albastru”, de exemplu „255 0 0”."
 
 #: ../libmatekbd/show-layout.ui.h:1
 msgid "Keyboard Layout"

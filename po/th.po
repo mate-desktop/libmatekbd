@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-09 12:55+0200\n"
-"PO-Revision-Date: 2015-09-06 18:41+0000\n"
+"PO-Revision-Date: 2016-01-05 05:57+0000\n"
 "Last-Translator: infirit <inactive+infirit@transifex.com>\n"
 "Language-Team: Thai (http://www.transifex.com/mate/MATE/language/th/)\n"
 "MIME-Version: 1.0\n"
@@ -37,7 +37,7 @@ msgstr "ผังแป้นพิมพ์ \"%s\"\nสงวนลิขสิ
 
 #: ../libmatekbd/matekbd-keyboard-drawing.c:2542
 msgid "Unknown"
-msgstr ""
+msgstr "ไม่ทราบ"
 
 #: ../libmatekbd/matekbd-keyboard-drawing.c:2587
 #, c-format

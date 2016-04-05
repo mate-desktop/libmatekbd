@@ -4,13 +4,14 @@
 # 
 # Translators:
 # Gil Forcada <gilforcada@guifi.net>, 2007, 2008, 2009, 2010
+# Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-09 12:55+0200\n"
-"PO-Revision-Date: 2015-09-06 18:41+0000\n"
-"Last-Translator: infirit <inactive+infirit@transifex.com>\n"
+"PO-Revision-Date: 2015-11-24 10:07+0000\n"
+"Last-Translator: Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/mate/MATE/language/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,7 +26,7 @@ msgstr "S'ha produït un error en carregar una imatge: %s"
 
 #: ../libmatekbd/matekbd-indicator.c:699 ../libmatekbd/matekbd-status.c:645
 msgid "XKB initialization error"
-msgstr "Error d'inicialització de l'XKB"
+msgstr "Error d'inicialització del XKB"
 
 #: ../libmatekbd/matekbd-keyboard-drawing.c:2460
 #, c-format
@@ -99,7 +100,7 @@ msgstr "Gestors d'actualització del teclat"
 msgid ""
 "A collection of scripts to run whenever the keyboard state is reloaded. "
 "Useful for re-applying xmodmap based adjustments"
-msgstr "Una col·lecció d'scripts per executar en qualsevol moment que es recarregui l'estat del teclat. Útil per tornar a aplicar ajustaments basats en xmodmap"
+msgstr "Una col·lecció de scripts per executar en qualsevol moment que es recarregui l'estat del teclat. Útil per tornar a aplicar ajustaments basats en xmodmap"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:8
 msgid "modmap file list"
@@ -145,11 +146,11 @@ msgstr "Suprimeix el missatge d'avís «ha canviat el X sysconfig»"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:18
 msgid "Allow to disable the keyboard indicator tray icon"
-msgstr ""
+msgstr "Permetre inhabilitar la icona de la safata de l'indicador del teclat"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:19
 msgid "Show keyboard leds indicator"
-msgstr ""
+msgstr "Mostra l'indicador dels leds del teclat"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:20
 msgid "The Keyboard Preview, X offset"
@@ -173,7 +174,7 @@ msgstr "Grups secundaris"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:25
 msgid "The font"
-msgstr ""
+msgstr "La lletra"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:26
 msgid ""
@@ -183,7 +184,7 @@ msgstr ""
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:27
 msgid "The foreground color"
-msgstr "El color de primer pla"
+msgstr "El color del primer pla de les lletres"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:28
 msgid ""

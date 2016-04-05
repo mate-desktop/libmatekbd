@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-09 12:55+0200\n"
-"PO-Revision-Date: 2016-02-05 08:37+0000\n"
+"PO-Revision-Date: 2016-03-27 18:11+0000\n"
 "Last-Translator: Микола Ткач <Stuartlittle1970@gmail.com>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/mate/MATE/language/uk/)\n"
 "MIME-Version: 1.0\n"
@@ -36,7 +36,7 @@ msgid ""
 "Keyboard layout \"%s\"\n"
 "Copyright &#169; X.Org Foundation and XKeyboardConfig contributors\n"
 "For licensing see package metadata"
-msgstr "Розкладка клавіятури \"%s\"\nАвторське право &#169; X.Org Foundation та помічники у написанні XKeyboardConfig\nЛіцензійні умови викладені у метаданих"
+msgstr "Розкладка набірниці \"%s\"\nАвторське право &#169; X.Org Foundation та помічники у написанні XKeyboardConfig\nЛіцензійні умови викладені у метаданих"
 
 #: ../libmatekbd/matekbd-keyboard-drawing.c:2542
 msgid "Unknown"
@@ -45,7 +45,7 @@ msgstr "Невідомо"
 #: ../libmatekbd/matekbd-keyboard-drawing.c:2587
 #, c-format
 msgid "Keyboard Layout \"%s\""
-msgstr "Розкладка клавіятури \"%s\""
+msgstr "Розкладка набірниці \"%s\""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:719
 #, c-format
@@ -78,33 +78,33 @@ msgstr "немає параметрів"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:1
 msgid "Keyboard model"
-msgstr "Модель клавіятури"
+msgstr "Модель набірниці"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:2
 msgid "keyboard model"
-msgstr "модель клавіятури"
+msgstr "модель набірниці"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:3
 msgid "Keyboard layout"
-msgstr "Розкладка клавіятури"
+msgstr "Розкладка набірниці"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:4
 msgid "keyboard layout"
-msgstr "розкладка клавіятури"
+msgstr "розкладка набірниці"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:5
 msgid "Keyboard options"
-msgstr "Додаткові параметри клавіятури"
+msgstr "Додаткові параметри набірниці"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:6
 msgid "Keyboard Update Handlers"
-msgstr "Обробники оновлення клавіятури"
+msgstr "Опрацьовники оновлення набірниці"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:7
 msgid ""
 "A collection of scripts to run whenever the keyboard state is reloaded. "
 "Useful for re-applying xmodmap based adjustments"
-msgstr "Колекція сценаріїв, що запускаються при перезавантаженні стану клавіятури. Корисно для повторного накладання корекцій на основі xmodmap"
+msgstr "Колекція сценаріїв, що запускаються при перезавантаженні стану набірниці. Корисно для повторного накладання корекцій на основі xmodmap"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:8
 msgid "modmap file list"
@@ -112,7 +112,7 @@ msgstr "перелік файлів modmap"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:9
 msgid "A list of modmap files available in the $HOME directory."
-msgstr "Перелік файлів modmap, що доступні у каталозі $HOME."
+msgstr "Перелік файлів modmap, доступних у каталозі $HOME."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:10
 msgid "Default group, assigned on window creation"
@@ -150,11 +150,11 @@ msgstr "Не виводити повідомлення \"Змінилася ко
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:18
 msgid "Allow to disable the keyboard indicator tray icon"
-msgstr "Дозволяє вимкнути піктограму індикатора клавіятури в системному лотку."
+msgstr "Дозволяє вимкнути піктограму індикатора набірниці у системній таці."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:19
 msgid "Show keyboard leds indicator"
-msgstr "Показувати свідтодіодний індикатор клавіятури"
+msgstr "Показувати світлодіодний індикатор набірниці"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:20
 msgid "The Keyboard Preview, X offset"
@@ -184,7 +184,7 @@ msgstr "Шрифт"
 msgid ""
 "The font for the layout indicator. This should be in \"[FAMILY-LIST] [STYLE-"
 "OPTIONS] [SIZE]\" format."
-msgstr "Шрифт індикатора розкладки. Має бути в форматі: \"[FAMILY-LIST] [STYLE-OPTIONS] [SIZE]\" ."
+msgstr "Шрифт індикатора розкладки. Має бути у форматі: \"[FAMILY-LIST] [STYLE-OPTIONS] [SIZE]\" ."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:27
 msgid "The foreground color"
@@ -194,7 +194,7 @@ msgstr "Колір тексту"
 msgid ""
 "The foreground color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
-msgstr "Колір переднього плану для індикатора розкладки. Має бути у форматі \"RGB \", наприклад \" 255 ​​0 0 \" ."
+msgstr "Колір переднього пляну для індикатора розкладки. Має бути у форматі \"RGB \", наприклад \" 255 ​​0 0 \" ."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:29
 msgid "The background color"
@@ -204,16 +204,16 @@ msgstr "Колір тла"
 msgid ""
 "The background color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
-msgstr "Колір заднього плану для індикатора розкладки. Має бути у форматі \"RGB \", наприклад \" 255 ​​0 0 \" ."
+msgstr "Колір заднього пляну для індикатора розкладки. Має бути у форматі \"RGB \", наприклад \" 255 ​​0 0 \" ."
 
 #: ../libmatekbd/show-layout.ui.h:1
 msgid "Keyboard Layout"
-msgstr "Розкладка клавіятури"
+msgstr "Розкладка набірниці"
 
 #: ../test/matekbd-indicator-test.c:55
 #, c-format
 msgid "Keyboard Indicator Test (%s)"
-msgstr "Перевірка індикатора клавіятури (%s)"
+msgstr "Перевірка індикатора набірниці (%s)"
 
 #: ../test/matekbd-indicator-test.c:63
 msgid "Indicator:"

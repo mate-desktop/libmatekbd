@@ -36,7 +36,7 @@ msgstr ""
 
 #: ../libmatekbd/matekbd-keyboard-drawing.c:2542
 msgid "Unknown"
-msgstr ""
+msgstr "Noma'lum"
 
 #: ../libmatekbd/matekbd-keyboard-drawing.c:2587
 #, c-format
