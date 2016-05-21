@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# muzaffar habibullayev <muzaffarlearner@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-09 12:55+0200\n"
-"PO-Revision-Date: 2012-06-29 10:50+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2016-05-14 15:38+0000\n"
+"Last-Translator: muzaffar habibullayev <muzaffarlearner@gmail.com>\n"
 "Language-Team: Uzbek (http://www.transifex.com/mate/MATE/language/uz/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -41,52 +42,52 @@ msgstr "Noma'lum"
 #: ../libmatekbd/matekbd-keyboard-drawing.c:2587
 #, c-format
 msgid "Keyboard Layout \"%s\""
-msgstr ""
+msgstr "Klaviatura Tartibi \"%s\""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:719
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
-msgstr[0] ""
+msgstr[0] "tartiblar \"%s\""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:737
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
-msgstr[0] ""
+msgstr[0] "xossalar \"%s\""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:745
 #, c-format
 msgid "model \"%s\", %s and %s"
-msgstr ""
+msgstr "model \"%s\", %s va %s"
 
 #: ../libmatekbd/matekbd-keyboard-config.c:746
 msgid "no layout"
-msgstr ""
+msgstr "tugmalar tartibi yo'q"
 
 #: ../libmatekbd/matekbd-keyboard-config.c:747
 msgid "no options"
-msgstr ""
+msgstr "xossalar yo'q"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:1
 msgid "Keyboard model"
-msgstr ""
+msgstr "Klaviatura rusumi"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:2
 msgid "keyboard model"
-msgstr ""
+msgstr "klaviatura rusumi"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:3
 msgid "Keyboard layout"
-msgstr ""
+msgstr "Klaviatura tartibi"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:4
 msgid "keyboard layout"
-msgstr ""
+msgstr "klaviatura tartibi"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:5
 msgid "Keyboard options"
-msgstr ""
+msgstr "Klaviatura moslamalari"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:6
 msgid "Keyboard Update Handlers"
@@ -170,7 +171,7 @@ msgstr ""
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:25
 msgid "The font"
-msgstr ""
+msgstr "Shrift"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:26
 msgid ""
@@ -180,7 +181,7 @@ msgstr ""
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:27
 msgid "The foreground color"
-msgstr ""
+msgstr "Oldi fon rangi"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:28
 msgid ""
@@ -190,7 +191,7 @@ msgstr ""
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:29
 msgid "The background color"
-msgstr ""
+msgstr "Orqa fon rangi"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:30
 msgid ""
@@ -200,13 +201,13 @@ msgstr ""
 
 #: ../libmatekbd/show-layout.ui.h:1
 msgid "Keyboard Layout"
-msgstr ""
+msgstr "Klaviatura Tartibi"
 
 #: ../test/matekbd-indicator-test.c:55
 #, c-format
 msgid "Keyboard Indicator Test (%s)"
-msgstr ""
+msgstr "Klaviatura Indikatori Sinovi (%s)"
 
 #: ../test/matekbd-indicator-test.c:63
 msgid "Indicator:"
-msgstr ""
+msgstr "Indicator:"
