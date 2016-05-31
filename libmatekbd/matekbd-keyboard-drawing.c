@@ -296,7 +296,11 @@ rounded_polygon (cairo_t * cr,
 
 static void
 draw_polygon (MatekbdKeyboardDrawingRenderContext * context,
+#if GTK_CHECK_VERSION (3, 0, 0)
+	      GdkRGBA * fill_color,
+#else
 	      GdkColor * fill_color,
+#endif
 	      gint xkb_x,
 	      gint xkb_y, XkbPointRec * xkb_points, guint num_points,
 	      gdouble radius)
@@ -308,11 +312,15 @@ draw_polygon (MatekbdKeyboardDrawingRenderContext * context,
 	if (fill_color) {
 		filled = TRUE;
 	} else {
-		fill_color = context->dark_color;
+		fill_color = &context->dark_color;
 		filled = FALSE;
 	}
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	gdk_cairo_set_source_rgba (context->cr, fill_color);
+#else
 	gdk_cairo_set_source_color (context->cr, fill_color);
+#endif
 
 	points = g_new (GdkPoint, num_points);
 
@@ -368,12 +376,20 @@ curve_rectangle (cairo_t * cr,
 static void
 draw_curve_rectangle (cairo_t * cr,
 		      gboolean filled,
+#if GTK_CHECK_VERSION (3, 0, 0)
+		      GdkRGBA * fill_color,
+#else
 		      GdkColor * fill_color,
+#endif
 		      gint x, gint y, gint width, gint height, gint radius)
 {
 	curve_rectangle (cr, x, y, width, height, radius);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	gdk_cairo_set_source_rgba (cr, fill_color);
+#else
 	gdk_cairo_set_source_color (cr, fill_color);
+#endif
 
 	if (filled)
 		cairo_fill (cr);
@@ -384,7 +400,11 @@ draw_curve_rectangle (cairo_t * cr,
 /* x, y, width, height are in the xkb coordinate system */
 static void
 draw_rectangle (MatekbdKeyboardDrawingRenderContext * context,
+#if GTK_CHECK_VERSION (3, 0, 0)
+		GdkRGBA * fill_color,
+#else
 		GdkColor * fill_color,
+#endif
 		gint angle,
 		gint xkb_x, gint xkb_y, gint xkb_width, gint xkb_height,
 		gint radius)
@@ -396,7 +416,7 @@ draw_rectangle (MatekbdKeyboardDrawingRenderContext * context,
 		if (fill_color) {
 			filled = TRUE;
 		} else {
-			fill_color = context->dark_color;
+			fill_color = &context->dark_color;
 			filled = FALSE;
 		}
 
@@ -439,7 +459,12 @@ draw_rectangle (MatekbdKeyboardDrawingRenderContext * context,
 static void
 draw_outline (MatekbdKeyboardDrawingRenderContext * context,
 	      XkbOutlineRec * outline,
-	      GdkColor * color, gint angle, gint origin_x, gint origin_y)
+#if GTK_CHECK_VERSION (3, 0, 0)
+	      GdkRGBA * color,
+#else
+	      GdkColor * color,
+#endif
+	      gint angle, gint origin_x, gint origin_y)
 {
 #ifdef KBDRAW_DEBUG
 	printf (" num_points in %p: %d\n", outline, outline->num_points);
@@ -493,55 +518,98 @@ draw_outline (MatekbdKeyboardDrawingRenderContext * context,
 
 /* see PSColorDef in xkbprint */
 static gboolean
+#if GTK_CHECK_VERSION (3, 0, 0)
+parse_xkb_color_spec (gchar * colorspec, GdkRGBA * color)
+#else
 parse_xkb_color_spec (gchar * colorspec, GdkColor * color)
+#endif
 {
 	glong level;
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	color->alpha = 1.0;
+#endif
 	if (g_ascii_strcasecmp (colorspec, "black") == 0) {
 		color->red = 0;
 		color->green = 0;
 		color->blue = 0;
 	} else if (g_ascii_strcasecmp (colorspec, "white") == 0) {
-		color->red = 65535;
-		color->green = 65535;
-		color->blue = 65535;
+#if GTK_CHECK_VERSION (3, 0, 0)
+		color->red = 1.0;
+		color->green = 1.0;
+		color->blue = 1.0;
+#else
+		color->red = 0xFFFF;
+		color->green = 0xFFFF;
+		color->blue = 0xFFFF;
+#endif
 	} else if (g_ascii_strncasecmp (colorspec, "grey", 4) == 0 ||
 		   g_ascii_strncasecmp (colorspec, "gray", 4) == 0) {
 		level = strtol (colorspec + 4, NULL, 10);
 
-		color->red = 65535 - 65535 * level / 100;
-		color->green = 65535 - 65535 * level / 100;
-		color->blue = 65535 - 65535 * level / 100;
+#if GTK_CHECK_VERSION (3, 0, 0)
+		color->red = 1.0 - 1.0 * level / 100.0;
+		color->green = 1.0 - 1.0 * level / 100.0;
+		color->blue = 1.0 - 1.0 * level / 100.0;
+#else
+		color->red = 0xFFFF - 0xFFFF * level / 100.0;
+		color->green = 0xFFFF - 0xFFFF * level / 100.0;
+		color->blue = 0xFFFF - 0xFFFF * level / 100.0;
+#endif
 	} else if (g_ascii_strcasecmp (colorspec, "red") == 0) {
-		color->red = 65535;
+#if GTK_CHECK_VERSION (3, 0, 0)
+		color->red = 1.0;
+#else
+		color->red = 0xFFFF;
+#endif
 		color->green = 0;
 		color->blue = 0;
 	} else if (g_ascii_strcasecmp (colorspec, "green") == 0) {
 		color->red = 0;
-		color->green = 65535;
+#if GTK_CHECK_VERSION (3, 0, 0)
+		color->green = 1.0;
+#else
+		color->green = 0xFFFF;
+#endif
 		color->blue = 0;
 	} else if (g_ascii_strcasecmp (colorspec, "blue") == 0) {
 		color->red = 0;
 		color->green = 0;
-		color->blue = 65535;
+#if GTK_CHECK_VERSION (3, 0, 0)
+		color->blue = 1.0;
+#else
+		color->blue = 0xFFFF;
+#endif
 	} else if (g_ascii_strncasecmp (colorspec, "red", 3) == 0) {
 		level = strtol (colorspec + 3, NULL, 10);
 
-		color->red = 65535 * level / 100;
+#if GTK_CHECK_VERSION (3, 0, 0)
+		color->red = 1.0 * level / 100.0;
+#else
+		color->red = 0xFFFF * level / 100.0;
+#endif
 		color->green = 0;
 		color->blue = 0;
 	} else if (g_ascii_strncasecmp (colorspec, "green", 5) == 0) {
 		level = strtol (colorspec + 5, NULL, 10);
 
 		color->red = 0;
-		color->green = 65535 * level / 100;;
+#if GTK_CHECK_VERSION (3, 0, 0)
+		color->green = 1.0 * level / 100.0;
+#else
+		color->green = 0xFFFF * level / 100.0;
+#endif
 		color->blue = 0;
 	} else if (g_ascii_strncasecmp (colorspec, "blue", 4) == 0) {
 		level = strtol (colorspec + 4, NULL, 10);
 
 		color->red = 0;
 		color->green = 0;
-		color->blue = 65535 * level / 100;
+#if GTK_CHECK_VERSION (3, 0, 0)
+		color->blue = 1.0 * level / 100.0;
+#else
+		color->blue = 0xFFFF * level / 100.0;
+#endif
 	} else
 		return FALSE;
 
@@ -808,7 +876,11 @@ draw_pango_layout (MatekbdKeyboardDrawingRenderContext * context,
 		   gint angle, gint x, gint y)
 {
 	PangoLayout *layout = context->layout;
+#if GTK_CHECK_VERSION (3, 0, 0)
+	GdkRGBA *color;
+#else
 	GdkColor *color;
+#endif
 	PangoLayoutLine *line;
 	gint x_off, y_off;
 	gint i;
@@ -856,7 +928,11 @@ draw_pango_layout (MatekbdKeyboardDrawingRenderContext * context,
 	}
 
 	cairo_move_to (context->cr, x, y);
+#if GTK_CHECK_VERSION (3, 0, 0)
+	gdk_cairo_set_source_rgba (context->cr, color);
+#else
 	gdk_cairo_set_source_color (context->cr, color);
+#endif
 	pango_cairo_show_layout (context->cr, layout);
 }
 
@@ -1035,11 +1111,11 @@ draw_key (MatekbdKeyboardDrawingRenderContext * context,
 	XkbShapeRec *shape;
 #if GTK_CHECK_VERSION (3, 0, 0)
 	GtkStyleContext *style_context;
-	GdkRGBA rgba;
+	GdkRGBA color;
 #else
 	GtkStyle *style;
-#endif
 	GdkColor color;
+#endif
 	XkbOutlineRec *outline;
 	int origin_offset_x;
 	/* gint i; */
@@ -1062,12 +1138,8 @@ draw_key (MatekbdKeyboardDrawingRenderContext * context,
 		gtk_style_context_add_class (style_context, GTK_STYLE_CLASS_VIEW);
 		gtk_style_context_get_background_color (style_context,
 		                                        GTK_STATE_FLAG_SELECTED,
-		                                        &rgba);
+		                                        &color);
 		gtk_style_context_restore (style_context);
-
-		color.red = rgba.red * 65535;
-		color.green = rgba.green * 65535;
-		color.blue = rgba.blue * 65535;
 #else
 		style = gtk_widget_get_style (GTK_WIDGET (drawing));
 		color = style->base[GTK_STATE_SELECTED];
@@ -1214,7 +1286,11 @@ draw_indicator_doodad (MatekbdKeyboardDrawingRenderContext * context,
 		       MatekbdKeyboardDrawingDoodad * doodad,
 		       XkbIndicatorDoodadRec * indicator_doodad)
 {
+#if GTK_CHECK_VERSION (3, 0, 0)
+	GdkRGBA *color;
+#else
 	GdkColor *color;
+#endif
 	XkbShapeRec *shape;
 	gint i;
 
@@ -1241,7 +1317,11 @@ draw_shape_doodad (MatekbdKeyboardDrawingRenderContext * context,
 		   XkbShapeDoodadRec * shape_doodad)
 {
 	XkbShapeRec *shape;
+#if GTK_CHECK_VERSION (3, 0, 0)
+	GdkRGBA *color;
+#else
 	GdkColor *color;
+#endif
 	gint i;
 
 	if (!drawing->xkb)
@@ -1372,12 +1452,12 @@ create_cairo (MatekbdKeyboardDrawing * drawing)
 #if GTK_CHECK_VERSION (3, 0, 0)
 	GtkStyleContext *style_context = NULL;
 	GtkStateFlags state;
-	GdkRGBA dark_rgba;
+	GdkRGBA dark_color;
 #else
 	GtkStyle *style = NULL;
 	GtkStateType state;
-#endif
 	GdkColor dark_color;
+#endif
 
 	if (drawing == NULL)
 		return FALSE;
@@ -1392,11 +1472,11 @@ create_cairo (MatekbdKeyboardDrawing * drawing)
 	state = gtk_style_context_get_state (style_context);
 
 	gtk_style_context_get_background_color (style_context, state,
-	                                        &dark_rgba);
+	                                        &dark_color);
 	/* make dark background by making regular background darker */
-	dark_color.red = dark_rgba.red * 65535 * 0.7;
-	dark_color.green = dark_rgba.green * 65535 * 0.7;
-	dark_color.blue = dark_rgba.blue * 65535 * 0.7;
+	dark_color.red *= 0.7;
+	dark_color.green *= 0.7;
+	dark_color.blue *= 0.7;
 #else
 	style = gtk_widget_get_style (GTK_WIDGET (drawing));
 	state = gtk_widget_get_state (GTK_WIDGET (drawing));
@@ -1404,7 +1484,7 @@ create_cairo (MatekbdKeyboardDrawing * drawing)
 	dark_color = style->dark[state];
 #endif
 
-	drawing->renderContext->dark_color = gdk_color_copy (&dark_color);
+	drawing->renderContext->dark_color = dark_color;
 
 	return TRUE;
 }
@@ -1414,9 +1494,6 @@ destroy_cairo (MatekbdKeyboardDrawing * drawing)
 {
 	cairo_destroy (drawing->renderContext->cr);
 	drawing->renderContext->cr = NULL;
-
-	gdk_color_free (drawing->renderContext->dark_color);
-	drawing->renderContext->dark_color = NULL;
 }
 
 static void
@@ -1426,7 +1503,7 @@ draw_keyboard (MatekbdKeyboardDrawing * drawing)
         GtkStyleContext *context =
 	    gtk_widget_get_style_context (GTK_WIDGET (drawing));
 	GtkStateFlags state = gtk_style_context_get_state (context);
-	GdkRGBA rgba;
+	GdkRGBA color;
 #else
 	GtkStyle *style = gtk_widget_get_style (GTK_WIDGET (drawing));
 	GtkStateType state = gtk_widget_get_state (GTK_WIDGET (drawing));
@@ -1450,9 +1527,9 @@ draw_keyboard (MatekbdKeyboardDrawing * drawing)
 #if GTK_CHECK_VERSION (3, 0, 0)
 		gtk_style_context_save (context);
 		gtk_style_context_add_class (context, GTK_STYLE_CLASS_VIEW);
-		gtk_style_context_get_background_color (context, state, &rgba);
+		gtk_style_context_get_background_color (context, state, &color);
 		gtk_style_context_restore (context);
-		gdk_cairo_set_source_rgba (drawing->renderContext->cr, &rgba);
+		gdk_cairo_set_source_rgba (drawing->renderContext->cr, &color);
 #else
 		gdk_cairo_set_source_color (drawing->renderContext->cr,
 		                            &style->base[state]);
@@ -1916,7 +1993,11 @@ init_colors (MatekbdKeyboardDrawing * drawing)
 	if (!drawing->xkb)
 		return;
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	drawing->colors = g_new (GdkRGBA, drawing->xkb->geom->num_colors);
+#else
 	drawing->colors = g_new (GdkColor, drawing->xkb->geom->num_colors);
+#endif
 
 	for (i = 0; i < drawing->xkb->geom->num_colors; i++) {
 		result =
@@ -2312,17 +2393,16 @@ matekbd_keyboard_drawing_render (MatekbdKeyboardDrawing * kbdrawing,
 #if GTK_CHECK_VERSION (3, 0, 0)
 	GtkStyleContext *style_context =
 	    gtk_widget_get_style_context (GTK_WIDGET (kbdrawing));
-	GdkColor dark_color;
-	GdkRGBA dark_rgba;
+	GdkRGBA dark_color;
 	PangoFontDescription *fd = NULL;
 
 	gtk_style_context_get_background_color (style_context,
 	                                        gtk_style_context_get_state (style_context),
-	                                        &dark_rgba);
+	                                        &dark_color);
 	/* make dark background by making regular background darker */
-	dark_color.red = dark_rgba.red * 65535 * 0.7;
-	dark_color.green = dark_rgba.green * 65535 * 0.7;
-	dark_color.blue = dark_rgba.blue * 65535 * 0.7;
+	dark_color.red *= 0.7;
+	dark_color.green *= 0.7;
+	dark_color.blue *= 0.7;
 
 	gtk_style_context_get (style_context,
 	                       gtk_style_context_get_state (style_context),
@@ -2343,7 +2423,7 @@ matekbd_keyboard_drawing_render (MatekbdKeyboardDrawing * kbdrawing,
 		layout,
 		pango_font_description_copy (fd),
 		1, 1,
-		&dark_color
+		dark_color
 	};
 
 	if (!context_setup_scaling (&context, kbdrawing, width, height,
