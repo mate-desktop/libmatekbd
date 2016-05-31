@@ -1033,7 +1033,13 @@ draw_key (MatekbdKeyboardDrawingRenderContext * context,
 	  MatekbdKeyboardDrawing * drawing, MatekbdKeyboardDrawingKey * key)
 {
 	XkbShapeRec *shape;
-	GdkColor *color;
+#if GTK_CHECK_VERSION (3, 0, 0)
+	GtkStyleContext *style_context;
+	GdkRGBA rgba;
+#else
+	GtkStyle *style;
+#endif
+	GdkColor color;
 	XkbOutlineRec *outline;
 	int origin_offset_x;
 	/* gint i; */
@@ -1049,23 +1055,36 @@ draw_key (MatekbdKeyboardDrawingRenderContext * context,
 
 	shape = drawing->xkb->geom->shapes + key->xkbkey->shape_ndx;
 
-	if (key->pressed)
-		color =
-		    &gtk_widget_get_style (GTK_WIDGET (drawing))->base
-		    [GTK_STATE_SELECTED];
-	else
-		color = drawing->colors + key->xkbkey->color_ndx;
+	if (key->pressed) {
+#if GTK_CHECK_VERSION (3, 0, 0)
+		style_context = gtk_widget_get_style_context (GTK_WIDGET (drawing));
+		gtk_style_context_save (style_context);
+		gtk_style_context_add_class (style_context, GTK_STYLE_CLASS_VIEW);
+		gtk_style_context_get_background_color (style_context,
+		                                        GTK_STATE_FLAG_SELECTED,
+		                                        &rgba);
+		gtk_style_context_restore (style_context);
+
+		color.red = rgba.red * 65535;
+		color.green = rgba.green * 65535;
+		color.blue = rgba.blue * 65535;
+#else
+		style = gtk_widget_get_style (GTK_WIDGET (drawing));
+		color = style->base[GTK_STATE_SELECTED];
+#endif
+	 } else
+		color = *(drawing->colors + key->xkbkey->color_ndx);
 
 #ifdef KBDRAW_DEBUG
 	printf
-	    (" outlines base in the shape: %p (total: %d), origin: (%d, %d), angle %d, colored: %s\n",
+	    (" outlines base in the shape: %p (total: %d), origin: (%d, %d), angle %d\n",
 	     shape->outlines, shape->num_outlines, key->origin_x,
-	     key->origin_y, key->angle, color ? "yes" : "no");
+	     key->origin_y, key->angle);
 #endif
 
 	/* draw the primary outline */
 	outline = shape->primary ? shape->primary : shape->outlines;
-	draw_outline (context, outline, color, key->angle, key->origin_x,
+	draw_outline (context, outline, &color, key->angle, key->origin_x,
 		      key->origin_y);
 #if 0
 	/* don't draw other outlines for now, since
@@ -1350,7 +1369,16 @@ draw_keyboard_to_context (MatekbdKeyboardDrawingRenderContext * context,
 static gboolean
 create_cairo (MatekbdKeyboardDrawing * drawing)
 {
+#if GTK_CHECK_VERSION (3, 0, 0)
+	GtkStyleContext *style_context = NULL;
+	GtkStateFlags state;
+	GdkRGBA dark_rgba;
+#else
+	GtkStyle *style = NULL;
 	GtkStateType state;
+#endif
+	GdkColor dark_color;
+
 	if (drawing == NULL)
 		return FALSE;
 	if (drawing->surface == NULL)
@@ -1359,9 +1387,25 @@ create_cairo (MatekbdKeyboardDrawing * drawing)
 	drawing->renderContext->cr =
 	    cairo_create (drawing->surface);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	style_context = gtk_widget_get_style_context (GTK_WIDGET (drawing));
+	state = gtk_style_context_get_state (style_context);
+
+	gtk_style_context_get_background_color (style_context, state,
+	                                        &dark_rgba);
+	/* make dark background by making regular background darker */
+	dark_color.red = dark_rgba.red * 65535 * 0.7;
+	dark_color.green = dark_rgba.green * 65535 * 0.7;
+	dark_color.blue = dark_rgba.blue * 65535 * 0.7;
+#else
+	style = gtk_widget_get_style (GTK_WIDGET (drawing));
 	state = gtk_widget_get_state (GTK_WIDGET (drawing));
-	drawing->renderContext->dark_color =
-	    &gtk_widget_get_style (GTK_WIDGET (drawing))->dark[state];
+
+	dark_color = style->dark[state];
+#endif
+
+	drawing->renderContext->dark_color = gdk_color_copy (&dark_color);
+
 	return TRUE;
 }
 
@@ -1370,14 +1414,23 @@ destroy_cairo (MatekbdKeyboardDrawing * drawing)
 {
 	cairo_destroy (drawing->renderContext->cr);
 	drawing->renderContext->cr = NULL;
+
+	gdk_color_free (drawing->renderContext->dark_color);
 	drawing->renderContext->dark_color = NULL;
 }
 
 static void
 draw_keyboard (MatekbdKeyboardDrawing * drawing)
 {
+#if GTK_CHECK_VERSION (3, 0, 0)
+        GtkStyleContext *context =
+	    gtk_widget_get_style_context (GTK_WIDGET (drawing));
+	GtkStateFlags state = gtk_style_context_get_state (context);
+	GdkRGBA rgba;
+#else
+	GtkStyle *style = gtk_widget_get_style (GTK_WIDGET (drawing));
 	GtkStateType state = gtk_widget_get_state (GTK_WIDGET (drawing));
-        GtkStyle *style = gtk_widget_get_style (GTK_WIDGET (drawing));
+#endif
 	GtkAllocation allocation;
 
 	if (!drawing->xkb)
@@ -1393,10 +1446,18 @@ draw_keyboard (MatekbdKeyboardDrawing * drawing)
 					       allocation.height);
 
 	if (create_cairo (drawing)) {
-	        /* blank background */
-                gdk_cairo_set_source_color (drawing->renderContext->cr,
-                                            &style->base[state]);
-                cairo_paint (drawing->renderContext->cr);
+		/* blank background */
+#if GTK_CHECK_VERSION (3, 0, 0)
+		gtk_style_context_save (context);
+		gtk_style_context_add_class (context, GTK_STYLE_CLASS_VIEW);
+		gtk_style_context_get_background_color (context, state, &rgba);
+		gtk_style_context_restore (context);
+		gdk_cairo_set_source_rgba (drawing->renderContext->cr, &rgba);
+#else
+		gdk_cairo_set_source_color (drawing->renderContext->cr,
+		                            &style->base[state]);
+#endif
+		cairo_paint (drawing->renderContext->cr);
 
 		draw_keyboard_to_context (drawing->renderContext, drawing);
 		destroy_cairo (drawing);
@@ -1412,13 +1473,24 @@ alloc_render_context (MatekbdKeyboardDrawing * drawing)
 
 	PangoContext *pangoContext =
 	    gtk_widget_get_pango_context (GTK_WIDGET (drawing));
+
+#if GTK_CHECK_VERSION (3, 0, 0)
+	GtkStyleContext *style_context =
+	    gtk_widget_get_style_context (GTK_WIDGET (drawing));
+	PangoFontDescription *fd = NULL;
+
+	gtk_style_context_get (style_context,
+	                       gtk_style_context_get_state (style_context),
+	                       GTK_STYLE_PROPERTY_FONT, &fd, NULL);
+#else
+	GtkStyle *style = gtk_widget_get_style (GTK_WIDGET (drawing));
+	PangoFontDescription *fd = style->font_desc;
+#endif
+
 	context->layout = pango_layout_new (pangoContext);
 	pango_layout_set_ellipsize (context->layout, PANGO_ELLIPSIZE_END);
 
-	context->font_desc =
-	    pango_font_description_copy (gtk_widget_get_style
-					 (GTK_WIDGET
-					  (drawing))->font_desc);
+	context->font_desc = pango_font_description_copy (fd);
 	context->angle = 0;
 	context->scale_numerator = 1;
 	context->scale_denominator = 1;
@@ -2237,26 +2309,51 @@ matekbd_keyboard_drawing_render (MatekbdKeyboardDrawing * kbdrawing,
 			      double width, double height,
 			      double dpi_x, double dpi_y)
 {
+#if GTK_CHECK_VERSION (3, 0, 0)
+	GtkStyleContext *style_context =
+	    gtk_widget_get_style_context (GTK_WIDGET (kbdrawing));
+	GdkColor dark_color;
+	GdkRGBA dark_rgba;
+	PangoFontDescription *fd = NULL;
+
+	gtk_style_context_get_background_color (style_context,
+	                                        gtk_style_context_get_state (style_context),
+	                                        &dark_rgba);
+	/* make dark background by making regular background darker */
+	dark_color.red = dark_rgba.red * 65535 * 0.7;
+	dark_color.green = dark_rgba.green * 65535 * 0.7;
+	dark_color.blue = dark_rgba.blue * 65535 * 0.7;
+
+	gtk_style_context_get (style_context,
+	                       gtk_style_context_get_state (style_context),
+	                       GTK_STYLE_PROPERTY_FONT, &fd, NULL);
+	fd = pango_font_description_copy (fd);
+#else
+	GtkStyle *style = gtk_widget_get_style (GTK_WIDGET (kbdrawing));
+	GdkColor dark_color;
+	PangoFontDescription *fd =
+	    pango_font_description_copy (style->font_desc);
+
+	dark_color = style->dark[gtk_widget_get_state (GTK_WIDGET (kbdrawing))];
+#endif
+
 	MatekbdKeyboardDrawingRenderContext context = {
 		cr,
 		kbdrawing->renderContext->angle,
 		layout,
-		pango_font_description_copy (gtk_widget_get_style
-					     (GTK_WIDGET
-					      (kbdrawing))->font_desc),
+		pango_font_description_copy (fd),
 		1, 1,
-		&gtk_widget_get_style (GTK_WIDGET (kbdrawing))->dark
-		    [gtk_widget_get_state (GTK_WIDGET (kbdrawing))]
+		&dark_color
 	};
 
 	if (!context_setup_scaling (&context, kbdrawing, width, height,
-				    dpi_x, dpi_y))
+	                            dpi_x, dpi_y))
 		return FALSE;
 	cairo_translate (cr, x, y);
 
 	draw_keyboard_to_context (&context, kbdrawing);
 
-	pango_font_description_free (context.font_desc);
+	pango_font_description_free (fd);
 
 	return TRUE;
 }

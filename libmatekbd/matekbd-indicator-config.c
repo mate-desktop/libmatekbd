@@ -38,7 +38,6 @@
  * MatekbdIndicatorConfig:
  */
 #define MATEKBD_INDICATOR_CONFIG_SCHEMA  MATEKBD_CONFIG_SCHEMA ".indicator"
-#define GTK_STYLE_PATH "*PanelWidget*"
 
 const gchar MATEKBD_INDICATOR_CONFIG_KEY_SHOW_FLAGS[] = "show-flags";
 const gchar MATEKBD_INDICATOR_CONFIG_KEY_SECONDARIES[] = "secondary";
@@ -62,17 +61,41 @@ matekbd_indicator_config_load_font (MatekbdIndicatorConfig * ind_config)
 	if (ind_config->font_family == NULL ||
 	    ind_config->font_family[0] == '\0') {
 		PangoFontDescription *fd = NULL;
+#if GTK_CHECK_VERSION (3, 0, 0)
+		GtkWidgetPath *widget_path = gtk_widget_path_new ();
+		GtkStyleContext *context = gtk_style_context_new ();
+
+		gtk_widget_path_append_type (widget_path, GTK_TYPE_WINDOW);
+		gtk_widget_path_iter_set_name (widget_path, -1 , "PanelWidget");
+
+		gtk_style_context_set_path (context, widget_path);
+		gtk_style_context_set_screen (context, gdk_screen_get_default ());
+		gtk_style_context_set_state (context, GTK_STATE_FLAG_NORMAL);
+		gtk_style_context_add_class (context, GTK_STYLE_CLASS_DEFAULT);
+		gtk_style_context_add_class (context, "gnome-panel-menu-bar");
+		gtk_style_context_add_class (context, "mate-panel-menu-bar");
+
+		gtk_style_context_get (context, GTK_STATE_FLAG_NORMAL,
+		                       GTK_STYLE_PROPERTY_FONT, &fd, NULL);
+#else
 		GtkStyle *style =
 		    gtk_rc_get_style_by_paths (gtk_settings_get_default (),
-					       GTK_STYLE_PATH,
-					       GTK_STYLE_PATH,
+					       "*PanelWidget*",
+					       "*PanelWidget*",
 					       GTK_TYPE_LABEL);
 		if (style != NULL)
 			fd = style->font_desc;
+#endif
+
 		if (fd != NULL) {
 			ind_config->font_family =
 			    g_strdup (pango_font_description_to_string(fd));
 		}
+
+#if GTK_CHECK_VERSION (3, 0, 0)
+		g_object_unref (G_OBJECT (context));
+		gtk_widget_path_unref (widget_path);
+#endif
 	}
 	xkl_debug (150, "font: [%s]\n", ind_config->font_family);
 
@@ -83,32 +106,50 @@ matekbd_indicator_config_load_colors (MatekbdIndicatorConfig * ind_config)
 {
 	ind_config->foreground_color =
 	    g_settings_get_string (ind_config->settings,
-				     MATEKBD_INDICATOR_CONFIG_KEY_FOREGROUND_COLOR);
+	                           MATEKBD_INDICATOR_CONFIG_KEY_FOREGROUND_COLOR);
 
 	if (ind_config->foreground_color == NULL ||
 	    ind_config->foreground_color[0] == '\0') {
+#if GTK_CHECK_VERSION (3, 0, 0)
+		GtkWidgetPath *widget_path = gtk_widget_path_new ();
+		GtkStyleContext *context = gtk_style_context_new ();
+		GdkRGBA fg_color;
+
+		gtk_widget_path_append_type (widget_path, GTK_TYPE_WINDOW);
+		gtk_widget_path_iter_set_name (widget_path, -1 , "PanelWidget");
+
+		gtk_style_context_set_path (context, widget_path);
+		gtk_style_context_set_screen (context, gdk_screen_get_default ());
+		gtk_style_context_set_state (context, GTK_STATE_FLAG_NORMAL);
+		gtk_style_context_add_class (context, GTK_STYLE_CLASS_DEFAULT);
+		gtk_style_context_add_class (context, "gnome-panel-menu-bar");
+		gtk_style_context_add_class (context, "mate-panel-menu-bar");
+
+		gtk_style_context_get_color (context,
+		                             GTK_STATE_FLAG_NORMAL, &fg_color);
+		ind_config->foreground_color =
+		    g_strdup_printf ("%g %g %g",
+		                     fg_color.red,
+		                     fg_color.green,
+		                     fg_color.blue);
+
+		g_object_unref (G_OBJECT (context));
+		gtk_widget_path_unref (widget_path);
+#else
 		GtkStyle *style =
 		    gtk_rc_get_style_by_paths (gtk_settings_get_default (),
-					       GTK_STYLE_PATH,
-					       GTK_STYLE_PATH,
+					       "*PanelWidget*",
+					       "*PanelWidget*",
 					       GTK_TYPE_LABEL);
 		if (style != NULL) {
+			GdkColor fg_color = style->fg[GTK_STATE_NORMAL];
 			ind_config->foreground_color =
-			    g_strdup_printf ("%g %g %g", ((double)
-							  style->
-							  fg
-							  [GTK_STATE_NORMAL].red)
-					     / 0x10000, ((double)
-							 style->
-							 fg
-							 [GTK_STATE_NORMAL].green)
-					     / 0x10000, ((double)
-							 style->
-							 fg
-							 [GTK_STATE_NORMAL].blue)
-					     / 0x10000);
+			    g_strdup_printf ("%g %g %g",
+					     ((double) fg_color.red) / 0xFFFF,
+					     ((double) fg_color.green) / 0xFFFF,
+					     ((double) fg_color.blue) / 0xFFFF);
 		}
-
+#endif
 	}
 
 	ind_config->background_color =
