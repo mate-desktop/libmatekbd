@@ -118,7 +118,7 @@ introspection_sources = $(matekbdinc_HEADERS) \
         $(libmatekbdui_la_SOURCES)
 
 Matekbd-1.0.gir: libmatekbd.la libmatekbdui.la
-Matekbd_1_0_gir_INCLUDES = GObject-2.0 Gtk-$(GTK_API_VERSION) xlib-2.0
+Matekbd_1_0_gir_INCLUDES = GObject-2.0 Gtk-$(GTK_API_VERSION) xlib-2.0 Xkl-1.0
 Matekbd_1_0_gir_CFLAGS = $(libmatekbdui_la_CFLAGS)
 Matekbd_1_0_gir_LIBS = libmatekbd.la libmatekbdui.la
 Matekbd_1_0_gir_FILES = $(introspection_sources)

@@ -48,7 +48,7 @@ dnl ***************************************************************************
 GLIB_REQUIRED=2.36
 GIO_REQUIRED=2.25.0
 
-LIBXKLAVIER_REQUIRED=5.0
+LIBXKLAVIER_REQUIRED=5.2
 
 AC_SUBST([GIO_REQUIRED])
 AC_SUBST([GTK_API_VERSION])
