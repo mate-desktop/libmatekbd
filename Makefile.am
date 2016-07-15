@@ -6,7 +6,7 @@ SUBDIRS = libmatekbd $(TEST) po
 
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
-DISTCHECK_CONFIGURE_FLAGS = --enable-introspection
+DISTCHECK_CONFIGURE_FLAGS = --enable-introspection --with-gtk=$(GTK_API_VERSION)
 
 DISTCLEANFILES = \
   intltool-extract \
