@@ -4,6 +4,7 @@
 # 
 # Translators:
 # crolidge, 2014-2015
+# crolidge, 2016
 # Duarte Loreto <happyguy_pt@hotmail.com>, 2007-2010
 # Sérgio Marques <smarquespt@gmail.com>, 2012
 msgid ""
@@ -11,7 +12,7 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-09 12:55+0200\n"
-"PO-Revision-Date: 2015-09-07 22:03+0000\n"
+"PO-Revision-Date: 2016-05-29 15:41+0000\n"
 "Last-Translator: crolidge\n"
 "Language-Team: Portuguese (http://www.transifex.com/mate/MATE/language/pt/)\n"
 "MIME-Version: 1.0\n"
@@ -181,7 +182,7 @@ msgstr "O tipo de letra"
 msgid ""
 "The font for the layout indicator. This should be in \"[FAMILY-LIST] [STYLE-"
 "OPTIONS] [SIZE]\" format."
-msgstr ""
+msgstr "O tipo de letra do indicador de esquema. Este deve estar no formato \"[FAMILY-LIST] [STYLE-OPTIONS] [SIZE]."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:27
 msgid "The foreground color"
@@ -191,7 +192,7 @@ msgstr "A cor principal"
 msgid ""
 "The foreground color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
-msgstr ""
+msgstr "A cor principal do indicador de esquema. Esta deve estar no formato \"R G B\". Por exemplo, \"255 0 0\"."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:29
 msgid "The background color"
@@ -201,7 +202,7 @@ msgstr "A cor de fundo"
 msgid ""
 "The background color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
-msgstr ""
+msgstr "A cor de fundo do indicador de esquema. Esta deve estar no formato \"R G B\". Por exemplo, \"255 0 0\"."
 
 #: ../libmatekbd/show-layout.ui.h:1
 msgid "Keyboard Layout"

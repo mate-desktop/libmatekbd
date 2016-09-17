@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-09 12:55+0200\n"
-"PO-Revision-Date: 2016-03-09 21:50+0000\n"
+"PO-Revision-Date: 2016-09-07 13:29+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/mate/MATE/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -24,11 +24,11 @@ msgstr ""
 #: ../libmatekbd/matekbd-indicator.c:116 ../libmatekbd/matekbd-status.c:310
 #, c-format
 msgid "There was an error loading an image: %s"
-msgstr "Įvyko klaida įkeliant paveikslėlį: %s"
+msgstr "Įvyko klaida įkeliant paveikslą: %s"
 
 #: ../libmatekbd/matekbd-indicator.c:699 ../libmatekbd/matekbd-status.c:645
 msgid "XKB initialization error"
-msgstr "XKB inicializavimo klaida"
+msgstr "XKB inicijavimo klaida"
 
 #: ../libmatekbd/matekbd-keyboard-drawing.c:2460
 #, c-format

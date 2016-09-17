@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Rasti K5 <rasti.khdhr@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-09 12:55+0200\n"
-"PO-Revision-Date: 2015-09-06 18:41+0000\n"
-"Last-Translator: infirit <inactive+infirit@transifex.com>\n"
+"PO-Revision-Date: 2016-09-15 18:10+0000\n"
+"Last-Translator: Rasti K5 <rasti.khdhr@gmail.com>\n"
 "Language-Team: Kurdish (Iraq) (http://www.transifex.com/mate/MATE/language/ku_IQ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,12 +37,12 @@ msgstr ""
 
 #: ../libmatekbd/matekbd-keyboard-drawing.c:2542
 msgid "Unknown"
-msgstr ""
+msgstr "نەناسراو"
 
 #: ../libmatekbd/matekbd-keyboard-drawing.c:2587
 #, c-format
 msgid "Keyboard Layout \"%s\""
-msgstr ""
+msgstr "کڵیشەی تەختەکلیل \"%s\""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:719
 #, c-format
@@ -68,7 +69,7 @@ msgstr ""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:747
 msgid "no options"
-msgstr ""
+msgstr "بێ بژاردە"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:1
 msgid "Keyboard model"
@@ -84,11 +85,11 @@ msgstr ""
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:4
 msgid "keyboard layout"
-msgstr ""
+msgstr "کڵێشەی تەختەکلیل"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:5
 msgid "Keyboard options"
-msgstr ""
+msgstr "بژاردەکانی تەختەکلیل"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:6
 msgid "Keyboard Update Handlers"
@@ -160,11 +161,11 @@ msgstr ""
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:22
 msgid "The Keyboard Preview, width"
-msgstr ""
+msgstr "پێشدیتنی تەختەکلیل، پانی"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:23
 msgid "The Keyboard Preview, height"
-msgstr ""
+msgstr "پێشدیتنی تەختەکلیل، بەرزی"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:24
 msgid "Secondary groups"
@@ -202,7 +203,7 @@ msgstr ""
 
 #: ../libmatekbd/show-layout.ui.h:1
 msgid "Keyboard Layout"
-msgstr ""
+msgstr "کڵێشەی تەختەکلیل"
 
 #: ../test/matekbd-indicator-test.c:55
 #, c-format

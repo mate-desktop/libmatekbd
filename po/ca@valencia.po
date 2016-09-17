@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Gil Forcada <gilforcada@guifi.net>, 2007, 2008, 2009, 2010
+# Gil Forcada <gilforcada@guifi.net>, 2007-2010
+# Pilar Embid Giner <embid_mar@gva.es>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-09 12:55+0200\n"
-"PO-Revision-Date: 2015-09-06 18:41+0000\n"
-"Last-Translator: infirit <inactive+infirit@transifex.com>\n"
+"PO-Revision-Date: 2016-09-08 06:23+0000\n"
+"Last-Translator: Jose Alfredo Murcia Andrés <joamuran@gmail.com>\n"
 "Language-Team: Catalan (Valencian) (http://www.transifex.com/mate/MATE/language/ca@valencia/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,12 +38,12 @@ msgstr "Disposició de teclat «%s»\nCopyright &#169; la Fundació X.Org i els 
 
 #: ../libmatekbd/matekbd-keyboard-drawing.c:2542
 msgid "Unknown"
-msgstr ""
+msgstr "Desconegut"
 
 #: ../libmatekbd/matekbd-keyboard-drawing.c:2587
 #, c-format
 msgid "Keyboard Layout \"%s\""
-msgstr ""
+msgstr "Disposició del teclat «%s»"
 
 #: ../libmatekbd/matekbd-keyboard-config.c:719
 #, c-format
@@ -99,7 +100,7 @@ msgstr "Gestors d'actualització del teclat"
 msgid ""
 "A collection of scripts to run whenever the keyboard state is reloaded. "
 "Useful for re-applying xmodmap based adjustments"
-msgstr "Una col·lecció d'scripts per executar en qualsevol moment que es recarregui l'estat del teclat. Útil per tornar a aplicar ajustaments basats en xmodmap"
+msgstr "Una col·lecció d'scripts per a executar en qualsevol moment que es recarregue l'estat del teclat. Útil per a tornar a aplicar ajustaments basats en xmodmap"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:8
 msgid "modmap file list"
@@ -115,11 +116,11 @@ msgstr "Grup predeterminat, s'assigna en la creació d'una finestra"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:11
 msgid "Keep and manage separate group per window"
-msgstr "Mantén i gestiona un grup separat per finestra"
+msgstr "Mantín i gestiona un grup separat per finestra"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:12
 msgid "Save/restore indicators together with layout groups"
-msgstr "Alça/restaura els indicadors juntament amb els grups de disposició"
+msgstr "Guarda/restaura els indicadors juntament amb els grups de disposició"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:13
 msgid "Show layout names instead of group names"
@@ -141,15 +142,15 @@ msgstr "Carrega disposicions i opcions utilitzades rarament i exòtiques"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:17
 msgid "Suppress the \"X sysconfig changed\" warning message"
-msgstr "Suprimeix el missatge d'avís «ha canviat el X sysconfig»"
+msgstr "Suprimeix el missatge d'avís «ha canviat l'X sysconfig»"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:18
 msgid "Allow to disable the keyboard indicator tray icon"
-msgstr ""
+msgstr "Permet inhabilitar la icona de la safata de l'indicador del teclat"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:19
 msgid "Show keyboard leds indicator"
-msgstr ""
+msgstr "Mostra l'indicador dels leds del teclat"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:20
 msgid "The Keyboard Preview, X offset"
@@ -161,11 +162,11 @@ msgstr "La previsualització del teclat, desplaçament vertical"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:22
 msgid "The Keyboard Preview, width"
-msgstr "La previsualització del teclat, amplada"
+msgstr "La previsualització del teclat, amplària"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:23
 msgid "The Keyboard Preview, height"
-msgstr "La previsualització del teclat, alçada"
+msgstr "La previsualització del teclat, alçària"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:24
 msgid "Secondary groups"
@@ -173,37 +174,37 @@ msgstr "Grups secundaris"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:25
 msgid "The font"
-msgstr ""
+msgstr "La lletra"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:26
 msgid ""
 "The font for the layout indicator. This should be in \"[FAMILY-LIST] [STYLE-"
 "OPTIONS] [SIZE]\" format."
-msgstr ""
+msgstr "La lletra per a l'indicador de disposició. Ha d'estar en format \"[FAMILY-LIST] [STYLE-OPTIONS] [SIZE]\"."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:27
 msgid "The foreground color"
-msgstr "El color de primer pla"
+msgstr "El color de la lletra"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:28
 msgid ""
 "The foreground color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
-msgstr ""
+msgstr "El color de la lletra per a l'indicador de disposició. Ha d'estar en format \"R G B\", per exemple \"255 0 0\"."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:29
 msgid "The background color"
-msgstr "El color de fons"
+msgstr "El color del fons"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:30
 msgid ""
 "The background color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
-msgstr ""
+msgstr "El color del fons per a l'indicador de disposició. Ha d'estar en format \"R G B\", per exemple \"255 0 0\"."
 
 #: ../libmatekbd/show-layout.ui.h:1
 msgid "Keyboard Layout"
-msgstr ""
+msgstr "Disposició del teclat"
 
 #: ../test/matekbd-indicator-test.c:55
 #, c-format
