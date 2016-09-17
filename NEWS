@@ -1,7 +1,8 @@
-1.15.0
-    require libxklavier 5.2 and use its introspection
-    GTK+3: use GdkRGBA instead of deprecated GdkColor
-    GTK+3: use GtkStyleContext
+1.16.0
+    Require libxklavier 5.2 and use its introspection
+    GTK+3: fix some deprecations
+    distcheck: explicitly use currently selected GTK+ version
+    Translations update
 
 1.14.1
     Translations updated
