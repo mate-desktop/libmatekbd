@@ -61,7 +61,6 @@ matekbd_indicator_config_load_font (MatekbdIndicatorConfig * ind_config)
 	if (ind_config->font_family == NULL ||
 	    ind_config->font_family[0] == '\0') {
 		PangoFontDescription *fd = NULL;
-#if GTK_CHECK_VERSION (3, 0, 0)
 		GtkWidgetPath *widget_path = gtk_widget_path_new ();
 		GtkStyleContext *context = gtk_style_context_new ();
 
@@ -77,25 +76,14 @@ matekbd_indicator_config_load_font (MatekbdIndicatorConfig * ind_config)
 
 		gtk_style_context_get (context, GTK_STATE_FLAG_NORMAL,
 		                       GTK_STYLE_PROPERTY_FONT, &fd, NULL);
-#else
-		GtkStyle *style =
-		    gtk_rc_get_style_by_paths (gtk_settings_get_default (),
-					       "*PanelWidget*",
-					       "*PanelWidget*",
-					       GTK_TYPE_LABEL);
-		if (style != NULL)
-			fd = style->font_desc;
-#endif
 
 		if (fd != NULL) {
 			ind_config->font_family =
 			    g_strdup (pango_font_description_to_string(fd));
 		}
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 		g_object_unref (G_OBJECT (context));
 		gtk_widget_path_unref (widget_path);
-#endif
 	}
 	xkl_debug (150, "font: [%s]\n", ind_config->font_family);
 
@@ -110,7 +98,6 @@ matekbd_indicator_config_load_colors (MatekbdIndicatorConfig * ind_config)
 
 	if (ind_config->foreground_color == NULL ||
 	    ind_config->foreground_color[0] == '\0') {
-#if GTK_CHECK_VERSION (3, 0, 0)
 		GtkWidgetPath *widget_path = gtk_widget_path_new ();
 		GtkStyleContext *context = gtk_style_context_new ();
 		GdkRGBA fg_color;
@@ -135,21 +122,6 @@ matekbd_indicator_config_load_colors (MatekbdIndicatorConfig * ind_config)
 
 		g_object_unref (G_OBJECT (context));
 		gtk_widget_path_unref (widget_path);
-#else
-		GtkStyle *style =
-		    gtk_rc_get_style_by_paths (gtk_settings_get_default (),
-					       "*PanelWidget*",
-					       "*PanelWidget*",
-					       GTK_TYPE_LABEL);
-		if (style != NULL) {
-			GdkColor fg_color = style->fg[GTK_STATE_NORMAL];
-			ind_config->foreground_color =
-			    g_strdup_printf ("%g %g %g",
-					     ((double) fg_color.red) / 0xFFFF,
-					     ((double) fg_color.green) / 0xFFFF,
-					     ((double) fg_color.blue) / 0xFFFF);
-		}
-#endif
 	}
 
 	ind_config->background_color =
@@ -203,11 +175,7 @@ matekbd_indicator_config_get_images_file (MatekbdIndicatorConfig *
 	if (icon_info != NULL) {
 		image_file =
 		    g_strdup (gtk_icon_info_get_filename (icon_info));
-#if GTK_CHECK_VERSION (3, 8, 0)
 		g_object_unref (icon_info);
-#else
-		gtk_icon_info_free (icon_info);
-#endif
 	}
 
 	return image_file;

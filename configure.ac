@@ -2,7 +2,7 @@ dnl ***************************************************************************
 dnl *** configure.in for libmatekbd                                        ***
 dnl ***************************************************************************
 m4_define([libmatekbd_major_version], [1])
-m4_define([libmatekbd_minor_version], [16])
+m4_define([libmatekbd_minor_version], [17])
 m4_define([libmatekbd_micro_version], [0])
 m4_define([libmatekbd_version],[libmatekbd_major_version.libmatekbd_minor_version.libmatekbd_micro_version])
 
@@ -17,46 +17,15 @@ AM_INIT_AUTOMAKE([1.9 no-dist-gzip dist-xz check-news])
 m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
 AC_CONFIG_MACRO_DIR(m4)
 
-dnl ----------------------------------------------------------------------------
-dnl GTK library version
-dnl ----------------------------------------------------------------------------
-AC_MSG_CHECKING([which gtk+ version to compile against])
-AC_ARG_WITH([gtk],
-  [AS_HELP_STRING([--with-gtk=2.0|3.0],[which gtk+ version to compile against (default: 2.0)])],
-  [case "$with_gtk" in
-     2.0|3.0) ;;
-     *) AC_MSG_ERROR([invalid gtk version specified]) ;;
-   esac],
-  [with_gtk=2.0])
-AC_MSG_RESULT([$with_gtk])
-
-case "$with_gtk" in
-  2.0) GTK_API_VERSION=2.0
-       GTK_REQUIRED=2.24
-       GDK_REQUIRED=2.24
-       ;;
-  3.0) GTK_API_VERSION=3.0
-       GTK_REQUIRED=3.0.0
-       GDK_REQUIRED=3.0
-       ;;
-esac
-AC_SUBST([GTK_API_VERSION])
-
-dnl ***************************************************************************
-dnl *** Minimum library versions for libmatekbd                            ***
-dnl ***************************************************************************
 GLIB_REQUIRED=2.36
 GIO_REQUIRED=2.25.0
-
+GTK_REQUIRED=3.14.0
+GDK_REQUIRED=3.14.0
 LIBXKLAVIER_REQUIRED=5.2
 
 AC_SUBST([GIO_REQUIRED])
-AC_SUBST([GTK_API_VERSION])
-AC_SUBST([GTK_REQUIRED])
 AC_SUBST([GDK_REQUIRED])
 AC_SUBST([LIBXKLAVIER_REQUIRED])
-
-dnl ***************************************************************************
 
 MATE_COMMON_INIT
 MATE_COMPILE_WARNINGS
@@ -93,12 +62,12 @@ PKG_CHECK_MODULES(GIO, gio-2.0 >= $GIO_REQUIRED)
 AC_SUBST(GIO_CFLAGS)
 AC_SUBST(GIO_LIBS)
 
-PKG_CHECK_MODULES(GDK, gdk-$GTK_API_VERSION >= $GDK_REQUIRED)
+PKG_CHECK_MODULES(GDK, gdk-3.0 >= $GDK_REQUIRED)
 
 AC_SUBST(GDK_CFLAGS)
 AC_SUBST(GDK_LIBS)
 
-PKG_CHECK_MODULES(GTK, gtk+-$GTK_API_VERSION >= $GTK_REQUIRED gdk-x11-$GTK_API_VERSION >= $GDK_REQUIRED)
+PKG_CHECK_MODULES(GTK, gtk+-3.0 >= $GTK_REQUIRED gdk-x11-3.0 >= $GDK_REQUIRED)
 
 AC_SUBST(GTK_CFLAGS)
 AC_SUBST(GTK_LIBS)

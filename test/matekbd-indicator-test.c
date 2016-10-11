@@ -36,10 +36,6 @@
 
 #include "X11/XKBlib.h"
 
-#if GTK_CHECK_VERSION (3, 0, 0)
-#define gtk_vbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_VERTICAL,Y)
-#endif
-
 int main(int argc, char** argv)
 {
 	GtkWidget* gki;
@@ -60,7 +56,7 @@ int main(int argc, char** argv)
 	matekbd_indicator_set_parent_tooltips(MATEKBD_INDICATOR (gki), TRUE);
 
 	gtk_window_resize(GTK_WINDOW(mainwin), 250, 250);
-	vbox = gtk_vbox_new(TRUE, 6);
+	vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 6);
 
 	gtk_container_add(GTK_CONTAINER(mainwin), vbox);
 	gtk_container_set_border_width(GTK_CONTAINER(vbox), 12);

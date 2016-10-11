@@ -117,11 +117,7 @@ struct _MatekbdKeyboardDrawingRenderContext {
 	gint scale_numerator;
 	gint scale_denominator;
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 	GdkRGBA dark_color;
-#else
-	GdkColor dark_color;
-#endif
 };
 
 struct _MatekbdKeyboardDrawing {
@@ -142,11 +138,7 @@ struct _MatekbdKeyboardDrawing {
 	/* list of stuff to draw in priority order */
 	GList *keyboard_items;
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 	GdkRGBA *colors;
-#else
-	GdkColor *colors;
-#endif
 
 	guint timeout;
 	guint idle_redraw;
