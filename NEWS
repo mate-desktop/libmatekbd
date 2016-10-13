@@ -1,3 +1,5 @@
+1.17.0
+
 1.16.0
     Require libxklavier 5.2 and use its introspection
     GTK+3: fix some deprecations
