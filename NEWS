@@ -1,4 +1,6 @@
 1.17.0
+    Translations updated
+    move to GTK+3 (>= 3.14), drop GTK+2 code and --with-gtk build option
 
 1.16.0
     Require libxklavier 5.2 and use its introspection
