@@ -4,7 +4,7 @@
 # 
 # Translators:
 # Fábio Nogueira <deb-user-ba@ubuntu.com>, 2008
-# Gilberto Coutinho <gilberto.jsc@gmail.com>, 2015
+# Gilberto José Souza Coutinho <gilberto.jsc@gmail.com>, 2015
 # Marcus Vinícius Marques, 2014
 # Paulo Henrique de Sousa <simbios.devs@gmail.com>, 2016
 # Washington Lins <washington-lins@uol.com.br>, 2007
