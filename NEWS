@@ -1,44 +1,52 @@
-1.17.0
-    Translations updated
-    move to GTK+3 (>= 3.14), drop GTK+2 code and --with-gtk build option
+### libmatekbd 1.17.0
 
-1.16.0
-    Require libxklavier 5.2 and use its introspection
-    GTK+3: fix some deprecations
-    distcheck: explicitly use currently selected GTK+ version
-    Translations update
+  * Translations updated
+  * move to GTK+3 (>= 3.14), drop GTK+2 code and --with-gtk build option
 
-1.14.1
-    Translations updated
+### libmatekbd 1.16.0
 
-1.14.0
-    Drop MateConf migration script
-    Reduce introspection build warnings
-    Fix some GTK+3 deprecations
-    Some more fixes and cleanups
-    Translations update
-    Fix Changelog generation
+  * Require libxklavier 5.2 and use its introspection
+  * GTK+3: fix some deprecations
+  * distcheck: explicitly use currently selected GTK+ version
+  * Translations update
 
-1.12.1
-    Translations update
+### libmatekbd 1.14.1
 
-1.12.0
-    Add GObject introspection
-    Retrieve strings directly from gschema (requires intltool 0.50.1)
-    Layout view/print dialog: remove useless Help button
-    Layout view/print dialog: some UI fixes
-    Some GTK+3 fixes
-    Some more fixes and cleanups
-    Translations update
+  * Translations updated
 
-1.10.0
-    Bugfixes
+### libmatekbd 1.14.0
 
-1.8.0
-    Improved indicator font customization
-    GTK3 support
+  * Drop MateConf migration script
+  * Reduce introspection build warnings
+  * Fix some GTK+3 deprecations
+  * Some more fixes and cleanups
+  * Translations update
+  * Fix Changelog generation
 
-1.5.0
-    Switch to gsettings (dropped mateconf)
-    Removed old obsolete plugin system for keyboard indicators (unused)
+### libmatekbd 1.12.1
 
+  * Translations update
+
+### libmatekbd 1.12.0
+
+  * Add GObject introspection
+  * Retrieve strings directly from gschema (requires intltool 0.50.1)
+  * Layout view/print dialog: remove useless Help button
+  * Layout view/print dialog: some UI fixes
+  * Some GTK+3 fixes
+  * Some more fixes and cleanups
+  * Translations update
+
+### libmatekbd 1.10.0
+
+  * Bugfixes
+
+### libmatekbd 1.8.0
+
+  * Improved indicator font customization
+  * GTK3 support
+
+### libmatekbd 1.5.0
+
+  * Switch to gsettings (dropped mateconf)
+  * Removed old obsolete plugin system for keyboard indicators (unused)
