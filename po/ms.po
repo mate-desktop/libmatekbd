@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-09 12:55+0200\n"
+"POT-Creation-Date: 2016-11-28 13:01+0300\n"
 "PO-Revision-Date: 2015-09-30 21:29+0000\n"
 "Last-Translator: abuyop <abuyop@gmail.com>\n"
 "Language-Team: Malay (http://www.transifex.com/mate/MATE/language/ms/)\n"
@@ -28,7 +28,7 @@ msgstr "Terdapat ralat memuatkan imej: %s"
 msgid "XKB initialization error"
 msgstr "Ralat pengawalan XKB"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2460
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2492
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
@@ -36,37 +36,37 @@ msgid ""
 "For licensing see package metadata"
 msgstr "Bentangan papan kekunci \"%s\"\nHakcipta &#169; penyumbang X.Org Foundation dan XKeyboardConfig\nUntuk pelesenan lihat data meta pakej"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2542
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2574
 msgid "Unknown"
 msgstr "Tidak diketahui"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2587
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2619
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "Bentangan Papan Kekunci \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:719
+#: ../libmatekbd/matekbd-keyboard-config.c:720
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
 msgstr[0] "bentangan \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:737
+#: ../libmatekbd/matekbd-keyboard-config.c:738
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
 msgstr[0] "pilihan \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:745
+#: ../libmatekbd/matekbd-keyboard-config.c:746
 #, c-format
 msgid "model \"%s\", %s and %s"
 msgstr "model \"%s\", %s dan %s"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:746
+#: ../libmatekbd/matekbd-keyboard-config.c:747
 msgid "no layout"
 msgstr "tiada bentangan"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:747
+#: ../libmatekbd/matekbd-keyboard-config.c:748
 msgid "no options"
 msgstr "tiada pilihan"
 

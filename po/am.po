@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# samson <sambelet@yahoo.com>, 2013,2015
+# samson <sambelet@yahoo.com>, 2013,2015,2017
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-09 12:55+0200\n"
-"PO-Revision-Date: 2015-09-06 19:04+0000\n"
+"POT-Creation-Date: 2016-11-28 13:01+0300\n"
+"PO-Revision-Date: 2017-03-02 18:20+0000\n"
 "Last-Translator: samson <sambelet@yahoo.com>\n"
 "Language-Team: Amharic (http://www.transifex.com/mate/MATE/language/am/)\n"
 "MIME-Version: 1.0\n"
@@ -25,49 +25,49 @@ msgstr "ምስሉ ሲጫን ስህተት ተፈጥሯል: %s"
 
 #: ../libmatekbd/matekbd-indicator.c:699 ../libmatekbd/matekbd-status.c:645
 msgid "XKB initialization error"
-msgstr ""
+msgstr "XKB የ ማስነሻ ስህተት"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2460
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2492
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
 "Copyright &#169; X.Org Foundation and XKeyboardConfig contributors\n"
 "For licensing see package metadata"
-msgstr ""
+msgstr "Keyboard layout \"%s\"\nCopyright &#169; X.Org Foundation and XKeyboardConfig contributors\nFor licensing see package metadata"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2542
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2574
 msgid "Unknown"
 msgstr "ያልታወቀ"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2587
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2619
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "የፊደል ገበታ አቀማመጥ \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:719
+#: ../libmatekbd/matekbd-keyboard-config.c:720
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
 msgstr[0] "እቅዶች \"%s\""
 msgstr[1] "እቅዶች \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:737
+#: ../libmatekbd/matekbd-keyboard-config.c:738
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
 msgstr[0] "ምርጫ \"%s\""
 msgstr[1] "ምርጫዎች \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:745
+#: ../libmatekbd/matekbd-keyboard-config.c:746
 #, c-format
 msgid "model \"%s\", %s and %s"
 msgstr "ዘዴ \"%s\", %s እና %s"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:746
+#: ../libmatekbd/matekbd-keyboard-config.c:747
 msgid "no layout"
 msgstr "እቅድ የለም"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:747
+#: ../libmatekbd/matekbd-keyboard-config.c:748
 msgid "no options"
 msgstr "ምርጫዎች የሉም "
 
@@ -93,83 +93,83 @@ msgstr "የፊደል ገበታ ምርጫዎች"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:6
 msgid "Keyboard Update Handlers"
-msgstr ""
+msgstr "የ ፊደል ገበታ ማሻሻያ"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:7
 msgid ""
 "A collection of scripts to run whenever the keyboard state is reloaded. "
 "Useful for re-applying xmodmap based adjustments"
-msgstr ""
+msgstr "የ ጽሁፎች ስብስብስ ማስኬጃ የ ፊደል ገበታ በሚጫን ጊዜ: የሚጠቅመው የ xmodmap based ማስተካከያ ሲፈጸም ነው"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:8
 msgid "modmap file list"
-msgstr ""
+msgstr "modmap የ ፋይል ዝርዝር"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:9
 msgid "A list of modmap files available in the $HOME directory."
-msgstr ""
+msgstr "ዝርዝር የ modmap ፋይሎች ዝግጁ ናቸው በ $HOME ዳይሬክቶሪ ውስጥ."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:10
 msgid "Default group, assigned on window creation"
-msgstr ""
+msgstr "ነባር ቡድን መመደቢያ በ መስኮት መፍጠሪያ ውስጥ"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:11
 msgid "Keep and manage separate group per window"
-msgstr ""
+msgstr "የ ተለየ ቡድን በ መስኮት ውስጥ ማስቀመጫ እና ማስተዳደሪያ"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:12
 msgid "Save/restore indicators together with layout groups"
-msgstr ""
+msgstr "ማስቀመጫ/እንደ ነበር መመለሻ በ አንድ ላይ ከ እቅድ ቡድን ጋር"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:13
 msgid "Show layout names instead of group names"
-msgstr ""
+msgstr "የ እቅድ ስም ማሳያ ከ ቡድን ስሞች ይልቅ"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:14
 msgid ""
 "Show layout names instead of group names (only for versions of XFree "
 "supporting multiple layouts)"
-msgstr ""
+msgstr "የ እቅድ ስም ማሳያ ከ ቡድን ስም ይልቅ (ለ እትሞች ብቻ ለ XFree supporting multiple layouts)"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:15
 msgid "Load extra configuration items"
-msgstr ""
+msgstr "ተጨማሪ የ እቃዎች ማሰናጃ መጫኛ"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:16
 msgid "Load exotic, rarely used layouts and options"
-msgstr ""
+msgstr "እንግዳ ነገር መጫኛ: ብዙ ጊዜ የማይጠቀሙበት እቅድ እና ምርጫ"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:17
 msgid "Suppress the \"X sysconfig changed\" warning message"
-msgstr ""
+msgstr "መከል፤ከያ የ \"X sysconfig changed\" ማስጠንቀቂያ መልእክት"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:18
 msgid "Allow to disable the keyboard indicator tray icon"
-msgstr ""
+msgstr "የ ፊደል ገበታ ምልክት መጠቆሚያ ማሳያ ማስቻያ"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:19
 msgid "Show keyboard leds indicator"
-msgstr ""
+msgstr "የ ፊደል ገበታ መብራት ማሳያ"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:20
 msgid "The Keyboard Preview, X offset"
-msgstr ""
+msgstr "የ ፊደል ገበታ ቅድመ እይታ X ማካካሻ"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:21
 msgid "The Keyboard Preview, Y offset"
-msgstr ""
+msgstr "የ ፊደል ገበታ ቅድመ እይታ Y ማካካሻ"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:22
 msgid "The Keyboard Preview, width"
-msgstr ""
+msgstr "የ ፊደል ገበታ ቅድመ እይታ ስፋት"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:23
 msgid "The Keyboard Preview, height"
-msgstr ""
+msgstr "የ ፊደል ገበታ ቅድመ እይታ እርዝመት"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:24
 msgid "Secondary groups"
-msgstr ""
+msgstr "ሁለተኛ ቡድን"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:25
 msgid "The font"
@@ -179,7 +179,7 @@ msgstr "ፊደል"
 msgid ""
 "The font for the layout indicator. This should be in \"[FAMILY-LIST] [STYLE-"
 "OPTIONS] [SIZE]\" format."
-msgstr ""
+msgstr "የ እቅድ መጠቆሚያ ፊደል ከ እነዚህ ውስጥ መሆን አለበት: \"[FAMILY-LIST] [STYLE-OPTIONS] [SIZE]\" አቀራረብ."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:27
 msgid "The foreground color"
@@ -189,7 +189,7 @@ msgstr "የፊት ለፊቱ ቀለም "
 msgid ""
 "The foreground color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
-msgstr ""
+msgstr "የ ፊት ለፊት ቀለም ለ እቅድ መጠቆሚያ: ይህ መሆን አለበት  \"ቀ አ ሰ\" አቀራረብ ለምሳሌ \"255 0 0\"."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:29
 msgid "The background color"
@@ -199,7 +199,7 @@ msgstr "የመደቡ ቀለም "
 msgid ""
 "The background color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
-msgstr ""
+msgstr "የ መደብ ቀለም ለ እቅድ መጠቆሚያ: ይህ መሆን አለበት  \"ቀ አ ሰ\" አቀራረብ ለምሳሌ \"255 0 0\"."
 
 #: ../libmatekbd/show-layout.ui.h:1
 msgid "Keyboard Layout"

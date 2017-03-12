@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-09 12:55+0200\n"
+"POT-Creation-Date: 2016-11-28 13:01+0300\n"
 "PO-Revision-Date: 2015-12-22 22:34+0000\n"
 "Last-Translator: ciaran\n"
 "Language-Team: Welsh (http://www.transifex.com/mate/MATE/language/cy/)\n"
@@ -27,7 +27,7 @@ msgstr "Bu gwall llwytho delwedd: %s"
 msgid "XKB initialization error"
 msgstr "Gwall ymgychwyn XKB"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2460
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2492
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
@@ -35,16 +35,16 @@ msgid ""
 "For licensing see package metadata"
 msgstr ""
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2542
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2574
 msgid "Unknown"
 msgstr "Anhysbys"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2587
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2619
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "Cynllun y bysellfwrdd \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:719
+#: ../libmatekbd/matekbd-keyboard-config.c:720
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
@@ -53,7 +53,7 @@ msgstr[1] "cynlluniau \"%s\""
 msgstr[2] "cynlluniau \"%s\""
 msgstr[3] "cynlluniau \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:737
+#: ../libmatekbd/matekbd-keyboard-config.c:738
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
@@ -62,16 +62,16 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:745
+#: ../libmatekbd/matekbd-keyboard-config.c:746
 #, c-format
 msgid "model \"%s\", %s and %s"
 msgstr ""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:746
+#: ../libmatekbd/matekbd-keyboard-config.c:747
 msgid "no layout"
 msgstr "dim cynllun"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:747
+#: ../libmatekbd/matekbd-keyboard-config.c:748
 msgid "no options"
 msgstr "dim dewisiadau"
 

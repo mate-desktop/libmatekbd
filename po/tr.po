@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-09 12:55+0200\n"
+"POT-Creation-Date: 2016-11-28 13:01+0300\n"
 "PO-Revision-Date: 2015-11-11 08:40+0000\n"
 "Last-Translator: Butterfly <gokhanlnx@gmail.com>\n"
 "Language-Team: Turkish (http://www.transifex.com/mate/MATE/language/tr/)\n"
@@ -29,7 +29,7 @@ msgstr "Resim yüklenirken hata oluştu: %s"
 msgid "XKB initialization error"
 msgstr "XKB başlatma hatası"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2460
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2492
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
@@ -37,39 +37,39 @@ msgid ""
 "For licensing see package metadata"
 msgstr "Klavye düzeni \"%s\"\nTelif Hakkı &#169; X.Org Vakfı ve XKeyboardConfig katkıda bulunanları\nLisans bilgileri için paket temel bilgisine bakın"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2542
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2574
 msgid "Unknown"
 msgstr "Bilinmiyor"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2587
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2619
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "\"%s\" Klavye Düzeni"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:719
+#: ../libmatekbd/matekbd-keyboard-config.c:720
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
 msgstr[0] "düzen \"%s\""
 msgstr[1] "düzen \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:737
+#: ../libmatekbd/matekbd-keyboard-config.c:738
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
 msgstr[0] "seçenek \"%s\""
 msgstr[1] "seçenek \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:745
+#: ../libmatekbd/matekbd-keyboard-config.c:746
 #, c-format
 msgid "model \"%s\", %s and %s"
 msgstr "model \"%s\", %s ve %s"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:746
+#: ../libmatekbd/matekbd-keyboard-config.c:747
 msgid "no layout"
 msgstr "düzen yok"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:747
+#: ../libmatekbd/matekbd-keyboard-config.c:748
 msgid "no options"
 msgstr "seçenek yok"
 

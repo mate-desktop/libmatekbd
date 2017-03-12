@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-09 12:55+0200\n"
+"POT-Creation-Date: 2016-11-28 13:01+0300\n"
 "PO-Revision-Date: 2015-09-06 18:41+0000\n"
 "Last-Translator: infirit <inactive+infirit@transifex.com>\n"
 "Language-Team: Oriya (http://www.transifex.com/mate/MATE/language/or/)\n"
@@ -28,7 +28,7 @@ msgstr "ଗୋଟିଏ ପ୍ରତିଛବି ଧାରଣ କରିବା �
 msgid "XKB initialization error"
 msgstr "XKB ପ୍ରାରମ୍ଭିକରଣ ତୃଟି"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2460
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2492
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
@@ -36,39 +36,39 @@ msgid ""
 "For licensing see package metadata"
 msgstr "କିବୋର୍ଡ ସଂରଚନା \"%s\"\nCopyright &#169; X.Org ପ୍ରତିଷ୍ଠାନ ଏବଂ XKeyboardConfig ସହଯୋଗୀମାନେ\nଅନୁମତି ପତ୍ର ପାଇଁ ପ୍ୟାକେଜ ଅଧିତଥ୍ୟ ଦେଖନ୍ତୁ"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2542
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2574
 msgid "Unknown"
 msgstr ""
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2587
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2619
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr ""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:719
+#: ../libmatekbd/matekbd-keyboard-config.c:720
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
 msgstr[0] "\"%s\" ବିନ୍ଯାସ"
 msgstr[1] "\"%s\" ବିନ୍ଯାସ"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:737
+#: ../libmatekbd/matekbd-keyboard-config.c:738
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
 msgstr[0] "\"%s\" ବିକଳ୍ପ"
 msgstr[1] "\"%s\" ବିକଳ୍ପ"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:745
+#: ../libmatekbd/matekbd-keyboard-config.c:746
 #, c-format
 msgid "model \"%s\", %s and %s"
 msgstr "\"%s\", %s ଏବଂ %s ନମୁନା"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:746
+#: ../libmatekbd/matekbd-keyboard-config.c:747
 msgid "no layout"
 msgstr "କୌଣସି ବିନ୍ଯାସ ନାହିଁ"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:747
+#: ../libmatekbd/matekbd-keyboard-config.c:748
 msgid "no options"
 msgstr "କୌଣସି ବିକଳ୍ପ ନାହିଁ"
 

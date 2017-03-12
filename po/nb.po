@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-09 12:55+0200\n"
+"POT-Creation-Date: 2016-11-28 13:01+0300\n"
 "PO-Revision-Date: 2016-11-19 11:15+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål (http://www.transifex.com/mate/MATE/language/nb/)\n"
@@ -28,7 +28,7 @@ msgstr "Det oppsto en feil under lasting av bilde: %s"
 msgid "XKB initialization error"
 msgstr "Feil ved initiering av XKB"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2460
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2492
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
@@ -36,39 +36,39 @@ msgid ""
 "For licensing see package metadata"
 msgstr "Tastaturutforming «%s»\nKopirett &#169; X.Org-stiftelsen og XKeyboardConfig-bidragsyterene\nFor lisensdata, se pakkens metadata"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2542
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2574
 msgid "Unknown"
 msgstr "Ukjent"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2587
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2619
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "Tastaturutforming «%s»"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:719
+#: ../libmatekbd/matekbd-keyboard-config.c:720
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
 msgstr[0] "utforming «%s»"
 msgstr[1] "utforminger «%s»"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:737
+#: ../libmatekbd/matekbd-keyboard-config.c:738
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
 msgstr[0] "alternativ «%s»"
 msgstr[1] "alternativer «%s»"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:745
+#: ../libmatekbd/matekbd-keyboard-config.c:746
 #, c-format
 msgid "model \"%s\", %s and %s"
 msgstr "modell «%s», %s og %s"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:746
+#: ../libmatekbd/matekbd-keyboard-config.c:747
 msgid "no layout"
 msgstr "ingen utforming"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:747
+#: ../libmatekbd/matekbd-keyboard-config.c:748
 msgid "no options"
 msgstr "ingen alternativer"
 

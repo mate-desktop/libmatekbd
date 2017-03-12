@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-09 12:55+0200\n"
+"POT-Creation-Date: 2016-11-28 13:01+0300\n"
 "PO-Revision-Date: 2015-09-06 18:41+0000\n"
 "Last-Translator: infirit <inactive+infirit@transifex.com>\n"
 "Language-Team: Basque (http://www.transifex.com/mate/MATE/language/eu/)\n"
@@ -28,7 +28,7 @@ msgstr "Errorea gertatu da irudi bat kargatzean: %s"
 msgid "XKB initialization error"
 msgstr "Errorea XKB hasieratzean"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2460
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2492
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
@@ -36,39 +36,39 @@ msgid ""
 "For licensing see package metadata"
 msgstr "Teklatuaren \"%s\" diseinua\nCopyright-a &#169; X.Org Fundazioa eta XKeyboardConfig-en laguntzaileak\nLizentziari buruz jakiteko ikusi paketearen metadatuak"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2542
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2574
 msgid "Unknown"
 msgstr "Ezezaguna"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2587
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2619
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "\"%s\" teklatu-diseinua"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:719
+#: ../libmatekbd/matekbd-keyboard-config.c:720
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
 msgstr[0] "\"%s\" diseinua"
 msgstr[1] "\"%s\" diseinuak"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:737
+#: ../libmatekbd/matekbd-keyboard-config.c:738
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
 msgstr[0] "\"%s\" aukera"
 msgstr[1] "\"%s\" aukerak"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:745
+#: ../libmatekbd/matekbd-keyboard-config.c:746
 #, c-format
 msgid "model \"%s\", %s and %s"
 msgstr "\"%s\" modeloa, %s eta %s"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:746
+#: ../libmatekbd/matekbd-keyboard-config.c:747
 msgid "no layout"
 msgstr "diseinurik ez"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:747
+#: ../libmatekbd/matekbd-keyboard-config.c:748
 msgid "no options"
 msgstr "aukerarik ez"
 

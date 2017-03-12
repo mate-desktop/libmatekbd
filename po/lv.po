@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-09 12:55+0200\n"
+"POT-Creation-Date: 2016-11-28 13:01+0300\n"
 "PO-Revision-Date: 2015-09-06 18:41+0000\n"
 "Last-Translator: infirit <inactive+infirit@transifex.com>\n"
 "Language-Team: Latvian (http://www.transifex.com/mate/MATE/language/lv/)\n"
@@ -29,7 +29,7 @@ msgstr "Gadījās kļūda ielādējot attēlu: %s"
 msgid "XKB initialization error"
 msgstr "XKB inicializācijas kļūda"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2460
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2492
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
@@ -37,16 +37,16 @@ msgid ""
 "For licensing see package metadata"
 msgstr "Tastatūras izkārtojums \"%s\"\nAutortiesības &#169; X.Org Fonds un XKeyboardConfig komanda\nLicences informācija pieejama pakotnes metadatos"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2542
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2574
 msgid "Unknown"
 msgstr "Nezināms"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2587
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2619
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "Tastatūras izkārtojums \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:719
+#: ../libmatekbd/matekbd-keyboard-config.c:720
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
@@ -54,7 +54,7 @@ msgstr[0] "izkārtojums \"%s\""
 msgstr[1] "izkārtojumi \"%s\""
 msgstr[2] "izkārtojumi \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:737
+#: ../libmatekbd/matekbd-keyboard-config.c:738
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
@@ -62,16 +62,16 @@ msgstr[0] "iespēja \"%s\""
 msgstr[1] "iespējas \"%s\""
 msgstr[2] "iespējas \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:745
+#: ../libmatekbd/matekbd-keyboard-config.c:746
 #, c-format
 msgid "model \"%s\", %s and %s"
 msgstr "modelis \"%s\", %s un %s"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:746
+#: ../libmatekbd/matekbd-keyboard-config.c:747
 msgid "no layout"
 msgstr "nav izkārtojuma"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:747
+#: ../libmatekbd/matekbd-keyboard-config.c:748
 msgid "no options"
 msgstr "nav iespēju"
 

@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Giuseppe Pignataro <rogepix@gmail.com>, 2015
+# Giuseppe Pignataro (Fasbyte01) <rogepix@gmail.com>, 2015
 # Marco Bartolucci <nap.84@live.it>, 2016
 # Milo Casagrande <milo@ubuntu.com>, 2009, 2010
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-09 12:55+0200\n"
+"POT-Creation-Date: 2016-11-28 13:01+0300\n"
 "PO-Revision-Date: 2016-01-25 18:11+0000\n"
 "Last-Translator: Marco Bartolucci <nap.84@live.it>\n"
 "Language-Team: Italian (http://www.transifex.com/mate/MATE/language/it/)\n"
@@ -29,7 +29,7 @@ msgstr "Si è verificato un errore nel caricare un'immagine: %s"
 msgid "XKB initialization error"
 msgstr "Errore di inizializzazione di XKB"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2460
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2492
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
@@ -37,39 +37,39 @@ msgid ""
 "For licensing see package metadata"
 msgstr "Disposizione di tastiera «%s»\nCopyright &#169; X.Org Foundation e collaboratori di XKeyboardConfig\nPer la licenza consultare i metadati del pacchetto"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2542
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2574
 msgid "Unknown"
 msgstr "Sconosciuta"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2587
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2619
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "Disposizione Tastiera «%s»"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:719
+#: ../libmatekbd/matekbd-keyboard-config.c:720
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
 msgstr[0] "disposizione «%s»"
 msgstr[1] "disposizioni «%s»"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:737
+#: ../libmatekbd/matekbd-keyboard-config.c:738
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
 msgstr[0] "opzione «%s»"
 msgstr[1] "opzioni «%s»"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:745
+#: ../libmatekbd/matekbd-keyboard-config.c:746
 #, c-format
 msgid "model \"%s\", %s and %s"
 msgstr "modello «%s», %s e %s"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:746
+#: ../libmatekbd/matekbd-keyboard-config.c:747
 msgid "no layout"
 msgstr "nessuna disposizione"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:747
+#: ../libmatekbd/matekbd-keyboard-config.c:748
 msgid "no options"
 msgstr "nessuna opzione"
 

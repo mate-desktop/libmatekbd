@@ -4,13 +4,14 @@
 # 
 # Translators:
 # Gil Forcada <gilforcada@guifi.net>, 2007, 2008, 2009, 2010
+# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2017
 # Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-09 12:55+0200\n"
-"PO-Revision-Date: 2016-06-19 09:31+0000\n"
+"POT-Creation-Date: 2016-11-28 13:01+0300\n"
+"PO-Revision-Date: 2017-03-08 20:55+0000\n"
 "Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/mate/MATE/language/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -26,49 +27,49 @@ msgstr "S'ha produït un error en carregar una imatge: %s"
 
 #: ../libmatekbd/matekbd-indicator.c:699 ../libmatekbd/matekbd-status.c:645
 msgid "XKB initialization error"
-msgstr "Error d'inicialització del XKB"
+msgstr "Error d'inicialització de XKB"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2460
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2492
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
 "Copyright &#169; X.Org Foundation and XKeyboardConfig contributors\n"
 "For licensing see package metadata"
-msgstr "Disposició de teclat «%s»\nCopyright &#169; la Fundació X.Org i els col·laboradors del XKeyboardConfig\nVegeu les metadades del paquet per a la llicència"
+msgstr "Disposició de teclat «%s»\nDrets d'autor &#169; la Fundació X.Org i els col·laboradors de XKeyboardConfig\nVegeu les metadades del paquet per a la llicència"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2542
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2574
 msgid "Unknown"
 msgstr "Desconegut"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2587
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2619
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "Disposició del teclat «%s»"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:719
+#: ../libmatekbd/matekbd-keyboard-config.c:720
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
 msgstr[0] "«%s» disposició"
 msgstr[1] "«%s» disposicions"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:737
+#: ../libmatekbd/matekbd-keyboard-config.c:738
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
 msgstr[0] "«%s» opció"
 msgstr[1] "«%s» opcions"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:745
+#: ../libmatekbd/matekbd-keyboard-config.c:746
 #, c-format
 msgid "model \"%s\", %s and %s"
 msgstr "model «%s, %s i %s»"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:746
+#: ../libmatekbd/matekbd-keyboard-config.c:747
 msgid "no layout"
 msgstr "no hi ha disposició"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:747
+#: ../libmatekbd/matekbd-keyboard-config.c:748
 msgid "no options"
 msgstr "no hi ha opcions"
 

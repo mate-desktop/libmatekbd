@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-09 12:55+0200\n"
+"POT-Creation-Date: 2016-11-28 13:01+0300\n"
 "PO-Revision-Date: 2015-12-06 16:18+0000\n"
 "Last-Translator: Siranush <ss.m.95@mail.ru>\n"
 "Language-Team: Armenian (http://www.transifex.com/mate/MATE/language/hy/)\n"
@@ -27,7 +27,7 @@ msgstr "Պատկերի բեռնման ժամանակ տեղի է  ունեցել
 msgid "XKB initialization error"
 msgstr "XKB սկզբնարժեքավորման սխալ"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2460
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2492
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
@@ -35,39 +35,39 @@ msgid ""
 "For licensing see package metadata"
 msgstr "Ստեղնաշարի դասավորություն \"%s\"\nՀեղինակային իրավունք &#169; X.Org Հիմնադրամ և XKeyboardConfig ջակիցներ\nԼիցենզավորման համար տես մետատվյալների փաթեթը"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2542
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2574
 msgid "Unknown"
 msgstr "Անհայտ"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2587
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2619
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "Ստեղնաշարի Դասավորություն \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:719
+#: ../libmatekbd/matekbd-keyboard-config.c:720
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
 msgstr[0] "Դասավորություն \"%s\""
 msgstr[1] "Դասավորություններ \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:737
+#: ../libmatekbd/matekbd-keyboard-config.c:738
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
 msgstr[0] "տարբերակ \"%s\""
 msgstr[1] "տարբերակներ \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:745
+#: ../libmatekbd/matekbd-keyboard-config.c:746
 #, c-format
 msgid "model \"%s\", %s and %s"
 msgstr "մոդել \"%s\", %s և %s"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:746
+#: ../libmatekbd/matekbd-keyboard-config.c:747
 msgid "no layout"
 msgstr "նախագիծ չկա"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:747
+#: ../libmatekbd/matekbd-keyboard-config.c:748
 msgid "no options"
 msgstr "ընտրանքներ չկան"
 

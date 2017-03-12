@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Sky Lion <xskylionx@gmail.com>, 2016
+# Sky Lion <xskylionx@gmail.com>, 2016-2017
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-09 12:55+0200\n"
-"PO-Revision-Date: 2016-09-05 14:58+0000\n"
+"POT-Creation-Date: 2016-11-28 13:01+0300\n"
+"PO-Revision-Date: 2017-01-15 14:46+0000\n"
 "Last-Translator: Sky Lion <xskylionx@gmail.com>\n"
 "Language-Team: Bosnian (http://www.transifex.com/mate/MATE/language/bs/)\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,7 @@ msgstr ""
 msgid "XKB initialization error"
 msgstr ""
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2460
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2492
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
@@ -35,59 +35,59 @@ msgid ""
 "For licensing see package metadata"
 msgstr ""
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2542
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2574
 msgid "Unknown"
 msgstr "Nepoznato"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2587
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2619
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr ""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:719
+#: ../libmatekbd/matekbd-keyboard-config.c:720
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "raspored \"%s\""
+msgstr[1] "rasporedi \"%s\""
+msgstr[2] "rasporedi \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:737
+#: ../libmatekbd/matekbd-keyboard-config.c:738
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-
-#: ../libmatekbd/matekbd-keyboard-config.c:745
-#, c-format
-msgid "model \"%s\", %s and %s"
-msgstr ""
+msgstr[0] "opcija \"%s\""
+msgstr[1] "opcije \"%s\""
+msgstr[2] "opcije \"%s\""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:746
-msgid "no layout"
-msgstr ""
+#, c-format
+msgid "model \"%s\", %s and %s"
+msgstr "model \"%s\", %s i %s"
 
 #: ../libmatekbd/matekbd-keyboard-config.c:747
+msgid "no layout"
+msgstr "nijedan raspored"
+
+#: ../libmatekbd/matekbd-keyboard-config.c:748
 msgid "no options"
 msgstr "Nema opcija"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:1
 msgid "Keyboard model"
-msgstr ""
+msgstr "Model tastature"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:2
 msgid "keyboard model"
-msgstr ""
+msgstr "model tastature"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:3
 msgid "Keyboard layout"
-msgstr ""
+msgstr "Raspored tastature"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:4
 msgid "keyboard layout"
-msgstr ""
+msgstr "raspored tastature"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:5
 msgid "Keyboard options"
@@ -125,13 +125,13 @@ msgstr ""
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:13
 msgid "Show layout names instead of group names"
-msgstr ""
+msgstr "Prikaži imena rasporeda umjesto imena grupa"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:14
 msgid ""
 "Show layout names instead of group names (only for versions of XFree "
 "supporting multiple layouts)"
-msgstr ""
+msgstr "Prikaži imena rasporeda umjesto imena grupa (samo za verzije XFree-a koje podržavaju više rasporeda)"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:15
 msgid "Load extra configuration items"
@@ -175,7 +175,7 @@ msgstr ""
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:25
 msgid "The font"
-msgstr ""
+msgstr "Font"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:26
 msgid ""
@@ -185,7 +185,7 @@ msgstr ""
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:27
 msgid "The foreground color"
-msgstr ""
+msgstr "Prednja boja"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:28
 msgid ""
@@ -195,7 +195,7 @@ msgstr ""
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:29
 msgid "The background color"
-msgstr ""
+msgstr "Boja pozadine"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:30
 msgid ""
@@ -205,7 +205,7 @@ msgstr ""
 
 #: ../libmatekbd/show-layout.ui.h:1
 msgid "Keyboard Layout"
-msgstr ""
+msgstr "Raspored tastature"
 
 #: ../test/matekbd-indicator-test.c:55
 #, c-format

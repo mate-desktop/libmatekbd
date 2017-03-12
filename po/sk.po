@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-09 12:55+0200\n"
+"POT-Creation-Date: 2016-11-28 13:01+0300\n"
 "PO-Revision-Date: 2016-02-12 23:34+0000\n"
 "Last-Translator: Ján Ďanovský <dagsoftware@yahoo.com>\n"
 "Language-Team: Slovak (http://www.transifex.com/mate/MATE/language/sk/)\n"
@@ -29,7 +29,7 @@ msgstr "Nastala chyba pri načítaní obrázku: %s"
 msgid "XKB initialization error"
 msgstr "Chyba inicializácie XKB"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2460
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2492
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
@@ -37,16 +37,16 @@ msgid ""
 "For licensing see package metadata"
 msgstr "Rozloženie klávesnice „%s“\nCopyright &#169; X.Org Foundation a prispievajúci k XKeyboardConfig\nLicencovanie si pozrite v metadátach balíka"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2542
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2574
 msgid "Unknown"
 msgstr "Neznáme"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2587
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2619
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "Rozloženie klávesnice „%s“"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:719
+#: ../libmatekbd/matekbd-keyboard-config.c:720
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
@@ -54,7 +54,7 @@ msgstr[0] "rozloženie „%s“"
 msgstr[1] "rozloženia „%s“"
 msgstr[2] "rozložení „%s“"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:737
+#: ../libmatekbd/matekbd-keyboard-config.c:738
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
@@ -62,16 +62,16 @@ msgstr[0] "možnosť „%s“"
 msgstr[1] "možnosti „%s“"
 msgstr[2] "možnosti „%s“"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:745
+#: ../libmatekbd/matekbd-keyboard-config.c:746
 #, c-format
 msgid "model \"%s\", %s and %s"
 msgstr "model „%s“, %s a %s"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:746
+#: ../libmatekbd/matekbd-keyboard-config.c:747
 msgid "no layout"
 msgstr "bez rozloženia"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:747
+#: ../libmatekbd/matekbd-keyboard-config.c:748
 msgid "no options"
 msgstr "bez možností"
 

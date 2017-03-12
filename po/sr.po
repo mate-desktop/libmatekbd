@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-09 12:55+0200\n"
+"POT-Creation-Date: 2016-11-28 13:01+0300\n"
 "PO-Revision-Date: 2015-10-09 08:02+0000\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian (http://www.transifex.com/mate/MATE/language/sr/)\n"
@@ -30,7 +30,7 @@ msgstr "Дошло је до грешке учитавања слике: %s"
 msgid "XKB initialization error"
 msgstr "Грешка покретања ИксКБ-а"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2460
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2492
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
@@ -38,16 +38,16 @@ msgid ""
 "For licensing see package metadata"
 msgstr "Распоред тастатуре „%s“\nАуторска права &#169; Х.Орг Фондација и доприносиоци Подешавања Х тастатуре\nЗа услове лиценцирања погледајте метаподатке пакета"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2542
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2574
 msgid "Unknown"
 msgstr "Непознато"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2587
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2619
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "Распоред тастатуре „%s“"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:719
+#: ../libmatekbd/matekbd-keyboard-config.c:720
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
@@ -55,7 +55,7 @@ msgstr[0] "распоред „%s“"
 msgstr[1] "распореди „%s“"
 msgstr[2] "распореди „%s“"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:737
+#: ../libmatekbd/matekbd-keyboard-config.c:738
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
@@ -63,16 +63,16 @@ msgstr[0] "опција „%s“"
 msgstr[1] "опције „%s“"
 msgstr[2] "опције „%s“"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:745
+#: ../libmatekbd/matekbd-keyboard-config.c:746
 #, c-format
 msgid "model \"%s\", %s and %s"
 msgstr "модел „%s“, „%s“ и „%s“"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:746
+#: ../libmatekbd/matekbd-keyboard-config.c:747
 msgid "no layout"
 msgstr "нема распореда"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:747
+#: ../libmatekbd/matekbd-keyboard-config.c:748
 msgid "no options"
 msgstr "нема опција"
 

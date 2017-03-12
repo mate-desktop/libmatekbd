@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-09 12:55+0200\n"
+"POT-Creation-Date: 2016-11-28 13:01+0300\n"
 "PO-Revision-Date: 2016-09-28 15:52+0000\n"
 "Last-Translator: Cfpo Miègjorn-Pirenèus <formacion@cfpoc.net>\n"
 "Language-Team: Occitan (post 1500) (http://www.transifex.com/mate/MATE/language/oc/)\n"
@@ -27,7 +27,7 @@ msgstr "Una error s'es produita en cargant un imatge : %s"
 msgid "XKB initialization error"
 msgstr "Error d'inicializacion XKB"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2460
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2492
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
@@ -35,39 +35,39 @@ msgid ""
 "For licensing see package metadata"
 msgstr "Agençament de clavièr « %s »\nCopyright &#169; X.Org Foundation e contributors XKeyboardConfig\nLos detalhs de licéncia se tròban dins las metadonadas del paquet."
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2542
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2574
 msgid "Unknown"
 msgstr "Desconegut"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2587
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2619
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "Agençament de clavièr « %s »"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:719
+#: ../libmatekbd/matekbd-keyboard-config.c:720
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
 msgstr[0] "agençament « %s »"
 msgstr[1] "agençaments « %s »"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:737
+#: ../libmatekbd/matekbd-keyboard-config.c:738
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
 msgstr[0] "opcion \"%s\""
 msgstr[1] "opcions \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:745
+#: ../libmatekbd/matekbd-keyboard-config.c:746
 #, c-format
 msgid "model \"%s\", %s and %s"
 msgstr "modèl \"%s\", %s e %s"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:746
+#: ../libmatekbd/matekbd-keyboard-config.c:747
 msgid "no layout"
 msgstr "pas cap d'agençament"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:747
+#: ../libmatekbd/matekbd-keyboard-config.c:748
 msgid "no options"
 msgstr "pas cap d'opcions"
 

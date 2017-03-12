@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-09 12:55+0200\n"
+"POT-Creation-Date: 2016-11-28 13:01+0300\n"
 "PO-Revision-Date: 2015-09-06 18:41+0000\n"
 "Last-Translator: infirit <inactive+infirit@transifex.com>\n"
 "Language-Team: Bengali (http://www.transifex.com/mate/MATE/language/bn/)\n"
@@ -30,7 +30,7 @@ msgstr "ছবি লোডে ত্রুটি হয়েছিল: %s"
 msgid "XKB initialization error"
 msgstr "XKB প্রারম্ভ সংক্রান্ত ত্রুটি"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2460
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2492
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
@@ -38,39 +38,39 @@ msgid ""
 "For licensing see package metadata"
 msgstr "কীবোর্ডের লেআউট \"%s\"\nস্বত্বাধিকার &#169; X.Org ফাউন্ডেশন ও XKeyboardConfig নির্মাতাবৃন্দ\nলাইসেন্স সংক্রান্ত তথ্য জানার জন্য অনুগ্রহ করে প্যাকেজের মেটাডাটা দেখুন"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2542
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2574
 msgid "Unknown"
 msgstr ""
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2587
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2619
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr ""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:719
+#: ../libmatekbd/matekbd-keyboard-config.c:720
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
 msgstr[0] "বহির্বিন্যাস \"%s\""
 msgstr[1] "বহির্বিন্যাস \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:737
+#: ../libmatekbd/matekbd-keyboard-config.c:738
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
 msgstr[0] "অপশন \"%s\""
 msgstr[1] "অপশন \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:745
+#: ../libmatekbd/matekbd-keyboard-config.c:746
 #, c-format
 msgid "model \"%s\", %s and %s"
 msgstr "মডেল \"%s\", %s এবং %s"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:746
+#: ../libmatekbd/matekbd-keyboard-config.c:747
 msgid "no layout"
 msgstr "কোনো বহির্বিন্যাস নেই"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:747
+#: ../libmatekbd/matekbd-keyboard-config.c:748
 msgid "no options"
 msgstr "কোনো অপশন নেই"
 

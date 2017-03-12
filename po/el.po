@@ -12,9 +12,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-09 12:55+0200\n"
-"PO-Revision-Date: 2016-04-15 19:12+0000\n"
-"Last-Translator: Angelos Chraniotis <chraniotis@gmail.com>\n"
+"POT-Creation-Date: 2016-11-28 13:01+0300\n"
+"PO-Revision-Date: 2017-02-07 20:15+0000\n"
+"Last-Translator: Αλέξανδρος Καπετάνιος <alexandros@gnugr.org>\n"
 "Language-Team: Greek (http://www.transifex.com/mate/MATE/language/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,7 +31,7 @@ msgstr "Υπήρξε σφάλμα κατά την φόρτωση της εικό
 msgid "XKB initialization error"
 msgstr "Σφάλμα αρχικοποίησης XKB"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2460
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2492
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
@@ -39,39 +39,39 @@ msgid ""
 "For licensing see package metadata"
 msgstr "Διάταξη πληκτρολογίου \"%s\"\nΠνευματικά δικαιώματα &#169; X.Org Foundation και συντελεστές XKeyboardConfig\nΓια πληροφορίες για την άδεια διάθεσης, δείτε τα μεταδεδομένα του πακέτου"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2542
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2574
 msgid "Unknown"
 msgstr "Άγνωστο"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2587
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2619
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "Διάταξη Πληκτρολογίου «%s»"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:719
+#: ../libmatekbd/matekbd-keyboard-config.c:720
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
 msgstr[0] "διάταξη \"%s\""
 msgstr[1] "διατάξεις \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:737
+#: ../libmatekbd/matekbd-keyboard-config.c:738
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
 msgstr[0] "επιλογή \"%s\""
 msgstr[1] "επιλογές \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:745
+#: ../libmatekbd/matekbd-keyboard-config.c:746
 #, c-format
 msgid "model \"%s\", %s and %s"
 msgstr "μοντέλο \"%s\", %s και %s"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:746
+#: ../libmatekbd/matekbd-keyboard-config.c:747
 msgid "no layout"
 msgstr "χωρίς διάταξη"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:747
+#: ../libmatekbd/matekbd-keyboard-config.c:748
 msgid "no options"
 msgstr "χωρίς επιλογές"
 
