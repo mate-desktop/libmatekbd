@@ -1,7 +1,10 @@
-### libmatekbd 1.17.0
+### libmatekbd 1.18.0
 
-  * Translations updated
-  * move to GTK+3 (>= 3.14), drop GTK+2 code and --with-gtk build option
+  * NEWS: use consistent, project wide, markdown-like formatting
+    to make generating release announcements easier
+  * Move to GTK+3 (require GTK+ >= 3.14), drop GTK+2 code and
+    --with-gtk build option
+  * Translations update
 
 ### libmatekbd 1.16.0
 
