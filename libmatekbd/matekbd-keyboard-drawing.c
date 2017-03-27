@@ -2615,6 +2615,7 @@ matekbd_keyboard_drawing_new_dialog (gint group, gchar * group_name)
 	    GTK_WIDGET (gtk_builder_get_object
 			(builder, "gswitchit_layout_view"));
 	kbdraw = matekbd_keyboard_drawing_new ();
+	gtk_widget_set_vexpand (kbdraw, TRUE);
 
 	snprintf (title, sizeof (title), _("Keyboard Layout \"%s\""),
 		  group_name);
