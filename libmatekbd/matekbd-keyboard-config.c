@@ -637,8 +637,7 @@ matekbd_keyboard_config_activate (MatekbdKeyboardConfig * kbd_config)
 
 /**
  * matekbd_keyboard_config_start_listen:
- *
- * Func: (scope notified): a function to call when settings are changed
+ * @func: (scope notified): a function to call when settings are changed
  */
 void
 matekbd_keyboard_config_start_listen (MatekbdKeyboardConfig * kbd_config,
