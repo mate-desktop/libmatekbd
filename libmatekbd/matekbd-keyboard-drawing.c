@@ -2291,6 +2291,9 @@ matekbd_keyboard_drawing_render (MatekbdKeyboardDrawing * kbdrawing,
 	return TRUE;
 }
 
+/**
+ * matekbd_keyboard_drawing_set_keyboard: (skip)
+ */
 gboolean
 matekbd_keyboard_drawing_set_keyboard (MatekbdKeyboardDrawing * drawing,
 				    XkbComponentNamesRec * names)
