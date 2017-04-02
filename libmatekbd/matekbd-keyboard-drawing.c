@@ -39,6 +39,8 @@
 
 #define GTK_RESPONSE_PRINT 2
 
+#define KEY_FONT_SIZE 12
+
 enum {
 	BAD_KEYCODE = 0,
 	NUM_SIGNALS
@@ -1519,7 +1521,7 @@ context_setup_scaling (MatekbdKeyboardDrawingRenderContext * context,
 	}
 
 	pango_font_description_set_size (context->font_desc,
-					 720 * dpi_x *
+					 72 * KEY_FONT_SIZE * dpi_x *
 					 context->scale_numerator /
 					 context->scale_denominator);
 	pango_layout_set_spacing (context->layout,
