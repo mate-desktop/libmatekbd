@@ -2094,8 +2094,6 @@ matekbd_keyboard_drawing_init (MatekbdKeyboardDrawing * drawing)
 	drawing->track_modifiers = 0;
 	drawing->track_config = 0;
 
-	gtk_widget_set_double_buffered (GTK_WIDGET (drawing), FALSE);
-
 	/* XXX: XkbClientMapMask | XkbIndicatorMapMask | XkbNamesMask | XkbGeometryMask */
 	drawing->xkb = XkbGetKeyboard (drawing->display,
 				       XkbGBN_GeometryMask |
