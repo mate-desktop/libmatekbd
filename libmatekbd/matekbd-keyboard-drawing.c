@@ -1585,7 +1585,7 @@ key_event (GtkWidget * widget,
 	}
 
 	invalidate_key_region (drawing, key);
-	return FALSE;
+	return TRUE;
 }
 
 static gint
