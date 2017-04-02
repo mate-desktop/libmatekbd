@@ -2176,6 +2176,11 @@ matekbd_keyboard_drawing_new (void)
 static void
 matekbd_keyboard_drawing_class_init (MatekbdKeyboardDrawingClass * klass)
 {
+#if GTK_CHECK_VERSION (3, 20, 0)
+	GtkWidgetClass *widget_class = GTK_WIDGET_CLASS (klass);
+	gtk_widget_class_set_css_name (widget_class, "matekbd-keyboard-drawing");
+#endif
+
 	klass->bad_keycode = NULL;
 
 	matekbd_keyboard_drawing_signals[BAD_KEYCODE] =
