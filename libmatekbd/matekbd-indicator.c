@@ -388,7 +388,7 @@ matekbd_indicator_prepare_drawing (MatekbdIndicator * gki, int group)
 	} else {
 		char *lbl_title = NULL;
 		char *layout_name = NULL;
-		GtkWidget *align, *label;
+		GtkWidget *label;
 		static GHashTable *ln2cnt_map = NULL;
 
 		layout_name =
@@ -403,8 +403,15 @@ matekbd_indicator_prepare_drawing (MatekbdIndicator * gki, int group)
 						       &ln2cnt_map,
 						       layout_name);
 
-		align = gtk_alignment_new (0.5, 0.5, 1.0, 1.0);
 		label = gtk_label_new (lbl_title);
+		gtk_widget_set_halign (label, GTK_ALIGN_CENTER);
+		gtk_widget_set_valign (label, GTK_ALIGN_CENTER);
+		gtk_widget_set_hexpand (label, TRUE);
+		gtk_widget_set_vexpand (label, TRUE);
+		gtk_widget_set_margin_start (label, 2);
+		gtk_widget_set_margin_end (label, 2);
+		gtk_widget_set_margin_top (label, 2);
+		gtk_widget_set_margin_bottom (label, 2);
 		g_free (lbl_title);
 		gtk_label_set_angle (GTK_LABEL (label), gki->priv->angle);
 
@@ -414,10 +421,7 @@ matekbd_indicator_prepare_drawing (MatekbdIndicator * gki, int group)
 			ln2cnt_map = NULL;
 		}
 
-		gtk_container_add (GTK_CONTAINER (align), label);
-		gtk_container_add (GTK_CONTAINER (ebox), align);
-
-		gtk_container_set_border_width (GTK_CONTAINER (align), 2);
+		gtk_container_add (GTK_CONTAINER (ebox), label);
 	}
 
 	g_signal_connect (G_OBJECT (ebox),
