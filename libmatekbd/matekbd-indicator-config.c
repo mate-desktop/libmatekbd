@@ -139,7 +139,7 @@ matekbd_indicator_config_refresh_style (MatekbdIndicatorConfig * ind_config)
 	matekbd_indicator_config_load_colors (ind_config);
 }
 
-char *
+gchar *
 matekbd_indicator_config_get_images_file (MatekbdIndicatorConfig *
 				       ind_config,
 				       MatekbdKeyboardConfig *
@@ -164,6 +164,13 @@ matekbd_indicator_config_get_images_file (MatekbdIndicatorConfig *
 				/* probably there is something in theme? */
 				icon_info = gtk_icon_theme_lookup_icon
 				    (ind_config->icon_theme, l, 48, 0);
+
+				/* Unbelievable but happens */
+				if (icon_info != NULL &&
+				    gtk_icon_info_get_filename (icon_info) == NULL) {
+					g_object_unref (icon_info);
+					icon_info = NULL;
+				}
 			}
 		}
 	}
@@ -195,7 +202,7 @@ matekbd_indicator_config_load_image_filenames (MatekbdIndicatorConfig *
 
 	for (i = xkl_engine_get_max_num_groups (ind_config->engine);
 	     --i >= 0;) {
-		char *image_file =
+		gchar *image_file =
 		    matekbd_indicator_config_get_images_file (ind_config,
 							   kbd_config,
 							   i);
