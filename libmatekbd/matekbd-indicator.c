@@ -251,35 +251,28 @@ matekbd_indicator_button_pressed (GtkWidget *
 }
 
 static void
-flag_exposed (GtkWidget * flag, GdkEventExpose * event, GdkPixbuf * image)
+draw_flag (GtkWidget * flag, cairo_t * cr, GdkPixbuf * image)
 {
 	/* Image width and height */
 	int iw = gdk_pixbuf_get_width (image);
 	int ih = gdk_pixbuf_get_height (image);
 	GtkAllocation allocation;
 	double xwiratio, ywiratio, wiratio;
-        cairo_t *cr;
 
 	gtk_widget_get_allocation (flag, &allocation);
-
-        cr = gdk_cairo_create (event->window);
-        gdk_cairo_region (cr, event->region);
-        cairo_clip (cr);
 
 	/* widget-to-image scales, X and Y */
 	xwiratio = 1.0 * allocation.width / iw;
 	ywiratio = 1.0 * allocation.height / ih;
 	wiratio = xwiratio < ywiratio ? xwiratio : ywiratio;
 
-        /* transform cairo context */
-        cairo_translate (cr, allocation.width / 2.0, allocation.height / 2.0);
-        cairo_scale (cr, wiratio, wiratio);
-        cairo_translate (cr, - iw / 2.0, - ih / 2.0);
+	/* transform cairo context */
+	cairo_translate (cr, allocation.width / 2.0, allocation.height / 2.0);
+	cairo_scale (cr, wiratio, wiratio);
+	cairo_translate (cr, - iw / 2.0, - ih / 2.0);
 
-        gdk_cairo_set_source_pixbuf (cr, image, 0, 0);
-        cairo_paint (cr);
-
-        cairo_destroy (cr);
+	gdk_cairo_set_source_pixbuf (cr, image, 0, 0);
+	cairo_paint (cr);
 }
 
 gchar *
@@ -382,8 +375,8 @@ matekbd_indicator_prepare_drawing (MatekbdIndicator * gki, int group)
 		flag = gtk_drawing_area_new ();
 		gtk_widget_add_events (GTK_WIDGET (flag),
 				       GDK_BUTTON_PRESS_MASK);
-		g_signal_connect (G_OBJECT (flag), "expose_event",
-				  G_CALLBACK (flag_exposed), image);
+		g_signal_connect (G_OBJECT (flag), "draw",
+		                  G_CALLBACK (draw_flag), image);
 		gtk_container_add (GTK_CONTAINER (ebox), flag);
 	} else {
 		char *lbl_title = NULL;
