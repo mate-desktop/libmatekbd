@@ -1,3 +1,17 @@
+### libmatekbd 1.18.1
+
+  * matekbd-indicator: don't use deprecated gdk_cairo_create
+  * Fix for strange GtkIconInfo behaviour
+  * matekbd-indicator: don't use deprecated GtkAlignment
+  * keyboard-drawing: set css name matekbd-keyboard-drawing
+  * Slightly increase the font size for the key labels
+  * matekbd-keyboard-drawing: Don't unset double buffering
+  * matekbd-keyboard-drawing: Handle XkbGetKeyboard() failing
+  * matekbd-keyboard-drawing: Prevent gtk+ keynav from taking focus away
+  * fix some introspection warnings
+  * show-layout.ui: don't use deprecated widgets
+  * UI: expand kbdraw vertical
+
 ### libmatekbd 1.18.0
 
   * NEWS: use consistent, project wide, markdown-like formatting
