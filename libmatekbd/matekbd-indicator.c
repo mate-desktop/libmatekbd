@@ -399,8 +399,6 @@ matekbd_indicator_prepare_drawing (MatekbdIndicator * gki, int group)
 		label = gtk_label_new (lbl_title);
 		gtk_widget_set_halign (label, GTK_ALIGN_CENTER);
 		gtk_widget_set_valign (label, GTK_ALIGN_CENTER);
-		gtk_widget_set_hexpand (label, TRUE);
-		gtk_widget_set_vexpand (label, TRUE);
 		gtk_widget_set_margin_start (label, 2);
 		gtk_widget_set_margin_end (label, 2);
 		gtk_widget_set_margin_top (label, 2);
