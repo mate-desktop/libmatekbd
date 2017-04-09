@@ -1,3 +1,8 @@
+### libmatekbd 1.18.2
+
+  * Translations update
+  * don't expand mate-indicator in lock-dialog
+
 ### libmatekbd 1.18.1
 
   * matekbd-indicator: don't use deprecated gdk_cairo_create
