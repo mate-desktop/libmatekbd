@@ -6,13 +6,13 @@
 # Džiugas Grėbliūnas <dziugas.grebliunas@gmail.com>, 2014
 # Gintautas Miliauskas <gintas@akl.lt>, 2007, 2008
 # brennus <jonas.ska@gmail.com>, 2014
-# Moo, 2015-2016
+# Moo, 2015-2017
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-28 13:01+0300\n"
-"PO-Revision-Date: 2016-09-07 13:29+0000\n"
+"PO-Revision-Date: 2017-03-16 09:12+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/mate/MATE/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -59,9 +59,9 @@ msgstr[2] "išdėstymai \"%s\""
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
-msgstr[0] "parinktis \"%s\""
-msgstr[1] "parinktys \"%s\""
-msgstr[2] "parinktys \"%s\""
+msgstr[0] "parametras \"%s\""
+msgstr[1] "parametrai \"%s\""
+msgstr[2] "parametrai \"%s\""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:746
 #, c-format
@@ -74,7 +74,7 @@ msgstr "nėra išdėstymo"
 
 #: ../libmatekbd/matekbd-keyboard-config.c:748
 msgid "no options"
-msgstr "nėra parinkčių"
+msgstr "nėra parametrų"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:1
 msgid "Keyboard model"
@@ -94,7 +94,7 @@ msgstr "klaviatūros išdėstymas"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:5
 msgid "Keyboard options"
-msgstr "Klaviatūros parinktys"
+msgstr "Klaviatūros parametrai"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:6
 msgid "Keyboard Update Handlers"
@@ -142,7 +142,7 @@ msgstr "Įkelti papildomus konfigūracijos elementus"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:16
 msgid "Load exotic, rarely used layouts and options"
-msgstr "Įkelti retus išdėstymus ir parinktis"
+msgstr "Įkelti retus išdėstymus ir parametrus"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:17
 msgid "Suppress the \"X sysconfig changed\" warning message"
@@ -184,7 +184,7 @@ msgstr "Šriftas"
 msgid ""
 "The font for the layout indicator. This should be in \"[FAMILY-LIST] [STYLE-"
 "OPTIONS] [SIZE]\" format."
-msgstr "Išdėstymų indikatoriaus šriftas. Tai turėtų būti nurodyta \"[ŠEIMOS-SĄRAŠAS] [STILIAUS-PARINKTYS] [DYDIS]\" formatu."
+msgstr "Išdėstymų indikatoriaus šriftas. Tai turėtų būti nurodyta \"[ŠEIMOS-SĄRAŠAS] [STILIAUS-PARAMETRAI] [DYDIS]\" formatu."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:27
 msgid "The foreground color"
