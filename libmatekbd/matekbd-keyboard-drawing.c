@@ -2081,11 +2081,11 @@ matekbd_keyboard_drawing_init (MatekbdKeyboardDrawing * drawing)
 	/* XXX: this stuff probably doesn't matter.. also, gdk_screen_get_default can fail */
 	if (gtk_widget_has_screen (GTK_WIDGET (drawing)))
 		drawing->screen_num =
-		    gdk_screen_get_number (gtk_widget_get_screen
+		    gdk_x11_screen_get_screen_number (gtk_widget_get_screen
 					   (GTK_WIDGET (drawing)));
 	else
 		drawing->screen_num =
-		    gdk_screen_get_number (gdk_screen_get_default ());
+		    gdk_x11_screen_get_screen_number (gdk_screen_get_default ());
 
 	drawing->surface = NULL;
 	alloc_render_context (drawing);
