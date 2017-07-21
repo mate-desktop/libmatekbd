@@ -635,7 +635,8 @@ matekbd_status_init (MatekbdStatus * gki)
 	gki->priv = g_new0 (MatekbdStatusPrivate, 1);
 
 	/* This should give NA a hint about the order */
-	gtk_status_icon_set_name (GTK_STATUS_ICON (gki), "keyboard");
+	/* commenting out fixes a Gdk-critical warning */
+/*	gtk_status_icon_set_name (GTK_STATUS_ICON (gki), "keyboard"); */
 
 	xkl_debug (100, "Initiating the widget startup process for %p\n",
 		   gki);
