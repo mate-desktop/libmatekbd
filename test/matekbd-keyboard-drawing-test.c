@@ -161,7 +161,11 @@ main (gint argc, gchar ** argv)
 	GtkWidget *window;
 	GtkWidget *matekbd_keyboard_drawing;
 	GdkScreen *screen;
+#if GTK_CHECK_VERSION (3, 22, 0)
+	GdkMonitor *monitor;
+#else
 	gint monitor;
+#endif
 	GdkRectangle rect;
 	GOptionContext *context;
 	GError *error = NULL;
@@ -204,8 +208,13 @@ main (gint argc, gchar ** argv)
 			  G_CALLBACK (gtk_main_quit), NULL);
 
 	screen = gtk_window_get_screen (GTK_WINDOW (window));
+#if GTK_CHECK_VERSION (3, 22, 0)
+	monitor = gdk_display_get_monitor_at_point (gdk_screen_get_display (screen), 0, 0);
+	gdk_monitor_get_geometry (monitor, &rect);
+#else
 	monitor = gdk_screen_get_monitor_at_point (screen, 0, 0);
 	gdk_screen_get_monitor_geometry (screen, monitor, &rect);
+#endif
 	gtk_window_set_default_size (GTK_WINDOW (window),
 				     rect.width * 4 / 5,
 				     rect.height * 1 / 2);
