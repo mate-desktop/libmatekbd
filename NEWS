@@ -1,5 +1,27 @@
 ### libmatekbd 1.19.0
 
+  * Translations update
+  * matekbd-status: Fix Gdk-CRITICAL warning on creating status bar icon
+  * gtk 3.22: avoid deprecated gdk_screen_get_monitor... functions:
+  * avoid deprecated gdk_screen_get_width/height
+  * avoid deprecated gdk_screen_get_number
+  * update issue_template
+  * create issue_template.md
+  * Restore Polish translation credits from GNOME
+  * sync with transifex
+  * matekbd-indicator: Don't expand
+  * matekbd-indicator: don't use deprecated gdk_cairo_create
+  * Fix for strange GtkIconInfo behaviour
+  * matekbd-indicator: don't use deprecated GtkAlignment
+  * keyboard-drawing: set css name matekbd-keyboard-drawing
+  * Slightly increase the font size for the key labels
+  * matekbd-keyboard-drawing: Don't unset double buffering
+  * matekbd-keyboard-drawing: Handle XkbGetKeyboard() failing
+  * matekbd-keyboard-drawing: Prevent gtk+ keynav from taking focus away
+  * fix some introspection warnings
+  * show-layout.ui: don't use deprecated widgets
+  * UI: expand kbdraw vertical
+
 ### libmatekbd 1.18.0
 
   * NEWS: use consistent, project wide, markdown-like formatting
