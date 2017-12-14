@@ -29,6 +29,8 @@
 
 #include <gio/gio.h>
 
+#include <gdk/gdkx.h>
+
 #include <matekbd-config-private.h>
 
 static void
@@ -77,11 +79,9 @@ matekbd_preview_load_position (void)
 	if (x == -1 || y == -1 || w == -1 || h == -1) {
 		/* default values should be treated as
 		 * "0.75 of the screen size" */
-		gint w, h;
 		GdkScreen *scr = gdk_screen_get_default ();
-
-		gdk_window_get_geometry (gdk_screen_get_root_window (scr), NULL, NULL,
-					 &w, &h);
+		gint w = WidthOfScreen (gdk_x11_screen_get_xscreen (scr));
+		gint h = HeightOfScreen (gdk_x11_screen_get_xscreen (scr));
 		rv->x = w >> 3;
 		rv->y = h >> 3;
 		rv->width = w - (w >> 2);
