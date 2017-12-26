@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-28 13:01+0300\n"
-"PO-Revision-Date: 2016-09-28 15:52+0000\n"
-"Last-Translator: Cfpo Miègjorn-Pirenèus <formacion@cfpoc.net>\n"
+"POT-Creation-Date: 2017-11-28 09:52+0100\n"
+"PO-Revision-Date: 2017-09-19 13:36+0000\n"
+"Last-Translator: Cfpo Miègjorn-Pirenèus <inactive+cfpomp@transifex.com>\n"
 "Language-Team: Occitan (post 1500) (http://www.transifex.com/mate/MATE/language/oc/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,11 +23,11 @@ msgstr ""
 msgid "There was an error loading an image: %s"
 msgstr "Una error s'es produita en cargant un imatge : %s"
 
-#: ../libmatekbd/matekbd-indicator.c:699 ../libmatekbd/matekbd-status.c:645
+#: ../libmatekbd/matekbd-indicator.c:694 ../libmatekbd/matekbd-status.c:646
 msgid "XKB initialization error"
 msgstr "Error d'inicializacion XKB"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2492
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2503
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
@@ -35,39 +35,39 @@ msgid ""
 "For licensing see package metadata"
 msgstr "Agençament de clavièr « %s »\nCopyright &#169; X.Org Foundation e contributors XKeyboardConfig\nLos detalhs de licéncia se tròban dins las metadonadas del paquet."
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2574
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2585
 msgid "Unknown"
 msgstr "Desconegut"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2619
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2631
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "Agençament de clavièr « %s »"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:720
+#: ../libmatekbd/matekbd-keyboard-config.c:719
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
 msgstr[0] "agençament « %s »"
 msgstr[1] "agençaments « %s »"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:738
+#: ../libmatekbd/matekbd-keyboard-config.c:737
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
 msgstr[0] "opcion \"%s\""
 msgstr[1] "opcions \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:746
+#: ../libmatekbd/matekbd-keyboard-config.c:745
 #, c-format
 msgid "model \"%s\", %s and %s"
 msgstr "modèl \"%s\", %s e %s"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:747
+#: ../libmatekbd/matekbd-keyboard-config.c:746
 msgid "no layout"
 msgstr "pas cap d'agençament"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:748
+#: ../libmatekbd/matekbd-keyboard-config.c:747
 msgid "no options"
 msgstr "pas cap d'opcions"
 

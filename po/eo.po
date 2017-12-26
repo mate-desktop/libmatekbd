@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-28 13:01+0300\n"
-"PO-Revision-Date: 2015-09-06 18:41+0000\n"
+"POT-Creation-Date: 2017-11-28 09:52+0100\n"
+"PO-Revision-Date: 2017-09-19 13:36+0000\n"
 "Last-Translator: infirit <inactive+infirit@transifex.com>\n"
 "Language-Team: Esperanto (http://www.transifex.com/mate/MATE/language/eo/)\n"
 "MIME-Version: 1.0\n"
@@ -23,11 +23,11 @@ msgstr ""
 msgid "There was an error loading an image: %s"
 msgstr "Okazis eraro dum ŝargado de bildo: %s"
 
-#: ../libmatekbd/matekbd-indicator.c:699 ../libmatekbd/matekbd-status.c:645
+#: ../libmatekbd/matekbd-indicator.c:694 ../libmatekbd/matekbd-status.c:646
 msgid "XKB initialization error"
 msgstr "XKB-prepara eraro"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2492
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2503
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
@@ -35,39 +35,39 @@ msgid ""
 "For licensing see package metadata"
 msgstr "Klarararanĝoj \"%s\"\nKopirajto &#169; X.Org-fondaĵo kaj XKeyboardConfig-kontribuantoj\nPor permesilado vidu al metadatumoj de la pakaĵo"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2574
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2585
 msgid "Unknown"
 msgstr "Nekonate"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2619
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2631
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "Klavararanĝo \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:720
+#: ../libmatekbd/matekbd-keyboard-config.c:719
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
 msgstr[0] "aranĝo \"%s\""
 msgstr[1] "aranĝoj \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:738
+#: ../libmatekbd/matekbd-keyboard-config.c:737
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
 msgstr[0] "opcio \"%s\""
 msgstr[1] "opcioj \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:746
+#: ../libmatekbd/matekbd-keyboard-config.c:745
 #, c-format
 msgid "model \"%s\", %s and %s"
 msgstr "modelo \"%s\", %s kaj %s"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:747
+#: ../libmatekbd/matekbd-keyboard-config.c:746
 msgid "no layout"
 msgstr "neniu aranĝo"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:748
+#: ../libmatekbd/matekbd-keyboard-config.c:747
 msgid "no options"
 msgstr "neniuj opcioj"
 

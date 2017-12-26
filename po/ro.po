@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-28 13:01+0300\n"
-"PO-Revision-Date: 2015-11-03 17:49+0000\n"
+"POT-Creation-Date: 2017-11-28 09:52+0100\n"
+"PO-Revision-Date: 2017-09-19 13:36+0000\n"
 "Last-Translator: Daniel <danny3@tutanota.com>\n"
 "Language-Team: Romanian (http://www.transifex.com/mate/MATE/language/ro/)\n"
 "MIME-Version: 1.0\n"
@@ -25,11 +25,11 @@ msgstr ""
 msgid "There was an error loading an image: %s"
 msgstr "S-a produs o eroare la încărcarea unei imagini: %s"
 
-#: ../libmatekbd/matekbd-indicator.c:699 ../libmatekbd/matekbd-status.c:645
+#: ../libmatekbd/matekbd-indicator.c:694 ../libmatekbd/matekbd-status.c:646
 msgid "XKB initialization error"
 msgstr "Eroare inițializare XKB"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2492
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2503
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
@@ -37,16 +37,16 @@ msgid ""
 "For licensing see package metadata"
 msgstr "Aranjament tastatură „%s”\nDrepturi de autor &#169; Fundația X.Org și colaboratorii XKeyboardConfig\nPentru licențiere consultați metadatele pachetului"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2574
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2585
 msgid "Unknown"
 msgstr "Necunoscut"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2619
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2631
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "Aranjament tastatură „%s”"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:720
+#: ../libmatekbd/matekbd-keyboard-config.c:719
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
@@ -54,7 +54,7 @@ msgstr[0] "aranjament „%s”"
 msgstr[1] "aranjamente „%s”"
 msgstr[2] "aranjamente „%s”"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:738
+#: ../libmatekbd/matekbd-keyboard-config.c:737
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
@@ -62,16 +62,16 @@ msgstr[0] "opțiune „%s”"
 msgstr[1] "opțiuni „%s”"
 msgstr[2] "opțiuni „%s”"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:746
+#: ../libmatekbd/matekbd-keyboard-config.c:745
 #, c-format
 msgid "model \"%s\", %s and %s"
 msgstr "model „%s”, %s și %s"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:747
+#: ../libmatekbd/matekbd-keyboard-config.c:746
 msgid "no layout"
 msgstr "niciun aranjament"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:748
+#: ../libmatekbd/matekbd-keyboard-config.c:747
 msgid "no options"
 msgstr "fără opțiuni"
 

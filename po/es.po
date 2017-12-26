@@ -3,8 +3,8 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Adolfo Jayme-Barrientos, 2015
-# Adolfo Jayme-Barrientos, 2013
+# Adolfo Jayme Barrientos, 2015
+# Adolfo Jayme Barrientos, 2013
 # Benjamin Perez Carrillo <benperezc@gmail.com>, 2015
 # Claudio Saavedra <csaavedra@alumnos.utalca.cl>, 2007
 # Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008, 2009, 2010
@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-28 13:01+0300\n"
-"PO-Revision-Date: 2015-10-25 20:59+0000\n"
+"POT-Creation-Date: 2017-11-28 09:52+0100\n"
+"PO-Revision-Date: 2017-09-19 13:36+0000\n"
 "Last-Translator: Benjamin Perez Carrillo <benperezc@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/mate/MATE/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -27,11 +27,11 @@ msgstr ""
 msgid "There was an error loading an image: %s"
 msgstr "Hubo un error al cargar una imagen: %s"
 
-#: ../libmatekbd/matekbd-indicator.c:699 ../libmatekbd/matekbd-status.c:645
+#: ../libmatekbd/matekbd-indicator.c:694 ../libmatekbd/matekbd-status.c:646
 msgid "XKB initialization error"
 msgstr "Error de inicialización de XKB"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2492
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2503
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
@@ -39,39 +39,39 @@ msgid ""
 "For licensing see package metadata"
 msgstr "Distribución de teclado «%s»\nCopyright &#169; la Fundación X.Org y los contribuidores de XKeyboardConfig\nPara la licencia vea los metadatos del paquete"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2574
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2585
 msgid "Unknown"
 msgstr "Desconocida"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2619
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2631
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "Distribución del teclado «%s»"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:720
+#: ../libmatekbd/matekbd-keyboard-config.c:719
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
 msgstr[0] "distribución «%s»"
 msgstr[1] "distribuciones «%s»"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:738
+#: ../libmatekbd/matekbd-keyboard-config.c:737
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
 msgstr[0] "opción «%s»"
 msgstr[1] "opciones «%s»"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:746
+#: ../libmatekbd/matekbd-keyboard-config.c:745
 #, c-format
 msgid "model \"%s\", %s and %s"
 msgstr "modelo «%s», %s y %s"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:747
+#: ../libmatekbd/matekbd-keyboard-config.c:746
 msgid "no layout"
 msgstr "sin distribución"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:748
+#: ../libmatekbd/matekbd-keyboard-config.c:747
 msgid "no options"
 msgstr "sin opciones"
 
