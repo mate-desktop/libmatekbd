@@ -1,3 +1,8 @@
+### libmatekbd 1.20.0
+
+  * sync with transifex
+  * remove < gtk+-3.22 bits and bump required gtk+
+
 ### libmatekbd 1.19.1
 
   * Translations update
