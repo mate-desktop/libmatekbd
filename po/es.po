@@ -3,8 +3,8 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Adolfo Jayme Barrientos, 2015
-# Adolfo Jayme Barrientos, 2013
+# Adolfo Jayme-Barrientos, 2015
+# Adolfo Jayme-Barrientos, 2013
 # Benjamin Perez Carrillo <benperezc@gmail.com>, 2015
 # Claudio Saavedra <csaavedra@alumnos.utalca.cl>, 2007
 # Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008, 2009, 2010
