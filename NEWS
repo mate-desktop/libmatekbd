@@ -1,7 +1,9 @@
 ### libmatekbd 1.20.0
 
   * sync with transifex
+  * bump minimum GDK version according to GTK+ one
   * remove < gtk+-3.22 bits and bump required gtk+
+  * building: bump required glib version to 2.50.0
 
 ### libmatekbd 1.19.1
 
