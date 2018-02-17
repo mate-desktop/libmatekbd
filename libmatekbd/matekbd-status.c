@@ -159,6 +159,7 @@ matekbd_status_render_cairo (cairo_t * cr, int group)
 	PangoLayout *pl;
 	int lwidth, lheight;
 	gchar *layout_name, *lbl_title;
+	double screen_res;
 	cairo_font_options_t *fo;
 	static GHashTable *ln2cnt_map = NULL;
 
@@ -185,6 +186,10 @@ matekbd_status_render_cairo (cairo_t * cr, int group)
 	}
 
 	pcc = pango_cairo_create_context (cr);
+
+	screen_res = gdk_screen_get_resolution (gdk_screen_get_default ());
+	if (screen_res > 0)
+		pango_cairo_context_set_resolution (pcc, screen_res);
 
 	fo = cairo_font_options_copy (gdk_screen_get_font_options
 				      (gdk_screen_get_default ()));
