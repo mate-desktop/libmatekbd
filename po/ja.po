@@ -1,47 +1,48 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# ABE Tsunehiko, 2015
-# Hideki Yamane <henrich@debian.or.jp>, 2010
-# Takeshi AIHANA <takeshi.aihana@gmail.com>, 2007, 2008
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-28 09:52+0100\n"
-"PO-Revision-Date: 2017-09-19 13:36+0000\n"
-"Last-Translator: ABE Tsunehiko\n"
-"Language-Team: Japanese (http://www.transifex.com/mate/MATE/language/ja/)\n"
+"POT-Creation-Date: 2018-03-14 09:47+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Rockers <sumorock@hotmail.com>, 2018\n"
+"Language-Team: Japanese (https://www.transifex.com/mate/teams/13566/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../libmatekbd/matekbd-indicator.c:116 ../libmatekbd/matekbd-status.c:310
+#: ../libmatekbd/matekbd-indicator.c:116 ../libmatekbd/matekbd-status.c:315
 #, c-format
 msgid "There was an error loading an image: %s"
 msgstr "イメージを読み込む際にエラーが発生しました: %s"
 
-#: ../libmatekbd/matekbd-indicator.c:694 ../libmatekbd/matekbd-status.c:646
+#: ../libmatekbd/matekbd-indicator.c:694 ../libmatekbd/matekbd-status.c:651
 msgid "XKB initialization error"
 msgstr "XKB の初期化エラー"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2503
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2501
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
 "Copyright &#169; X.Org Foundation and XKeyboardConfig contributors\n"
 "For licensing see package metadata"
-msgstr "キーボードのレイアウト \"%s\"\nCopyright &#169; X.Org Foundation と XKeyboardConfig の貢献者\nライセンスに関してはパッケージ内のメタデータを参照のこと"
+msgstr ""
+"キーボードのレイアウト \"%s\"\n"
+"Copyright &#169; X.Org Foundation と XKeyboardConfig の貢献者\n"
+"ライセンスに関してはパッケージ内のメタデータを参照のこと"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2585
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2583
 msgid "Unknown"
 msgstr "不明"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2631
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2629
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "キーボードのレイアウト \"%s\""
@@ -99,7 +100,8 @@ msgstr "キーボードの更新ハンドラ"
 msgid ""
 "A collection of scripts to run whenever the keyboard state is reloaded. "
 "Useful for re-applying xmodmap based adjustments"
-msgstr "キーボードの状態が変更された時に実行するスクリプト集です。これらのスクリプトは xmodmap による調整結果をもう一度適用する際に便利です。"
+msgstr ""
+"キーボードの状態が変更された時に実行するスクリプト集です。これらのスクリプトは xmodmap による調整結果をもう一度適用する際に便利です。"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:8
 msgid "modmap file list"
@@ -179,7 +181,9 @@ msgstr "フォント"
 msgid ""
 "The font for the layout indicator. This should be in \"[FAMILY-LIST] [STYLE-"
 "OPTIONS] [SIZE]\" format."
-msgstr "レイアウトインジケーターに使用するフォントです。\"[FAMILY-LIST] [STYLE-OPTIONS] [SIZE]\" のように指定してください。"
+msgstr ""
+"レイアウトインジケーターに使用するフォントです。\"[FAMILY-LIST] [STYLE-OPTIONS] [SIZE]\" "
+"のように指定してください。"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:27
 msgid "The foreground color"

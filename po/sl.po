@@ -1,46 +1,48 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Damir Jerovšek <jierro@windowslive.com>, 2013
-# Helena S <ele@tutamail.com>, 2017
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-28 09:52+0100\n"
-"PO-Revision-Date: 2017-09-23 18:17+0000\n"
-"Last-Translator: Helena S <ele@tutamail.com>\n"
-"Language-Team: Slovenian (http://www.transifex.com/mate/MATE/language/sl/)\n"
+"POT-Creation-Date: 2018-03-14 09:47+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Helena S <ele@tutamail.com>, 2018\n"
+"Language-Team: Slovenian (https://www.transifex.com/mate/teams/13566/sl/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: sl\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
 
-#: ../libmatekbd/matekbd-indicator.c:116 ../libmatekbd/matekbd-status.c:310
+#: ../libmatekbd/matekbd-indicator.c:116 ../libmatekbd/matekbd-status.c:315
 #, c-format
 msgid "There was an error loading an image: %s"
 msgstr "Med nalaganjem slike je prišlo do napake: %s"
 
-#: ../libmatekbd/matekbd-indicator.c:694 ../libmatekbd/matekbd-status.c:646
+#: ../libmatekbd/matekbd-indicator.c:694 ../libmatekbd/matekbd-status.c:651
 msgid "XKB initialization error"
 msgstr "Napaka med začenjanjem XKB"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2503
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2501
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
 "Copyright &#169; X.Org Foundation and XKeyboardConfig contributors\n"
 "For licensing see package metadata"
-msgstr "Razporeditev tipk \"%s\"\nAvtorske pravice &#169; razvijalci X.Org Foundation in XKeyboardConfig\nZa dovoljenja si oglejte metapodatke paketa"
+msgstr ""
+"Razporeditev tipk \"%s\"\n"
+"Avtorske pravice &#169; razvijalci X.Org Foundation in XKeyboardConfig\n"
+"Za dovoljenja si oglejte metapodatke paketa"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2585
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2583
 msgid "Unknown"
 msgstr "Neznano"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2631
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2629
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "Razporeditev tipk \"%s\""
@@ -49,19 +51,19 @@ msgstr "Razporeditev tipk \"%s\""
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
-msgstr[0] "razporedi \"%s\""
-msgstr[1] "razpored \"%s\""
-msgstr[2] "razporeda \"%s\""
-msgstr[3] "razporeditve \"%s\""
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:737
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
-msgstr[0] "možnosti \"%s\""
-msgstr[1] "možnost \"%s\""
-msgstr[2] "možnosti \"%s\""
-msgstr[3] "možnosti \"%s\""
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:745
 #, c-format
@@ -104,7 +106,9 @@ msgstr "Ročniki posodobitev tipkovnice"
 msgid ""
 "A collection of scripts to run whenever the keyboard state is reloaded. "
 "Useful for re-applying xmodmap based adjustments"
-msgstr "Zbirka skript za izvajanje ob ponovnem nalaganju stanja tipkovnice. Uporabno za ponovno uveljavljanje prilagoditev, temelječih na xmodmap"
+msgstr ""
+"Zbirka skript za izvajanje ob ponovnem nalaganju stanja tipkovnice. Uporabno"
+" za ponovno uveljavljanje prilagoditev, temelječih na xmodmap"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:8
 msgid "modmap file list"
@@ -134,7 +138,9 @@ msgstr "Pokaži imena razporeditev namesto imen skupin"
 msgid ""
 "Show layout names instead of group names (only for versions of XFree "
 "supporting multiple layouts)"
-msgstr "Pokaži imena razporeditev namesto imen skupin (samo za različice XFree, ki podpirajo različne razporeditve)"
+msgstr ""
+"Pokaži imena razporeditev namesto imen skupin (samo za različice XFree, ki "
+"podpirajo različne razporeditve)"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:15
 msgid "Load extra configuration items"

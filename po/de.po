@@ -1,51 +1,48 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Andre Klapper <ak-47@gmx.net>, 2008
-# Christian <Christian.Kirbach@googlemail.com>, 2009, 2010
-# Hendrik Richter <hendrikr@gnome.org>, 2007
-# Johannes Hofmann <rhasti@googlemail.com>, 2007
-# Maria Kor <korda.maria@gmail.com>, 2015
-# Mario Blättermann <mariobl@gnome.org>, 2010
-# Tobias Bannert <tobannert@gmail.com>, 2014-2015
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-28 09:52+0100\n"
-"PO-Revision-Date: 2017-09-19 13:36+0000\n"
-"Last-Translator: Tobias Bannert <tobannert@gmail.com>\n"
-"Language-Team: German (http://www.transifex.com/mate/MATE/language/de/)\n"
+"POT-Creation-Date: 2018-03-14 09:47+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Tobias Bannert <tobannert@gmail.com>, 2018\n"
+"Language-Team: German (https://www.transifex.com/mate/teams/13566/de/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../libmatekbd/matekbd-indicator.c:116 ../libmatekbd/matekbd-status.c:310
+#: ../libmatekbd/matekbd-indicator.c:116 ../libmatekbd/matekbd-status.c:315
 #, c-format
 msgid "There was an error loading an image: %s"
 msgstr "Beim Laden des Bildes ist ein Fehler aufgetreten: %s"
 
-#: ../libmatekbd/matekbd-indicator.c:694 ../libmatekbd/matekbd-status.c:646
+#: ../libmatekbd/matekbd-indicator.c:694 ../libmatekbd/matekbd-status.c:651
 msgid "XKB initialization error"
 msgstr "XKB-Initialisierungsfehler"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2503
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2501
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
 "Copyright &#169; X.Org Foundation and XKeyboardConfig contributors\n"
 "For licensing see package metadata"
-msgstr "Tastaturbelegung »%s«\nUrheberrecht &#169; X.Org Foundation und XKeyboardConfig-Mitwirkende\nFür Informationen zur Lizenz bitte die Paketmetadaten ansehen"
+msgstr ""
+"Tastaturbelegung »%s«\n"
+"Urheberrecht &#169; X.Org Foundation und XKeyboardConfig-Mitwirkende\n"
+"Für Informationen zur Lizenz bitte die Paketmetadaten ansehen"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2585
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2583
 msgid "Unknown"
 msgstr "Unbekannt"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2631
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2629
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "Tastaturbelegung »%s«"
@@ -54,15 +51,15 @@ msgstr "Tastaturbelegung »%s«"
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
-msgstr[0] "Belegung »%s«"
-msgstr[1] "Belegungen »%s«"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:737
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
-msgstr[0] "Option »%s«"
-msgstr[1] "Optionen »%s«"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:745
 #, c-format
@@ -105,7 +102,10 @@ msgstr "Tastaturaktualisierungsroutine"
 msgid ""
 "A collection of scripts to run whenever the keyboard state is reloaded. "
 "Useful for re-applying xmodmap based adjustments"
-msgstr "Skriptsammlung, die beim Neuladen des Tastaturstatus ausgeführt wird. Nützlich, wenn auf xmodpmap basierende Anpassungen wiederholt angewendet werden."
+msgstr ""
+"Skriptsammlung, die beim Neuladen des Tastaturstatus ausgeführt wird. "
+"Nützlich, wenn auf xmodpmap basierende Anpassungen wiederholt angewendet "
+"werden."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:8
 msgid "modmap file list"
@@ -113,7 +113,8 @@ msgstr "modmap-Dateiliste"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:9
 msgid "A list of modmap files available in the $HOME directory."
-msgstr "Eine Liste von modmap-Dateien, die im Persönlichen Ordner verfügbar sind."
+msgstr ""
+"Eine Liste von modmap-Dateien, die im Persönlichen Ordner verfügbar sind."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:10
 msgid "Default group, assigned on window creation"
@@ -125,7 +126,9 @@ msgstr "Einzelne Gruppe pro Fenster beibehalten und verwalten"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:12
 msgid "Save/restore indicators together with layout groups"
-msgstr "Speichern und Wiederherstellen der Anzeigen zusammen mit den Belegungsgruppen"
+msgstr ""
+"Speichern und Wiederherstellen der Anzeigen zusammen mit den "
+"Belegungsgruppen"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:13
 msgid "Show layout names instead of group names"
@@ -135,7 +138,9 @@ msgstr "Belegungsnamen anstatt Gruppennamen anzeigen"
 msgid ""
 "Show layout names instead of group names (only for versions of XFree "
 "supporting multiple layouts)"
-msgstr "Belegungsnamen anstatt Gruppennamen anzeigen (Nur für XFree-Versionen, die mehrere Tastaturbelegungen unterstützen)"
+msgstr ""
+"Belegungsnamen anstatt Gruppennamen anzeigen (Nur für XFree-Versionen, die "
+"mehrere Tastaturbelegungen unterstützen)"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:15
 msgid "Load extra configuration items"
@@ -151,7 +156,8 @@ msgstr "Die Warnmeldung »X sysconfig changed« unterdrücken"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:18
 msgid "Allow to disable the keyboard indicator tray icon"
-msgstr "Das Deaktivieren des Tastaturanzeigesymbols in der Systemleiste erlauben"
+msgstr ""
+"Das Deaktivieren des Tastaturanzeigesymbols in der Systemleiste erlauben"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:19
 msgid "Show keyboard leds indicator"
@@ -185,7 +191,9 @@ msgstr "Die Schrift"
 msgid ""
 "The font for the layout indicator. This should be in \"[FAMILY-LIST] [STYLE-"
 "OPTIONS] [SIZE]\" format."
-msgstr "Die Schrift für die Belegungsanzeige. Diese sollte in folgendem Format sein: [SCHRIFTFAMILIENLISTE] [STILOPTIONEN] [GRÖßE]."
+msgstr ""
+"Die Schrift für die Belegungsanzeige. Diese sollte in folgendem Format sein:"
+" [SCHRIFTFAMILIENLISTE] [STILOPTIONEN] [GRÖßE]."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:27
 msgid "The foreground color"
@@ -195,7 +203,9 @@ msgstr "Die Vordergrundfarbe"
 msgid ""
 "The foreground color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
-msgstr "Die Vordergrundfarbe für die Belegungsanzeige. Diese sollte im RGB-Format angegeben werden, z.B. »255 0 0«."
+msgstr ""
+"Die Vordergrundfarbe für die Belegungsanzeige. Diese sollte im RGB-Format "
+"angegeben werden, z.B. »255 0 0«."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:29
 msgid "The background color"
@@ -205,7 +215,9 @@ msgstr "Die Hintergrundfarbe"
 msgid ""
 "The background color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
-msgstr "Die Hintergrundfarbe für die Belegungsanzeige. Diese sollte im RGB-Format angegeben werden, z.B. »255 0 0«."
+msgstr ""
+"Die Hintergrundfarbe für die Belegungsanzeige. Diese sollte im RGB-Format "
+"angegeben werden, z.B. »255 0 0«."
 
 #: ../libmatekbd/show-layout.ui.h:1
 msgid "Keyboard Layout"

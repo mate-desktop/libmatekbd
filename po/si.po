@@ -1,33 +1,33 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Danishka Navin <snavin@redhat.com>, 2007
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-28 09:52+0100\n"
-"PO-Revision-Date: 2017-09-19 13:36+0000\n"
-"Last-Translator: infirit <inactive+infirit@transifex.com>\n"
-"Language-Team: Sinhala (http://www.transifex.com/mate/MATE/language/si/)\n"
+"POT-Creation-Date: 2018-03-14 09:47+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
+"Language-Team: Sinhala (https://www.transifex.com/mate/teams/13566/si/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: si\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../libmatekbd/matekbd-indicator.c:116 ../libmatekbd/matekbd-status.c:310
+#: ../libmatekbd/matekbd-indicator.c:116 ../libmatekbd/matekbd-status.c:315
 #, c-format
 msgid "There was an error loading an image: %s"
 msgstr "පිළිඹිබුව පුරණයෙදි දෝෂයක් තිබුනි: %s"
 
-#: ../libmatekbd/matekbd-indicator.c:694 ../libmatekbd/matekbd-status.c:646
+#: ../libmatekbd/matekbd-indicator.c:694 ../libmatekbd/matekbd-status.c:651
 msgid "XKB initialization error"
 msgstr "XKB ආරම්භන දෝෂය"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2503
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2501
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
@@ -35,11 +35,11 @@ msgid ""
 "For licensing see package metadata"
 msgstr ""
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2585
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2583
 msgid "Unknown"
-msgstr ""
+msgstr "නොදන්නා"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2631
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2629
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr ""
@@ -48,15 +48,15 @@ msgstr ""
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
-msgstr[0] "සැලසුම \"%s\""
-msgstr[1] "සැලසුම් \"%s\""
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:737
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
-msgstr[0] "විකල්පය \"%s\""
-msgstr[1] "විකල්ප \"%s\""
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:745
 #, c-format
@@ -99,7 +99,9 @@ msgstr "යතුරු පුවරුවෙ නවීකරණය පාලන
 msgid ""
 "A collection of scripts to run whenever the keyboard state is reloaded. "
 "Useful for re-applying xmodmap based adjustments"
-msgstr "යතුරු පුවරුවෙ ස්වභාවය කිනම් හො අවස්තාවක ප්‍රථියෙදුනා,වුවිට ක්‍රියාත්මක වන ඛෙත එකතුවක්. xmodmap මත පදනම්වු වෙනස්කිරිම් නැවත යෙදිම සඳහා ප්‍රයොජනවත්වෙයි"
+msgstr ""
+"යතුරු පුවරුවෙ ස්වභාවය කිනම් හො අවස්තාවක ප්‍රථියෙදුනා,වුවිට ක්‍රියාත්මක වන "
+"ඛෙත එකතුවක්. xmodmap මත පදනම්වු වෙනස්කිරිම් නැවත යෙදිම සඳහා ප්‍රයොජනවත්වෙයි"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:8
 msgid "modmap file list"
@@ -129,7 +131,9 @@ msgstr "සමුහ නම් වෙනුවට සැලසුම් නම�
 msgid ""
 "Show layout names instead of group names (only for versions of XFree "
 "supporting multiple layouts)"
-msgstr "සමුහ නම් වෙනුවට සැලසුම් නම් පෙන්වන්න (බහු සැලසුම් සහය ලබාදෙන XFree වෙළුම් සඳහා පමණි)"
+msgstr ""
+"සමුහ නම් වෙනුවට සැලසුම් නම් පෙන්වන්න (බහු සැලසුම් සහය ලබාදෙන XFree වෙළුම් "
+"සඳහා පමණි)"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:15
 msgid "Load extra configuration items"

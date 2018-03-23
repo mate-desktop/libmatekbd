@@ -1,47 +1,48 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Dr,T,Vasudevan <agnihot3@gmail.com>, 2010
-# Dr.T.Vasudevan <agnihot3@gmail.com>, 2007, 2010
-# I. Felix <ifelix@redhat.com>, 2008, 2009
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-28 09:52+0100\n"
-"PO-Revision-Date: 2017-09-19 13:36+0000\n"
-"Last-Translator: infirit <inactive+infirit@transifex.com>\n"
-"Language-Team: Tamil (http://www.transifex.com/mate/MATE/language/ta/)\n"
+"POT-Creation-Date: 2018-03-14 09:47+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
+"Language-Team: Tamil (https://www.transifex.com/mate/teams/13566/ta/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ta\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../libmatekbd/matekbd-indicator.c:116 ../libmatekbd/matekbd-status.c:310
+#: ../libmatekbd/matekbd-indicator.c:116 ../libmatekbd/matekbd-status.c:315
 #, c-format
 msgid "There was an error loading an image: %s"
 msgstr "ஒரு பிம்பத்தை ஏற்றுவதில் பிழை ஏற்பட்டது: %s"
 
-#: ../libmatekbd/matekbd-indicator.c:694 ../libmatekbd/matekbd-status.c:646
+#: ../libmatekbd/matekbd-indicator.c:694 ../libmatekbd/matekbd-status.c:651
 msgid "XKB initialization error"
 msgstr "XKB துவக்கப் பிழை"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2503
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2501
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
 "Copyright &#169; X.Org Foundation and XKeyboardConfig contributors\n"
 "For licensing see package metadata"
-msgstr "விசைப்பலகை அமைப்பு \"%s\"\nபதிப்புரிமை &#169; X.Org Foundation மற்றும் XKeyboardConfig contributors\nஉரிமத்திற்கு தொகுப்பு metadataவை பார்க்கவும்"
+msgstr ""
+"விசைப்பலகை அமைப்பு \"%s\"\n"
+"பதிப்புரிமை &#169; X.Org Foundation மற்றும் XKeyboardConfig contributors\n"
+"உரிமத்திற்கு தொகுப்பு metadataவை பார்க்கவும்"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2585
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2583
 msgid "Unknown"
 msgstr "தெரியாத"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2631
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2629
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "விசைப்பலகை அமைப்பு \"%s\""
@@ -50,15 +51,15 @@ msgstr "விசைப்பலகை அமைப்பு \"%s\""
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
-msgstr[0] "அமைப்பு \"%s\""
-msgstr[1] "அமைப்புகள் \"%s\""
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:737
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
-msgstr[0] "விருப்பம் \"%s\""
-msgstr[1] "விருப்பங்கள் \"%s\""
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:745
 #, c-format
@@ -101,7 +102,10 @@ msgstr "விசைப்பலகை மேம்பாடு கையாள�
 msgid ""
 "A collection of scripts to run whenever the keyboard state is reloaded. "
 "Useful for re-applying xmodmap based adjustments"
-msgstr "ஒரு தொகுப்பு ஸ்கிரிப்ட்கள், விசைப்பலகை நிலையை மீட்டு ஏற்றும் போதெல்லாம் இயக்க. எக்ஸ்மாட்மாப் அடிப்படையான சரிசெய்தல்களை மீண்டும் பயன்படுத்த உபயோகமாகும்."
+msgstr ""
+"ஒரு தொகுப்பு ஸ்கிரிப்ட்கள், விசைப்பலகை நிலையை மீட்டு ஏற்றும் போதெல்லாம் "
+"இயக்க. எக்ஸ்மாட்மாப் அடிப்படையான சரிசெய்தல்களை மீண்டும் பயன்படுத்த "
+"உபயோகமாகும்."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:8
 msgid "modmap file list"
@@ -131,7 +135,9 @@ msgstr "குழுப்பெயர்களுக்கு பதில் �
 msgid ""
 "Show layout names instead of group names (only for versions of XFree "
 "supporting multiple layouts)"
-msgstr "குழுப்பெயர்களுக்கு பதில் அமைப்பு பெயர்களைக் காட்டுக. (பல அமைப்புகளை ஆதரிக்கும் எக்ஸ் ஃப்ரீ பதிப்புகளுக்கு மட்டும்)"
+msgstr ""
+"குழுப்பெயர்களுக்கு பதில் அமைப்பு பெயர்களைக் காட்டுக. (பல அமைப்புகளை "
+"ஆதரிக்கும் எக்ஸ் ஃப்ரீ பதிப்புகளுக்கு மட்டும்)"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:15
 msgid "Load extra configuration items"

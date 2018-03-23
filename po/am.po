@@ -1,45 +1,48 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# samson <sambelet@yahoo.com>, 2013,2015,2017
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-28 09:52+0100\n"
-"PO-Revision-Date: 2017-09-19 15:12+0000\n"
-"Last-Translator: samson <sambelet@yahoo.com>\n"
-"Language-Team: Amharic (http://www.transifex.com/mate/MATE/language/am/)\n"
+"POT-Creation-Date: 2018-03-14 09:47+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: samson <sambelet@yahoo.com>, 2018\n"
+"Language-Team: Amharic (https://www.transifex.com/mate/teams/13566/am/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: am\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: ../libmatekbd/matekbd-indicator.c:116 ../libmatekbd/matekbd-status.c:310
+#: ../libmatekbd/matekbd-indicator.c:116 ../libmatekbd/matekbd-status.c:315
 #, c-format
 msgid "There was an error loading an image: %s"
 msgstr "ምስሉ ሲጫን ስህተት ተፈጥሯል: %s"
 
-#: ../libmatekbd/matekbd-indicator.c:694 ../libmatekbd/matekbd-status.c:646
+#: ../libmatekbd/matekbd-indicator.c:694 ../libmatekbd/matekbd-status.c:651
 msgid "XKB initialization error"
 msgstr "XKB የ ማስነሻ ስህተት"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2503
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2501
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
 "Copyright &#169; X.Org Foundation and XKeyboardConfig contributors\n"
 "For licensing see package metadata"
-msgstr "Keyboard layout \"%s\"\nCopyright &#169; X.Org Foundation and XKeyboardConfig contributors\nFor licensing see package metadata"
+msgstr ""
+"Keyboard layout \"%s\"\n"
+"Copyright &#169; X.Org Foundation and XKeyboardConfig contributors\n"
+"For licensing see package metadata"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2585
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2583
 msgid "Unknown"
 msgstr "ያልታወቀ"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2631
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2629
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "የፊደል ገበታ አቀማመጥ \"%s\""
@@ -55,7 +58,7 @@ msgstr[1] "እቅዶች \"%s\""
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
-msgstr[0] "ምርጫ \"%s\""
+msgstr[0] "ምርጫዎች \"%s\""
 msgstr[1] "ምርጫዎች \"%s\""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:745
@@ -73,11 +76,11 @@ msgstr "ምርጫዎች የሉም "
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:1
 msgid "Keyboard model"
-msgstr "የፊደል ገበታው አይነት "
+msgstr "የ ፊደል ገበታው አይነት "
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:2
 msgid "keyboard model"
-msgstr "የፊደል ገበታው አይነት "
+msgstr "የ ፊደል ገበታው አይነት "
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:3
 msgid "Keyboard layout"
@@ -89,7 +92,7 @@ msgstr "የ ፊደል ገበታ አቀማመጥ"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:5
 msgid "Keyboard options"
-msgstr "የፊደል ገበታ ምርጫዎች"
+msgstr "የ ፊደል ገበታ ምርጫዎች"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:6
 msgid "Keyboard Update Handlers"
@@ -99,7 +102,8 @@ msgstr "የ ፊደል ገበታ ማሻሻያ"
 msgid ""
 "A collection of scripts to run whenever the keyboard state is reloaded. "
 "Useful for re-applying xmodmap based adjustments"
-msgstr "የ ጽሁፎች ስብስብስ ማስኬጃ የ ፊደል ገበታ በሚጫን ጊዜ: የሚጠቅመው የ xmodmap based ማስተካከያ ሲፈጸም ነው"
+msgstr ""
+"የ ጽሁፎች ስብስብስ ማስኬጃ የ ፊደል ገበታ በሚጫን ጊዜ: የሚጠቅመው የ xmodmap based ማስተካከያ ሲፈጸም ነው"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:8
 msgid "modmap file list"
@@ -129,7 +133,8 @@ msgstr "የ እቅድ ስም ማሳያ ከ ቡድን ስሞች ይልቅ"
 msgid ""
 "Show layout names instead of group names (only for versions of XFree "
 "supporting multiple layouts)"
-msgstr "የ እቅድ ስም ማሳያ ከ ቡድን ስም ይልቅ (ለ እትሞች ብቻ ለ XFree supporting multiple layouts)"
+msgstr ""
+"የ እቅድ ስም ማሳያ ከ ቡድን ስም ይልቅ (ለ እትሞች ብቻ ለ XFree supporting multiple layouts)"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:15
 msgid "Load extra configuration items"
@@ -179,7 +184,9 @@ msgstr "ፊደል"
 msgid ""
 "The font for the layout indicator. This should be in \"[FAMILY-LIST] [STYLE-"
 "OPTIONS] [SIZE]\" format."
-msgstr "የ እቅድ መጠቆሚያ ፊደል ከ እነዚህ ውስጥ መሆን አለበት: \"[FAMILY-LIST] [STYLE-OPTIONS] [SIZE]\" አቀራረብ."
+msgstr ""
+"የ እቅድ መጠቆሚያ ፊደል ከ እነዚህ ውስጥ መሆን አለበት: \"[FAMILY-LIST] [STYLE-OPTIONS] "
+"[SIZE]\" አቀራረብ."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:27
 msgid "The foreground color"
