@@ -1,11 +1,15 @@
+### libmatekbd 1.20.2
+
+  * Translations update
+
 ### libmatekbd 1.20.1
 
-    tx: update translations
-    Use gdk screen resolution for font in keyboard status notification icon
+  * Translations update
+  * Use gdk screen resolution for font in keyboard status notification icon
 
 ### libmatekbd 1.20.0
 
-  * sync with transifex
+  * Translations update
   * bump minimum GDK version according to GTK+ one
   * remove < gtk+-3.22 bits and bump required gtk+
   * building: bump required glib version to 2.50.0
