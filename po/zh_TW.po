@@ -35,8 +35,8 @@ msgid ""
 "For licensing see package metadata"
 msgstr ""
 "鍵盤配置「%s」\n"
-"版權所有 &#169; X.Org 基金會及 XKeyboardConfig 貢獻者\n"
-"要了解授權請查閱套件中繼資料"
+"著作權所有 &#169; X.Org 基金會及 XKeyboardConfig 貢獻者\n"
+"要了解授權請查閱軟體包中介資料"
 
 #: ../libmatekbd/matekbd-keyboard-drawing.c:2583
 msgid "Unknown"

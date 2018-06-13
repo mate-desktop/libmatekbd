@@ -51,15 +51,15 @@ msgstr "\"%s\" Klavye Düzeni"
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "düzen \"%s\""
+msgstr[1] "düzen \"%s\""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:737
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "seçenek \"%s\""
+msgstr[1] "seçenek \"%s\""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:745
 #, c-format

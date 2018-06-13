@@ -45,7 +45,7 @@ msgstr "ያልታወቀ"
 #: ../libmatekbd/matekbd-keyboard-drawing.c:2629
 #, c-format
 msgid "Keyboard Layout \"%s\""
-msgstr "የፊደል ገበታ አቀማመጥ \"%s\""
+msgstr "የ ፊደል ገበታ አቀማመጥ \"%s\""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:719
 #, c-format

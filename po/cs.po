@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: cs\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
 
 #: ../libmatekbd/matekbd-indicator.c:116 ../libmatekbd/matekbd-status.c:315
 #, c-format
@@ -54,6 +54,7 @@ msgid_plural "layouts \"%s\""
 msgstr[0] "rozložení \"%s\""
 msgstr[1] "rozložení \"%s\""
 msgstr[2] "rozložení \"%s\""
+msgstr[3] "rozložení \"%s\""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:737
 #, c-format
@@ -62,6 +63,7 @@ msgid_plural "options \"%s\""
 msgstr[0] "volba \"%s\""
 msgstr[1] "volby \"%s\""
 msgstr[2] "volby \"%s\""
+msgstr[3] "volby \"%s\""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:745
 #, c-format

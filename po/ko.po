@@ -51,13 +51,13 @@ msgstr "\"%s\" 키보드 배치"
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
-msgstr[0] ""
+msgstr[0] "\"%s\" 배치"
 
 #: ../libmatekbd/matekbd-keyboard-config.c:737
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
-msgstr[0] ""
+msgstr[0] "\"%s\" 옵션"
 
 #: ../libmatekbd/matekbd-keyboard-config.c:745
 #, c-format

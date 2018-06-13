@@ -51,8 +51,8 @@ msgstr "Klaviatuuripaigutus \"%s\""
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "paigutus \"%s\""
+msgstr[1] "paigutused \"%s\""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:737
 #, c-format

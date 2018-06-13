@@ -51,15 +51,15 @@ msgstr "Tastaturbelegung »%s«"
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Belegung »%s«"
+msgstr[1] "Belegungen »%s«"
 
 #: ../libmatekbd/matekbd-keyboard-config.c:737
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Option »%s«"
+msgstr[1] "Optionen »%s«"
 
 #: ../libmatekbd/matekbd-keyboard-config.c:745
 #, c-format
