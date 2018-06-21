@@ -1,5 +1,8 @@
 ### libmatekbd 1.21.0
 
+  * sync with transifex
+  * Use gdk screen resolution for font in keyboard status notification icon, to get correct scaling on HiPDI displays.
+
 ### libmatekbd 1.20.0
 
   * sync with transifex
