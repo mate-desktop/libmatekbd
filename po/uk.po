@@ -1,48 +1,48 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# wanderlust <wanderlust@ukr.net>, 2009
-# zubr139, 2012
-# Микола Ткач <znadibnyk@gmail.com>, 2013,2015-2016
-# Шаповалов Анатолій Романович <elrond.716.smith@gmail.com>, 2015
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-28 09:52+0100\n"
-"PO-Revision-Date: 2017-09-19 13:36+0000\n"
-"Last-Translator: Микола Ткач <znadibnyk@gmail.com>\n"
-"Language-Team: Ukrainian (http://www.transifex.com/mate/MATE/language/uk/)\n"
+"POT-Creation-Date: 2018-03-14 09:42+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Шаповалов Анатолій Романович <elrond.716.smith@gmail.com>, 2018\n"
+"Language-Team: Ukrainian (https://www.transifex.com/mate/teams/13566/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: uk\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
-#: ../libmatekbd/matekbd-indicator.c:116 ../libmatekbd/matekbd-status.c:310
+#: ../libmatekbd/matekbd-indicator.c:116 ../libmatekbd/matekbd-status.c:315
 #, c-format
 msgid "There was an error loading an image: %s"
 msgstr "Помилка завантаження зображення: %s"
 
-#: ../libmatekbd/matekbd-indicator.c:694 ../libmatekbd/matekbd-status.c:646
+#: ../libmatekbd/matekbd-indicator.c:694 ../libmatekbd/matekbd-status.c:651
 msgid "XKB initialization error"
 msgstr "Помилка ініціялізації XKB"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2503
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2501
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
 "Copyright &#169; X.Org Foundation and XKeyboardConfig contributors\n"
 "For licensing see package metadata"
-msgstr "Розкладка набірниці \"%s\"\nАвторське право &#169; X.Org Foundation та помічники у написанні XKeyboardConfig\nЛіцензійні умови викладені у метаданих"
+msgstr ""
+"Розкладка набірниці \"%s\"\n"
+"Авторське право &#169; X.Org Foundation та помічники у написанні XKeyboardConfig\n"
+"Ліцензійні умови викладені у метаданих"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2585
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2583
 msgid "Unknown"
-msgstr "Невідомо"
+msgstr "Невідомий"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2631
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2629
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "Розкладка набірниці \"%s\""
@@ -51,17 +51,19 @@ msgstr "Розкладка набірниці \"%s\""
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
-msgstr[0] "розкладка \"%s\""
-msgstr[1] "розкладки \"%s\""
-msgstr[2] "розкладок \"%s\""
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:737
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
-msgstr[0] "параметр \"%s\""
-msgstr[1] "параметри \"%s\""
-msgstr[2] "параметрів \"%s\""
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:745
 #, c-format
@@ -104,7 +106,9 @@ msgstr "Опрацьовники оновлення набірниці"
 msgid ""
 "A collection of scripts to run whenever the keyboard state is reloaded. "
 "Useful for re-applying xmodmap based adjustments"
-msgstr "Колекція сценаріїв, що запускаються при перезавантаженні стану набірниці. Корисно для повторного накладання корекцій на основі xmodmap"
+msgstr ""
+"Колекція сценаріїв, що запускаються при перезавантаженні стану набірниці. "
+"Корисно для повторного накладання корекцій на основі xmodmap"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:8
 msgid "modmap file list"
@@ -134,7 +138,9 @@ msgstr "Показувати назви розкладок замість наз
 msgid ""
 "Show layout names instead of group names (only for versions of XFree "
 "supporting multiple layouts)"
-msgstr "Показувати назви замість назв груп (лише для версій XFree, які підтримують декілька розкладок)"
+msgstr ""
+"Показувати назви замість назв груп (лише для версій XFree, які підтримують "
+"декілька розкладок)"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:15
 msgid "Load extra configuration items"
@@ -184,7 +190,9 @@ msgstr "Шрифт"
 msgid ""
 "The font for the layout indicator. This should be in \"[FAMILY-LIST] [STYLE-"
 "OPTIONS] [SIZE]\" format."
-msgstr "Шрифт індикатора розкладки. Має бути у форматі: \"[FAMILY-LIST] [STYLE-OPTIONS] [SIZE]\" ."
+msgstr ""
+"Шрифт індикатора розкладки. Має бути у форматі: \"[FAMILY-LIST] [STYLE-"
+"OPTIONS] [SIZE]\" ."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:27
 msgid "The foreground color"
@@ -194,7 +202,9 @@ msgstr "Колір тексту"
 msgid ""
 "The foreground color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
-msgstr "Колір переднього пляну для індикатора розкладки. Має бути у форматі \"RGB \", наприклад \" 255 ​​0 0 \" ."
+msgstr ""
+"Колір переднього пляну для індикатора розкладки. Має бути у форматі \"RGB "
+"\", наприклад \" 255 ​​0 0 \" ."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:29
 msgid "The background color"
@@ -204,7 +214,9 @@ msgstr "Колір тла"
 msgid ""
 "The background color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
-msgstr "Колір заднього пляну для індикатора розкладки. Має бути у форматі \"RGB \", наприклад \" 255 ​​0 0 \" ."
+msgstr ""
+"Колір заднього пляну для індикатора розкладки. Має бути у форматі \"RGB \", "
+"наприклад \" 255 ​​0 0 \" ."
 
 #: ../libmatekbd/show-layout.ui.h:1
 msgid "Keyboard Layout"

@@ -1,45 +1,48 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Siranush <ss.m.95@mail.ru>, 2015
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-28 09:52+0100\n"
-"PO-Revision-Date: 2017-09-22 14:38+0000\n"
-"Last-Translator: Siranush <ss.m.95@mail.ru>\n"
-"Language-Team: Armenian (http://www.transifex.com/mate/MATE/language/hy/)\n"
+"POT-Creation-Date: 2018-03-14 09:42+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Siranush <ss.m.95@mail.ru>, 2018\n"
+"Language-Team: Armenian (https://www.transifex.com/mate/teams/13566/hy/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: hy\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../libmatekbd/matekbd-indicator.c:116 ../libmatekbd/matekbd-status.c:310
+#: ../libmatekbd/matekbd-indicator.c:116 ../libmatekbd/matekbd-status.c:315
 #, c-format
 msgid "There was an error loading an image: %s"
 msgstr "Պատկերի բեռնման ժամանակ տեղի է  ունեցել սխալ: %s"
 
-#: ../libmatekbd/matekbd-indicator.c:694 ../libmatekbd/matekbd-status.c:646
+#: ../libmatekbd/matekbd-indicator.c:694 ../libmatekbd/matekbd-status.c:651
 msgid "XKB initialization error"
 msgstr "XKB սկզբնարժեքավորման սխալ"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2503
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2501
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
 "Copyright &#169; X.Org Foundation and XKeyboardConfig contributors\n"
 "For licensing see package metadata"
-msgstr "Ստեղնաշարի դասավորություն \"%s\"\nՀեղինակային իրավունք &#169; X.Org Հիմնադրամ և XKeyboardConfig ջակիցներ\nԼիցենզավորման համար տես մետատվյալների փաթեթը"
+msgstr ""
+"Ստեղնաշարի դասավորություն \"%s\"\n"
+"Հեղինակային իրավունք &#169; X.Org Հիմնադրամ և XKeyboardConfig ջակիցներ\n"
+"Լիցենզավորման համար տես մետատվյալների փաթեթը"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2585
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2583
 msgid "Unknown"
 msgstr "Անհայտ"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2631
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2629
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "Ստեղնաշարի Դասավորություն \"%s\""
@@ -48,15 +51,15 @@ msgstr "Ստեղնաշարի Դասավորություն \"%s\""
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
-msgstr[0] "Դասավորություն \"%s\""
-msgstr[1] "Դասավորություններ \"%s\""
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:737
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
-msgstr[0] "տարբերակ \"%s\""
-msgstr[1] "տարբերակներ \"%s\""
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:745
 #, c-format
@@ -99,7 +102,9 @@ msgstr "Ստեղնաշարը Թարմացնել Մշակման ծրագրով"
 msgid ""
 "A collection of scripts to run whenever the keyboard state is reloaded. "
 "Useful for re-applying xmodmap based adjustments"
-msgstr "Ինտերպրետացվող ծրագրի հավաքածուն գործարկել, երբ որ ստեղնաշարը վերբեռնված է։ Օգտակարության համար կրկին դիմել xmodmap վրա հիմնված ճշգրտումներին։"
+msgstr ""
+"Ինտերպրետացվող ծրագրի հավաքածուն գործարկել, երբ որ ստեղնաշարը վերբեռնված է։ "
+"Օգտակարության համար կրկին դիմել xmodmap վրա հիմնված ճշգրտումներին։"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:8
 msgid "modmap file list"
@@ -129,7 +134,9 @@ msgstr "Խմբի անունները փոխարեն ցույց տալ անուն�
 msgid ""
 "Show layout names instead of group names (only for versions of XFree "
 "supporting multiple layouts)"
-msgstr "Ցույց տալ խմբերի անուներ դասավորության անուների փոխարեն (միայն XFree տարբերակների համար աջակցող բազմաթիվ դասավորություններ)"
+msgstr ""
+"Ցույց տալ խմբերի անուներ դասավորության անուների փոխարեն (միայն XFree "
+"տարբերակների համար աջակցող բազմաթիվ դասավորություններ)"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:15
 msgid "Load extra configuration items"
@@ -179,7 +186,9 @@ msgstr "Տառատեսակը"
 msgid ""
 "The font for the layout indicator. This should be in \"[FAMILY-LIST] [STYLE-"
 "OPTIONS] [SIZE]\" format."
-msgstr "Դասավորությունը ցուցանիշի տառատեսակ։Սա պետք է լինի\"[FAMILY-LIST] [STYLE-OPTIONS] [SIZE]\" ձևաչափում։"
+msgstr ""
+"Դասավորությունը ցուցանիշի տառատեսակ։Սա պետք է լինի\"[FAMILY-LIST] [STYLE-"
+"OPTIONS] [SIZE]\" ձևաչափում։"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:27
 msgid "The foreground color"
@@ -189,7 +198,9 @@ msgstr "Առաջնահերթային գույնը"
 msgid ""
 "The foreground color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
-msgstr "Դասավորության ցուցանիշի առաջնային գույնը.Սա պետք է լինի է «R G B» ձևաչափով, օրինակ, «255 0 0»."
+msgstr ""
+"Դասավորության ցուցանիշի առաջնային գույնը.Սա պետք է լինի է «R G B» ձևաչափով, "
+"օրինակ, «255 0 0»."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:29
 msgid "The background color"
@@ -199,7 +210,9 @@ msgstr "Ֆոնի գույնը"
 msgid ""
 "The background color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
-msgstr "Դասավորության ցուցանիշի ֆոնի գույնը.Սա պետք է լինի է «R G B» ձևաչափով, օրինակ, «255 0 0»."
+msgstr ""
+"Դասավորության ցուցանիշի ֆոնի գույնը.Սա պետք է լինի է «R G B» ձևաչափով, "
+"օրինակ, «255 0 0»."
 
 #: ../libmatekbd/show-layout.ui.h:1
 msgid "Keyboard Layout"

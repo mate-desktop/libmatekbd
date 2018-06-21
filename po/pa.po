@@ -1,45 +1,48 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# A S Alam <aalam@users.sf.net>, 2007, 2009, 2010
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-28 09:52+0100\n"
-"PO-Revision-Date: 2017-09-19 13:36+0000\n"
-"Last-Translator: infirit <inactive+infirit@transifex.com>\n"
-"Language-Team: Panjabi (Punjabi) (http://www.transifex.com/mate/MATE/language/pa/)\n"
+"POT-Creation-Date: 2018-03-14 09:42+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
+"Language-Team: Panjabi (Punjabi) (https://www.transifex.com/mate/teams/13566/pa/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pa\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../libmatekbd/matekbd-indicator.c:116 ../libmatekbd/matekbd-status.c:310
+#: ../libmatekbd/matekbd-indicator.c:116 ../libmatekbd/matekbd-status.c:315
 #, c-format
 msgid "There was an error loading an image: %s"
 msgstr "ਇੱਕ ਚਿੱਤਰ ਲੋਡ ਕਰਨ ਦੌਰਾਨ ਗਲਤੀ ਆਈ ਹੈ: %s"
 
-#: ../libmatekbd/matekbd-indicator.c:694 ../libmatekbd/matekbd-status.c:646
+#: ../libmatekbd/matekbd-indicator.c:694 ../libmatekbd/matekbd-status.c:651
 msgid "XKB initialization error"
 msgstr "XKB ਸ਼ੁਰੂਆਤ ਗਲਤੀ"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2503
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2501
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
 "Copyright &#169; X.Org Foundation and XKeyboardConfig contributors\n"
 "For licensing see package metadata"
-msgstr "ਕੀਬੋਰਡ ਲੇਆਉਟ \"%s\"\nCopyright &#169; X.Org ਫਾਊਂਡੇਸ਼ਨ ਅਤੇ XKeyboardConfig ਯੋਗਦਾਨੀ\nਲਾਈਸੈਂਸ ਲਈ ਪੈਕੇਜ ਮੇਟਾਡਾਟਾ ਵੇਖੋ"
+msgstr ""
+"ਕੀਬੋਰਡ ਲੇਆਉਟ \"%s\"\n"
+"Copyright &#169; X.Org ਫਾਊਂਡੇਸ਼ਨ ਅਤੇ XKeyboardConfig ਯੋਗਦਾਨੀ\n"
+"ਲਾਈਸੈਂਸ ਲਈ ਪੈਕੇਜ ਮੇਟਾਡਾਟਾ ਵੇਖੋ"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2585
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2583
 msgid "Unknown"
 msgstr "ਅਣਜਾਣ"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2631
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2629
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "ਕੀ-ਬੋਰਡ ਲੇਆਉਟ \"%s\""
@@ -48,15 +51,15 @@ msgstr "ਕੀ-ਬੋਰਡ ਲੇਆਉਟ \"%s\""
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
-msgstr[0] "ਲੇਆਉਟ \"%s\""
-msgstr[1] "\"%s\" ਲੇਆਉਟ"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:737
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
-msgstr[0] "ਚੋਣ \"%s\""
-msgstr[1] "ਚੋਣਾਂ \"%s\""
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:745
 #, c-format
@@ -99,7 +102,9 @@ msgstr "ਕੀ-ਬੋਰਡ ਅੱਪਡੇਟ ਹੈਂਲਡਰ"
 msgid ""
 "A collection of scripts to run whenever the keyboard state is reloaded. "
 "Useful for re-applying xmodmap based adjustments"
-msgstr "ਚਲਾਉਣ ਲਈ ਸਕ੍ਰਿਪਟਾਂ ਦਾ ਭੰਡਾਰ ਹੈ, ਜੋ ਕਿ ਕੀ-ਬੋਰਡ ਹਾਲਤ ਮੁੜ-ਲੋਡ ਕਰਨ ਦੌਰਾਨ ਚੱਲਦੀਆਂ ਹਨ। xmodmap ਆਧਾਰ ਬਦਲਾਅ ਮੁੜ-ਲਾਗੂ ਕਰਨ ਦੌਰਾਨ ਲਾਭਦਾਇਕ ਹੈ।"
+msgstr ""
+"ਚਲਾਉਣ ਲਈ ਸਕ੍ਰਿਪਟਾਂ ਦਾ ਭੰਡਾਰ ਹੈ, ਜੋ ਕਿ ਕੀ-ਬੋਰਡ ਹਾਲਤ ਮੁੜ-ਲੋਡ ਕਰਨ ਦੌਰਾਨ ਚੱਲਦੀਆਂ"
+" ਹਨ। xmodmap ਆਧਾਰ ਬਦਲਾਅ ਮੁੜ-ਲਾਗੂ ਕਰਨ ਦੌਰਾਨ ਲਾਭਦਾਇਕ ਹੈ।"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:8
 msgid "modmap file list"
@@ -129,7 +134,8 @@ msgstr "ਗਰੁੱਪ ਨਾਂ ਦੀ ਬਜਾਏ ਲੇਆਉਟ ਨਾਂ 
 msgid ""
 "Show layout names instead of group names (only for versions of XFree "
 "supporting multiple layouts)"
-msgstr "ਗਰੁੱਪ ਨਾਂ ਦੀ ਬਜਾਏ ਲੇਆਉਟ ਨਾਂ ਵੇਖੋ (XFree ਵਲੋਂ ਸਹਾਇਕ ਬਹੁ ਲੇਆਉਟ ਦੇ ਵਰਜਨ ਲਈ ਹੀ)"
+msgstr ""
+"ਗਰੁੱਪ ਨਾਂ ਦੀ ਬਜਾਏ ਲੇਆਉਟ ਨਾਂ ਵੇਖੋ (XFree ਵਲੋਂ ਸਹਾਇਕ ਬਹੁ ਲੇਆਉਟ ਦੇ ਵਰਜਨ ਲਈ ਹੀ)"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:15
 msgid "Load extra configuration items"

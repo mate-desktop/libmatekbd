@@ -1,47 +1,48 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Adi Roiban https://launchpad.net/~adiroiban, 2009
-# Daniel <danny3@tutanota.com>, 2015
-# Lucian Adrian Grijincu <lucian.grijincu@gmail.com>, 2010
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-28 09:52+0100\n"
-"PO-Revision-Date: 2017-09-19 13:36+0000\n"
-"Last-Translator: Daniel <danny3@tutanota.com>\n"
-"Language-Team: Romanian (http://www.transifex.com/mate/MATE/language/ro/)\n"
+"POT-Creation-Date: 2018-03-14 09:42+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Daniel <danny3@tutanota.com>, 2018\n"
+"Language-Team: Romanian (https://www.transifex.com/mate/teams/13566/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ro\n"
 "Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
 
-#: ../libmatekbd/matekbd-indicator.c:116 ../libmatekbd/matekbd-status.c:310
+#: ../libmatekbd/matekbd-indicator.c:116 ../libmatekbd/matekbd-status.c:315
 #, c-format
 msgid "There was an error loading an image: %s"
 msgstr "S-a produs o eroare la încărcarea unei imagini: %s"
 
-#: ../libmatekbd/matekbd-indicator.c:694 ../libmatekbd/matekbd-status.c:646
+#: ../libmatekbd/matekbd-indicator.c:694 ../libmatekbd/matekbd-status.c:651
 msgid "XKB initialization error"
 msgstr "Eroare inițializare XKB"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2503
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2501
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
 "Copyright &#169; X.Org Foundation and XKeyboardConfig contributors\n"
 "For licensing see package metadata"
-msgstr "Aranjament tastatură „%s”\nDrepturi de autor &#169; Fundația X.Org și colaboratorii XKeyboardConfig\nPentru licențiere consultați metadatele pachetului"
+msgstr ""
+"Aranjament tastatură „%s”\n"
+"Drepturi de autor &#169; Fundația X.Org și colaboratorii XKeyboardConfig\n"
+"Pentru licențiere consultați metadatele pachetului"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2585
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2583
 msgid "Unknown"
 msgstr "Necunoscut"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2631
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2629
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "Aranjament tastatură „%s”"
@@ -50,17 +51,17 @@ msgstr "Aranjament tastatură „%s”"
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
-msgstr[0] "aranjament „%s”"
-msgstr[1] "aranjamente „%s”"
-msgstr[2] "aranjamente „%s”"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:737
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
-msgstr[0] "opțiune „%s”"
-msgstr[1] "opțiuni „%s”"
-msgstr[2] "opțiuni „%s”"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:745
 #, c-format
@@ -103,7 +104,9 @@ msgstr "Operator actualizare tastatură"
 msgid ""
 "A collection of scripts to run whenever the keyboard state is reloaded. "
 "Useful for re-applying xmodmap based adjustments"
-msgstr "O colecție de scripturi de rulat ori de câte ori starea tastaturii este reîncărcată. Folositor pentru aplicarea de corecții bazate pe xmodmap"
+msgstr ""
+"O colecție de scripturi de rulat ori de câte ori starea tastaturii este "
+"reîncărcată. Folositor pentru aplicarea de corecții bazate pe xmodmap"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:8
 msgid "modmap file list"
@@ -123,7 +126,8 @@ msgstr "Păstrează și administrează grupuri separate per fereastră"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:12
 msgid "Save/restore indicators together with layout groups"
-msgstr "Salvează/restarurează indicatorii împreună cu grupurile de aranjamente"
+msgstr ""
+"Salvează/restarurează indicatorii împreună cu grupurile de aranjamente"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:13
 msgid "Show layout names instead of group names"
@@ -133,7 +137,9 @@ msgstr "Afișare nume aranjament în locul numelui grupurilor"
 msgid ""
 "Show layout names instead of group names (only for versions of XFree "
 "supporting multiple layouts)"
-msgstr "Afișare nume aranjament în locul numelui grupurilor (doar pentru versiuni de XFree ce suportă aranjamente multiple)"
+msgstr ""
+"Afișare nume aranjament în locul numelui grupurilor (doar pentru versiuni de"
+" XFree ce suportă aranjamente multiple)"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:15
 msgid "Load extra configuration items"
@@ -183,7 +189,9 @@ msgstr "Fontul"
 msgid ""
 "The font for the layout indicator. This should be in \"[FAMILY-LIST] [STYLE-"
 "OPTIONS] [SIZE]\" format."
-msgstr "Fontul pentru indicatorul aranjament. Acesta ar trebui să fie în formatul „[FAMILY-LIST] [STYLE-OPTIONS] [SIZE]”."
+msgstr ""
+"Fontul pentru indicatorul aranjament. Acesta ar trebui să fie în formatul "
+"„[FAMILY-LIST] [STYLE-OPTIONS] [SIZE]”."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:27
 msgid "The foreground color"
@@ -193,7 +201,9 @@ msgstr "Culoarea de prim-plan"
 msgid ""
 "The foreground color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
-msgstr "Culoarea de prim plan pentru indicatorul aranjament. Aceasta ar trebui să fie în formatul „Roșu Verde Albastru”, de exemplu „255 0 0”."
+msgstr ""
+"Culoarea de prim plan pentru indicatorul aranjament. Aceasta ar trebui să "
+"fie în formatul „Roșu Verde Albastru”, de exemplu „255 0 0”."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:29
 msgid "The background color"
@@ -203,7 +213,9 @@ msgstr "Culoarea de fundal"
 msgid ""
 "The background color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
-msgstr "Culoarea de fundal pentru indicatorul aranjament. Aceasta ar trebui să fie în formatul „Roșu Verde Albastru”, de exemplu „255 0 0”."
+msgstr ""
+"Culoarea de fundal pentru indicatorul aranjament. Aceasta ar trebui să fie "
+"în formatul „Roșu Verde Albastru”, de exemplu „255 0 0”."
 
 #: ../libmatekbd/show-layout.ui.h:1
 msgid "Keyboard Layout"

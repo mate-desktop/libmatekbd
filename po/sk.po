@@ -1,47 +1,48 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Ján Ďanovský <dagsoftware@yahoo.com>, 2014,2016
-# Roman Mátyus <romanmatyus@gmail.com>, 2010
-# Tibor Kaputa <tibbbi2@gmail.com>, 2014
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-28 09:52+0100\n"
-"PO-Revision-Date: 2017-09-19 13:36+0000\n"
-"Last-Translator: Ján Ďanovský <dagsoftware@yahoo.com>\n"
-"Language-Team: Slovak (http://www.transifex.com/mate/MATE/language/sk/)\n"
+"POT-Creation-Date: 2018-03-14 09:42+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Tibor Kaputa <tibbbi2@gmail.com>, 2018\n"
+"Language-Team: Slovak (https://www.transifex.com/mate/teams/13566/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: sk\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);\n"
 
-#: ../libmatekbd/matekbd-indicator.c:116 ../libmatekbd/matekbd-status.c:310
+#: ../libmatekbd/matekbd-indicator.c:116 ../libmatekbd/matekbd-status.c:315
 #, c-format
 msgid "There was an error loading an image: %s"
 msgstr "Nastala chyba pri načítaní obrázku: %s"
 
-#: ../libmatekbd/matekbd-indicator.c:694 ../libmatekbd/matekbd-status.c:646
+#: ../libmatekbd/matekbd-indicator.c:694 ../libmatekbd/matekbd-status.c:651
 msgid "XKB initialization error"
 msgstr "Chyba inicializácie XKB"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2503
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2501
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
 "Copyright &#169; X.Org Foundation and XKeyboardConfig contributors\n"
 "For licensing see package metadata"
-msgstr "Rozloženie klávesnice „%s“\nCopyright &#169; X.Org Foundation a prispievajúci k XKeyboardConfig\nLicencovanie si pozrite v metadátach balíka"
+msgstr ""
+"Rozloženie klávesnice „%s“\n"
+"Copyright &#169; X.Org Foundation a prispievajúci k XKeyboardConfig\n"
+"Licencovanie si pozrite v metadátach balíka"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2585
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2583
 msgid "Unknown"
-msgstr "Neznáme"
+msgstr "Neznámy"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2631
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2629
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "Rozloženie klávesnice „%s“"
@@ -50,17 +51,19 @@ msgstr "Rozloženie klávesnice „%s“"
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
-msgstr[0] "rozloženie „%s“"
-msgstr[1] "rozloženia „%s“"
-msgstr[2] "rozložení „%s“"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:737
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
-msgstr[0] "možnosť „%s“"
-msgstr[1] "možnosti „%s“"
-msgstr[2] "možnosti „%s“"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:745
 #, c-format
@@ -103,7 +106,9 @@ msgstr "Obsluhy aktualizácie klávesnice"
 msgid ""
 "A collection of scripts to run whenever the keyboard state is reloaded. "
 "Useful for re-applying xmodmap based adjustments"
-msgstr "Skupina skriptov určená na spustenie vždy, keď dôjde k opätovnému načítaniu stavu klávesnice. Je to užitočné na opakované použitie zmien v „xmodmap“"
+msgstr ""
+"Skupina skriptov určená na spustenie vždy, keď dôjde k opätovnému načítaniu "
+"stavu klávesnice. Je to užitočné na opakované použitie zmien v „xmodmap“"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:8
 msgid "modmap file list"
@@ -133,7 +138,9 @@ msgstr "Zobraziť názvy rozložení namiesto názvov skupín"
 msgid ""
 "Show layout names instead of group names (only for versions of XFree "
 "supporting multiple layouts)"
-msgstr "Zobraziť názvy rozložení namiesto názvov skupín (iba u verzií XFree podporujúcich viacnásobné rozloženia)"
+msgstr ""
+"Zobraziť názvy rozložení namiesto názvov skupín (iba u verzií XFree "
+"podporujúcich viacnásobné rozloženia)"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:15
 msgid "Load extra configuration items"
@@ -183,7 +190,9 @@ msgstr "Písmo"
 msgid ""
 "The font for the layout indicator. This should be in \"[FAMILY-LIST] [STYLE-"
 "OPTIONS] [SIZE]\" format."
-msgstr "Písmo indikátora rozloženia. Táto hodnota by mala byť vo formáte „[ZOZNAM-RODINY] [MOŽNOSTI-ŠTÝLU] [VEĽKOSŤ]“."
+msgstr ""
+"Písmo indikátora rozloženia. Táto hodnota by mala byť vo formáte „[ZOZNAM-"
+"RODINY] [MOŽNOSTI-ŠTÝLU] [VEĽKOSŤ]“."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:27
 msgid "The foreground color"
@@ -193,7 +202,9 @@ msgstr "Farba popredia"
 msgid ""
 "The foreground color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
-msgstr "Farba popredia indikátora rozloženia. Táto hodnota by mala byť vo formáte „R G B“, napríklad „255 0 0“."
+msgstr ""
+"Farba popredia indikátora rozloženia. Táto hodnota by mala byť vo formáte „R"
+" G B“, napríklad „255 0 0“."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:29
 msgid "The background color"
@@ -203,7 +214,9 @@ msgstr "Farba pozadia"
 msgid ""
 "The background color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
-msgstr "Farba pozadia indikátora rozloženia. Táto hodnota by mala byť vo formáte „R G B“, napríklad „255 0 0“."
+msgstr ""
+"Farba pozadia indikátora rozloženia. Táto hodnota by mala byť vo formáte „R "
+"G B“, napríklad „255 0 0“."
 
 #: ../libmatekbd/show-layout.ui.h:1
 msgid "Keyboard Layout"

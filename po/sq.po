@@ -1,46 +1,48 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Ardit Dani <ardit.dani@gmail.com>, 2014
-# Laurent Dhima <laurenti@alblinux.net>, 2007, 2008
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-28 09:52+0100\n"
-"PO-Revision-Date: 2017-09-19 13:36+0000\n"
-"Last-Translator: infirit <inactive+infirit@transifex.com>\n"
-"Language-Team: Albanian (http://www.transifex.com/mate/MATE/language/sq/)\n"
+"POT-Creation-Date: 2018-03-14 09:42+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Ardit Dani <ardit.dani@gmail.com>, 2018\n"
+"Language-Team: Albanian (https://www.transifex.com/mate/teams/13566/sq/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: sq\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../libmatekbd/matekbd-indicator.c:116 ../libmatekbd/matekbd-status.c:310
+#: ../libmatekbd/matekbd-indicator.c:116 ../libmatekbd/matekbd-status.c:315
 #, c-format
 msgid "There was an error loading an image: %s"
 msgstr "U verifikua një gabim gjatë ngarkimit të një figure: %s"
 
-#: ../libmatekbd/matekbd-indicator.c:694 ../libmatekbd/matekbd-status.c:646
+#: ../libmatekbd/matekbd-indicator.c:694 ../libmatekbd/matekbd-status.c:651
 msgid "XKB initialization error"
 msgstr "Gabim i nisjes së XKB"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2503
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2501
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
 "Copyright &#169; X.Org Foundation and XKeyboardConfig contributors\n"
 "For licensing see package metadata"
-msgstr "Planimetria e tastierës «%s»\nCopyright &#169; X.Org Foundation e bashkpunëtorëve të XKeyboardConfig\nPër liçensën shiko metadata e paketit"
+msgstr ""
+"Planimetria e tastierës «%s»\n"
+"Copyright &#169; X.Org Foundation e bashkpunëtorëve të XKeyboardConfig\n"
+"Për liçensën shiko metadata e paketit"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2585
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2583
 msgid "Unknown"
-msgstr "i panjohur"
+msgstr "Panjohur"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2631
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2629
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "Planimetria e tastierës \"%s\""
@@ -49,15 +51,15 @@ msgstr "Planimetria e tastierës \"%s\""
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
-msgstr[0] "planimetria \"%s\""
-msgstr[1] "planimetritë \"%s\""
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:737
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
-msgstr[0] "opsioni \"%s\""
-msgstr[1] "opsionet \"%s\""
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:745
 #, c-format
@@ -100,7 +102,9 @@ msgstr "Trajtues rifreskimi tastiere"
 msgid ""
 "A collection of scripts to run whenever the keyboard state is reloaded. "
 "Useful for re-applying xmodmap based adjustments"
-msgstr "Një përmbledhje script/esh për t'u përdorur kur gjendja e tastierës ringarkohet. E nevojshme për të ri-aplikuar rregullime bazë tek xmodmap"
+msgstr ""
+"Një përmbledhje script/esh për t'u përdorur kur gjendja e tastierës "
+"ringarkohet. E nevojshme për të ri-aplikuar rregullime bazë tek xmodmap"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:8
 msgid "modmap file list"
@@ -130,7 +134,9 @@ msgstr "Shfaq emrat e planimetrive në vend të emrave të grupit"
 msgid ""
 "Show layout names instead of group names (only for versions of XFree "
 "supporting multiple layouts)"
-msgstr "Shfaq emrat e planimetrive në vend të emrave të grupit (vetëm për versionet e XFree që suportojnë më shumë se një planimetri)"
+msgstr ""
+"Shfaq emrat e planimetrive në vend të emrave të grupit (vetëm për versionet "
+"e XFree që suportojnë më shumë se një planimetri)"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:15
 msgid "Load extra configuration items"
@@ -142,7 +148,8 @@ msgstr "Ngarko ekzotike, planet e përdorura rrallë dhe opsionet"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:17
 msgid "Suppress the \"X sysconfig changed\" warning message"
-msgstr "Blloko mesazhin paralajmërues \"konfigurimi i sistemit X është ndryshuar\""
+msgstr ""
+"Blloko mesazhin paralajmërues \"konfigurimi i sistemit X është ndryshuar\""
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:18
 msgid "Allow to disable the keyboard indicator tray icon"

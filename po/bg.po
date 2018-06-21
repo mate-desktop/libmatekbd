@@ -1,48 +1,48 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Alexander Shopov <ash@kambanaria.org>, 2007, 2008, 2009, 2010
-# Yavor Doganov <yavor@gnu.org>, 2008
-# Замфир Йончев <zamfir.yonchev@gmail.com>, 2016
-# Любомир Василев, 2016
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-28 09:52+0100\n"
-"PO-Revision-Date: 2017-09-19 13:36+0000\n"
-"Last-Translator: Любомир Василев\n"
-"Language-Team: Bulgarian (http://www.transifex.com/mate/MATE/language/bg/)\n"
+"POT-Creation-Date: 2018-03-14 09:42+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Замфир Йончев <zamfir.yonchev@gmail.com>, 2018\n"
+"Language-Team: Bulgarian (https://www.transifex.com/mate/teams/13566/bg/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: bg\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../libmatekbd/matekbd-indicator.c:116 ../libmatekbd/matekbd-status.c:310
+#: ../libmatekbd/matekbd-indicator.c:116 ../libmatekbd/matekbd-status.c:315
 #, c-format
 msgid "There was an error loading an image: %s"
 msgstr "Грешка при зареждането на изображението: %s"
 
-#: ../libmatekbd/matekbd-indicator.c:694 ../libmatekbd/matekbd-status.c:646
+#: ../libmatekbd/matekbd-indicator.c:694 ../libmatekbd/matekbd-status.c:651
 msgid "XKB initialization error"
 msgstr "Грешка при инициализирането на XKB"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2503
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2501
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
 "Copyright &#169; X.Org Foundation and XKeyboardConfig contributors\n"
 "For licensing see package metadata"
-msgstr "Клавиатурна подредба „%s“\nАвторски права &#169; X.Org Foundation и сътрудници на XKeyboardConfig\nВижте мета-данните на пакета за информация относно лиценза"
+msgstr ""
+"Клавиатурна подредба „%s“\n"
+"Авторски права &#169; X.Org Foundation и сътрудници на XKeyboardConfig\n"
+"Вижте мета-данните на пакета за информация относно лиценза"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2585
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2583
 msgid "Unknown"
-msgstr "Непозната"
+msgstr "Неизвестно"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2631
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2629
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "Подредба на клавиатурата — %s"
@@ -102,7 +102,10 @@ msgstr "Скриптове за обработка на промяната на 
 msgid ""
 "A collection of scripts to run whenever the keyboard state is reloaded. "
 "Useful for re-applying xmodmap based adjustments"
-msgstr "Набор от скриптове, които да се изпълняват при всяко презареждане на състоянието на клавиатурата. Полезно е за повторното прилагане на допълнителни конфигурации по xmodmap."
+msgstr ""
+"Набор от скриптове, които да се изпълняват при всяко презареждане на "
+"състоянието на клавиатурата. Полезно е за повторното прилагане на "
+"допълнителни конфигурации по xmodmap."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:8
 msgid "modmap file list"
@@ -122,7 +125,8 @@ msgstr "Управление на отделна група за всеки пр
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:12
 msgid "Save/restore indicators together with layout groups"
-msgstr "Запазване/възстановяване на индикаторите заедно с групите по подредбата"
+msgstr ""
+"Запазване/възстановяване на индикаторите заедно с групите по подредбата"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:13
 msgid "Show layout names instead of group names"
@@ -132,7 +136,9 @@ msgstr "Показване на имената на подредбите вме�
 msgid ""
 "Show layout names instead of group names (only for versions of XFree "
 "supporting multiple layouts)"
-msgstr "Показване на имената на подредбите вместо имената на групите (само при версии на XFree, които поддържат множество подредби)"
+msgstr ""
+"Показване на имената на подредбите вместо имената на групите (само при "
+"версии на XFree, които поддържат множество подредби)"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:15
 msgid "Load extra configuration items"
@@ -182,7 +188,9 @@ msgstr "Шрифтът"
 msgid ""
 "The font for the layout indicator. This should be in \"[FAMILY-LIST] [STYLE-"
 "OPTIONS] [SIZE]\" format."
-msgstr "Шрифт за индикатора на подредбата. Трябва да бъде във формата„[СЕМЕЙСТВО] [СТИЛОВЕ] [РАЗМЕР]“."
+msgstr ""
+"Шрифт за индикатора на подредбата. Трябва да бъде във формата„[СЕМЕЙСТВО] "
+"[СТИЛОВЕ] [РАЗМЕР]“."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:27
 msgid "The foreground color"
@@ -192,7 +200,9 @@ msgstr "Основен цвят"
 msgid ""
 "The foreground color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
-msgstr "Предният цвят на индикатора за подредбата. Трябва да бъде във формата „Ч З В“, например: „255 0 0“."
+msgstr ""
+"Предният цвят на индикатора за подредбата. Трябва да бъде във формата „Ч З "
+"В“, например: „255 0 0“."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:29
 msgid "The background color"
@@ -202,7 +212,9 @@ msgstr "Цвят на фона"
 msgid ""
 "The background color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
-msgstr "Задният цвят на индикатора за подредбата. Трябва да бъде във формата „Ч З В“, например: „255 0 0“."
+msgstr ""
+"Задният цвят на индикатора за подредбата. Трябва да бъде във формата „Ч З "
+"В“, например: „255 0 0“."
 
 #: ../libmatekbd/show-layout.ui.h:1
 msgid "Keyboard Layout"

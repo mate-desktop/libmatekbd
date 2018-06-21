@@ -1,48 +1,48 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Džiugas Grėbliūnas <dziugas.grebliunas@gmail.com>, 2014
-# Gintautas Miliauskas <gintas@akl.lt>, 2007, 2008
-# brennus <jonas.ska@gmail.com>, 2014
-# Moo, 2015-2017
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-28 09:52+0100\n"
-"PO-Revision-Date: 2017-09-19 13:36+0000\n"
-"Last-Translator: Moo\n"
-"Language-Team: Lithuanian (http://www.transifex.com/mate/MATE/language/lt/)\n"
+"POT-Creation-Date: 2018-03-14 09:42+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Audrius Meskauskas, 2018\n"
+"Language-Team: Lithuanian (https://www.transifex.com/mate/teams/13566/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: lt\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
 
-#: ../libmatekbd/matekbd-indicator.c:116 ../libmatekbd/matekbd-status.c:310
+#: ../libmatekbd/matekbd-indicator.c:116 ../libmatekbd/matekbd-status.c:315
 #, c-format
 msgid "There was an error loading an image: %s"
 msgstr "Įvyko klaida įkeliant paveikslą: %s"
 
-#: ../libmatekbd/matekbd-indicator.c:694 ../libmatekbd/matekbd-status.c:646
+#: ../libmatekbd/matekbd-indicator.c:694 ../libmatekbd/matekbd-status.c:651
 msgid "XKB initialization error"
 msgstr "XKB inicijavimo klaida"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2503
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2501
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
 "Copyright &#169; X.Org Foundation and XKeyboardConfig contributors\n"
 "For licensing see package metadata"
-msgstr "Klaviatūros išdėstymas \"%s\"\nAutorinės teisės &#169; X.Org Foundation ir XKeyboardConfig kontributoriai\nLicencija paketo metaduomenyse"
+msgstr ""
+"Klaviatūros išdėstymas \"%s\"\n"
+"Autorinės teisės &#169; X.Org Foundation ir XKeyboardConfig kontributoriai\n"
+"Licencija paketo metaduomenyse"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2585
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2583
 msgid "Unknown"
 msgstr "Nežinoma"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2631
+#: ../libmatekbd/matekbd-keyboard-drawing.c:2629
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "Klaviatūros išdėstymas \"%s\""
@@ -53,7 +53,8 @@ msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
 msgstr[0] "išdėstymas \"%s\""
 msgstr[1] "išdėstymai \"%s\""
-msgstr[2] "išdėstymai \"%s\""
+msgstr[2] "išdėstymų \"%s\""
+msgstr[3] "išdėstymų \"%s\""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:737
 #, c-format
@@ -61,7 +62,8 @@ msgid "option \"%s\""
 msgid_plural "options \"%s\""
 msgstr[0] "parametras \"%s\""
 msgstr[1] "parametrai \"%s\""
-msgstr[2] "parametrai \"%s\""
+msgstr[2] "parametrų \"%s\""
+msgstr[3] "parametrų \"%s\""
 
 #: ../libmatekbd/matekbd-keyboard-config.c:745
 #, c-format
@@ -104,7 +106,9 @@ msgstr "Klaviatūros atnaujinimo valdikliai"
 msgid ""
 "A collection of scripts to run whenever the keyboard state is reloaded. "
 "Useful for re-applying xmodmap based adjustments"
-msgstr "Scenarijų, įvykdomų klaviatūros būsenai pasikeitus, rinkinys. Naudingas xmodmap pagrįstiems pataisymams."
+msgstr ""
+"Scenarijų, įvykdomų klaviatūros būsenai pasikeitus, rinkinys. Naudingas "
+"xmodmap pagrįstiems pataisymams."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:8
 msgid "modmap file list"
@@ -134,7 +138,9 @@ msgstr "Rodyti išdėstymų vardus vietoje grupių vardų"
 msgid ""
 "Show layout names instead of group names (only for versions of XFree "
 "supporting multiple layouts)"
-msgstr "Rodyti išdėstymų vardus vietoje grupių vardų (tik XFree versijoms, palaikančioms kelis išdėstymus)"
+msgstr ""
+"Rodyti išdėstymų vardus vietoje grupių vardų (tik XFree versijoms, "
+"palaikančioms kelis išdėstymus)"
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:15
 msgid "Load extra configuration items"
@@ -184,7 +190,9 @@ msgstr "Šriftas"
 msgid ""
 "The font for the layout indicator. This should be in \"[FAMILY-LIST] [STYLE-"
 "OPTIONS] [SIZE]\" format."
-msgstr "Išdėstymų indikatoriaus šriftas. Tai turėtų būti nurodyta \"[ŠEIMOS-SĄRAŠAS] [STILIAUS-PARAMETRAI] [DYDIS]\" formatu."
+msgstr ""
+"Išdėstymų indikatoriaus šriftas. Tai turėtų būti nurodyta \"[ŠEIMOS-SĄRAŠAS]"
+" [STILIAUS-PARAMETRAI] [DYDIS]\" formatu."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:27
 msgid "The foreground color"
@@ -194,7 +202,9 @@ msgstr "Priekinio plano spalva"
 msgid ""
 "The foreground color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
-msgstr "Išdėstymų indikatoriaus priekinio plano spalva. Tai turėtų būti nurodyta \"R G B\" formatu, pavyzdžiui, \"255 0 0\"."
+msgstr ""
+"Išdėstymų indikatoriaus priekinio plano spalva. Tai turėtų būti nurodyta \"R"
+" G B\" formatu, pavyzdžiui, \"255 0 0\"."
 
 #: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:29
 msgid "The background color"
@@ -204,7 +214,9 @@ msgstr "Fono spalva"
 msgid ""
 "The background color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
-msgstr "Išdėstymų indikatoriaus fono spalva. Tai turėtų būti nurodyta \"R G B\" formatu, pavyzdžiui, \"255 0 0\"."
+msgstr ""
+"Išdėstymų indikatoriaus fono spalva. Tai turėtų būti nurodyta \"R G B\" "
+"formatu, pavyzdžiui, \"255 0 0\"."
 
 #: ../libmatekbd/show-layout.ui.h:1
 msgid "Keyboard Layout"
