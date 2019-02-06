@@ -53,7 +53,7 @@ const gchar *MATEKBD_KEYBOARD_CONFIG_ACTIVE[] = {
  */
 
 static gboolean
-g_strv_equal (gchar ** l1, gchar ** l2)
+matekbd_strv_equal (gchar ** l1, gchar ** l2)
 {
 	if (l1 == l2)
 		return TRUE;
@@ -555,7 +555,7 @@ matekbd_keyboard_config_equals (MatekbdKeyboardConfig * kbd_config1,
 	    (kbd_config2->model != NULL) &&
 	    g_ascii_strcasecmp (kbd_config1->model, kbd_config2->model))
 		return False;
-	if (!g_strv_equal (kbd_config1->layouts_variants,
+	if (!matekbd_strv_equal (kbd_config1->layouts_variants,
 			   kbd_config2->layouts_variants))
 		return False;
 
