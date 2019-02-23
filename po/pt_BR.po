@@ -3,13 +3,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Marcus Vinícius Marques, 2018
+# Gilberto José Souza Coutinho <gilberto.jsc@gmail.com>, 2018
+# Paulo Henrique de Sousa <simbios.devs@gmail.com>, 2018
+# Halan Germano Bacca <halangermano@hotmail.com.br>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-14 09:42+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2018-03-11 15:34+0000\n"
 "Last-Translator: Halan Germano Bacca <halangermano@hotmail.com.br>, 2018\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/mate/teams/13566/pt_BR/)\n"
 "MIME-Version: 1.0\n"
