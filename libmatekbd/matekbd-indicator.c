@@ -632,10 +632,10 @@ matekbd_indicator_filter_x_evt (GdkXEvent * xev, GdkEvent * event)
 static void
 matekbd_indicator_start_listen (void)
 {
-	gdk_window_add_filter (NULL, (GdkFilterFunc)
+	gdk_window_add_filter (NULL, (GdkFilterFunc) (void (*)(void))
 			       matekbd_indicator_filter_x_evt, NULL);
 	gdk_window_add_filter (gdk_get_default_root_window (),
-			       (GdkFilterFunc)
+			       (GdkFilterFunc) (void (*)(void))
 			       matekbd_indicator_filter_x_evt, NULL);
 
 	xkl_engine_start_listen (globals.engine,
@@ -648,11 +648,11 @@ matekbd_indicator_stop_listen (void)
 {
 	xkl_engine_stop_listen (globals.engine, XKLL_TRACK_KEYBOARD_STATE);
 
-	gdk_window_remove_filter (NULL, (GdkFilterFunc)
+	gdk_window_remove_filter (NULL, (GdkFilterFunc) (void (*)(void))
 				  matekbd_indicator_filter_x_evt, NULL);
 	gdk_window_remove_filter
 	    (gdk_get_default_root_window (),
-	     (GdkFilterFunc) matekbd_indicator_filter_x_evt, NULL);
+	     (GdkFilterFunc) (void (*)(void)) matekbd_indicator_filter_x_evt, NULL);
 }
 
 static gboolean

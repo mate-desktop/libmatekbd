@@ -2200,12 +2200,12 @@ matekbd_keyboard_drawing_get_type (void)
 			sizeof (MatekbdKeyboardDrawingClass),
 			NULL,	/* base_init */
 			NULL,	/* base_finalize */
-			(GClassInitFunc) matekbd_keyboard_drawing_class_init,
+			(GClassInitFunc) (void (*)(void)) matekbd_keyboard_drawing_class_init,
 			NULL,	/* class_finalize */
 			NULL,	/* class_data */
 			sizeof (MatekbdKeyboardDrawing),
 			0,	/* n_preallocs */
-			(GInstanceInitFunc) matekbd_keyboard_drawing_init,
+			(GInstanceInitFunc) (void (*)(void)) matekbd_keyboard_drawing_init,
 		};
 
 		matekbd_keyboard_drawing_type =

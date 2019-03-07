@@ -373,7 +373,7 @@ matekbd_status_prepare_drawing (MatekbdStatus * gki, int group)
 						  globals.real_width *
 						  4,
 						  (GdkPixbufDestroyNotify)
-						  g_free, NULL);
+						  (void (*)(void)) g_free, NULL);
 		xkl_debug (150,
 			   "Image %d created -> %p[%dx%d], alpha: %d\n",
 			   group, image, gdk_pixbuf_get_width (image),
@@ -588,11 +588,11 @@ matekbd_status_filter_x_evt (GdkXEvent * xev, GdkEvent * event)
 static void
 matekbd_status_start_listen (void)
 {
-	gdk_window_add_filter (NULL, (GdkFilterFunc)
+	gdk_window_add_filter (NULL, (GdkFilterFunc) (void (*)(void))
 			       matekbd_status_filter_x_evt, NULL);
 	gdk_window_add_filter (gdk_get_default_root_window (),
-			       (GdkFilterFunc) matekbd_status_filter_x_evt,
-			       NULL);
+			       (GdkFilterFunc) (void (*)(void))
+			       matekbd_status_filter_x_evt, NULL);
 
 	xkl_engine_start_listen (globals.engine,
 				 XKLL_TRACK_KEYBOARD_STATE);
@@ -604,11 +604,11 @@ matekbd_status_stop_listen (void)
 {
 	xkl_engine_stop_listen (globals.engine, XKLL_TRACK_KEYBOARD_STATE);
 
-	gdk_window_remove_filter (NULL, (GdkFilterFunc)
+	gdk_window_remove_filter (NULL, (GdkFilterFunc) (void (*)(void))
 				  matekbd_status_filter_x_evt, NULL);
-	gdk_window_remove_filter
-	    (gdk_get_default_root_window (),
-	     (GdkFilterFunc) matekbd_status_filter_x_evt, NULL);
+	gdk_window_remove_filter (gdk_get_default_root_window (),
+                                  (GdkFilterFunc) (void (*)(void))
+                                  matekbd_status_filter_x_evt, NULL);
 }
 
 static void
