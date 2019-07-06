@@ -1,3 +1,9 @@
+### libmatekbd 1.23.0
+
+  * tx: sync with transifex
+  * travis: enable 'cppcheck' in debian
+  * [ci] use clang analyzer
+
 ### libmatekbd 1.22.0
 
   * sync with transifex
