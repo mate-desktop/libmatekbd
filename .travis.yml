@@ -95,6 +95,7 @@ requires:
     # Useful URL: https://src.fedoraproject.org/cgit/rpms/libmatekbd.git
     - clang-analyzer
     - clang
+    - cppcheck-htmlreport
     - desktop-file-utils
     - gcc
     - gcc-c++
@@ -164,7 +165,9 @@ build_scripts:
 
 after_scripts:
   - if [ ${DISTRO_NAME} == "fedora" ];then
-  -   ./gen-index -i http://mate-desktop.org/favicon.ico
+  -   cppcheck --xml --output-file=cppcheck.xml --enable=warning,style,performance,portability,information,missingInclude .
+  -   cppcheck-htmlreport --title=${REPO_NAME} --file=cppcheck.xml --report-dir=cppcheck-htmlreport
+  -   ./gen-index -l 20 -i http://mate-desktop.org/favicon.ico
   - fi
   - make distcheck
 
