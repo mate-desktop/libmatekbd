@@ -69,7 +69,6 @@ requires:
     - git
     - gobject-introspection
     - gtk3
-    - intltool
     - libxklavier
     - make
     - mate-common
@@ -78,12 +77,12 @@ requires:
   debian:
     # Useful URL: https://github.com/mate-desktop/debian-packages
     # Useful URL: https://salsa.debian.org/debian-mate-team/libmatekbd
+    - autopoint
     - clang
     - clang-tools
     - cppcheck
     - git
     - gobject-introspection
-    - intltool
     - libgirepository1.0-dev
     - libglib2.0-dev
     - libgtk-3-dev
@@ -110,11 +109,11 @@ requires:
     - redhat-rpm-config
 
   ubuntu:
+    - autopoint
     - clang
     - clang-tools
     - git
     - gobject-introspection
-    - intltool
     - libgirepository1.0-dev
     - libglib2.0-dev
     - libgtk-3-dev
