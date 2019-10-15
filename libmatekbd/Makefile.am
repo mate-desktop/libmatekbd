@@ -69,12 +69,9 @@ matekbdinc_HEADERS = \
                       matekbd-keyboard-drawing.h \
                       matekbd-util.h
 
-@INTLTOOL_DESKTOP_RULE@
-
 noinst_HEADERS = $(extra_nih) \
                  matekbd-config-private.h
 
-@INTLTOOL_XML_NOMERGE_RULE@
 gsettingsschema_in_files = org.mate.peripherals-keyboard-xkb.gschema.xml.in
 gsettings_SCHEMAS = $(gsettingsschema_in_files:.xml.in=.xml)
 @GSETTINGS_RULES@

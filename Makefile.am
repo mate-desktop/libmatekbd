@@ -2,24 +2,17 @@ if BUILD_TESTS
 TEST = test
 endif
 
-SUBDIRS = libmatekbd $(TEST) po
+SUBDIRS = po libmatekbd $(TEST)
 
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
 DISTCHECK_CONFIGURE_FLAGS = --enable-introspection
 
-DISTCLEANFILES = \
-  intltool-extract \
-  intltool-merge \
-  intltool-update
 
 EXTRA_DIST = \
         autogen.sh \
         libmatekbd.pc.in \
-        libmatekbdui.pc.in \
-        intltool-extract.in \
-        intltool-merge.in \
-        intltool-update.in
+        libmatekbdui.pc.in
 
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = libmatekbd.pc libmatekbdui.pc
@@ -33,4 +26,3 @@ ChangeLog:
 dist: ChangeLog
 
 .PHONY: ChangeLog
-
