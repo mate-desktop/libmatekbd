@@ -53,14 +53,6 @@ extern gboolean matekbd_keyboard_config_dump_settings (MatekbdKeyboardConfig *
 						    kbd_config,
 						    const char *file_name);
 
-extern void matekbd_keyboard_config_start_listen (MatekbdKeyboardConfig *
-					       kbd_config,
-					       GCallback func,
-					       gpointer user_data);
-
-extern void matekbd_keyboard_config_stop_listen (MatekbdKeyboardConfig *
-					      kbd_config);
-
 extern gboolean matekbd_keyboard_config_get_lv_descriptions (XklConfigRegistry
 							  *
 							  config_registry,
