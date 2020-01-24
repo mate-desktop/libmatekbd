@@ -2206,6 +2206,7 @@ matekbd_keyboard_drawing_get_type (void)
 			sizeof (MatekbdKeyboardDrawing),
 			0,	/* n_preallocs */
 			(GInstanceInitFunc) matekbd_keyboard_drawing_init,
+			NULL	/* *value_table */
 		};
 
 		matekbd_keyboard_drawing_type =
