@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR MATE Desktop Environment team
+# This file is distributed under the same license as the libmatekbd package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -8,12 +8,11 @@
 # Rivo Zängov <eraser@eraser.ee>, 2018
 # Ivar Smolin <okul@linux.ee>, 2019
 # 
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-14 09:42+0100\n"
+"Project-Id-Version: libmatekbd 1.23.0\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/libmatekbd\n"
+"POT-Creation-Date: 2019-11-06 22:04+0100\n"
 "PO-Revision-Date: 2018-03-11 15:34+0000\n"
 "Last-Translator: Ivar Smolin <okul@linux.ee>, 2019\n"
 "Language-Team: Estonian (https://www.transifex.com/mate/teams/13566/et/)\n"
@@ -23,16 +22,16 @@ msgstr ""
 "Language: et\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../libmatekbd/matekbd-indicator.c:116 ../libmatekbd/matekbd-status.c:315
+#: libmatekbd/matekbd-indicator.c:116 libmatekbd/matekbd-status.c:315
 #, c-format
 msgid "There was an error loading an image: %s"
 msgstr "Pildi laadimisel tekkis viga: %s"
 
-#: ../libmatekbd/matekbd-indicator.c:694 ../libmatekbd/matekbd-status.c:651
+#: libmatekbd/matekbd-indicator.c:694 libmatekbd/matekbd-status.c:651
 msgid "XKB initialization error"
 msgstr "XKB lähtestamise viga"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2501
+#: libmatekbd/matekbd-keyboard-drawing.c:2501
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
@@ -43,67 +42,68 @@ msgstr ""
 "Autoriõigused &#169; X.Org Foundation ja XKeyboardConfigi kaasaaitajad\n"
 "Litsentsi andmed leiad paki metaandmetest"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2583
+#: libmatekbd/matekbd-keyboard-drawing.c:2583
 msgid "Unknown"
 msgstr "Tundmatu"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2629
+#: libmatekbd/matekbd-keyboard-drawing.c:2629
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "Klaviatuuripaigutus \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:719
+#: libmatekbd/matekbd-keyboard-config.c:719
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
 msgstr[0] "paigutus \"%s\""
 msgstr[1] "paigutused \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:737
+#: libmatekbd/matekbd-keyboard-config.c:737
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
 msgstr[0] "valik \"%s\""
 msgstr[1] "valikud \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:745
+#: libmatekbd/matekbd-keyboard-config.c:745
 #, c-format
 msgid "model \"%s\", %s and %s"
 msgstr "mudel \"%s\", %s ja %s"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:746
+#: libmatekbd/matekbd-keyboard-config.c:746
 msgid "no layout"
 msgstr "paigutus puudub"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:747
+#: libmatekbd/matekbd-keyboard-config.c:747
 msgid "no options"
 msgstr "valikud puuduvad"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:1
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:11
 msgid "Keyboard model"
 msgstr "Klaviatuuri mudel"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:2
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:12
 msgid "keyboard model"
 msgstr "klaviatuuri mudel"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:3
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:16
 msgid "Keyboard layout"
 msgstr "Klaviatuuri paigutus"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:4
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:17
 msgid "keyboard layout"
 msgstr "klaviatuuri paigutus"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:5
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:21
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:22
 msgid "Keyboard options"
 msgstr "Klaviatuuri valikud"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:6
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:28
 msgid "Keyboard Update Handlers"
 msgstr "Klaviatuuriuuenduste käsitlejad"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:7
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:29
 msgid ""
 "A collection of scripts to run whenever the keyboard state is reloaded. "
 "Useful for re-applying xmodmap based adjustments"
@@ -111,31 +111,34 @@ msgstr ""
 "Kogumik skripte, mida käivitatakse klaviatuuri oleku ümberlaadimisel. See on"
 " kasulik näiteks xmodmap'il põhinevate sätete rakendamiseks"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:8
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:33
 msgid "modmap file list"
 msgstr "modmap-failide loend"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:9
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:34
 msgid "A list of modmap files available in the $HOME directory."
 msgstr "$HOME kataloogis olevate modmap-failide nimekiri."
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:10
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:38
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:39
 msgid "Default group, assigned on window creation"
 msgstr "Akna loomisega seotud vaikimisi grupp"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:11
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:43
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:44
 msgid "Keep and manage separate group per window"
 msgstr "Iga akna kohta hoitakse ja hallatakse eraldi gruppi"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:12
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:48
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:49
 msgid "Save/restore indicators together with layout groups"
 msgstr "Näidikute salvestamine ja taastamine koos paigutuste gruppidega"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:13
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:53
 msgid "Show layout names instead of group names"
 msgstr "Grupinimede asemel paigutuste nimede näitamine"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:14
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:54
 msgid ""
 "Show layout names instead of group names (only for versions of XFree "
 "supporting multiple layouts)"
@@ -143,51 +146,59 @@ msgstr ""
 "Grupinimede asemel paigutuste nimede näitamine (ainult mitme paugutuse toega"
 " XFree versioonidele)"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:15
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:58
 msgid "Load extra configuration items"
 msgstr "Sätete lisavalikute laadimine"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:16
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:59
 msgid "Load exotic, rarely used layouts and options"
 msgstr "Eksootiliste, harva kasutatavate paigutuste ja valikute laadimine"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:17
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:63
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:64
 msgid "Suppress the \"X sysconfig changed\" warning message"
 msgstr "\"X sysconfig changed\" teadete peitmine"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:18
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:68
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:69
 msgid "Allow to disable the keyboard indicator tray icon"
 msgstr "Klaviatuurinäidiku salveikooni keelamise võimaldamine"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:19
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:73
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:74
 msgid "Show keyboard leds indicator"
 msgstr "Klaviatuuritulede näidiku näitamine"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:20
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:80
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:81
 msgid "The Keyboard Preview, X offset"
 msgstr "Klaviatuuri eelvaate X-telje nihe"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:21
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:85
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:86
 msgid "The Keyboard Preview, Y offset"
 msgstr "Klaviatuuri eelvaate Y-telje nihe"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:22
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:90
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:91
 msgid "The Keyboard Preview, width"
 msgstr "Klaviatuuri eelvaate laius"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:23
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:95
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:96
 msgid "The Keyboard Preview, height"
 msgstr "Klaviatuuri eelvaate kõrgus"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:24
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:102
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:103
 msgid "Secondary groups"
 msgstr "Teisejärgulised grupid"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:25
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:110
 msgid "The font"
 msgstr "Kirjatüüp"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:26
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:111
 msgid ""
 "The font for the layout indicator. This should be in \"[FAMILY-LIST] [STYLE-"
 "OPTIONS] [SIZE]\" format."
@@ -195,11 +206,11 @@ msgstr ""
 "Paigutuse näidiku kirjatüüp. See peaks olema vormingus \"[PEREKOND] [STIILI-"
 "VALIKUD] [SUURUS]\"."
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:27
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:115
 msgid "The foreground color"
 msgstr "Teksti värv"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:28
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:116
 msgid ""
 "The foreground color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
@@ -207,11 +218,11 @@ msgstr ""
 "Paigutuse näidiku teksti värv. See peaks olema vormingus \"R G B\" (punane-"
 "roheline-sinine), näiteks \"255 0 0\"."
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:29
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:120
 msgid "The background color"
 msgstr "Taustavärv"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:30
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:121
 msgid ""
 "The background color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
@@ -219,15 +230,15 @@ msgstr ""
 "Paigutuse näidiku taustavärv. See peaks olema vormingus \"R G B\" (punane-"
 "roheline-sinine), näiteks \"255 0 0\"."
 
-#: ../libmatekbd/show-layout.ui.h:1
+#: libmatekbd/show-layout.ui:9
 msgid "Keyboard Layout"
 msgstr "Klaviatuuri paigutus"
 
-#: ../test/matekbd-indicator-test.c:55
+#: test/matekbd-indicator-test.c:55
 #, c-format
 msgid "Keyboard Indicator Test (%s)"
 msgstr "Klaviatuurinäidiku test (%s)"
 
-#: ../test/matekbd-indicator-test.c:63
+#: test/matekbd-indicator-test.c:63
 msgid "Indicator:"
 msgstr "Näidik:"

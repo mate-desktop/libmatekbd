@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR MATE Desktop Environment team
+# This file is distributed under the same license as the libmatekbd package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -8,12 +8,11 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2018
 # 
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-14 09:42+0100\n"
+"Project-Id-Version: libmatekbd 1.23.0\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/libmatekbd\n"
+"POT-Creation-Date: 2019-11-06 22:04+0100\n"
 "PO-Revision-Date: 2018-03-11 15:34+0000\n"
 "Last-Translator: 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2018\n"
 "Language-Team: Korean (https://www.transifex.com/mate/teams/13566/ko/)\n"
@@ -23,16 +22,16 @@ msgstr ""
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../libmatekbd/matekbd-indicator.c:116 ../libmatekbd/matekbd-status.c:315
+#: libmatekbd/matekbd-indicator.c:116 libmatekbd/matekbd-status.c:315
 #, c-format
 msgid "There was an error loading an image: %s"
 msgstr "그림을 읽어들이는 데 오류가 발생했습니다: %s"
 
-#: ../libmatekbd/matekbd-indicator.c:694 ../libmatekbd/matekbd-status.c:651
+#: libmatekbd/matekbd-indicator.c:694 libmatekbd/matekbd-status.c:651
 msgid "XKB initialization error"
 msgstr "XKB 초기화 오류"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2501
+#: libmatekbd/matekbd-keyboard-drawing.c:2501
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
@@ -43,146 +42,158 @@ msgstr ""
 "Copyright &#169; X.Org Foundation and XKeyboardConfig contributors\n"
 "For licensing see package metadata"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2583
+#: libmatekbd/matekbd-keyboard-drawing.c:2583
 msgid "Unknown"
 msgstr "알 수 없음"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2629
+#: libmatekbd/matekbd-keyboard-drawing.c:2629
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "\"%s\" 키보드 배치"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:719
+#: libmatekbd/matekbd-keyboard-config.c:719
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
 msgstr[0] "\"%s\" 배치"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:737
+#: libmatekbd/matekbd-keyboard-config.c:737
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
 msgstr[0] "\"%s\" 옵션"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:745
+#: libmatekbd/matekbd-keyboard-config.c:745
 #, c-format
 msgid "model \"%s\", %s and %s"
 msgstr "모델 \"%s\", %s 및 %s"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:746
+#: libmatekbd/matekbd-keyboard-config.c:746
 msgid "no layout"
 msgstr "배치 없음"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:747
+#: libmatekbd/matekbd-keyboard-config.c:747
 msgid "no options"
 msgstr "옵션 없음"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:1
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:11
 msgid "Keyboard model"
 msgstr "키보드 모델"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:2
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:12
 msgid "keyboard model"
 msgstr "키보드 모델"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:3
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:16
 msgid "Keyboard layout"
 msgstr "키보드 배치"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:4
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:17
 msgid "keyboard layout"
 msgstr "키보드 배치"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:5
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:21
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:22
 msgid "Keyboard options"
 msgstr "키보드 옵션"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:6
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:28
 msgid "Keyboard Update Handlers"
 msgstr "키보드 업데이트 핸들러"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:7
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:29
 msgid ""
 "A collection of scripts to run whenever the keyboard state is reloaded. "
 "Useful for re-applying xmodmap based adjustments"
 msgstr ""
 "키보드 상태를 다시 읽어들였을 때마다 실행할 스크립트 모음. xmodmap 기반으로 조정하는 부분을 다시 적용할 때 좋습니다."
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:8
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:33
 msgid "modmap file list"
 msgstr "modmap 파일 목록"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:9
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:34
 msgid "A list of modmap files available in the $HOME directory."
 msgstr "$HOME 디렉터리에 사용할 수 있는 modmap 파일의 목록."
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:10
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:38
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:39
 msgid "Default group, assigned on window creation"
 msgstr "기본 그룹, 창을 만들 때 할당"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:11
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:43
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:44
 msgid "Keep and manage separate group per window"
 msgstr "창마다 별도의 그룹을 유지 및 관리"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:12
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:48
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:49
 msgid "Save/restore indicators together with layout groups"
 msgstr "알림 기능을 키보드 배치 그룹과 같이 저장/복구"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:13
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:53
 msgid "Show layout names instead of group names"
 msgstr "그룹 이름이 아니라 키보드 배치 이름 표시"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:14
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:54
 msgid ""
 "Show layout names instead of group names (only for versions of XFree "
 "supporting multiple layouts)"
 msgstr "그룹 이름 대신에 키보드 배치 이름을 표시(키보드 배치 여러 개 동시 사용을 지원하는 XFree 버전의 경우에만 해당)"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:15
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:58
 msgid "Load extra configuration items"
 msgstr "추가 설정 항목 읽어들이기"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:16
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:59
 msgid "Load exotic, rarely used layouts and options"
 msgstr "거의 사용하지 않는 희한한 키보드 배치와 옵션 읽어들이기"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:17
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:63
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:64
 msgid "Suppress the \"X sysconfig changed\" warning message"
 msgstr "\"X 시스템 설정 바뀜\" 경고 메시지 표시하지 않기"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:18
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:68
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:69
 msgid "Allow to disable the keyboard indicator tray icon"
 msgstr "키보드 표시기 트레이 아이콘 사용 불가 허용하기 "
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:19
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:73
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:74
 msgid "Show keyboard leds indicator"
 msgstr "키보드 LED 표시기 보이기"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:20
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:80
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:81
 msgid "The Keyboard Preview, X offset"
 msgstr "키보드 미리 보기, 가로 오프셋"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:21
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:85
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:86
 msgid "The Keyboard Preview, Y offset"
 msgstr "키보드 미리 보기, 세로 오프셋"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:22
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:90
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:91
 msgid "The Keyboard Preview, width"
 msgstr "키보드 미리 보기, 너비"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:23
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:95
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:96
 msgid "The Keyboard Preview, height"
 msgstr "키보드 미리 보기, 높이"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:24
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:102
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:103
 msgid "Secondary groups"
 msgstr "다른 그룹"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:25
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:110
 msgid "The font"
 msgstr "글꼴"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:26
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:111
 msgid ""
 "The font for the layout indicator. This should be in \"[FAMILY-LIST] [STYLE-"
 "OPTIONS] [SIZE]\" format."
@@ -190,35 +201,35 @@ msgstr ""
 "레이아웃 표시기에 사용할 글꼴. \"[FAMILY-LIST] [STYLE-OPTIONS] [SIZE]\" format 규정을 준수해야 "
 "합니다."
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:27
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:115
 msgid "The foreground color"
 msgstr "전경 색"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:28
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:116
 msgid ""
 "The foreground color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
 msgstr "레이아웃 표시기 전경에 사용될 색. \"R G B\" format, for example \"255 0 0\" 규정을 준수해야 합니다."
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:29
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:120
 msgid "The background color"
 msgstr "배경 색"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:30
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:121
 msgid ""
 "The background color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
 msgstr "레이아웃 표시기 배경에 사용될 색. \"R G B\" format, for example \"255 0 0\" 규정을 준수해야 합니다."
 
-#: ../libmatekbd/show-layout.ui.h:1
+#: libmatekbd/show-layout.ui:9
 msgid "Keyboard Layout"
 msgstr "키보드 배치"
 
-#: ../test/matekbd-indicator-test.c:55
+#: test/matekbd-indicator-test.c:55
 #, c-format
 msgid "Keyboard Indicator Test (%s)"
 msgstr "키보드 알림 테스트 (%s)"
 
-#: ../test/matekbd-indicator-test.c:63
+#: test/matekbd-indicator-test.c:63
 msgid "Indicator:"
 msgstr "알림:"

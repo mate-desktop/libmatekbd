@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR MATE Desktop Environment team
+# This file is distributed under the same license as the libmatekbd package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -9,12 +9,11 @@
 # Marco Bartolucci <nap.84@live.it>, 2018
 # l3nn4rt, 2018
 # 
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-14 09:42+0100\n"
+"Project-Id-Version: libmatekbd 1.23.0\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/libmatekbd\n"
+"POT-Creation-Date: 2019-11-06 22:04+0100\n"
 "PO-Revision-Date: 2018-03-11 15:34+0000\n"
 "Last-Translator: l3nn4rt, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/mate/teams/13566/it/)\n"
@@ -24,16 +23,16 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../libmatekbd/matekbd-indicator.c:116 ../libmatekbd/matekbd-status.c:315
+#: libmatekbd/matekbd-indicator.c:116 libmatekbd/matekbd-status.c:315
 #, c-format
 msgid "There was an error loading an image: %s"
 msgstr "Si è verificato un errore nel caricare un'immagine: %s"
 
-#: ../libmatekbd/matekbd-indicator.c:694 ../libmatekbd/matekbd-status.c:651
+#: libmatekbd/matekbd-indicator.c:694 libmatekbd/matekbd-status.c:651
 msgid "XKB initialization error"
 msgstr "Errore di inizializzazione di XKB"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2501
+#: libmatekbd/matekbd-keyboard-drawing.c:2501
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
@@ -44,67 +43,68 @@ msgstr ""
 "Copyright &#169; X.Org Foundation e collaboratori di XKeyboardConfig\n"
 "Per la licenza consultare i metadati del pacchetto"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2583
+#: libmatekbd/matekbd-keyboard-drawing.c:2583
 msgid "Unknown"
 msgstr "Sconosciuto"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2629
+#: libmatekbd/matekbd-keyboard-drawing.c:2629
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "Disposizione Tastiera «%s»"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:719
+#: libmatekbd/matekbd-keyboard-config.c:719
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
 msgstr[0] "disposizione \"%s\""
 msgstr[1] "disposizioni \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:737
+#: libmatekbd/matekbd-keyboard-config.c:737
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
 msgstr[0] "opzione \"%s\""
 msgstr[1] "opzioni \"%s\""
 
-#: ../libmatekbd/matekbd-keyboard-config.c:745
+#: libmatekbd/matekbd-keyboard-config.c:745
 #, c-format
 msgid "model \"%s\", %s and %s"
 msgstr "modello «%s», %s e %s"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:746
+#: libmatekbd/matekbd-keyboard-config.c:746
 msgid "no layout"
 msgstr "nessuna disposizione"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:747
+#: libmatekbd/matekbd-keyboard-config.c:747
 msgid "no options"
 msgstr "nessuna opzione"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:1
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:11
 msgid "Keyboard model"
 msgstr "Modello tastiera"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:2
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:12
 msgid "keyboard model"
 msgstr "modello tastiera"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:3
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:16
 msgid "Keyboard layout"
 msgstr "Disposizione tastiera"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:4
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:17
 msgid "keyboard layout"
 msgstr "disposizione tastiera"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:5
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:21
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:22
 msgid "Keyboard options"
 msgstr "Opzioni tastiera"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:6
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:28
 msgid "Keyboard Update Handlers"
 msgstr "Gestori Aggiornamento Tastiera"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:7
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:29
 msgid ""
 "A collection of scripts to run whenever the keyboard state is reloaded. "
 "Useful for re-applying xmodmap based adjustments"
@@ -112,31 +112,34 @@ msgstr ""
 "Una raccolta di script da eseguire quando lo stato della tastiera viene "
 "ricaricato. Utile per riapplicare regolazioni basate su xmodmap"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:8
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:33
 msgid "modmap file list"
 msgstr "Elenco file modmap"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:9
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:34
 msgid "A list of modmap files available in the $HOME directory."
 msgstr "Un elenco di file modmap disponibili nella directory $HOME."
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:10
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:38
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:39
 msgid "Default group, assigned on window creation"
 msgstr "Gruppo predefinito, assegnato alla creazione della finestra"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:11
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:43
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:44
 msgid "Keep and manage separate group per window"
 msgstr "Mantiene e gestisce gruppi separati per finestra"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:12
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:48
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:49
 msgid "Save/restore indicators together with layout groups"
 msgstr "Salva/Ripristina gli indicatori assieme ai gruppi di disposizioni"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:13
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:53
 msgid "Show layout names instead of group names"
 msgstr "Mostra i nomi di disposizione invece dei nomi di gruppo"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:14
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:54
 msgid ""
 "Show layout names instead of group names (only for versions of XFree "
 "supporting multiple layouts)"
@@ -144,55 +147,63 @@ msgstr ""
 "Mostra i nomi di disposizione invece dei nomi di gruppo (solo per versioni "
 "di XFree che supportano disposizioni multiple)"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:15
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:58
 msgid "Load extra configuration items"
 msgstr "Carica elementi di configurazione extra"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:16
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:59
 msgid "Load exotic, rarely used layouts and options"
 msgstr "Carica disposizioni e opzioni usate raramente"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:17
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:63
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:64
 msgid "Suppress the \"X sysconfig changed\" warning message"
 msgstr ""
 "Sopprime il messaggio di avvertimento \"configurazione di sistema di X "
 "cambiata\""
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:18
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:68
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:69
 msgid "Allow to disable the keyboard indicator tray icon"
 msgstr ""
 "Consente di disabilitare l'icona dell'indicatore della tastiera nell'area di"
 " notifica"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:19
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:73
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:74
 msgid "Show keyboard leds indicator"
 msgstr "Visualizza indicatore led della tastiera"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:20
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:80
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:81
 msgid "The Keyboard Preview, X offset"
 msgstr "L'anteprima di tastiera, offset orizzontale"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:21
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:85
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:86
 msgid "The Keyboard Preview, Y offset"
 msgstr "L'anteprima di tastiera, offset verticale"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:22
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:90
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:91
 msgid "The Keyboard Preview, width"
 msgstr "L'anteprima di tastiera, larghezza"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:23
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:95
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:96
 msgid "The Keyboard Preview, height"
 msgstr "L'anteprima di tastiera, altezza"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:24
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:102
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:103
 msgid "Secondary groups"
 msgstr "Gruppi secondari"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:25
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:110
 msgid "The font"
 msgstr "Il carattere"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:26
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:111
 msgid ""
 "The font for the layout indicator. This should be in \"[FAMILY-LIST] [STYLE-"
 "OPTIONS] [SIZE]\" format."
@@ -200,11 +211,11 @@ msgstr ""
 "Il carattere per l'indicatore della disposizione. Deve essere nel formato "
 "\"[FAMILY-LIST] [STYLE-OPTIONS] [SIZE]\"."
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:27
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:115
 msgid "The foreground color"
 msgstr "Il colore di primo piano"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:28
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:116
 msgid ""
 "The foreground color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
@@ -212,11 +223,11 @@ msgstr ""
 "Il colore di primo piano per l'indicatore della disposizione. Deve essere "
 "nel formato \"R G B\", ad esempio \"255 0 0\"."
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:29
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:120
 msgid "The background color"
 msgstr "Il colore di sfondo"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:30
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:121
 msgid ""
 "The background color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
@@ -224,15 +235,15 @@ msgstr ""
 "Il colore di sfondo per l'indicatore della disposizione. Deve essere nel "
 "formato \"R G B\", ad esempio \"255 0 0\"."
 
-#: ../libmatekbd/show-layout.ui.h:1
+#: libmatekbd/show-layout.ui:9
 msgid "Keyboard Layout"
 msgstr "Disposizione Tastiera"
 
-#: ../test/matekbd-indicator-test.c:55
+#: test/matekbd-indicator-test.c:55
 #, c-format
 msgid "Keyboard Indicator Test (%s)"
 msgstr "Test Indicatore Tastiera (%s)"
 
-#: ../test/matekbd-indicator-test.c:63
+#: test/matekbd-indicator-test.c:63
 msgid "Indicator:"
 msgstr "Indicatore:"

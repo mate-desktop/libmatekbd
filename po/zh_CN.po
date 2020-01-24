@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR MATE Desktop Environment team
+# This file is distributed under the same license as the libmatekbd package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -8,12 +8,11 @@
 # Mingcong Bai <jeffbai@aosc.xyz>, 2018
 # liushuyu011 <liushuyu011@gmail.com>, 2018
 # 
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-14 09:42+0100\n"
+"Project-Id-Version: libmatekbd 1.23.0\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/libmatekbd\n"
+"POT-Creation-Date: 2019-11-06 22:04+0100\n"
 "PO-Revision-Date: 2018-03-11 15:34+0000\n"
 "Last-Translator: liushuyu011 <liushuyu011@gmail.com>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/mate/teams/13566/zh_CN/)\n"
@@ -23,16 +22,16 @@ msgstr ""
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../libmatekbd/matekbd-indicator.c:116 ../libmatekbd/matekbd-status.c:315
+#: libmatekbd/matekbd-indicator.c:116 libmatekbd/matekbd-status.c:315
 #, c-format
 msgid "There was an error loading an image: %s"
 msgstr "加载图片出错：%s"
 
-#: ../libmatekbd/matekbd-indicator.c:694 ../libmatekbd/matekbd-status.c:651
+#: libmatekbd/matekbd-indicator.c:694 libmatekbd/matekbd-status.c:651
 msgid "XKB initialization error"
 msgstr "XKB 初始化出错"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2501
+#: libmatekbd/matekbd-keyboard-drawing.c:2501
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
@@ -43,179 +42,191 @@ msgstr ""
 "版权所有&#169 X.Org 基金会及 XKeyboardConfig 贡献者\n"
 "许可请查看软件包元数据"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2583
+#: libmatekbd/matekbd-keyboard-drawing.c:2583
 msgid "Unknown"
 msgstr "未知"
 
-#: ../libmatekbd/matekbd-keyboard-drawing.c:2629
+#: libmatekbd/matekbd-keyboard-drawing.c:2629
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "键盘布局“%s”"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:719
+#: libmatekbd/matekbd-keyboard-config.c:719
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
 msgstr[0] "布局“%s”"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:737
+#: libmatekbd/matekbd-keyboard-config.c:737
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
 msgstr[0] "选项“%s”"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:745
+#: libmatekbd/matekbd-keyboard-config.c:745
 #, c-format
 msgid "model \"%s\", %s and %s"
 msgstr "型号“%s”，%s 和 %s"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:746
+#: libmatekbd/matekbd-keyboard-config.c:746
 msgid "no layout"
 msgstr "无布局"
 
-#: ../libmatekbd/matekbd-keyboard-config.c:747
+#: libmatekbd/matekbd-keyboard-config.c:747
 msgid "no options"
 msgstr "无选项"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:1
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:11
 msgid "Keyboard model"
 msgstr "键盘型号"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:2
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:12
 msgid "keyboard model"
 msgstr "键盘型号"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:3
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:16
 msgid "Keyboard layout"
 msgstr "键盘布局"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:4
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:17
 msgid "keyboard layout"
 msgstr "键盘布局"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:5
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:21
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:22
 msgid "Keyboard options"
 msgstr "键盘选项"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:6
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:28
 msgid "Keyboard Update Handlers"
 msgstr "键盘升级处理器"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:7
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:29
 msgid ""
 "A collection of scripts to run whenever the keyboard state is reloaded. "
 "Useful for re-applying xmodmap based adjustments"
 msgstr "键盘状态重载时需运行的一组脚本。在重新应用基于 xmodmap 的调节时有用"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:8
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:33
 msgid "modmap file list"
 msgstr "modmap 文件列表"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:9
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:34
 msgid "A list of modmap files available in the $HOME directory."
 msgstr "在 $HOME 目录中的可用的 modmap 文件的一个列表。"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:10
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:38
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:39
 msgid "Default group, assigned on window creation"
 msgstr "窗口创建时赋予的默认的组"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:11
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:43
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:44
 msgid "Keep and manage separate group per window"
 msgstr "为每个窗口保持和管理单独的组"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:12
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:48
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:49
 msgid "Save/restore indicators together with layout groups"
 msgstr "与布局分组一起保存/恢复指示器"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:13
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:53
 msgid "Show layout names instead of group names"
 msgstr "显示布局名称而不是组名称"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:14
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:54
 msgid ""
 "Show layout names instead of group names (only for versions of XFree "
 "supporting multiple layouts)"
 msgstr "显示布局名称而不是组名称(只针对支持多种布局的 XFree 版本)"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:15
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:58
 msgid "Load extra configuration items"
 msgstr "加载额外配置条目"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:16
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:59
 msgid "Load exotic, rarely used layouts and options"
 msgstr "部分加载，仅使用布局和选项"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:17
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:63
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:64
 msgid "Suppress the \"X sysconfig changed\" warning message"
 msgstr "禁止“X sysconfig changed”警告消息"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:18
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:68
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:69
 msgid "Allow to disable the keyboard indicator tray icon"
 msgstr "允许禁用键盘指示器的托盘图标"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:19
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:73
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:74
 msgid "Show keyboard leds indicator"
 msgstr "显示键盘 LED 指示灯"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:20
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:80
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:81
 msgid "The Keyboard Preview, X offset"
 msgstr "键盘预览，X 偏移量"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:21
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:85
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:86
 msgid "The Keyboard Preview, Y offset"
 msgstr "键盘预览，Y 偏移量"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:22
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:90
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:91
 msgid "The Keyboard Preview, width"
 msgstr "键盘预览，宽度"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:23
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:95
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:96
 msgid "The Keyboard Preview, height"
 msgstr "键盘预览，高度"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:24
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:102
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:103
 msgid "Secondary groups"
 msgstr "次组"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:25
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:110
 msgid "The font"
 msgstr "字体"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:26
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:111
 msgid ""
 "The font for the layout indicator. This should be in \"[FAMILY-LIST] [STYLE-"
 "OPTIONS] [SIZE]\" format."
 msgstr "键盘布局指示器的字体。格式应为 \"[字体家族列表] [字体样式选项] [字体大小]\" 。"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:27
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:115
 msgid "The foreground color"
 msgstr "前景色"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:28
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:116
 msgid ""
 "The foreground color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
 msgstr "键盘布局指示器的前景色。格式应为 \"R G B\"，例如 \"255 0 0\" 。"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:29
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:120
 msgid "The background color"
 msgstr "背景颜色"
 
-#: ../libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.h:30
+#: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:121
 msgid ""
 "The background color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
 msgstr "键盘布局指示器的背景色。格式应为 \"R G B\"，例如 \"255 0 0\" 。"
 
-#: ../libmatekbd/show-layout.ui.h:1
+#: libmatekbd/show-layout.ui:9
 msgid "Keyboard Layout"
 msgstr "键盘布局"
 
-#: ../test/matekbd-indicator-test.c:55
+#: test/matekbd-indicator-test.c:55
 #, c-format
 msgid "Keyboard Indicator Test (%s)"
 msgstr "键盘指示器测试(%s)"
 
-#: ../test/matekbd-indicator-test.c:63
+#: test/matekbd-indicator-test.c:63
 msgid "Indicator:"
 msgstr "指示器："
