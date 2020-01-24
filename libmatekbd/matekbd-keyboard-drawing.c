@@ -648,7 +648,7 @@ set_key_label_in_layout (MatekbdKeyboardDrawingRenderContext * context,
 
 	switch (keyval) {
 	case GDK_KEY_Scroll_Lock:
-		set_markup (context, "Scroll\nLock");
+		set_markup (context, _("Scroll\nLock"));
 		break;
 
 	case GDK_KEY_space:
@@ -656,67 +656,257 @@ set_key_label_in_layout (MatekbdKeyboardDrawingRenderContext * context,
 		break;
 
 	case GDK_KEY_Sys_Req:
-		set_markup (context, "Sys Rq");
+		set_markup (context, _("Sys Rq"));
 		break;
 
 	case GDK_KEY_Page_Up:
-		set_markup (context, "Page\nUp");
+		set_markup (context, _("Page\nUp"));
 		break;
 
 	case GDK_KEY_Page_Down:
-		set_markup (context, "Page\nDown");
+		set_markup (context, _("Page\nDown"));
 		break;
 
 	case GDK_KEY_Num_Lock:
-		set_markup (context, "Num\nLock");
+		set_markup (context, _("Num\nLock"));
 		break;
 
 	case GDK_KEY_KP_Page_Up:
-		set_markup (context, "Pg Up");
+		set_markup (context, _("Pg Up"));
 		break;
 
 	case GDK_KEY_KP_Page_Down:
-		set_markup (context, "Pg Dn");
+		set_markup (context, _("Pg Dn"));
 		break;
 
 	case GDK_KEY_KP_Home:
-		set_markup (context, "Home");
+		set_markup (context, _("Home"));
 		break;
 
 	case GDK_KEY_KP_Left:
-		set_markup (context, "Left");
+		set_markup (context, _("Left"));
 		break;
 
 	case GDK_KEY_KP_End:
-		set_markup (context, "End");
+		set_markup (context, _("End"));
 		break;
 
 	case GDK_KEY_KP_Up:
-		set_markup (context, "Up");
+		set_markup (context, _("Up"));
 		break;
 
 	case GDK_KEY_KP_Begin:
-		set_markup (context, "Begin");
+		set_markup (context, _("Begin"));
 		break;
 
 	case GDK_KEY_KP_Right:
-		set_markup (context, "Right");
+		set_markup (context, _("Right"));
 		break;
 
 	case GDK_KEY_KP_Enter:
-		set_markup (context, "Enter");
+		set_markup (context, _("Enter"));
 		break;
 
 	case GDK_KEY_KP_Down:
-		set_markup (context, "Down");
+		set_markup (context, _("Down"));
 		break;
 
 	case GDK_KEY_KP_Insert:
-		set_markup (context, "Ins");
+		set_markup (context, _("Ins"));
 		break;
 
 	case GDK_KEY_KP_Delete:
-		set_markup (context, "Del");
+		set_markup (context, _("Del"));
+		break;
+
+	/* 0xfe03 */
+	case GDK_KEY_ISO_Level3_Shift:
+		set_markup (context, _("ISO_Level3_Shift"));
+		break;
+
+	/* 0xfe20 */
+	case GDK_KEY_ISO_Left_Tab:
+		set_markup (context, _("Tab"));
+		break;
+
+	/* 0xff08 */
+	case GDK_KEY_BackSpace:
+		set_markup (context, _("BackSpace"));
+		break;
+
+	/* 0xff09 */
+	case GDK_KEY_Tab:
+		set_markup (context, _("Tab"));
+		break;
+
+	/* 0xff0d */
+	case GDK_KEY_Return:
+		set_markup (context, _("Return"));
+		break;
+
+	/* 0xff13 */
+	case GDK_KEY_Pause:
+		set_markup (context, _("Pause"));
+		break;
+
+	/* 0xff1b */
+	case GDK_KEY_Escape:
+		set_markup (context, _("Esc"));
+		break;
+
+	/* 0xff50 */
+	case GDK_KEY_Home:
+		set_markup (context, _("Home"));
+		break;
+
+	/* 0xff51 */
+	case GDK_KEY_Left:
+		set_markup (context, _("Left"));
+		break;
+
+	/* 0xff52 */
+	case GDK_KEY_Up:
+		set_markup (context, _("Up"));
+		break;
+
+	/* 0xff53 */
+	case GDK_KEY_Right:
+		set_markup (context, _("Right"));
+		break;
+
+	/* 0xff54 */
+	case GDK_KEY_Down:
+		set_markup (context, _("Down"));
+		break;
+
+	/* 0xff57 */
+	case GDK_KEY_End:
+		set_markup (context, _("End"));
+		break;
+
+	/* 0xff61 */
+	case GDK_KEY_Print:
+		set_markup (context, _("Print"));
+		break;
+
+	/* 0xff63 */
+	case GDK_KEY_Insert:
+		set_markup (context, _("Insert"));
+		break;
+
+	/* 0xff67 */
+	case GDK_KEY_Menu:
+		set_markup (context, _("Menu"));
+		break;
+
+	/* 0xffbe */
+	case GDK_KEY_F1:
+		set_markup (context, _("F1"));
+		break;
+
+	/* 0xffbf */
+	case GDK_KEY_F2:
+		set_markup (context, _("F2"));
+		break;
+
+	/* 0xffc0 */
+	case GDK_KEY_F3:
+		set_markup (context, _("F3"));
+		break;
+
+	/* 0xffc1 */
+	case GDK_KEY_F4:
+		set_markup (context, _("F4"));
+		break;
+
+	/* 0xffc2 */
+	case GDK_KEY_F5:
+		set_markup (context, _("F5"));
+		break;
+
+	/* 0xffc3 */
+	case GDK_KEY_F6:
+		set_markup (context, _("F6"));
+		break;
+
+	/* 0xffc4 */
+	case GDK_KEY_F7:
+		set_markup (context, _("F7"));
+		break;
+
+	/* 0xffc5 */
+	case GDK_KEY_F8:
+		set_markup (context, _("F8"));
+		break;
+
+	/* 0xffc6 */
+	case GDK_KEY_F9:
+		set_markup (context, _("F9"));
+		break;
+
+	/* 0xffc7 */
+	case GDK_KEY_F10:
+		set_markup (context, _("F10"));
+		break;
+
+	/* 0xffc8 */
+	case GDK_KEY_F11:
+		set_markup (context, _("F11"));
+		break;
+
+	/* 0xffc9 */
+	case GDK_KEY_F12:
+		set_markup (context, _("F12"));
+		break;
+
+	/* 0xffe1 */
+	case GDK_KEY_Shift_L:
+		set_markup (context, _("Shift"));
+		break;
+
+	/* 0xffe2 */
+	case GDK_KEY_Shift_R:
+		set_markup (context, _("Shift"));
+		break;
+
+	/* 0xffe3 */
+	case GDK_KEY_Control_L:
+		set_markup (context, _("Control"));
+		break;
+
+	/* 0xffe4 */
+	case GDK_KEY_Control_R:
+		set_markup (context, _("Control"));
+		break;
+
+	/* 0xffe5 */
+	case GDK_KEY_Caps_Lock:
+		set_markup (context, _("Caps\nLock"));
+		break;
+
+	/* 0xffe7 */
+	case GDK_KEY_Meta_L:
+		set_markup (context, _("Meta"));
+		break;
+
+	/* 0xffe9 */
+	case GDK_KEY_Alt_L:
+		set_markup (context, _("Alt"));
+		break;
+
+	/* 0xffeb */
+	case GDK_KEY_Super_L:
+		set_markup (context, _("Super"));
+		break;
+
+	/* 0xffec */
+	case GDK_KEY_Super_R:
+		set_markup (context, _("Super"));
+		break;
+
+	/* 0xffff */
+	case GDK_KEY_VoidSymbol:
+		set_markup (context, _("Delete"));
 		break;
 
 	case GDK_KEY_dead_grave:
@@ -780,15 +970,15 @@ set_key_label_in_layout (MatekbdKeyboardDrawingRenderContext * context,
 		break;
 
 	case GDK_KEY_horizconnector:
-		set_markup (context, "horiz\nconn");
+		set_markup (context, _("horiz\nconn"));
 		break;
 
 	case GDK_KEY_Mode_switch:
-		set_markup (context, "AltGr");
+		set_markup (context, _("AltGr"));
 		break;
 
 	case GDK_KEY_Multi_key:
-		set_markup (context, "Compose");
+		set_markup (context, _("Compose"));
 		break;
 
 	default:
