@@ -153,7 +153,7 @@ matekbd_keyboard_config_split_items (const gchar * merged, gchar ** parent,
 {
 	static gchar pbuffer[XKL_MAX_CI_NAME_LENGTH];
 	static gchar cbuffer[XKL_MAX_CI_NAME_LENGTH];
-	int plen, clen;
+	int plen;
 	const gchar *pos;
 	*parent = *child = NULL;
 
@@ -163,11 +163,9 @@ matekbd_keyboard_config_split_items (const gchar * merged, gchar ** parent,
 	pos = strchr (merged, '\t');
 	if (pos == NULL) {
 		plen = strlen (merged);
-		clen = 0;
 	} else {
 		plen = pos - merged;
-		clen = strlen (pos + 1);
-		if (clen >= XKL_MAX_CI_NAME_LENGTH)
+		if (strlen (pos + 1) >= XKL_MAX_CI_NAME_LENGTH)
 			return FALSE;
 		strcpy (*child = cbuffer, pos + 1);
 	}
