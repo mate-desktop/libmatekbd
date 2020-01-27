@@ -2611,12 +2611,12 @@ matekbd_keyboard_drawing_new_dialog (gint group, gchar * group_name)
 	XklEngine* engine = xkl_engine_get_instance(GDK_DISPLAY_XDISPLAY(gdk_display_get_default()));
 
 	builder = gtk_builder_new ();
-	gtk_builder_add_from_file (builder, UIDIR "/show-layout.ui",
-				   &error);
+	gtk_builder_add_from_resource (builder,
+	                               "/org/mate/peripherals/keyboard/show-layout.ui",
+	                               &error);
 
 	if (error) {
-		g_error ("building ui from %s failed: %s",
-			 UIDIR "/show-layout.ui", error->message);
+		g_error ("Could not load UI: %s", error->message);
 		g_clear_error (&error);
 	}
 
