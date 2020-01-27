@@ -80,8 +80,8 @@ matekbd_preview_load_position (void)
 		/* default values should be treated as
 		 * "0.75 of the screen size" */
 		GdkScreen *scr = gdk_screen_get_default ();
-		gint w = WidthOfScreen (gdk_x11_screen_get_xscreen (scr));
-		gint h = HeightOfScreen (gdk_x11_screen_get_xscreen (scr));
+		w = WidthOfScreen (gdk_x11_screen_get_xscreen (scr));
+		h = HeightOfScreen (gdk_x11_screen_get_xscreen (scr));
 		rv->x = w >> 3;
 		rv->y = h >> 3;
 		rv->width = w - (w >> 2);
