@@ -1,85 +1,105 @@
+NULL =
 lib_LTLIBRARIES = libmatekbd.la libmatekbdui.la
 
-uidir = $(pkgdatadir)/ui
-ui_DATA = show-layout.ui
-
-common_CFLAGS = \
-	-I$(top_srcdir)					\
-	$(GDK_CFLAGS)					\
-	$(GIO_CFLAGS)					\
-	$(LIBXKLAVIER_CFLAGS)				\
-	$(XLIB_CFLAGS)					\
-	-I$(top_srcdir)/intl				\
-	-DG_LOG_DOMAIN=\"MateKbdIndicator\"		\
-	-DDATADIR=\"$(datadir)\"			\
-	-DSYSCONFDIR=\"$(sysconfdir)\"			\
-	-DLIBDIR=\"$(libdir)\"
-
-libmatekbd_la_CFLAGS = $(common_CFLAGS)
-
-libmatekbdui_la_CFLAGS = $(common_CFLAGS)		\
-	-DUIDIR=\"$(uidir)\"				\
-	$(GTK_CFLAGS)
+common_CFLAGS =					\
+	-I$(top_srcdir)				\
+	$(GDK_CFLAGS)				\
+	$(GIO_CFLAGS)				\
+	$(LIBXKLAVIER_CFLAGS)			\
+	$(XLIB_CFLAGS)				\
+	-I$(top_srcdir)/intl			\
+	-DG_LOG_DOMAIN=\"MateKbdIndicator\"	\
+	-DDATADIR=\"$(datadir)\"		\
+	-DSYSCONFDIR=\"$(sysconfdir)\"		\
+	-DLIBDIR=\"$(libdir)\"			\
+	$(NULL)
 
 common_LDFLAGS = -version-info @VERSION_INFO@ -no-undefined
 
-common_LIBADD = \
-		$(GDK_LIBS) \
-		$(GIO_LIBS) \
-		$(LIBXKLAVIER_LIBS) \
-		$(XLIB_LIBS)
+common_LIBADD =					\
+	$(GDK_LIBS)				\
+	$(GIO_LIBS)				\
+	$(LIBXKLAVIER_LIBS)			\
+	$(XLIB_LIBS)				\
+	$(NULL)
 
-libmatekbd_la_LDFLAGS = $(common_LDFLAGS)
-libmatekbd_la_LIBADD =  $(common_LIBADD)
+libmatekbd_la_SOURCES =				\
+	matekbd-desktop-config.c		\
+	matekbd-keyboard-config.c		\
+	matekbd-util.c				\
+	$(NULL)
+libmatekbd_la_CFLAGS =				\
+	$(common_CFLAGS)			\
+	$(NULL)
+libmatekbd_la_LDFLAGS =				\
+	$(common_LDFLAGS)			\
+	$(NULL)
+libmatekbd_la_LIBADD =				\
+	$(common_LIBADD)			\
+	$(NULL)
 
-libmatekbdui_la_LDFLAGS = $(common_LDFLAGS)
-libmatekbdui_la_LIBADD = libmatekbd.la \
-                           $(common_LIBADD) \
-                           $(GLIB_LIBS) \
-                           $(GMODULE_LIBS) \
-                           $(GTK_LIBS)
+libmatekbdui_la_SOURCES =			\
+	matekbd-indicator-config.c		\
+	matekbd-indicator.c			\
+	matekbd-status.c			\
+	matekbd-indicator-marshal.c		\
+	matekbd-keyboard-drawing-marshal.c	\
+	matekbd-keyboard-drawing-resources.c	\
+	matekbd-keyboard-drawing.c		\
+	$(NULL)
+libmatekbdui_la_CFLAGS =			\
+	$(common_CFLAGS)			\
+	$(GTK_CFLAGS)				\
+	$(NULL)
+libmatekbdui_la_LDFLAGS =			\
+	$(common_LDFLAGS)			\
+	$(NULL)
+libmatekbdui_la_LIBADD = 			\
+	libmatekbd.la				\
+	$(common_LIBADD)			\
+	$(GLIB_LIBS)				\
+	$(GMODULE_LIBS)				\
+	$(GTK_LIBS)				\
+	$(NULL)
 
-libmatekbd_la_SOURCES = \
-                         matekbd-desktop-config.c \
-                         matekbd-keyboard-config.c \
-                         matekbd-util.c
-
-libmatekbdui_la_SOURCES = \
-                         matekbd-indicator-config.c \
-                         matekbd-indicator.c \
-                         matekbd-status.c \
-                         matekbd-indicator-marshal.c \
-                         matekbd-keyboard-drawing-marshal.c \
-                         matekbd-keyboard-drawing.c
-
-BUILT_SOURCES = matekbd-indicator-marshal.c \
-	matekbd-indicator-marshal.h         \
-        matekbd-keyboard-drawing-marshal.c            \
-        matekbd-keyboard-drawing-marshal.h
+BUILT_SOURCES =					\
+	matekbd-indicator-marshal.c		\
+	matekbd-indicator-marshal.h		\
+	matekbd-keyboard-drawing-marshal.c	\
+	matekbd-keyboard-drawing-marshal.h	\
+	matekbd-keyboard-drawing-resources.c	\
+	matekbd-keyboard-drawing-resources.h	\
+	$(NULL)
 
 CLEANFILES = $(BUILT_SOURCES)
 
 matekbdincdir = $(includedir)/libmatekbd
-matekbdinc_HEADERS = \
-                      matekbd-desktop-config.h \
-                      matekbd-keyboard-config.h \
-                      matekbd-indicator.h \
-                      matekbd-status.h \
-                      matekbd-indicator-config.h \
-                      matekbd-keyboard-drawing.h \
-                      matekbd-util.h
+matekbdinc_HEADERS =				\
+	matekbd-desktop-config.h		\
+	matekbd-keyboard-config.h		\
+	matekbd-indicator.h			\
+	matekbd-status.h			\
+	matekbd-indicator-config.h		\
+	matekbd-keyboard-drawing.h		\
+	matekbd-util.h				\
+	$(NULL)
 
-noinst_HEADERS = $(extra_nih) \
-                 matekbd-config-private.h
+noinst_HEADERS =				\
+	$(extra_nih)				\
+	matekbd-config-private.h		\
+	$(NULL)
 
 gsettingsschema_in_files = org.mate.peripherals-keyboard-xkb.gschema.xml.in
 gsettings_SCHEMAS = $(gsettingsschema_in_files:.xml.in=.xml)
 @GSETTINGS_RULES@
 
-EXTRA_DIST = matekbd-indicator-marshal.list \
-             matekbd-keyboard-drawing-marshal.list \
-             $(gsettingsschema_in_files) \
-             $(ui_DATA)
+EXTRA_DIST =					\
+	matekbd-indicator-marshal.list		\
+	matekbd-keyboard-drawing-marshal.list	\
+	$(gsettingsschema_in_files)		\
+	org.mate.peripherals.keyboard.gresource.xml \
+	show-layout.ui				\
+	$(NULL)
 
 DISTCLEANFILES = $(gsettings_SCHEMAS)
 
@@ -103,6 +123,9 @@ matekbd-keyboard-drawing-marshal.c: matekbd-keyboard-drawing-marshal.h
           && mv matekbd-keyboard-drawing-marshal.tmp matekbd-keyboard-drawing-marshal.c ) \
         || ( rm -f matekbd-keyboard-drawing-marshal.tmp && exit 1 )
 
+
+matekbd-keyboard-drawing-resources.h matekbd-keyboard-drawing-resources.c: org.mate.peripherals.keyboard.gresource.xml Makefile $(shell $(GLIB_COMPILE_RESOURCES) --generate-dependencies --sourcedir $(srcdir) $(srcdir)/org.mate.peripherals.keyboard.gresource.xml)
+	$(AM_V_GEN) XMLLINT=$(XMLLINT) $(GLIB_COMPILE_RESOURCES) --target $@ --sourcedir $(srcdir) --generate --c-name matekbd $<
 
 -include $(INTROSPECTION_MAKEFILE)
 INTROSPECTION_GIRS = Matekbd-1.0.gir

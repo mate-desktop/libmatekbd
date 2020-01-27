@@ -87,6 +87,7 @@ requires:
     - libglib2.0-dev
     - libgtk-3-dev
     - libxklavier-dev
+    - libxml2-utils
     - make
     - mate-common
 
@@ -118,6 +119,7 @@ requires:
     - libglib2.0-dev
     - libgtk-3-dev
     - libxklavier-dev
+    - libxml2-utils
     - make
     - mate-common
 
