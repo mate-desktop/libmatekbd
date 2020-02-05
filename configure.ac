@@ -123,3 +123,25 @@ libmatekbd/Makefile
 libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml
 test/Makefile
 ])
+
+AC_OUTPUT
+
+dnl ---------------------------------------------------------------------------
+dnl - Show summary
+dnl ---------------------------------------------------------------------------
+
+echo "
+Configuration:
+
+    prefix:                       ${prefix}
+    exec_prefix:                  ${exec_prefix}
+    libdir:                       ${libdir}
+    bindir:                       ${bindir}
+    sbindir:                      ${sbindir}
+    sysconfdir:                   ${sysconfdir}
+    datadir:                      ${datadir}
+    source code location:         ${srcdir}
+    compiler:                     ${CC}
+    cflags:                       ${CFLAGS}
+    Warning flags:                ${WARN_CFLAGS}
+"
