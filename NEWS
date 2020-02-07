@@ -1,23 +1,34 @@
-### libmatekbd 1.23.0
+### libmatekbd 1.24.0
 
   * tx: sync with transifex
+  * build: add configuration summary
+  * Use gresources for UI files
+  * matekbd-keyboard-config: Value stored to 'clen' is never read
+  * matekbd-util: Local variables shadow outer variables
+  * matekbd-keyboard-drawing: Uninitialized structure member
+  * matekbd-config-private: avoid redundant redeclarations
+  * migrate from intltool to gettext
+
+### libmatekbd 1.23.0
+
+  * Translations update
   * travis: enable 'cppcheck' in debian
   * [ci] use clang analyzer
 
 ### libmatekbd 1.22.0
 
-  * sync with transifex
+  * Translations update
   * Initialize Travis CI support
   * rename g_strv_equal to matekbd_strv_equal
 
 ### libmatekbd 1.21.0
 
-  * sync with transifex
+  * Translations update
   * Use gdk screen resolution for font in keyboard status notification icon, to get correct scaling on HiPDI displays.
 
 ### libmatekbd 1.20.0
 
-  * sync with transifex
+  * Translations update
   * bump minimum GDK version according to GTK+ one
   * remove < gtk+-3.22 bits and bump required gtk+
   * building: bump required glib version to 2.50.0
