@@ -631,7 +631,7 @@ set_markup (MatekbdKeyboardDrawingRenderContext * context, gchar *txt)
 	txt = strcmp ("&", txt) ? txt : "&amp;";
 	if (g_utf8_strlen (txt, -1) > 1) {
 		gchar* buf =
-		    g_strdup_printf ("<span size=\"x-small\">%s</span>", txt);
+		    g_strdup_printf ("<span size=\"xx-small\">%s</span>", txt);
 		pango_layout_set_markup (layout, buf, -1);
 		g_free (buf);
 	} else {
