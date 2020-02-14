@@ -1,9 +1,9 @@
 [main]
 host = https://www.transifex.com
 
-[MATE.master--libmatekbd]
+[MATE.1.24--libmatekbd]
 file_filter = po/<lang>.po
-source_file = po/libmatekbd.pot
+source_file = libmatekbd.pot
 source_lang = en
 type = PO
 minimum_perc = 2
