@@ -4,16 +4,19 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Willy Sudiarto Raharjo <willysr@slackware-id.org>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Willy Sudiarto Raharjo <willysr@slackware-id.org>, 2020
+# Martin Wimpress <code@flexion.org>, 2020
+# Kukuh Syafaat <syafaatkukuh@gmail.com>, 2020
+# Andika Triwidada <andika@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: libmatekbd 1.23.0\n"
+"Project-Id-Version: libmatekbd 1.24.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/libmatekbd\n"
-"POT-Creation-Date: 2019-11-06 22:04+0100\n"
-"PO-Revision-Date: 2018-03-11 15:34+0000\n"
-"Last-Translator: Willy Sudiarto Raharjo <willysr@slackware-id.org>, 2018\n"
+"POT-Creation-Date: 2020-02-24 21:52+0100\n"
+"PO-Revision-Date: 2020-02-14 12:40+0000\n"
+"Last-Translator: Andika Triwidada <andika@gmail.com>, 2020\n"
 "Language-Team: Indonesian (https://www.transifex.com/mate/teams/13566/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,7 +33,233 @@ msgstr "Ada galat saat memuat suatu gambar: %s"
 msgid "XKB initialization error"
 msgstr "Kesalahan inisialisasi XKB"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:2501
+#: libmatekbd/matekbd-keyboard-drawing.c:651
+msgid ""
+"Scroll\n"
+"Lock"
+msgstr ""
+"Scroll\n"
+"Lock"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:659
+msgid "Sys Rq"
+msgstr "Sys Rq"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:663
+msgid ""
+"Page\n"
+"Up"
+msgstr ""
+"Page\n"
+"Up"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:667
+msgid ""
+"Page\n"
+"Down"
+msgstr ""
+"Page\n"
+"Down"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:671
+msgid ""
+"Num\n"
+"Lock"
+msgstr ""
+"Num\n"
+"Lock"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:675
+msgid "Pg Up"
+msgstr "Pg Up"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:679
+msgid "Pg Dn"
+msgstr "Pg Dn"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:683
+#: libmatekbd/matekbd-keyboard-drawing.c:759
+msgid "Home"
+msgstr "Beranda"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:687
+#: libmatekbd/matekbd-keyboard-drawing.c:764
+msgid "Left"
+msgstr "Kiri"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:691
+#: libmatekbd/matekbd-keyboard-drawing.c:784
+msgid "End"
+msgstr "End"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:695
+#: libmatekbd/matekbd-keyboard-drawing.c:769
+msgid "Up"
+msgstr "Naik"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:699
+msgid "Begin"
+msgstr "Home"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:703
+#: libmatekbd/matekbd-keyboard-drawing.c:774
+msgid "Right"
+msgstr "Kanan"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:707
+msgid "Enter"
+msgstr "Enter"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:711
+#: libmatekbd/matekbd-keyboard-drawing.c:779
+msgid "Down"
+msgstr "Turun"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:715
+msgid "Ins"
+msgstr "Ins"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:719
+msgid "Del"
+msgstr "Del"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:724
+msgid "ISO_Level3_Shift"
+msgstr "ISO_Level3_Shift"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:729
+#: libmatekbd/matekbd-keyboard-drawing.c:739
+msgid "Tab"
+msgstr "Tab"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:734
+msgid "BackSpace"
+msgstr "BackSpace"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:744
+msgid "Return"
+msgstr "Return"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:749
+msgid "Pause"
+msgstr "Pause"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:754
+msgid "Esc"
+msgstr "Esc"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:789
+msgid "Print"
+msgstr "Cetak"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:794
+msgid "Insert"
+msgstr "Sisipkan"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:799
+msgid "Menu"
+msgstr "Menu"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:804
+msgid "F1"
+msgstr "F1"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:809
+msgid "F2"
+msgstr "F2"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:814
+msgid "F3"
+msgstr "F3"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:819
+msgid "F4"
+msgstr "F4"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:824
+msgid "F5"
+msgstr "F5"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:829
+msgid "F6"
+msgstr "F6"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:834
+msgid "F7"
+msgstr "F7"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:839
+msgid "F8"
+msgstr "F8"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:844
+msgid "F9"
+msgstr "F9"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:849
+msgid "F10"
+msgstr "F10"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:854
+msgid "F11"
+msgstr "F11"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:859
+msgid "F12"
+msgstr "F12"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:864
+#: libmatekbd/matekbd-keyboard-drawing.c:869
+msgid "Shift"
+msgstr "Shift"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:874
+#: libmatekbd/matekbd-keyboard-drawing.c:879
+msgid "Control"
+msgstr "Control"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:884
+msgid ""
+"Caps\n"
+"Lock"
+msgstr ""
+"Caps\n"
+"Lock"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:889
+msgid "Meta"
+msgstr "Meta"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:894
+msgid "Alt"
+msgstr "Alt"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:899
+#: libmatekbd/matekbd-keyboard-drawing.c:904
+msgid "Super"
+msgstr "Super"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:909
+msgid "Delete"
+msgstr "Hapus"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:973
+msgid ""
+"horiz\n"
+"conn"
+msgstr ""
+"horiz\n"
+"conn"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:977
+msgid "AltGr"
+msgstr "AltGr"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:981
+msgid "Compose"
+msgstr "Compose"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:2692
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
@@ -41,37 +270,37 @@ msgstr ""
 "Hak cipta &#169; X.Org Foundation dan kontributor XKeyboardConfig\n"
 "Untuk lisensi lihat metadata paket"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:2583
+#: libmatekbd/matekbd-keyboard-drawing.c:2774
 msgid "Unknown"
 msgstr "Tidak diketahui"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:2629
+#: libmatekbd/matekbd-keyboard-drawing.c:2820
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "Tata Letak Papan Tik \"%s\""
 
-#: libmatekbd/matekbd-keyboard-config.c:719
+#: libmatekbd/matekbd-keyboard-config.c:717
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
-msgstr[0] ""
+msgstr[0] "tata letak \"%s\""
 
-#: libmatekbd/matekbd-keyboard-config.c:737
+#: libmatekbd/matekbd-keyboard-config.c:735
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
-msgstr[0] ""
+msgstr[0] "opsi \"%s\""
 
-#: libmatekbd/matekbd-keyboard-config.c:745
+#: libmatekbd/matekbd-keyboard-config.c:743
 #, c-format
 msgid "model \"%s\", %s and %s"
 msgstr "model \"%s\",%s dan%s"
 
-#: libmatekbd/matekbd-keyboard-config.c:746
+#: libmatekbd/matekbd-keyboard-config.c:744
 msgid "no layout"
 msgstr "tidak ada tata letak"
 
-#: libmatekbd/matekbd-keyboard-config.c:747
+#: libmatekbd/matekbd-keyboard-config.c:745
 msgid "no options"
 msgstr "tidak ada opsi"
 
