@@ -1,6 +1,13 @@
+### libmatekbd 1.24.1
+
+  * Translations update
+  * build: silent build warnings for distcheck
+  * Reduce the font size of the key names on keyboard layout display
+  * matekbd-keyboard-drawing: i18n symbolic names
+
 ### libmatekbd 1.24.0
 
-  * tx: sync with transifex
+  * Translations update
   * build: add configuration summary
   * Use gresources for UI files
   * matekbd-keyboard-config: Value stored to 'clen' is never read
