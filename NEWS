@@ -1,5 +1,11 @@
 ### libmatekbd 1.25.0
 
+  * Remove unused macros
+  * add git.mk to generate .gitignore
+  * build: silent build warnings for distcheck
+  * Reduce the font size of the key names on keyboard layout display
+  * matekbd-keyboard-drawing: i18n symbolic names
+
 ### libmatekbd 1.24.0
 
   * tx: sync with transifex
