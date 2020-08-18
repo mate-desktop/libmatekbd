@@ -4,19 +4,23 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# ToMáš Marný, 2018
 # LiberteCzech <liberte.czech@gmail.com>, 2018
-# Stanislav Kučera <inactive+kacernator@transifex.com>, 2018
+# 6e833d5535e2fe0dd9dfa7fe5bf473f2_d78f422 <64c38a0ff10419c64e8e03d54c72b3bd_352524>, 2018
 # Roman Horník <roman.hornik@debian-linux.cz>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Ondřej Kolín <ondrej.kolin@gmail.com>, 2020
+# Michal <sinope@seznam.cz>, 2020
+# Lucas Lommer <drom@kdyne.net>, 2020
+# Martin Wimpress <code@flexion.org>, 2020
+# ToMáš Marný, 2020
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: libmatekbd 1.23.0\n"
+"Project-Id-Version: libmatekbd 1.24.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/libmatekbd\n"
-"POT-Creation-Date: 2019-11-06 22:04+0100\n"
+"POT-Creation-Date: 2020-02-24 21:48+0100\n"
 "PO-Revision-Date: 2018-03-11 15:34+0000\n"
-"Last-Translator: Roman Horník <roman.hornik@debian-linux.cz>, 2018\n"
+"Last-Translator: ToMáš Marný, 2020\n"
 "Language-Team: Czech (https://www.transifex.com/mate/teams/13566/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,7 +37,231 @@ msgstr "Nastala chyba při načítání obrázku: %s"
 msgid "XKB initialization error"
 msgstr "Chyba při spouštění XKB"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:2501
+#: libmatekbd/matekbd-keyboard-drawing.c:651
+msgid ""
+"Scroll\n"
+"Lock"
+msgstr ""
+"Scroll\n"
+"Lock"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:659
+msgid "Sys Rq"
+msgstr "Sys Rq"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:663
+msgid ""
+"Page\n"
+"Up"
+msgstr ""
+"Page\n"
+"Up"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:667
+msgid ""
+"Page\n"
+"Down"
+msgstr ""
+"Page\n"
+"Down"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:671
+msgid ""
+"Num\n"
+"Lock"
+msgstr ""
+"Num\n"
+"Lock"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:675
+msgid "Pg Up"
+msgstr "Pg Up"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:679
+msgid "Pg Dn"
+msgstr "Pg Dn"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:683
+#: libmatekbd/matekbd-keyboard-drawing.c:759
+msgid "Home"
+msgstr "Domovská složka"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:687
+#: libmatekbd/matekbd-keyboard-drawing.c:764
+msgid "Left"
+msgstr "Vlevo"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:691
+#: libmatekbd/matekbd-keyboard-drawing.c:784
+msgid "End"
+msgstr "End"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:695
+#: libmatekbd/matekbd-keyboard-drawing.c:769
+msgid "Up"
+msgstr "Výš"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:699
+msgid "Begin"
+msgstr ""
+
+#: libmatekbd/matekbd-keyboard-drawing.c:703
+#: libmatekbd/matekbd-keyboard-drawing.c:774
+msgid "Right"
+msgstr "Vpravo"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:707
+msgid "Enter"
+msgstr "Enter"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:711
+#: libmatekbd/matekbd-keyboard-drawing.c:779
+msgid "Down"
+msgstr ""
+
+#: libmatekbd/matekbd-keyboard-drawing.c:715
+msgid "Ins"
+msgstr ""
+
+#: libmatekbd/matekbd-keyboard-drawing.c:719
+msgid "Del"
+msgstr ""
+
+#: libmatekbd/matekbd-keyboard-drawing.c:724
+msgid "ISO_Level3_Shift"
+msgstr ""
+
+#: libmatekbd/matekbd-keyboard-drawing.c:729
+#: libmatekbd/matekbd-keyboard-drawing.c:739
+msgid "Tab"
+msgstr ""
+
+#: libmatekbd/matekbd-keyboard-drawing.c:734
+msgid "BackSpace"
+msgstr ""
+
+#: libmatekbd/matekbd-keyboard-drawing.c:744
+msgid "Return"
+msgstr "Enter"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:749
+msgid "Pause"
+msgstr "Pozastavit"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:754
+msgid "Esc"
+msgstr ""
+
+#: libmatekbd/matekbd-keyboard-drawing.c:789
+msgid "Print"
+msgstr "Tisk"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:794
+msgid "Insert"
+msgstr "Vlož"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:799
+msgid "Menu"
+msgstr "Nabídka"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:804
+msgid "F1"
+msgstr "F1"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:809
+msgid "F2"
+msgstr "F2"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:814
+msgid "F3"
+msgstr "F3"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:819
+msgid "F4"
+msgstr "F4"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:824
+msgid "F5"
+msgstr "F5"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:829
+msgid "F6"
+msgstr "F6"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:834
+msgid "F7"
+msgstr "F7"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:839
+msgid "F8"
+msgstr "F8"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:844
+msgid "F9"
+msgstr "F9"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:849
+msgid "F10"
+msgstr "F10"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:854
+msgid "F11"
+msgstr "F11"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:859
+msgid "F12"
+msgstr "F12"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:864
+#: libmatekbd/matekbd-keyboard-drawing.c:869
+msgid "Shift"
+msgstr "Shift"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:874
+#: libmatekbd/matekbd-keyboard-drawing.c:879
+msgid "Control"
+msgstr "Control"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:884
+msgid ""
+"Caps\n"
+"Lock"
+msgstr ""
+"Caps\n"
+"Lock"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:889
+msgid "Meta"
+msgstr "Meta"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:894
+msgid "Alt"
+msgstr "Alt"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:899
+#: libmatekbd/matekbd-keyboard-drawing.c:904
+msgid "Super"
+msgstr "Super"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:909
+msgid "Delete"
+msgstr "Smazat"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:973
+msgid ""
+"horiz\n"
+"conn"
+msgstr ""
+
+#: libmatekbd/matekbd-keyboard-drawing.c:977
+msgid "AltGr"
+msgstr ""
+
+#: libmatekbd/matekbd-keyboard-drawing.c:981
+msgid "Compose"
+msgstr "Klávesa Compose"
+
+#: libmatekbd/matekbd-keyboard-drawing.c:2692
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
@@ -44,16 +272,16 @@ msgstr ""
 "Copyright &#169; X.Org Foundation a přispívající k XKeyboardConfig\n"
 "Licencování viz metadata balíčku"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:2583
+#: libmatekbd/matekbd-keyboard-drawing.c:2774
 msgid "Unknown"
 msgstr "Neznámo"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:2629
+#: libmatekbd/matekbd-keyboard-drawing.c:2820
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "Rozložení klávesnice \"%s\""
 
-#: libmatekbd/matekbd-keyboard-config.c:719
+#: libmatekbd/matekbd-keyboard-config.c:717
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
@@ -62,7 +290,7 @@ msgstr[1] "rozložení \"%s\""
 msgstr[2] "rozložení \"%s\""
 msgstr[3] "rozložení \"%s\""
 
-#: libmatekbd/matekbd-keyboard-config.c:737
+#: libmatekbd/matekbd-keyboard-config.c:735
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
@@ -71,16 +299,16 @@ msgstr[1] "volby \"%s\""
 msgstr[2] "volby \"%s\""
 msgstr[3] "volby \"%s\""
 
-#: libmatekbd/matekbd-keyboard-config.c:745
+#: libmatekbd/matekbd-keyboard-config.c:743
 #, c-format
 msgid "model \"%s\", %s and %s"
 msgstr "model \"%s\", %s a %s"
 
-#: libmatekbd/matekbd-keyboard-config.c:746
+#: libmatekbd/matekbd-keyboard-config.c:744
 msgid "no layout"
 msgstr "bez rozložení"
 
-#: libmatekbd/matekbd-keyboard-config.c:747
+#: libmatekbd/matekbd-keyboard-config.c:745
 msgid "no options"
 msgstr "bez možností"
 
