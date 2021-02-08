@@ -131,7 +131,10 @@ dnl - Show summary
 dnl ---------------------------------------------------------------------------
 
 echo "
-Configuration:
+Configure summary:
+
+    ${PACKAGE_STRING}
+    `echo $PACKAGE_STRING | sed "s/./=/g"`
 
     prefix:                       ${prefix}
     exec_prefix:                  ${exec_prefix}
