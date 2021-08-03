@@ -2,7 +2,7 @@ dnl ***************************************************************************
 dnl *** configure.in for libmatekbd                                        ***
 dnl ***************************************************************************
 m4_define([libmatekbd_major_version], [1])
-m4_define([libmatekbd_minor_version], [25])
+m4_define([libmatekbd_minor_version], [26])
 m4_define([libmatekbd_micro_version], [0])
 m4_define([libmatekbd_version],[libmatekbd_major_version.libmatekbd_minor_version.libmatekbd_micro_version])
 
