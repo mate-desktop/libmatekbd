@@ -7,16 +7,16 @@
 # Шаповалов Анатолій Романович <elrond.716.smith@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # zubr139, 2020
-# Микола Ткач <chistomov@gmail.com>, 2020
 # Bohdan Kovalchuk <neostanniy@gmail.com>, 2020
+# Микола Ткач <chistomov@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: libmatekbd 1.24.0\n"
+"Project-Id-Version: libmatekbd 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/libmatekbd\n"
-"POT-Creation-Date: 2020-02-24 21:48+0100\n"
+"POT-Creation-Date: 2020-08-18 14:22+0200\n"
 "PO-Revision-Date: 2018-03-11 15:34+0000\n"
-"Last-Translator: Bohdan Kovalchuk <neostanniy@gmail.com>, 2020\n"
+"Last-Translator: Микола Ткач <chistomov@gmail.com>, 2021\n"
 "Language-Team: Ukrainian (https://www.transifex.com/mate/teams/13566/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,223 +31,233 @@ msgstr "Помилка завантаження зображення: %s"
 
 #: libmatekbd/matekbd-indicator.c:694 libmatekbd/matekbd-status.c:651
 msgid "XKB initialization error"
-msgstr "Помилка ініціялізації XKB"
+msgstr "Помилка ініціалізації XKB"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:651
+#: libmatekbd/matekbd-keyboard-drawing.c:650
 msgid ""
 "Scroll\n"
 "Lock"
 msgstr ""
+"Гортання\n"
+"Блокування"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:659
+#: libmatekbd/matekbd-keyboard-drawing.c:658
 msgid "Sys Rq"
 msgstr ""
 
-#: libmatekbd/matekbd-keyboard-drawing.c:663
+#: libmatekbd/matekbd-keyboard-drawing.c:662
 msgid ""
 "Page\n"
 "Up"
 msgstr ""
+"Page\n"
+"Up"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:667
+#: libmatekbd/matekbd-keyboard-drawing.c:666
 msgid ""
 "Page\n"
 "Down"
 msgstr ""
+"Page\n"
+"Down"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:671
+#: libmatekbd/matekbd-keyboard-drawing.c:670
 msgid ""
 "Num\n"
 "Lock"
 msgstr ""
+"Num\n"
+"Lock"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:675
+#: libmatekbd/matekbd-keyboard-drawing.c:674
 msgid "Pg Up"
-msgstr ""
+msgstr "Pg Up"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:679
+#: libmatekbd/matekbd-keyboard-drawing.c:678
 msgid "Pg Dn"
-msgstr ""
+msgstr "Pg Dn"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:683
-#: libmatekbd/matekbd-keyboard-drawing.c:759
+#: libmatekbd/matekbd-keyboard-drawing.c:682
+#: libmatekbd/matekbd-keyboard-drawing.c:758
 msgid "Home"
 msgstr "Домівка"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:687
-#: libmatekbd/matekbd-keyboard-drawing.c:764
+#: libmatekbd/matekbd-keyboard-drawing.c:686
+#: libmatekbd/matekbd-keyboard-drawing.c:763
 msgid "Left"
 msgstr "Ліворуч"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:691
-#: libmatekbd/matekbd-keyboard-drawing.c:784
+#: libmatekbd/matekbd-keyboard-drawing.c:690
+#: libmatekbd/matekbd-keyboard-drawing.c:783
 msgid "End"
 msgstr ""
 
-#: libmatekbd/matekbd-keyboard-drawing.c:695
-#: libmatekbd/matekbd-keyboard-drawing.c:769
+#: libmatekbd/matekbd-keyboard-drawing.c:694
+#: libmatekbd/matekbd-keyboard-drawing.c:768
 msgid "Up"
 msgstr "Вгору"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:699
+#: libmatekbd/matekbd-keyboard-drawing.c:698
 msgid "Begin"
 msgstr ""
 
-#: libmatekbd/matekbd-keyboard-drawing.c:703
-#: libmatekbd/matekbd-keyboard-drawing.c:774
+#: libmatekbd/matekbd-keyboard-drawing.c:702
+#: libmatekbd/matekbd-keyboard-drawing.c:773
 msgid "Right"
 msgstr "Праворуч"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:707
+#: libmatekbd/matekbd-keyboard-drawing.c:706
 msgid "Enter"
 msgstr "Обчислити результат"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:711
-#: libmatekbd/matekbd-keyboard-drawing.c:779
+#: libmatekbd/matekbd-keyboard-drawing.c:710
+#: libmatekbd/matekbd-keyboard-drawing.c:778
 msgid "Down"
-msgstr ""
+msgstr "Down"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:715
+#: libmatekbd/matekbd-keyboard-drawing.c:714
 msgid "Ins"
-msgstr ""
+msgstr "Ins"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:719
+#: libmatekbd/matekbd-keyboard-drawing.c:718
 msgid "Del"
-msgstr ""
+msgstr "Del"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:724
+#: libmatekbd/matekbd-keyboard-drawing.c:723
 msgid "ISO_Level3_Shift"
 msgstr ""
 
-#: libmatekbd/matekbd-keyboard-drawing.c:729
-#: libmatekbd/matekbd-keyboard-drawing.c:739
+#: libmatekbd/matekbd-keyboard-drawing.c:728
+#: libmatekbd/matekbd-keyboard-drawing.c:738
 msgid "Tab"
-msgstr ""
+msgstr "Tab"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:734
+#: libmatekbd/matekbd-keyboard-drawing.c:733
 msgid "BackSpace"
-msgstr ""
+msgstr "BackSpace"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:744
+#: libmatekbd/matekbd-keyboard-drawing.c:743
 msgid "Return"
 msgstr ""
 
-#: libmatekbd/matekbd-keyboard-drawing.c:749
+#: libmatekbd/matekbd-keyboard-drawing.c:748
 msgid "Pause"
 msgstr "Павза"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:754
+#: libmatekbd/matekbd-keyboard-drawing.c:753
 msgid "Esc"
-msgstr ""
+msgstr "Esc"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:789
+#: libmatekbd/matekbd-keyboard-drawing.c:788
 msgid "Print"
 msgstr "Друк"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:794
+#: libmatekbd/matekbd-keyboard-drawing.c:793
 msgid "Insert"
 msgstr "Вставити"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:799
+#: libmatekbd/matekbd-keyboard-drawing.c:798
 msgid "Menu"
 msgstr "Меню"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:804
+#: libmatekbd/matekbd-keyboard-drawing.c:803
 msgid "F1"
 msgstr "F1"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:809
+#: libmatekbd/matekbd-keyboard-drawing.c:808
 msgid "F2"
-msgstr ""
+msgstr "F2"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:814
+#: libmatekbd/matekbd-keyboard-drawing.c:813
 msgid "F3"
-msgstr ""
+msgstr "F3"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:819
+#: libmatekbd/matekbd-keyboard-drawing.c:818
 msgid "F4"
-msgstr ""
+msgstr "F4"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:824
+#: libmatekbd/matekbd-keyboard-drawing.c:823
 msgid "F5"
-msgstr ""
+msgstr "F5"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:829
+#: libmatekbd/matekbd-keyboard-drawing.c:828
 msgid "F6"
-msgstr ""
+msgstr "F6"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:834
+#: libmatekbd/matekbd-keyboard-drawing.c:833
 msgid "F7"
-msgstr ""
+msgstr "F7"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:839
+#: libmatekbd/matekbd-keyboard-drawing.c:838
 msgid "F8"
 msgstr "F8"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:844
+#: libmatekbd/matekbd-keyboard-drawing.c:843
 msgid "F9"
 msgstr "F9"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:849
+#: libmatekbd/matekbd-keyboard-drawing.c:848
 msgid "F10"
-msgstr ""
+msgstr "F10"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:854
+#: libmatekbd/matekbd-keyboard-drawing.c:853
 msgid "F11"
-msgstr ""
+msgstr "F11"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:859
+#: libmatekbd/matekbd-keyboard-drawing.c:858
 msgid "F12"
-msgstr ""
+msgstr "F12"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:864
-#: libmatekbd/matekbd-keyboard-drawing.c:869
+#: libmatekbd/matekbd-keyboard-drawing.c:863
+#: libmatekbd/matekbd-keyboard-drawing.c:868
 msgid "Shift"
 msgstr "Shift"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:874
-#: libmatekbd/matekbd-keyboard-drawing.c:879
+#: libmatekbd/matekbd-keyboard-drawing.c:873
+#: libmatekbd/matekbd-keyboard-drawing.c:878
 msgid "Control"
-msgstr ""
+msgstr "Control"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:884
+#: libmatekbd/matekbd-keyboard-drawing.c:883
 msgid ""
 "Caps\n"
 "Lock"
 msgstr ""
+"Caps\n"
+"Lock"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:889
+#: libmatekbd/matekbd-keyboard-drawing.c:888
 msgid "Meta"
 msgstr "Meta"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:894
+#: libmatekbd/matekbd-keyboard-drawing.c:893
 msgid "Alt"
 msgstr "Alt"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:899
-#: libmatekbd/matekbd-keyboard-drawing.c:904
+#: libmatekbd/matekbd-keyboard-drawing.c:898
+#: libmatekbd/matekbd-keyboard-drawing.c:903
 msgid "Super"
 msgstr "Super"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:909
+#: libmatekbd/matekbd-keyboard-drawing.c:908
 msgid "Delete"
 msgstr "Вилучити"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:973
+#: libmatekbd/matekbd-keyboard-drawing.c:972
 msgid ""
 "horiz\n"
 "conn"
 msgstr ""
 
-#: libmatekbd/matekbd-keyboard-drawing.c:977
+#: libmatekbd/matekbd-keyboard-drawing.c:976
 msgid "AltGr"
-msgstr ""
+msgstr "AltGr"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:981
+#: libmatekbd/matekbd-keyboard-drawing.c:980
 msgid "Compose"
 msgstr ""
 
-#: libmatekbd/matekbd-keyboard-drawing.c:2692
+#: libmatekbd/matekbd-keyboard-drawing.c:2690
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
@@ -255,14 +265,14 @@ msgid ""
 "For licensing see package metadata"
 msgstr ""
 "Розкладка набірниці \"%s\"\n"
-"Авторське право &#169; X.Org Foundation та помічники у написанні XKeyboardConfig\n"
-"Ліцензійні умови викладені у метаданих"
+"Авторське право &#169; X.Org Foundation і помічники у написанні XKeyboardConfig\n"
+"Ліцензійні умови викладено у метаданих"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:2774
+#: libmatekbd/matekbd-keyboard-drawing.c:2772
 msgid "Unknown"
 msgstr "Невідомий"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:2820
+#: libmatekbd/matekbd-keyboard-drawing.c:2818
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "Розкладка набірниці \"%s\""
@@ -328,7 +338,7 @@ msgid ""
 "A collection of scripts to run whenever the keyboard state is reloaded. "
 "Useful for re-applying xmodmap based adjustments"
 msgstr ""
-"Колекція сценаріїв, що запускаються при перезавантаженні стану набірниці. "
+"Колекція сценаріїв, які запускаються при перезавантаженні стану набірниці. "
 "Корисно для повторного накладання корекцій на основі xmodmap"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:33
@@ -342,7 +352,7 @@ msgstr "Перелік файлів modmap, доступних у каталоз
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:38
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:39
 msgid "Default group, assigned on window creation"
-msgstr "Типова група, що призначається при створенні вікна"
+msgstr "Типова група, яка призначається при створенні вікна"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:43
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:44
@@ -392,22 +402,22 @@ msgstr "Показувати світлодіодний індикатор на�
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:80
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:81
 msgid "The Keyboard Preview, X offset"
-msgstr "Попередній перегляд, зсув по X"
+msgstr "Передпрогляд, зсув по X"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:85
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:86
 msgid "The Keyboard Preview, Y offset"
-msgstr "Попередній перегляд, зсув по Y"
+msgstr "Передпрогляд, зсув по Y"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:90
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:91
 msgid "The Keyboard Preview, width"
-msgstr "Попередній перегляд, ширина"
+msgstr "Передпрогляд, ширина"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:95
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:96
 msgid "The Keyboard Preview, height"
-msgstr "Попередній перегляд, висота"
+msgstr "Передпрогляд, висота"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:102
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:103
@@ -447,8 +457,8 @@ msgid ""
 "The background color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
 msgstr ""
-"Колір заднього пляну для індикатора розкладки. Має бути у форматі \"RGB \", "
-"наприклад \" 255 ​​0 0 \" ."
+"Колір тла для індикатора розкладки. Має бути у форматі \"RGB \", наприклад "
+"\" 255 ​​0 0 \" ."
 
 #: libmatekbd/show-layout.ui:9
 msgid "Keyboard Layout"

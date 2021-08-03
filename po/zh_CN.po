@@ -7,17 +7,20 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # Mingcong Bai <jeffbai@aosc.xyz>, 2020
 # Martin Wimpress <code@flexion.org>, 2020
-# liushuyu011 <liushuyu011@gmail.com>, 2020
+# shuyu liu <liushuyu011@gmail.com>, 2020
+# a73a47e368cc011d8f94528bd9d5d3f1_91fccdf <1b07f49e2a323989c85dd26d526f7bb9_871526>, 2020
 # liulitchi <xingzuo88@qq.com>, 2020
-# 邢家朋 <xingjiapeng10@163.com>, 2020
+# Zkdc, 2021
+# OkayPJ <1535253694@qq.com>, 2021
+# Wenbin Lv <wenbin816@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: libmatekbd 1.24.0\n"
+"Project-Id-Version: libmatekbd 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/libmatekbd\n"
-"POT-Creation-Date: 2020-02-24 21:48+0100\n"
+"POT-Creation-Date: 2020-08-18 14:22+0200\n"
 "PO-Revision-Date: 2018-03-11 15:34+0000\n"
-"Last-Translator: 邢家朋 <xingjiapeng10@163.com>, 2020\n"
+"Last-Translator: Wenbin Lv <wenbin816@gmail.com>, 2021\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/mate/teams/13566/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,7 +37,7 @@ msgstr "加载图片出错：%s"
 msgid "XKB initialization error"
 msgstr "XKB 初始化出错"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:651
+#: libmatekbd/matekbd-keyboard-drawing.c:650
 msgid ""
 "Scroll\n"
 "Lock"
@@ -42,11 +45,11 @@ msgstr ""
 "滚动\n"
 "锁定"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:659
+#: libmatekbd/matekbd-keyboard-drawing.c:658
 msgid "Sys Rq"
-msgstr ""
+msgstr "Sys Rq"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:663
+#: libmatekbd/matekbd-keyboard-drawing.c:662
 msgid ""
 "Page\n"
 "Up"
@@ -54,7 +57,7 @@ msgstr ""
 "上\n"
 "一页"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:667
+#: libmatekbd/matekbd-keyboard-drawing.c:666
 msgid ""
 "Page\n"
 "Down"
@@ -62,7 +65,7 @@ msgstr ""
 "下\n"
 "一页"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:671
+#: libmatekbd/matekbd-keyboard-drawing.c:670
 msgid ""
 "Num\n"
 "Lock"
@@ -70,193 +73,197 @@ msgstr ""
 "小键盘\n"
 "锁定"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:675
+#: libmatekbd/matekbd-keyboard-drawing.c:674
 msgid "Pg Up"
 msgstr "上页"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:679
+#: libmatekbd/matekbd-keyboard-drawing.c:678
 msgid "Pg Dn"
 msgstr "下页"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:683
-#: libmatekbd/matekbd-keyboard-drawing.c:759
+#: libmatekbd/matekbd-keyboard-drawing.c:682
+#: libmatekbd/matekbd-keyboard-drawing.c:758
 msgid "Home"
 msgstr "主目录"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:687
-#: libmatekbd/matekbd-keyboard-drawing.c:764
+#: libmatekbd/matekbd-keyboard-drawing.c:686
+#: libmatekbd/matekbd-keyboard-drawing.c:763
 msgid "Left"
 msgstr "左"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:691
-#: libmatekbd/matekbd-keyboard-drawing.c:784
+#: libmatekbd/matekbd-keyboard-drawing.c:690
+#: libmatekbd/matekbd-keyboard-drawing.c:783
 msgid "End"
-msgstr ""
+msgstr "结束"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:695
-#: libmatekbd/matekbd-keyboard-drawing.c:769
+#: libmatekbd/matekbd-keyboard-drawing.c:694
+#: libmatekbd/matekbd-keyboard-drawing.c:768
 msgid "Up"
 msgstr "向上"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:699
+#: libmatekbd/matekbd-keyboard-drawing.c:698
 msgid "Begin"
-msgstr ""
+msgstr "开始"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:703
-#: libmatekbd/matekbd-keyboard-drawing.c:774
+#: libmatekbd/matekbd-keyboard-drawing.c:702
+#: libmatekbd/matekbd-keyboard-drawing.c:773
 msgid "Right"
 msgstr "右"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:707
+#: libmatekbd/matekbd-keyboard-drawing.c:706
 msgid "Enter"
 msgstr "计算"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:711
-#: libmatekbd/matekbd-keyboard-drawing.c:779
+#: libmatekbd/matekbd-keyboard-drawing.c:710
+#: libmatekbd/matekbd-keyboard-drawing.c:778
 msgid "Down"
-msgstr ""
+msgstr "下"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:715
+#: libmatekbd/matekbd-keyboard-drawing.c:714
 msgid "Ins"
-msgstr ""
+msgstr "插入"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:719
+#: libmatekbd/matekbd-keyboard-drawing.c:718
 msgid "Del"
-msgstr ""
+msgstr "删除"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:724
+#: libmatekbd/matekbd-keyboard-drawing.c:723
 msgid "ISO_Level3_Shift"
-msgstr ""
+msgstr "ISO_Level3_Shift"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:729
-#: libmatekbd/matekbd-keyboard-drawing.c:739
+#: libmatekbd/matekbd-keyboard-drawing.c:728
+#: libmatekbd/matekbd-keyboard-drawing.c:738
 msgid "Tab"
-msgstr ""
+msgstr "Tab"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:734
+#: libmatekbd/matekbd-keyboard-drawing.c:733
 msgid "BackSpace"
-msgstr ""
+msgstr "退格"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:744
+#: libmatekbd/matekbd-keyboard-drawing.c:743
 msgid "Return"
-msgstr ""
+msgstr "回车"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:749
+#: libmatekbd/matekbd-keyboard-drawing.c:748
 msgid "Pause"
 msgstr "暂停"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:754
+#: libmatekbd/matekbd-keyboard-drawing.c:753
 msgid "Esc"
-msgstr ""
+msgstr "Esc"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:789
+#: libmatekbd/matekbd-keyboard-drawing.c:788
 msgid "Print"
 msgstr "打印"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:794
+#: libmatekbd/matekbd-keyboard-drawing.c:793
 msgid "Insert"
 msgstr "插入"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:799
+#: libmatekbd/matekbd-keyboard-drawing.c:798
 msgid "Menu"
 msgstr "菜单"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:804
+#: libmatekbd/matekbd-keyboard-drawing.c:803
 msgid "F1"
-msgstr ""
+msgstr "F1"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:809
+#: libmatekbd/matekbd-keyboard-drawing.c:808
 msgid "F2"
-msgstr ""
+msgstr "F2"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:814
+#: libmatekbd/matekbd-keyboard-drawing.c:813
 msgid "F3"
-msgstr ""
+msgstr "F3"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:819
+#: libmatekbd/matekbd-keyboard-drawing.c:818
 msgid "F4"
-msgstr ""
+msgstr "F4"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:824
+#: libmatekbd/matekbd-keyboard-drawing.c:823
 msgid "F5"
-msgstr ""
+msgstr "F5"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:829
+#: libmatekbd/matekbd-keyboard-drawing.c:828
 msgid "F6"
-msgstr ""
+msgstr "F6"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:834
+#: libmatekbd/matekbd-keyboard-drawing.c:833
 msgid "F7"
-msgstr ""
+msgstr "F7"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:839
+#: libmatekbd/matekbd-keyboard-drawing.c:838
 msgid "F8"
 msgstr "F8"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:844
+#: libmatekbd/matekbd-keyboard-drawing.c:843
 msgid "F9"
 msgstr "F9"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:849
+#: libmatekbd/matekbd-keyboard-drawing.c:848
 msgid "F10"
-msgstr ""
+msgstr "F10"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:854
+#: libmatekbd/matekbd-keyboard-drawing.c:853
 msgid "F11"
-msgstr ""
+msgstr "F11"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:859
+#: libmatekbd/matekbd-keyboard-drawing.c:858
 msgid "F12"
-msgstr ""
+msgstr "F12"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:864
-#: libmatekbd/matekbd-keyboard-drawing.c:869
+#: libmatekbd/matekbd-keyboard-drawing.c:863
+#: libmatekbd/matekbd-keyboard-drawing.c:868
 msgid "Shift"
 msgstr "Shift"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:874
-#: libmatekbd/matekbd-keyboard-drawing.c:879
+#: libmatekbd/matekbd-keyboard-drawing.c:873
+#: libmatekbd/matekbd-keyboard-drawing.c:878
 msgid "Control"
-msgstr ""
+msgstr "Control"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:884
+#: libmatekbd/matekbd-keyboard-drawing.c:883
 msgid ""
 "Caps\n"
 "Lock"
 msgstr ""
+"大写\n"
+"锁定"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:889
+#: libmatekbd/matekbd-keyboard-drawing.c:888
 msgid "Meta"
 msgstr "Meta"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:894
+#: libmatekbd/matekbd-keyboard-drawing.c:893
 msgid "Alt"
 msgstr "Alt"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:899
-#: libmatekbd/matekbd-keyboard-drawing.c:904
+#: libmatekbd/matekbd-keyboard-drawing.c:898
+#: libmatekbd/matekbd-keyboard-drawing.c:903
 msgid "Super"
 msgstr "Super"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:909
+#: libmatekbd/matekbd-keyboard-drawing.c:908
 msgid "Delete"
 msgstr "删除"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:973
+#: libmatekbd/matekbd-keyboard-drawing.c:972
 msgid ""
 "horiz\n"
 "conn"
 msgstr ""
+"horiz\n"
+"conn"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:977
+#: libmatekbd/matekbd-keyboard-drawing.c:976
 msgid "AltGr"
-msgstr ""
+msgstr "AltGr"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:981
+#: libmatekbd/matekbd-keyboard-drawing.c:980
 msgid "Compose"
-msgstr ""
+msgstr "Compose"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:2692
+#: libmatekbd/matekbd-keyboard-drawing.c:2690
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
@@ -267,11 +274,11 @@ msgstr ""
 "版权所有&#169 X.Org 基金会及 XKeyboardConfig 贡献者\n"
 "许可请查看软件包元数据"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:2774
+#: libmatekbd/matekbd-keyboard-drawing.c:2772
 msgid "Unknown"
 msgstr "未知"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:2820
+#: libmatekbd/matekbd-keyboard-drawing.c:2818
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "键盘布局“%s”"
