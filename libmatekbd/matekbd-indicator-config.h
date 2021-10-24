@@ -40,7 +40,7 @@ struct _MatekbdIndicatorConfig {
 	GSettings *settings;
 	GSList *image_filenames;
 	GtkIconTheme *icon_theme;
-	int config_listener_id;
+	gulong config_listener_id;
 	XklEngine *engine;
 };
 
