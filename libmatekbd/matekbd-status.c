@@ -720,6 +720,18 @@ matekbd_status_global_term (void)
 	matekbd_keyboard_config_term (&globals.kbd_cfg);
 	matekbd_desktop_config_term (&globals.cfg);
 
+#if GLIB_CHECK_VERSION(2,62,0)
+	if ((globals.state_changed_handler != 0) &&
+	    g_signal_handler_is_connected (globals.engine,
+	                                   globals.state_changed_handler))
+		g_clear_signal_handler (&globals.state_changed_handler,
+		                        globals.engine);
+	if ((globals.config_changed_handler != 0) &&
+	    g_signal_handler_is_connected (globals.engine,
+	                                   globals.config_changed_handler))
+		g_clear_signal_handler (&globals.config_changed_handler,
+		                        globals.engine);
+#else
 	if (g_signal_handler_is_connected
 	    (globals.engine, globals.state_changed_handler)) {
 		g_signal_handler_disconnect (globals.engine,
@@ -732,6 +744,7 @@ matekbd_status_global_term (void)
 					     globals.config_changed_handler);
 		globals.config_changed_handler = 0;
 	}
+#endif
 
 	g_object_unref (G_OBJECT (globals.registry));
 	globals.registry = NULL;
