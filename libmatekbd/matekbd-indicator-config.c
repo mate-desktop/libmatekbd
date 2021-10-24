@@ -332,7 +332,14 @@ matekbd_indicator_config_start_listen (MatekbdIndicatorConfig *
 void
 matekbd_indicator_config_stop_listen (MatekbdIndicatorConfig * ind_config)
 {
-	g_signal_handler_disconnect (ind_config->settings,
-				     ind_config->config_listener_id);
-	ind_config->config_listener_id = 0;
+#if GLIB_CHECK_VERSION(2,62,0)
+	g_clear_signal_handler (&ind_config->config_listener_id,
+	                        ind_config->settings);
+#else
+	if (ind_config->config_listener_id != 0) {
+		g_signal_handler_disconnect (ind_config->settings,
+					     ind_config->config_listener_id);
+		ind_config->config_listener_id = 0;
+	}
+#endif
 }

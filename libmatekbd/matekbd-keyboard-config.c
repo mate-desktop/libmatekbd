@@ -650,9 +650,16 @@ matekbd_keyboard_config_start_listen (MatekbdKeyboardConfig * kbd_config,
 void
 matekbd_keyboard_config_stop_listen (MatekbdKeyboardConfig * kbd_config)
 {
-	g_signal_handler_disconnect (kbd_config->settings,
-				     kbd_config->config_listener_id);
-	kbd_config->config_listener_id = 0;
+#if GLIB_CHECK_VERSION(2,62,0)
+	g_clear_signal_handler (&kbd_config->config_listener_id,
+	                        kbd_config->settings);
+#else
+	if (kbd_config->config_listener_id != 0) {
+		g_signal_handler_disconnect (kbd_config->settings,
+					     kbd_config->config_listener_id);
+		kbd_config->config_listener_id = 0;
+	}
+#endif
 }
 
 gboolean

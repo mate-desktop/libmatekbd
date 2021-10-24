@@ -256,9 +256,16 @@ matekbd_desktop_config_start_listen (MatekbdDesktopConfig * config,
 void
 matekbd_desktop_config_stop_listen (MatekbdDesktopConfig * config)
 {
-	g_signal_handler_disconnect (config->settings,
-				    config->config_listener_id);
-	config->config_listener_id = 0;
+#if GLIB_CHECK_VERSION(2,62,0)
+	g_clear_signal_handler (&config->config_listener_id,
+	                        config->settings);
+#else
+	if (config->config_listener_id != 0) {
+		g_signal_handler_disconnect (config->settings,
+		                             config->config_listener_id);
+		config->config_listener_id = 0;
+	}
+#endif
 }
 
 gboolean
