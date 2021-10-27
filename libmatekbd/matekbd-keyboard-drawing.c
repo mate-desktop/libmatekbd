@@ -33,7 +33,6 @@
 #include <matekbd-keyboard-drawing-marshal.h>
 #include <matekbd-util.h>
 
-
 #define INVALID_KEYCODE ((guint)(-1))
 
 #define GTK_RESPONSE_PRINT 2
@@ -57,7 +56,6 @@ extern gboolean xkl_xkb_config_native_prepare (XklEngine * engine,
 extern void xkl_xkb_config_native_cleanup (XklEngine * engine,
 					  gpointer component_names);
 
-
 static gint
 xkb_to_pixmap_coord (MatekbdKeyboardDrawingRenderContext * context, gint n)
 {
@@ -70,7 +68,6 @@ xkb_to_pixmap_double (MatekbdKeyboardDrawingRenderContext * context,
 {
 	return d * context->scale_numerator / context->scale_denominator;
 }
-
 
 /* angle is in tenths of a degree; coordinates can be anything as (xkb,
  * pixels, pango) as long as they are all the same */
@@ -151,7 +148,6 @@ intersect (gdouble n1x, gdouble n1y, gdouble d1,
 	inverse (n1x, n1y, n2x, n2y, &e, &f, &g, &h);
 	multiply (e, f, g, h, d1, d2, x, y);
 }
-
 
 /* draw an angle from the current point to b and then to c,
  * with a rounded corner of the given radius.
@@ -269,7 +265,6 @@ rounded_polygon (cairo_t * cr,
 				  points[0].x) / 2,
 		       (gdouble) (points[num_points - 1].y +
 				  points[0].y) / 2);
-
 
 #ifdef KBDRAW_DEBUG
 	printf ("    rounded polygon of radius %f:\n", radius);
@@ -551,7 +546,6 @@ parse_xkb_color_spec (gchar * colorspec, GdkRGBA * color)
 
 	return TRUE;
 }
-
 
 static guint
 find_keycode (MatekbdKeyboardDrawing * drawing, gchar * key_name)
@@ -994,7 +988,6 @@ set_key_label_in_layout (MatekbdKeyboardDrawingRenderContext * context,
 		}
 	}
 }
-
 
 static void
 draw_pango_layout (MatekbdKeyboardDrawingRenderContext * context,
@@ -2807,7 +2800,6 @@ matekbd_keyboard_drawing_new_dialog (gint group, gchar * group_name)
 		g_error ("Could not load UI: %s", error->message);
 		g_clear_error (&error);
 	}
-
 
 	dialog =
 	    GTK_WIDGET (gtk_builder_get_object
