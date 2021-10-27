@@ -198,11 +198,9 @@ void matekbd_keyboard_drawing_set_groups_levels (MatekbdKeyboardDrawing *
 					      MatekbdKeyboardDrawingGroupLevel
 					      * groupLevels[]);
 
-
 void matekbd_keyboard_drawing_print (MatekbdKeyboardDrawing * drawing,
 				  GtkWindow * parent_window,
 				  const gchar * description);
-
 
 GtkWidget* matekbd_keyboard_drawing_new_dialog (gint group, gchar* group_name);
 

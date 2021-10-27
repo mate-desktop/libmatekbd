@@ -27,7 +27,6 @@
 #include <glib.h>
 #include "libmatekbd/matekbd-keyboard-drawing.h"
 
-
 static gchar *groups = NULL;
 static gchar *levels = NULL;
 static gchar *symbols = NULL;

@@ -450,7 +450,6 @@ matekbd_indicator_parent_set (GtkWidget * gki, GtkWidget * previous_parent)
 	matekbd_indicator_update_tooltips (MATEKBD_INDICATOR (gki));
 }
 
-
 void
 matekbd_indicator_reinit_ui (MatekbdIndicator * gki)
 {
@@ -572,7 +571,6 @@ matekbd_indicator_state_callback (XklEngine * engine,
 	}
 }
 
-
 void
 matekbd_indicator_set_current_page (MatekbdIndicator * gki)
 {
@@ -626,7 +624,6 @@ matekbd_indicator_filter_x_evt (GdkXEvent * xev, GdkEvent * event)
 	}
 	return GDK_FILTER_CONTINUE;
 }
-
 
 /* Should be called once for all widgets */
 static void

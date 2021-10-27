@@ -528,7 +528,6 @@ matekbd_status_state_callback (XklEngine * engine,
 	}
 }
 
-
 void
 matekbd_status_set_current_page (MatekbdStatus * gki)
 {
@@ -582,7 +581,6 @@ matekbd_status_filter_x_evt (GdkXEvent * xev, GdkEvent * event)
 	}
 	return GDK_FILTER_CONTINUE;
 }
-
 
 /* Should be called once for all widgets */
 static void
