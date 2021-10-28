@@ -66,7 +66,7 @@ static const GOptionEntry options[] = {
 	 "Track the server XKB configuration", NULL},
 	{"version", '\0', 0, G_OPTION_ARG_NONE, &program_version,
 	 "Show current version", NULL},
-	{NULL},
+	{NULL, 0, 0, G_OPTION_ARG_NONE, NULL, NULL, NULL},
 };
 
 static gboolean
