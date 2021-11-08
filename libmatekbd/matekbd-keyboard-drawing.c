@@ -2097,6 +2097,7 @@ free_cdik (			/*colors doodads indicators keys */
 	g_list_free (drawing->keyboard_items);
 	drawing->keyboard_items = NULL;
 
+	g_free (drawing->physical_indicators);
 	g_free (drawing->keys);
 	g_free (drawing->colors);
 }
@@ -2239,6 +2240,8 @@ destroy (MatekbdKeyboardDrawing * drawing)
 	if (drawing->surface != NULL) {
 		cairo_surface_destroy (drawing->surface);
 	}
+
+	free_cdik (drawing);
 }
 
 static void
