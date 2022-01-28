@@ -1623,16 +1623,15 @@ alloc_render_context (MatekbdKeyboardDrawing * drawing)
 
 	GtkStyleContext *style_context =
 	    gtk_widget_get_style_context (GTK_WIDGET (drawing));
-	PangoFontDescription *fd = NULL;
 
 	gtk_style_context_get (style_context,
 	                       gtk_style_context_get_state (style_context),
-	                       GTK_STYLE_PROPERTY_FONT, &fd, NULL);
+	                       GTK_STYLE_PROPERTY_FONT, &context->font_desc,
+	                       NULL);
 
 	context->layout = pango_layout_new (pangoContext);
 	pango_layout_set_ellipsize (context->layout, PANGO_ELLIPSIZE_END);
 
-	context->font_desc = pango_font_description_copy (fd);
 	context->angle = 0;
 	context->scale_numerator = 1;
 	context->scale_denominator = 1;
@@ -2439,7 +2438,7 @@ matekbd_keyboard_drawing_render (MatekbdKeyboardDrawing * kbdrawing,
 	GtkStyleContext *style_context =
 	    gtk_widget_get_style_context (GTK_WIDGET (kbdrawing));
 	GdkRGBA dark_color;
-	PangoFontDescription *fd = NULL;
+	PangoFontDescription *fd;
 
 	gtk_style_context_get_background_color (style_context,
 	                                        gtk_style_context_get_state (style_context),
@@ -2451,21 +2450,25 @@ matekbd_keyboard_drawing_render (MatekbdKeyboardDrawing * kbdrawing,
 
 	gtk_style_context_get (style_context,
 	                       gtk_style_context_get_state (style_context),
-	                       GTK_STYLE_PROPERTY_FONT, &fd, NULL);
-	fd = pango_font_description_copy (fd);
+	                       GTK_STYLE_PROPERTY_FONT, &fd,
+	                       NULL);
 
 	MatekbdKeyboardDrawingRenderContext context = {
 		cr,
 		kbdrawing->renderContext->angle,
 		layout,
-		pango_font_description_copy (fd),
+		fd,
 		1, 1,
 		dark_color
 	};
 
 	if (!context_setup_scaling (&context, kbdrawing, width, height,
 	                            dpi_x, dpi_y))
+	{
+		pango_font_description_free (fd);
 		return FALSE;
+	}
+
 	cairo_translate (cr, x, y);
 
 	draw_keyboard_to_context (&context, kbdrawing);
