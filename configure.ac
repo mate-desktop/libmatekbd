@@ -105,7 +105,7 @@ AC_SUBST(XLIB_LIBS)
 GLIB_GSETTINGS
 
 AC_ARG_ENABLE([tests],
-              AC_HELP_STRING([--disable-tests], [Dont build the test apps]),,
+              AS_HELP_STRING([--disable-tests], [Dont build the test apps]),,
               [enable_tests=yes])
 
 AM_CONDITIONAL(BUILD_TESTS, test "$enable_tests" = "yes")
