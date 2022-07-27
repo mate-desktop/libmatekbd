@@ -63,8 +63,7 @@ static gchar *settings_signal_names[] = {
 
 struct _MatekbdStatusPrivate {
 	gdouble angle;
-	gulong settings_signal_handlers[sizeof (settings_signal_names) /
-					sizeof (settings_signal_names[0])];
+	gulong settings_signal_handlers[G_N_ELEMENTS (settings_signal_names)];
 };
 
 /* one instance for ALL widgets */
@@ -664,8 +663,7 @@ matekbd_status_init (MatekbdStatus * gki)
 	g_signal_connect (gki, "activate",
 			  G_CALLBACK (matekbd_status_activate), NULL);
 
-	for (i = sizeof (settings_signal_names) /
-	     sizeof (settings_signal_names[0]); --i >= 0;)
+	for (i = G_N_ELEMENTS (settings_signal_names); --i >= 0;)
 		gki->priv->settings_signal_handlers[i] =
 		    g_signal_connect_after (gtk_settings_get_default (),
 					    settings_signal_names[i],
@@ -683,8 +681,7 @@ matekbd_status_finalize (GObject * obj)
 		   "Starting the mate-kbd-status widget shutdown process for %p\n",
 		   gki);
 
-	for (i = sizeof (settings_signal_names) /
-	     sizeof (settings_signal_names[0]); --i >= 0;)
+	for (i = G_N_ELEMENTS (settings_signal_names); --i >= 0;)
 		g_signal_handler_disconnect (gtk_settings_get_default (),
 					     gki->
 					     priv->settings_signal_handlers
