@@ -70,9 +70,9 @@ matekbd_indicator_global_init (void);
 static void
 matekbd_indicator_global_term (void);
 static GtkWidget *
-matekbd_indicator_prepare_drawing (MatekbdIndicator * gki, int group);
+matekbd_indicator_prepare_drawing (MatekbdIndicator * gki, guint group);
 static void
-matekbd_indicator_set_current_page_for_group (MatekbdIndicator * gki, int group);
+matekbd_indicator_set_current_page_for_group (MatekbdIndicator * gki, guint group);
 static void
 matekbd_indicator_set_current_page (MatekbdIndicator * gki);
 static void
@@ -86,6 +86,7 @@ void
 matekbd_indicator_load_images ()
 {
 	int i;
+	guint max_num_groups;
 	GSList *image_filename;
 
 	globals.images = NULL;
@@ -96,9 +97,8 @@ matekbd_indicator_load_images ()
 		return;
 
 	image_filename = globals.ind_cfg.image_filenames;
-
-	for (i = xkl_engine_get_max_num_groups (globals.engine);
-	     --i >= 0; image_filename = image_filename->next) {
+	max_num_groups = xkl_engine_get_max_num_groups (globals.engine);
+	for (i = (int) max_num_groups; --i >= 0; image_filename = image_filename->next) {
 		GdkPixbuf *image = NULL;
 		char *image_file = (char *) image_filename->data;
 
@@ -112,14 +112,10 @@ matekbd_indicator_load_images ()
 							    GTK_DIALOG_DESTROY_WITH_PARENT,
 							    GTK_MESSAGE_ERROR,
 							    GTK_BUTTONS_OK,
-							    _
-							    ("There was an error loading an image: %s"),
-							    gerror->
-							    message);
-				g_signal_connect (G_OBJECT (dialog),
-						  "response",
-						  G_CALLBACK
-						  (gtk_widget_destroy),
+							    _("There was an error loading an image: %s"),
+							    gerror->message);
+				g_signal_connect (G_OBJECT (dialog), "response",
+						  G_CALLBACK (gtk_widget_destroy),
 						  NULL);
 
 				gtk_window_set_resizable (GTK_WINDOW
@@ -197,8 +193,8 @@ matekbd_indicator_cleanup (MatekbdIndicator * gki)
 void
 matekbd_indicator_fill (MatekbdIndicator * gki)
 {
-	int grp;
-	int total_groups = xkl_engine_get_num_groups (globals.engine);
+	guint grp;
+	guint total_groups = xkl_engine_get_num_groups (globals.engine);
 	GtkNotebook *notebook = GTK_NOTEBOOK (gki);
 
 	for (grp = 0; grp < total_groups; grp++) {
@@ -276,7 +272,7 @@ draw_flag (GtkWidget * flag, cairo_t * cr, GdkPixbuf * image)
 }
 
 gchar *
-matekbd_indicator_extract_layout_name (int group, XklEngine * engine,
+matekbd_indicator_extract_layout_name (guint group, XklEngine * engine,
 				    MatekbdKeyboardConfig * kbd_cfg,
 				    gchar ** short_group_names,
 				    gchar ** full_group_names)
@@ -320,7 +316,7 @@ matekbd_indicator_extract_layout_name (int group, XklEngine * engine,
 }
 
 gchar *
-matekbd_indicator_create_label_title (int group, GHashTable ** ln2cnt_map,
+matekbd_indicator_create_label_title (guint group, GHashTable ** ln2cnt_map,
 				   gchar * layout_name)
 {
 	gpointer pcounter = NULL;
@@ -358,7 +354,7 @@ matekbd_indicator_create_label_title (int group, GHashTable ** ln2cnt_map,
 }
 
 static GtkWidget *
-matekbd_indicator_prepare_drawing (MatekbdIndicator * gki, int group)
+matekbd_indicator_prepare_drawing (MatekbdIndicator * gki, guint group)
 {
 	gpointer pimage;
 	GdkPixbuf *image;
@@ -502,10 +498,11 @@ matekbd_indicator_load_group_names (const gchar ** layout_ids,
 	     &globals.short_group_names, &globals.full_group_names)) {
 		/* We just populate no short names (remain NULL) -
 		 * full names are going to be used anyway */
-		gint i, total_groups =
+		gint i;
+		guint total_groups =
 		    xkl_engine_get_num_groups (globals.engine);
 		globals.full_group_names =
-		    g_new0 (gchar *, total_groups + 1);
+		    g_new0 (gchar *, (gsize) (total_groups + 1));
 
 		if (xkl_engine_get_features (globals.engine) &
 		    XKLF_MULTIPLE_LAYOUTS_SUPPORTED) {
@@ -515,7 +512,7 @@ matekbd_indicator_load_group_names (const gchar ** layout_ids,
 				    g_strdup ((char *) *lst);
 			}
 		} else {
-			for (i = total_groups; --i >= 0;) {
+			for (i = (int) total_groups; --i >= 0;) {
 				globals.full_group_names[i] =
 				    g_strdup_printf ("Group %d", i);
 			}
@@ -564,8 +561,7 @@ matekbd_indicator_state_callback (XklEngine * engine,
 	if (changeType == GROUP_CHANGED) {
 		ForAllIndicators () {
 			xkl_debug (200, "do repaint\n");
-			matekbd_indicator_set_current_page_for_group
-			    (gki, group);
+			matekbd_indicator_set_current_page_for_group (gki, (guint) group);
 		}
 		NextIndicator ();
 	}
@@ -577,17 +573,15 @@ matekbd_indicator_set_current_page (MatekbdIndicator * gki)
 	XklState *cur_state;
 	cur_state = xkl_engine_get_current_state (globals.engine);
 	if (cur_state->group >= 0)
-		matekbd_indicator_set_current_page_for_group (gki,
-							   cur_state->
-							   group);
+		matekbd_indicator_set_current_page_for_group (gki, (guint) cur_state->group);
 }
 
 void
-matekbd_indicator_set_current_page_for_group (MatekbdIndicator * gki, int group)
+matekbd_indicator_set_current_page_for_group (MatekbdIndicator * gki, guint group)
 {
-	xkl_debug (200, "Revalidating for group %d\n", group);
+	xkl_debug (200, "Revalidating for group %u\n", group);
 
-	gtk_notebook_set_current_page (GTK_NOTEBOOK (gki), group + 1);
+	gtk_notebook_set_current_page (GTK_NOTEBOOK (gki), (gint) group + 1);
 
 	matekbd_indicator_update_tooltips (gki);
 }
@@ -898,9 +892,9 @@ matekbd_indicator_get_max_width_height_ratio (void)
 		return 0;
 	while (ip != NULL) {
 		GdkPixbuf *img = GDK_PIXBUF (ip->data);
-		gdouble r =
-		    1.0 * gdk_pixbuf_get_width (img) /
-		    gdk_pixbuf_get_height (img);
+		int width = gdk_pixbuf_get_width (img);
+		int height = gdk_pixbuf_get_height (img);
+		gdouble r = ((gdouble) width) / ((gdouble) height);
 		if (r > rv)
 			rv = r;
 		ip = ip->next;

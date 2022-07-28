@@ -277,7 +277,7 @@ matekbd_desktop_config_load_group_descriptions (MatekbdDesktopConfig
 	gchar **sld, **lld, **svd, **lvd;
 	gchar **psld, **plld, **plvd;
 	gchar **psgn, **pfgn, **psvd;
-	gint total_descriptions;
+	guint total_descriptions;
 
 	if (!matekbd_desktop_config_get_lv_descriptions
 	    (config, registry, layout_ids, variant_ids, &sld, &lld, &svd,
@@ -288,9 +288,9 @@ matekbd_desktop_config_load_group_descriptions (MatekbdDesktopConfig
 	total_descriptions = g_strv_length (sld);
 
 	*short_group_names = psgn =
-	    g_new0 (gchar *, total_descriptions + 1);
+	    g_new0 (gchar *, (gsize) (total_descriptions + 1));
 	*full_group_names = pfgn =
-	    g_new0 (gchar *, total_descriptions + 1);
+	    g_new0 (gchar *, (gsize) (total_descriptions + 1));
 
 	plld = lld;
 	psld = sld;

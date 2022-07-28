@@ -29,7 +29,7 @@
  */
 typedef struct _MatekbdIndicatorConfig MatekbdIndicatorConfig;
 struct _MatekbdIndicatorConfig {
-	int secondary_groups_mask;
+	guint secondary_groups_mask;
 	gboolean show_flags;
 
 	gchar *font_family;
@@ -64,10 +64,9 @@ extern void matekbd_indicator_config_refresh_style (MatekbdIndicatorConfig *
 						 applet_config);
 
 extern gchar
-    * matekbd_indicator_config_get_images_file (MatekbdIndicatorConfig *
-					     applet_config,
-					     MatekbdKeyboardConfig *
-					     kbd_config, int group);
+    * matekbd_indicator_config_get_images_file (MatekbdIndicatorConfig * applet_config,
+                                                MatekbdKeyboardConfig * kbd_config,
+                                                guint group);
 
 extern void matekbd_indicator_config_load_image_filenames (MatekbdIndicatorConfig
 							* applet_config,

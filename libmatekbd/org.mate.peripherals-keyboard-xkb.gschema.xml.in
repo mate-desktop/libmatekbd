@@ -97,7 +97,7 @@
     </key>
   </schema>
   <schema id="org.mate.peripherals-keyboard-xkb.indicator" path="/org/mate/desktop/peripherals/keyboard/indicator/">
-    <key name="secondary" type="i">
+    <key name="secondary" type="u">
       <default>0</default>
       <summary>Secondary groups</summary>
       <description>Secondary groups</description>

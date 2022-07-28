@@ -114,8 +114,8 @@ struct _MatekbdKeyboardDrawingRenderContext {
 	PangoLayout *layout;
 	PangoFontDescription *font_desc;
 
-	gint scale_numerator;
-	gint scale_denominator;
+	gdouble scale_numerator;
+	gdouble scale_denominator;
 
 	GdkRGBA dark_color;
 };
@@ -153,7 +153,7 @@ struct _MatekbdKeyboardDrawing {
 	gint xkb_event_type;
 
 	MatekbdKeyboardDrawingDoodad **physical_indicators;
-	gint physical_indicators_size;
+	unsigned long physical_indicators_size;
 
 	guint track_config:1;
 	guint track_modifiers:1;

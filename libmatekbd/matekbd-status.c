@@ -85,9 +85,9 @@ matekbd_status_global_init (void);
 static void
 matekbd_status_global_term (void);
 static GdkPixbuf *
-matekbd_status_prepare_drawing (MatekbdStatus * gki, int group);
+matekbd_status_prepare_drawing (MatekbdStatus * gki, guint group);
 static void
-matekbd_status_set_current_page_for_group (MatekbdStatus * gki, int group);
+matekbd_status_set_current_page_for_group (MatekbdStatus * gki, guint group);
 static void
 matekbd_status_set_current_page (MatekbdStatus * gki);
 static void
@@ -119,8 +119,8 @@ matekbd_status_global_cleanup (MatekbdStatus * gki)
 void
 matekbd_status_global_fill (MatekbdStatus * gki)
 {
-	int grp;
-	int total_groups = xkl_engine_get_num_groups (globals.engine);
+	guint grp;
+	guint total_groups = xkl_engine_get_num_groups (globals.engine);
 
 	for (grp = 0; grp < total_groups; grp++) {
 		GdkPixbuf *page = matekbd_status_prepare_drawing (gki, grp);
@@ -136,7 +136,7 @@ matekbd_status_activate (MatekbdStatus * gki)
 }
 
 /* hackish xref */
-extern gchar *matekbd_indicator_extract_layout_name (int group,
+extern gchar *matekbd_indicator_extract_layout_name (guint group,
 						  XklEngine * engine,
 						  MatekbdKeyboardConfig *
 						  kbd_cfg,
@@ -145,13 +145,13 @@ extern gchar *matekbd_indicator_extract_layout_name (int group,
 						  gchar **
 						  full_group_names);
 
-extern gchar *matekbd_indicator_create_label_title (int group,
+extern gchar *matekbd_indicator_create_label_title (guint group,
 						 GHashTable **
 						 ln2cnt_map,
 						 gchar * layout_name);
 
 static void
-matekbd_status_render_cairo (cairo_t * cr, int group)
+matekbd_status_render_cairo (cairo_t * cr, guint group)
 {
 	double r, g, b;
 	PangoFontDescription *pfd;
@@ -163,7 +163,7 @@ matekbd_status_render_cairo (cairo_t * cr, int group)
 	cairo_font_options_t *fo;
 	static GHashTable *ln2cnt_map = NULL;
 
-	xkl_debug (160, "Rendering cairo for group %d\n", group);
+	xkl_debug (160, "Rendering cairo for group %u\n", group);
 	if (globals.ind_cfg.background_color != NULL &&
 	    globals.ind_cfg.background_color[0] != 0) {
 		if (sscanf
@@ -285,7 +285,7 @@ convert_bgra_to_rgba (guint8 const *src, guint8 * dst, int width,
 }
 
 static GdkPixbuf *
-matekbd_status_prepare_drawing (MatekbdStatus * gki, int group)
+matekbd_status_prepare_drawing (MatekbdStatus * gki, guint group)
 {
 	GError *gerror = NULL;
 	char *image_filename;
@@ -332,7 +332,7 @@ matekbd_status_prepare_drawing (MatekbdStatus * gki, int group)
 			return NULL;
 		}
 		xkl_debug (150,
-			   "Image %d[%s] loaded -> %p[%dx%d], alpha: %d\n",
+			   "Image %u[%s] loaded -> %p[%dx%d], alpha: %d\n",
 			   group, image_filename, image,
 			   gdk_pixbuf_get_width (image),
 			   gdk_pixbuf_get_height (image),
@@ -350,13 +350,11 @@ matekbd_status_prepare_drawing (MatekbdStatus * gki, int group)
 		cairo_data = cairo_image_surface_get_data (cs);
 #if 0
 		char pngfilename[20];
-		g_sprintf (pngfilename, "label%d.png", group);
+		g_sprintf (pngfilename, "label%u.png", group);
 		cairo_surface_write_to_png (cs, pngfilename);
 #endif
 		pixbuf_data =
-		    g_new0 (guchar,
-			    4 * globals.real_width *
-			    globals.current_height);
+		    g_new0 (guchar, (gsize) (4 * globals.real_width * globals.current_height));
 		convert_bgra_to_rgba (cairo_data, pixbuf_data,
 				      globals.current_width,
 				      globals.current_height,
@@ -375,7 +373,7 @@ matekbd_status_prepare_drawing (MatekbdStatus * gki, int group)
 						  (GdkPixbufDestroyNotify)
 						  g_free, NULL);
 		xkl_debug (150,
-			   "Image %d created -> %p[%dx%d], alpha: %d\n",
+			   "Image %u created -> %p[%dx%d], alpha: %d\n",
 			   group, image, gdk_pixbuf_get_width (image),
 			   gdk_pixbuf_get_height (image),
 			   gdk_pixbuf_get_has_alpha (image));
@@ -455,12 +453,13 @@ matekbd_status_load_group_names (const gchar ** layout_ids,
 	     &globals.short_group_names, &globals.full_group_names)) {
 		/* We just populate no short names (remain NULL) -
 		 * full names are going to be used anyway */
-		gint i, total_groups =
+		gint i;
+		guint total_groups =
 		    xkl_engine_get_num_groups (globals.engine);
 		xkl_debug (150, "group descriptions loaded: %d!\n",
 			   total_groups);
 		globals.full_group_names =
-		    g_new0 (char *, total_groups + 1);
+		    g_new0 (char *, (gsize) (total_groups + 1));
 
 		if (xkl_engine_get_features (globals.engine) &
 		    XKLF_MULTIPLE_LAYOUTS_SUPPORTED) {
@@ -470,7 +469,7 @@ matekbd_status_load_group_names (const gchar ** layout_ids,
 				    g_strdup ((char *) *lst);
 			}
 		} else {
-			for (i = total_groups; --i >= 0;) {
+			for (i = (int) total_groups; --i >= 0;) {
 				globals.full_group_names[i] =
 				    g_strdup_printf ("Group %d", i);
 			}
@@ -514,15 +513,14 @@ matekbd_status_kbd_cfg_callback (MatekbdStatus * gki)
 static void
 matekbd_status_state_callback (XklEngine * engine,
 			    XklEngineStateChange changeType,
-			    gint group, gboolean restore)
+			    int group, gboolean restore)
 {
 	xkl_debug (150, "group is now %d, restore: %d\n", group, restore);
 
 	if (changeType == GROUP_CHANGED) {
 		ForAllIndicators () {
 			xkl_debug (200, "do repaint\n");
-			matekbd_status_set_current_page_for_group (gki,
-								group);
+			matekbd_status_set_current_page_for_group (gki, (guint) group);
 		}
 		NextIndicator ();
 	}
@@ -534,12 +532,11 @@ matekbd_status_set_current_page (MatekbdStatus * gki)
 	XklState *cur_state;
 	cur_state = xkl_engine_get_current_state (globals.engine);
 	if (cur_state->group >= 0)
-		matekbd_status_set_current_page_for_group (gki,
-							cur_state->group);
+		matekbd_status_set_current_page_for_group (gki, (guint) cur_state->group);
 }
 
 void
-matekbd_status_set_current_page_for_group (MatekbdStatus * gki, int group)
+matekbd_status_set_current_page_for_group (MatekbdStatus * gki, guint group)
 {
 	xkl_debug (200, "Revalidating for group %d\n", group);
 

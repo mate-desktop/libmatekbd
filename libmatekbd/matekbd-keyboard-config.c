@@ -153,7 +153,7 @@ matekbd_keyboard_config_split_items (const gchar * merged, gchar ** parent,
 {
 	static gchar pbuffer[XKL_MAX_CI_NAME_LENGTH];
 	static gchar cbuffer[XKL_MAX_CI_NAME_LENGTH];
-	int plen;
+	size_t plen;
 	const gchar *pos;
 	*parent = *child = NULL;
 
@@ -164,7 +164,7 @@ matekbd_keyboard_config_split_items (const gchar * merged, gchar ** parent,
 	if (pos == NULL) {
 		plen = strlen (merged);
 	} else {
-		plen = pos - merged;
+		plen = (size_t) (pos - merged);
 		if (strlen (pos + 1) >= XKL_MAX_CI_NAME_LENGTH)
 			return FALSE;
 		strcpy (*child = cbuffer, pos + 1);
@@ -224,11 +224,9 @@ matekbd_keyboard_config_copy_from_xkl_config (MatekbdKeyboardConfig * kbd_config
 			char *option = *p;
 			char *delim =
 			    (option != NULL) ? strchr (option, ':') : NULL;
-			int len;
+			size_t len;
 			if ((delim != NULL) &&
-			    ((len =
-			      (delim - option)) <
-			     XKL_MAX_CI_NAME_LENGTH)) {
+			    ((len = (size_t) (delim - option)) < XKL_MAX_CI_NAME_LENGTH)) {
 				strncpy (group, option, len);
 				group[len] = 0;
 				xkl_debug (150,
@@ -247,26 +245,26 @@ matekbd_keyboard_config_copy_to_xkl_config (MatekbdKeyboardConfig * kbd_config,
 					 XklConfigRec * pdata)
 {
 	int i;
-	int num_layouts, num_options;
+	guint num_layouts, num_options;
 	pdata->model =
-	    (kbd_config->model ==
-	     NULL) ? NULL : g_strdup (kbd_config->model);
+	    (kbd_config->model == NULL) ?
+	        NULL : g_strdup (kbd_config->model);
 
 	num_layouts =
-	    (kbd_config->layouts_variants ==
-	     NULL) ? 0 : g_strv_length (kbd_config->layouts_variants);
+	    (kbd_config->layouts_variants == NULL) ?
+	        0 : g_strv_length (kbd_config->layouts_variants);
 	num_options =
-	    (kbd_config->options ==
-	     NULL) ? 0 : g_strv_length (kbd_config->options);
+	    (kbd_config->options == NULL) ?
+	        0 : g_strv_length (kbd_config->options);
 
 	xkl_debug (150, "Taking %d layouts\n", num_layouts);
 	if (num_layouts != 0) {
 		gchar **the_layout_variant = kbd_config->layouts_variants;
 		char **p1 = pdata->layouts =
-		    g_new0 (char *, num_layouts + 1);
+		    g_new0 (char *, (gsize) (num_layouts + 1));
 		char **p2 = pdata->variants =
-		    g_new0 (char *, num_layouts + 1);
-		for (i = num_layouts; --i >= 0;) {
+		    g_new0 (char *, (gsize) (num_layouts + 1));
+		for (i = (int) num_layouts; --i >= 0;) {
 			char *layout, *variant;
 			if (matekbd_keyboard_config_split_items
 			    (*the_layout_variant, &layout, &variant)
@@ -299,7 +297,7 @@ matekbd_keyboard_config_copy_to_xkl_config (MatekbdKeyboardConfig * kbd_config,
 		gchar **the_option = kbd_config->options;
 		char **p = pdata->options =
 		    g_new0 (char *, num_options + 1);
-		for (i = num_options; --i >= 0;) {
+		for (i = (int) num_options; --i >= 0;) {
 			char *group, *option;
 			if (matekbd_keyboard_config_split_items
 			    (*the_option, &group, &option)
@@ -496,24 +494,24 @@ static gboolean
 matekbd_keyboard_config_options_equals (MatekbdKeyboardConfig * kbd_config1,
 				     MatekbdKeyboardConfig * kbd_config2)
 {
-	int num_options, num_options2;
+	guint num_options, num_options2;
 
 	num_options =
-	    (kbd_config1->options ==
-	     NULL) ? 0 : g_strv_length (kbd_config1->options);
+	    (kbd_config1->options == NULL) ?
+	        0 : g_strv_length (kbd_config1->options);
 	num_options2 =
-	    (kbd_config2->options ==
-	     NULL) ? 0 : g_strv_length (kbd_config2->options);
+	    (kbd_config2->options == NULL) ?
+	        0 : g_strv_length (kbd_config2->options);
 
 	if (num_options != num_options2)
 		return False;
 
 	if (num_options != 0) {
-		int i;
+		guint i;
 		char *group1, *option1;
 
 		for (i = 0; i < num_options; i++) {
-			int j;
+			guint j;
 			char *group2, *option2;
 			gboolean are_equal = FALSE;
 
@@ -697,7 +695,7 @@ matekbd_keyboard_config_to_string (const MatekbdKeyboardConfig * config)
 	GString *buffer = g_string_new (NULL);
 
 	gchar **iter;
-	gint count;
+	unsigned long  count;
 	gchar *result;
 
 	if (config->layouts_variants) {

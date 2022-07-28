@@ -120,10 +120,10 @@ matekbd_preview_save_position (GdkRectangle * rect)
 gchar **
 matekbd_strv_append (gchar ** arr, gchar * element)
 {
-	gint old_length = (arr == NULL) ? 0 : g_strv_length (arr);
-	gchar **new_arr = g_new0 (gchar *, old_length + 2);
+	guint old_length = (arr == NULL) ? 0 : g_strv_length (arr);
+	gchar **new_arr = g_new0 (gchar *, (gsize) (old_length + 2));
 	if (arr != NULL) {
-		memcpy (new_arr, arr, old_length * sizeof (gchar *));
+		memcpy (new_arr, arr, ((size_t) old_length) * sizeof (gchar *));
 		g_free (arr);
 	}
 	new_arr[old_length] = element;

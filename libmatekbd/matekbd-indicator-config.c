@@ -137,10 +137,9 @@ matekbd_indicator_config_refresh_style (MatekbdIndicatorConfig * ind_config)
 }
 
 gchar *
-matekbd_indicator_config_get_images_file (MatekbdIndicatorConfig *
-				       ind_config,
-				       MatekbdKeyboardConfig *
-				       kbd_config, int group)
+matekbd_indicator_config_get_images_file (MatekbdIndicatorConfig * ind_config,
+                                          MatekbdKeyboardConfig * kbd_config,
+                                          guint group)
 {
 	char *image_file = NULL;
 	GtkIconInfo *icon_info = NULL;
@@ -192,17 +191,18 @@ matekbd_indicator_config_load_image_filenames (MatekbdIndicatorConfig *
 					    kbd_config)
 {
 	int i;
+	guint max_num_groups;
 	ind_config->image_filenames = NULL;
 
 	if (!ind_config->show_flags)
 		return;
 
-	for (i = xkl_engine_get_max_num_groups (ind_config->engine);
-	     --i >= 0;) {
+	max_num_groups = xkl_engine_get_max_num_groups (ind_config->engine);
+	for (i = (int) max_num_groups; --i >= 0;) {
 		gchar *image_file =
 		    matekbd_indicator_config_get_images_file (ind_config,
 							   kbd_config,
-							   i);
+							   (guint) i);
 		ind_config->image_filenames =
 		    g_slist_prepend (ind_config->image_filenames,
 				     image_file);
@@ -280,8 +280,8 @@ void
 matekbd_indicator_config_load_from_gsettings (MatekbdIndicatorConfig * ind_config)
 {
 	ind_config->secondary_groups_mask =
-	    g_settings_get_int (ind_config->settings,
-				MATEKBD_INDICATOR_CONFIG_KEY_SECONDARIES);
+	    g_settings_get_uint (ind_config->settings,
+	                         MATEKBD_INDICATOR_CONFIG_KEY_SECONDARIES);
 
 	ind_config->show_flags =
 	    g_settings_get_boolean (ind_config->settings,
@@ -297,7 +297,7 @@ matekbd_indicator_config_save_to_gsettings (MatekbdIndicatorConfig * ind_config)
 {
 	g_settings_delay (ind_config->settings);
 
-	g_settings_set_int (ind_config->settings,
+	g_settings_set_uint (ind_config->settings,
 				  MATEKBD_INDICATOR_CONFIG_KEY_SECONDARIES,
 				  ind_config->secondary_groups_mask);
 	g_settings_set_boolean (ind_config->settings,

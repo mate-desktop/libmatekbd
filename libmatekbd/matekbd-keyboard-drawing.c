@@ -59,7 +59,7 @@ extern void xkl_xkb_config_native_cleanup (XklEngine * engine,
 static gint
 xkb_to_pixmap_coord (MatekbdKeyboardDrawingRenderContext * context, gint n)
 {
-	return n * context->scale_numerator / context->scale_denominator;
+	return (gint) (((gdouble) n) * context->scale_numerator / context->scale_denominator);
 }
 
 static gdouble
@@ -75,16 +75,14 @@ static void
 rotate_coordinate (gint origin_x,
 		   gint origin_y,
 		   gint x,
-		   gint y, gint angle, gint * rotated_x, gint * rotated_y)
+		   gint y, gdouble angle, gint * rotated_x, gint * rotated_y)
 {
-	*rotated_x =
-	    origin_x + (x - origin_x) * cos (M_PI * angle / 1800.0) - (y -
-								       origin_y)
-	    * sin (M_PI * angle / 1800.0);
-	*rotated_y =
-	    origin_y + (x - origin_x) * sin (M_PI * angle / 1800.0) + (y -
-								       origin_y)
-	    * cos (M_PI * angle / 1800.0);
+	*rotated_x = origin_x +
+	             (gint) ((cos (M_PI * angle / 1800.0) * (double) (x - origin_x)) -
+	                     (sin (M_PI * angle / 1800.0) * (double) (y - origin_y)));
+	*rotated_y = origin_y +
+	             (gint) ((sin (M_PI * angle / 1800.0) * (double) (x - origin_x)) +
+	                     (cos (M_PI * angle / 1800.0) * (double) (y - origin_y)));
 }
 
 static gdouble
@@ -339,7 +337,7 @@ curve_rectangle (cairo_t * cr,
 {
 	gdouble x1, y1;
 
-	if (!width || !height)
+	if (width == .0  || height == .0)
 		return;
 
 	x1 = x0 + width;
@@ -365,7 +363,7 @@ static void
 draw_curve_rectangle (cairo_t * cr,
 		      gboolean filled,
 		      GdkRGBA * fill_color,
-		      gint x, gint y, gint width, gint height, gint radius)
+		      gint x, gint y, gint width, gint height, gdouble radius)
 {
 	curve_rectangle (cr, x, y, width, height, radius);
 
@@ -383,7 +381,7 @@ draw_rectangle (MatekbdKeyboardDrawingRenderContext * context,
 		GdkRGBA * fill_color,
 		gint angle,
 		gint xkb_x, gint xkb_y, gint xkb_width, gint xkb_height,
-		gint radius)
+		gdouble radius)
 {
 	if (angle == 0) {
 		gint x, y, width, height;
@@ -447,7 +445,7 @@ draw_outline (MatekbdKeyboardDrawingRenderContext * context,
 			draw_rectangle (context, color, angle, origin_x,
 					origin_y, outline->points[0].x,
 					outline->points[0].y,
-					outline->corner_radius);
+					(gdouble) outline->corner_radius);
 
 #ifdef KBDRAW_DEBUG
 		printf ("pointsxy:%d %d %d\n", outline->points[0].x,
@@ -457,7 +455,7 @@ draw_outline (MatekbdKeyboardDrawingRenderContext * context,
 		draw_rectangle (context, NULL, angle, origin_x, origin_y,
 				outline->points[0].x,
 				outline->points[0].y,
-				outline->corner_radius);
+				(gdouble) outline->corner_radius);
 	} else if (outline->num_points == 2) {
 		gint rotated_x0, rotated_y0;
 
@@ -469,12 +467,12 @@ draw_outline (MatekbdKeyboardDrawingRenderContext * context,
 			draw_rectangle (context, color, angle, rotated_x0,
 					rotated_y0, outline->points[1].x,
 					outline->points[1].y,
-					outline->corner_radius);
+					(gdouble) outline->corner_radius);
 
 		draw_rectangle (context, NULL, angle, rotated_x0,
 				rotated_y0, outline->points[1].x,
 				outline->points[1].y,
-				outline->corner_radius);
+				(gdouble) outline->corner_radius);
 	} else {
 		if (color)
 			draw_polygon (context, color, origin_x, origin_y,
@@ -497,9 +495,9 @@ parse_xkb_color_spec (gchar * colorspec, GdkRGBA * color)
 	color->alpha = 1.0;
 
 	if (g_ascii_strcasecmp (colorspec, "black") == 0) {
-		color->red = 0;
-		color->green = 0;
-		color->blue = 0;
+		color->red = 0.;
+		color->green = 0.;
+		color->blue = 0.;
 	} else if (g_ascii_strcasecmp (colorspec, "white") == 0) {
 		color->red = 1.0;
 		color->green = 1.0;
@@ -508,39 +506,39 @@ parse_xkb_color_spec (gchar * colorspec, GdkRGBA * color)
 		   g_ascii_strncasecmp (colorspec, "gray", 4) == 0) {
 		level = strtol (colorspec + 4, NULL, 10);
 
-		color->red = 1.0 - 1.0 * level / 100.0;
-		color->green = 1.0 - 1.0 * level / 100.0;
-		color->blue = 1.0 - 1.0 * level / 100.0;
+		color->red = 1.0 - 1.0 * ((gdouble) level) / 100.0;
+		color->green = 1.0 - 1.0 *  ((gdouble) level) / 100.0;
+		color->blue = 1.0 - 1.0 * ((gdouble) level) / 100.0;
 	} else if (g_ascii_strcasecmp (colorspec, "red") == 0) {
 		color->red = 1.0;
-		color->green = 0;
-		color->blue = 0;
+		color->green = 0.;
+		color->blue = 0.;
 	} else if (g_ascii_strcasecmp (colorspec, "green") == 0) {
-		color->red = 0;
+		color->red = 0.;
 		color->green = 1.0;
-		color->blue = 0;
+		color->blue = 0.;
 	} else if (g_ascii_strcasecmp (colorspec, "blue") == 0) {
-		color->red = 0;
-		color->green = 0;
+		color->red = 0.;
+		color->green = 0.;
 		color->blue = 1.0;
 	} else if (g_ascii_strncasecmp (colorspec, "red", 3) == 0) {
 		level = strtol (colorspec + 3, NULL, 10);
 
-		color->red = 1.0 * level / 100.0;
-		color->green = 0;
-		color->blue = 0;
+		color->red = 1.0 * ((gdouble) level) / 100.0;
+		color->green = 0.;
+		color->blue = 0.;
 	} else if (g_ascii_strncasecmp (colorspec, "green", 5) == 0) {
 		level = strtol (colorspec + 5, NULL, 10);
 
-		color->red = 0;
-		color->green = 1.0 * level / 100.0;
-		color->blue = 0;
+		color->red = 0.;
+		color->green = 1.0 * ((gdouble) level) / 100.0;
+		color->blue = 0.;
 	} else if (g_ascii_strncasecmp (colorspec, "blue", 4) == 0) {
 		level = strtol (colorspec + 4, NULL, 10);
 
-		color->red = 0;
-		color->green = 0;
-		color->blue = 1.0 * level / 100.0;
+		color->red = 0.;
+		color->green = 0.;
+		color->blue = 1.0 * ((gdouble) level) / 100.0;
 	} else
 		return FALSE;
 
@@ -1103,7 +1101,7 @@ draw_key_label_helper (MatekbdKeyboardDrawingRenderContext * context,
 	default:
 		return;
 	}
-	set_key_label_in_layout (context, keysym);
+	set_key_label_in_layout (context, (guint) keysym);
 	pango_layout_set_width (context->layout, label_max_width);
 	label_y -= (pango_layout_get_line_count (context->layout) - 1) *
 	    (pango_font_description_get_size (context->font_desc) /
@@ -1131,7 +1129,7 @@ draw_key_label (MatekbdKeyboardDrawingRenderContext * context,
 	if (!drawing->xkb)
 		return;
 
-	padding = 23 * context->scale_numerator / context->scale_denominator;	/* 2.3mm */
+	padding = (gint) (23.0 * context->scale_numerator / context->scale_denominator); /* 2.3mm */
 
 	x = xkb_to_pixmap_coord (context, xkb_origin_x);
 	y = xkb_to_pixmap_coord (context, xkb_origin_y);
@@ -1703,12 +1701,12 @@ context_setup_scaling (MatekbdKeyboardDrawingRenderContext * context,
 	}
 
 	pango_font_description_set_size (context->font_desc,
-					 72 * KEY_FONT_SIZE * dpi_x *
-					 context->scale_numerator /
-					 context->scale_denominator);
+					 (gint) (72.0 * KEY_FONT_SIZE * dpi_x *
+					         context->scale_numerator /
+					         context->scale_denominator));
 	pango_layout_set_spacing (context->layout,
-				  -160 * dpi_y * context->scale_numerator /
-				  context->scale_denominator);
+				  (int) (-160.0 * dpi_y * context->scale_numerator /
+				         context->scale_denominator));
 	pango_layout_set_font_description (context->layout,
 					   context->font_desc);
 
@@ -2818,21 +2816,21 @@ matekbd_keyboard_drawing_new_dialog (gint group, gchar * group_name)
 
 	xkl_data = xkl_config_rec_new ();
 	if (xkl_config_rec_get_from_server (xkl_data, engine)) {
-		int num_layouts = g_strv_length (xkl_data->layouts);
-		int num_variants = g_strv_length (xkl_data->variants);
+		guint num_layouts = g_strv_length (xkl_data->layouts);
+		guint num_variants = g_strv_length (xkl_data->variants);
 		if (group >= 0 && group < num_layouts
 		    && group < num_variants) {
 			char *l = g_strdup (xkl_data->layouts[group]);
 			char *v = g_strdup (xkl_data->variants[group]);
 			char **p;
-			int i;
+			gint i;
 
 			if ((p = xkl_data->layouts) != NULL)
-				for (i = num_layouts; --i >= 0;)
+				for (i = (gint) num_layouts; --i >= 0;)
 					g_free (*p++);
 
 			if ((p = xkl_data->variants) != NULL)
-				for (i = num_variants; --i >= 0;)
+				for (i = (gint) num_variants; --i >= 0;)
 					g_free (*p++);
 
 			xkl_data->layouts =
