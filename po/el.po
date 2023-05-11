@@ -4,22 +4,22 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Efstathios Iosifidis <iefstathios@gmail.com>, 2018
-# Angelos Chraniotis <chraniotis@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2020
-# Martin Wimpress <code@flexion.org>, 2020
-# thunk <thunk77@gmail.com>, 2020
-# Panos Panagiotopoulos <panagiotopoulos@gmail.com>, 2020
-# Alexandros Kapetanios <alexandros@gnugr.org>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Martin Wimpress <code@flexion.org>, 2021
+# thunk <thunk77@gmail.com>, 2021
+# Panos Panagiotopoulos <panagiotopoulos@gmail.com>, 2021
+# Alexandros Kapetanios <alexandros@gnugr.org>, 2021
+# Angelos Chraniotis, 2021
+# Efstathios Iosifidis <iefstathios@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: libmatekbd 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/libmatekbd\n"
 "POT-Creation-Date: 2020-08-18 14:22+0200\n"
-"PO-Revision-Date: 2018-03-11 15:34+0000\n"
-"Last-Translator: Alexandros Kapetanios <alexandros@gnugr.org>, 2020\n"
-"Language-Team: Greek (https://www.transifex.com/mate/teams/13566/el/)\n"
+"PO-Revision-Date: 2021-09-18 19:49+0000\n"
+"Last-Translator: Efstathios Iosifidis <iefstathios@gmail.com>, 2021\n"
+"Language-Team: Greek (https://app.transifex.com/mate/teams/13566/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -136,7 +136,7 @@ msgstr ""
 
 #: libmatekbd/matekbd-keyboard-drawing.c:748
 msgid "Pause"
-msgstr ""
+msgstr "Παύση"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:753
 msgid "Esc"

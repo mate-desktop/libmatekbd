@@ -4,21 +4,22 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Mubarak Qahtani <abu-q76@hotmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2020
-# Martin Wimpress <code@flexion.org>, 2020
-# مهدي السطيفي <chinoune.mehdi@gmail.com>, 2020
-# alibacha19 <alibacha19@gmail.com>, 2020
-# Hayder Majid <cteehayder@gmail.com>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Mubarak Qahtani <abu-q76@hotmail.com>, 2021
+# Martin Wimpress <code@flexion.org>, 2021
+# مهدي السطيفي <chinoune.mehdi@gmail.com>, 2021
+# alibacha19 <alibacha19@gmail.com>, 2021
+# Hayder Majid <cteehayder@gmail.com>, 2021
+# Ahmd go <go.allen@protonmail.com>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: libmatekbd 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/libmatekbd\n"
 "POT-Creation-Date: 2020-08-18 14:22+0200\n"
-"PO-Revision-Date: 2018-03-11 15:34+0000\n"
-"Last-Translator: Hayder Majid <cteehayder@gmail.com>, 2020\n"
-"Language-Team: Arabic (https://www.transifex.com/mate/teams/13566/ar/)\n"
+"PO-Revision-Date: 2021-09-18 19:49+0000\n"
+"Last-Translator: Ahmd go <go.allen@protonmail.com>, 2021\n"
+"Language-Team: Arabic (https://app.transifex.com/mate/teams/13566/ar/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -38,7 +39,7 @@ msgstr "خطأ في بدء XKB"
 msgid ""
 "Scroll\n"
 "Lock"
-msgstr ""
+msgstr "F1"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:658
 msgid "Sys Rq"
@@ -61,6 +62,8 @@ msgid ""
 "Num\n"
 "Lock"
 msgstr ""
+"Num\n"
+"Lock"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:674
 msgid "Pg Up"
@@ -139,7 +142,7 @@ msgstr ""
 
 #: libmatekbd/matekbd-keyboard-drawing.c:753
 msgid "Esc"
-msgstr ""
+msgstr "Esc"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:788
 msgid "Print"
@@ -155,51 +158,51 @@ msgstr "القائمة"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:803
 msgid "F1"
-msgstr ""
+msgstr "F1"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:808
 msgid "F2"
-msgstr ""
+msgstr "F2"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:813
 msgid "F3"
-msgstr ""
+msgstr "F3"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:818
 msgid "F4"
-msgstr ""
+msgstr "F4"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:823
 msgid "F5"
-msgstr ""
+msgstr "F5"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:828
 msgid "F6"
-msgstr ""
+msgstr "F6"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:833
 msgid "F7"
-msgstr ""
+msgstr "F7"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:838
 msgid "F8"
-msgstr ""
+msgstr "F8"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:843
 msgid "F9"
-msgstr ""
+msgstr "F9"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:848
 msgid "F10"
-msgstr ""
+msgstr "F10"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:853
 msgid "F11"
-msgstr ""
+msgstr "F11"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:858
 msgid "F12"
-msgstr ""
+msgstr "F12"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:863
 #: libmatekbd/matekbd-keyboard-drawing.c:868
@@ -216,6 +219,8 @@ msgid ""
 "Caps\n"
 "Lock"
 msgstr ""
+"Caps\n"
+"Lock"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:888
 msgid "Meta"

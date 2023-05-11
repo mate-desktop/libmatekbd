@@ -4,18 +4,18 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Stefano Karapetsas <stefano@karapetsas.com>, 2020
-# Martin Wimpress <code@flexion.org>, 2020
-# Miguel Anxo Bouzada <mbouzada@gmail.com>, 2020
+# Miguel Anxo Bouzada <mbouzada@gmail.com>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Martin Wimpress <code@flexion.org>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: libmatekbd 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/libmatekbd\n"
 "POT-Creation-Date: 2020-08-18 14:22+0200\n"
-"PO-Revision-Date: 2018-03-11 15:34+0000\n"
-"Last-Translator: Miguel Anxo Bouzada <mbouzada@gmail.com>, 2020\n"
-"Language-Team: Galician (https://www.transifex.com/mate/teams/13566/gl/)\n"
+"PO-Revision-Date: 2021-09-18 19:49+0000\n"
+"Last-Translator: Martin Wimpress <code@flexion.org>, 2021\n"
+"Language-Team: Galician (https://app.transifex.com/mate/teams/13566/gl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -253,7 +253,7 @@ msgstr "AltGr"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:980
 msgid "Compose"
-msgstr "Composioción"
+msgstr "Composición"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:2690
 #, c-format
@@ -279,15 +279,15 @@ msgstr "Disposición do teclado «%s»"
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
-msgstr[0] "disposición «%s»"
-msgstr[1] "disposicións «%s»"
+msgstr[0] ""
+msgstr[1] ""
 
 #: libmatekbd/matekbd-keyboard-config.c:735
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
-msgstr[0] "opción «%s»"
-msgstr[1] "opcións «%s»"
+msgstr[0] ""
+msgstr[1] ""
 
 #: libmatekbd/matekbd-keyboard-config.c:743
 #, c-format

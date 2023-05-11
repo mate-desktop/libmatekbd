@@ -4,19 +4,19 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Cheng-Chia Tseng <pswo10680@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2020
-# Martin Wimpress <code@flexion.org>, 2020
-# 黃柏諺 <s8321414@gmail.com>, 2020
+# Cheng-Chia Tseng <pswo10680@gmail.com>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# 黃柏諺 <s8321414@gmail.com>, 2021
+# Martin Wimpress <code@flexion.org>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: libmatekbd 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/libmatekbd\n"
 "POT-Creation-Date: 2020-08-18 14:22+0200\n"
-"PO-Revision-Date: 2018-03-11 15:34+0000\n"
-"Last-Translator: 黃柏諺 <s8321414@gmail.com>, 2020\n"
-"Language-Team: Chinese (Taiwan) (https://www.transifex.com/mate/teams/13566/zh_TW/)\n"
+"PO-Revision-Date: 2021-09-18 19:49+0000\n"
+"Last-Translator: Martin Wimpress <code@flexion.org>, 2021\n"
+"Language-Team: Chinese (Taiwan) (https://app.transifex.com/mate/teams/13566/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -282,13 +282,13 @@ msgstr "鍵盤配置「%s」"
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
-msgstr[0] "配置「%s」"
+msgstr[0] ""
 
 #: libmatekbd/matekbd-keyboard-config.c:735
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
-msgstr[0] "選項「%s」"
+msgstr[0] ""
 
 #: libmatekbd/matekbd-keyboard-config.c:743
 #, c-format

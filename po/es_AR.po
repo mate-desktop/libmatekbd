@@ -4,28 +4,28 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Adrián Benavente <benaventeadrian@gmail.com>, 2018
-# Renzo Sparta <exequiel0210@gmail.com>, 2020
-# Germán Herrou <german.herrou@gmail.com>, 2020
+# Adrián Benavente <benaventeadrian@gmail.com>, 2021
+# Renzo Sparta <exequiel0210@gmail.com>, 2021
+# Germán Herrou <german.herrou@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: libmatekbd 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/libmatekbd\n"
 "POT-Creation-Date: 2020-08-18 14:22+0200\n"
-"PO-Revision-Date: 2018-03-11 15:34+0000\n"
-"Last-Translator: Germán Herrou <german.herrou@gmail.com>, 2020\n"
-"Language-Team: Spanish (Argentina) (https://www.transifex.com/mate/teams/13566/es_AR/)\n"
+"PO-Revision-Date: 2021-09-18 19:49+0000\n"
+"Last-Translator: Germán Herrou <german.herrou@gmail.com>, 2021\n"
+"Language-Team: Spanish (Argentina) (https://app.transifex.com/mate/teams/13566/es_AR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es_AR\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: libmatekbd/matekbd-indicator.c:116 libmatekbd/matekbd-status.c:315
 #, c-format
 msgid "There was an error loading an image: %s"
-msgstr "Hubo un error al cargar una imagen:%s"
+msgstr "Hubo un error al cargar una imagen: %s"
 
 #: libmatekbd/matekbd-indicator.c:694 libmatekbd/matekbd-status.c:651
 msgid "XKB initialization error"
@@ -271,6 +271,7 @@ msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
 msgstr[0] ""
 msgstr[1] ""
+msgstr[2] ""
 
 #: libmatekbd/matekbd-keyboard-config.c:735
 #, c-format
@@ -278,6 +279,7 @@ msgid "option \"%s\""
 msgid_plural "options \"%s\""
 msgstr[0] ""
 msgstr[1] ""
+msgstr[2] ""
 
 #: libmatekbd/matekbd-keyboard-config.c:743
 #, c-format
@@ -302,11 +304,11 @@ msgstr "Modelo de teclado"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:16
 msgid "Keyboard layout"
-msgstr "Modelo de teclado"
+msgstr "Distribución del teclado"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:17
 msgid "keyboard layout"
-msgstr "Modelo de teclado"
+msgstr "Distribución del teclado"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:21
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:22

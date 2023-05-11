@@ -4,23 +4,21 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Kim Malmo <berencamlost@msn.com>, 2019
-# Stefano Karapetsas <stefano@karapetsas.com>, 2020
-# Allan Nordhøy <epost@anotheragency.no>, 2020
-# Martin Wimpress <code@flexion.org>, 2020
-# Kenneth Jenssen <kennethjenssen@yahoo.com>, 2020
-# Imre Kristoffer Eilertsen <imreeil42@gmail.com>, 2020
-# b84df44fb72862b85bae7a669218c6c2, 2020
-# heskjestad <cato@heskjestad.xyz>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Allan Nordhøy <epost@anotheragency.no>, 2021
+# Kenneth Jenssen <kennethjenssen@yahoo.com>, 2021
+# Imre Kristoffer Eilertsen <imreeil42@gmail.com>, 2021
+# b84df44fb72862b85bae7a669218c6c2, 2021
+# heskjestad <cato@heskjestad.xyz>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: libmatekbd 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/libmatekbd\n"
 "POT-Creation-Date: 2020-08-18 14:22+0200\n"
-"PO-Revision-Date: 2018-03-11 15:34+0000\n"
-"Last-Translator: heskjestad <cato@heskjestad.xyz>, 2020\n"
-"Language-Team: Norwegian Bokmål (https://www.transifex.com/mate/teams/13566/nb/)\n"
+"PO-Revision-Date: 2021-09-18 19:49+0000\n"
+"Last-Translator: heskjestad <cato@heskjestad.xyz>, 2021\n"
+"Language-Team: Norwegian Bokmål (https://app.transifex.com/mate/teams/13566/nb/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -83,12 +81,12 @@ msgstr "Pg Dn"
 #: libmatekbd/matekbd-keyboard-drawing.c:682
 #: libmatekbd/matekbd-keyboard-drawing.c:758
 msgid "Home"
-msgstr "Hjem"
+msgstr "Home"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:686
 #: libmatekbd/matekbd-keyboard-drawing.c:763
 msgid "Left"
-msgstr "Venstre"
+msgstr "Pil venstre"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:690
 #: libmatekbd/matekbd-keyboard-drawing.c:783
@@ -107,7 +105,7 @@ msgstr "Begin"
 #: libmatekbd/matekbd-keyboard-drawing.c:702
 #: libmatekbd/matekbd-keyboard-drawing.c:773
 msgid "Right"
-msgstr "Høyre"
+msgstr "Pil høyre"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:706
 msgid "Enter"
@@ -116,7 +114,7 @@ msgstr "Enter"
 #: libmatekbd/matekbd-keyboard-drawing.c:710
 #: libmatekbd/matekbd-keyboard-drawing.c:778
 msgid "Down"
-msgstr "Ned"
+msgstr "Pil ned"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:714
 msgid "Ins"
@@ -157,7 +155,7 @@ msgstr "Skriv ut"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:793
 msgid "Insert"
-msgstr "Sett inn"
+msgstr "Insert"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:798
 msgid "Menu"
@@ -244,7 +242,7 @@ msgstr "Super"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:908
 msgid "Delete"
-msgstr "Slett"
+msgstr "Delete"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:972
 msgid ""
@@ -458,8 +456,8 @@ msgid ""
 "The background color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
 msgstr ""
-"Bakgrunnsfargen til utseende-indikatoren. Dette skal være i \"R G "
-"B\"-format, for eksempel \"255 0 0\"."
+"Bakgrunnsfargen til utseende-indikatoren. Dette må være i «R G B»-format, "
+"for eksempel «255 0 0»."
 
 #: libmatekbd/show-layout.ui:9
 msgid "Keyboard Layout"

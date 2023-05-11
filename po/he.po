@@ -4,20 +4,20 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Edward Sawyer <saoded@gmail.com>, 2018
-# shy tzedaka <shaytzedaka123@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2020
-# Martin Wimpress <code@flexion.org>, 2020
-# Yaron Shahrabani <sh.yaron@gmail.com>, 2020
+# Yaron Shahrabani <sh.yaron@gmail.com>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Edward Sawyer <saoded@gmail.com>, 2021
+# shy tzedaka <shaytzedaka123@gmail.com>, 2021
+# 63f334ffc0709ba0fc2361b80bf3c0f0_00ffd1e <ab96c93ca0ac55ba7fa06385427e60dd_878890>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: libmatekbd 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/libmatekbd\n"
 "POT-Creation-Date: 2020-08-18 14:22+0200\n"
-"PO-Revision-Date: 2018-03-11 15:34+0000\n"
-"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>, 2020\n"
-"Language-Team: Hebrew (https://www.transifex.com/mate/teams/13566/he/)\n"
+"PO-Revision-Date: 2021-09-18 19:49+0000\n"
+"Last-Translator: 63f334ffc0709ba0fc2361b80bf3c0f0_00ffd1e <ab96c93ca0ac55ba7fa06385427e60dd_878890>, 2021\n"
+"Language-Team: Hebrew (https://app.transifex.com/mate/teams/13566/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -72,12 +72,12 @@ msgstr ""
 #: libmatekbd/matekbd-keyboard-drawing.c:682
 #: libmatekbd/matekbd-keyboard-drawing.c:758
 msgid "Home"
-msgstr "תיקית הבית"
+msgstr "תיקיית הבית"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:686
 #: libmatekbd/matekbd-keyboard-drawing.c:763
 msgid "Left"
-msgstr "שמאלה"
+msgstr "שמאל"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:690
 #: libmatekbd/matekbd-keyboard-drawing.c:783
@@ -96,7 +96,7 @@ msgstr ""
 #: libmatekbd/matekbd-keyboard-drawing.c:702
 #: libmatekbd/matekbd-keyboard-drawing.c:773
 msgid "Right"
-msgstr "ימינה"
+msgstr "ימין"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:706
 msgid "Enter"
@@ -150,7 +150,7 @@ msgstr "הוספה"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:798
 msgid "Menu"
-msgstr "תפרי"
+msgstr "תפריט"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:803
 msgid "F1"
@@ -271,19 +271,19 @@ msgstr "פריסת המקלדת \"%s\""
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
-msgstr[0] "פריסה „%s”"
-msgstr[1] "פריסות „%s”"
-msgstr[2] "פריסות „%s”"
-msgstr[3] "פריסות „%s”"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: libmatekbd/matekbd-keyboard-config.c:735
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
-msgstr[0] "אפשרות „%s”"
-msgstr[1] "אפשרויות „%s”"
-msgstr[2] "אפשרויות „%s”"
-msgstr[3] "אפשרויות „%s”"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: libmatekbd/matekbd-keyboard-config.c:743
 #, c-format

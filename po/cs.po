@@ -4,24 +4,22 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# LiberteCzech <liberte.czech@gmail.com>, 2018
-# 6e833d5535e2fe0dd9dfa7fe5bf473f2_d78f422 <64c38a0ff10419c64e8e03d54c72b3bd_352524>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2020
-# Ondřej Kolín <ondrej.kolin@gmail.com>, 2020
-# Michal <sinope@seznam.cz>, 2020
-# Lukáš Lommer <drom@kdyne.net>, 2020
-# Martin Wimpress <code@flexion.org>, 2020
-# ToMáš Marný, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# ToMáš Marný, 2021
+# Michal <sinope@seznam.cz>, 2021
+# LiberteCzech <martin.kriz.czech@gmail.com>, 2021
+# 6e833d5535e2fe0dd9dfa7fe5bf473f2_d78f422 <64c38a0ff10419c64e8e03d54c72b3bd_352524>, 2021
 # Roman Horník <roman.hornik@debian-linux.cz>, 2021
+# Lukáš Lommer <drom@kdyne.net>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: libmatekbd 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/libmatekbd\n"
 "POT-Creation-Date: 2020-08-18 14:22+0200\n"
-"PO-Revision-Date: 2018-03-11 15:34+0000\n"
-"Last-Translator: Roman Horník <roman.hornik@debian-linux.cz>, 2021\n"
-"Language-Team: Czech (https://www.transifex.com/mate/teams/13566/cs/)\n"
+"PO-Revision-Date: 2021-09-18 19:49+0000\n"
+"Last-Translator: Lukáš Lommer <drom@kdyne.net>, 2021\n"
+"Language-Team: Czech (https://app.transifex.com/mate/teams/13566/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -31,7 +29,7 @@ msgstr ""
 #: libmatekbd/matekbd-indicator.c:116 libmatekbd/matekbd-status.c:315
 #, c-format
 msgid "There was an error loading an image: %s"
-msgstr "Nastala chyba při načítání obrázku: %s"
+msgstr "Při načítání obrázku nastala chyba: %s"
 
 #: libmatekbd/matekbd-indicator.c:694 libmatekbd/matekbd-status.c:651
 msgid "XKB initialization error"
@@ -84,7 +82,7 @@ msgstr "Pg Dn"
 #: libmatekbd/matekbd-keyboard-drawing.c:682
 #: libmatekbd/matekbd-keyboard-drawing.c:758
 msgid "Home"
-msgstr "Domovská složka"
+msgstr "Home"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:686
 #: libmatekbd/matekbd-keyboard-drawing.c:763
@@ -99,7 +97,7 @@ msgstr "End"
 #: libmatekbd/matekbd-keyboard-drawing.c:694
 #: libmatekbd/matekbd-keyboard-drawing.c:768
 msgid "Up"
-msgstr "Výš"
+msgstr "Nahoru"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:698
 msgid "Begin"
@@ -146,7 +144,7 @@ msgstr "Enter"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:748
 msgid "Pause"
-msgstr "Pozastavit"
+msgstr "Pauza"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:753
 msgid "Esc"
@@ -158,11 +156,11 @@ msgstr "Tisk"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:793
 msgid "Insert"
-msgstr "Vlož"
+msgstr "Insert"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:798
 msgid "Menu"
-msgstr "Nabídka"
+msgstr "Menu"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:803
 msgid "F1"
@@ -261,7 +259,7 @@ msgstr "AltGr"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:980
 msgid "Compose"
-msgstr "Klávesa Compose"
+msgstr "Compose"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:2690
 #, c-format
@@ -271,12 +269,12 @@ msgid ""
 "For licensing see package metadata"
 msgstr ""
 "Rozložení klávesnice \"%s\"\n"
-"Copyright &#169; X.Org Foundation a přispívající k XKeyboardConfig\n"
+"Copyright &#169; X.Org Foundation a přispěvatelé XKeyboardConfig\n"
 "Licencování viz metadata balíčku"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:2772
 msgid "Unknown"
-msgstr "Neznámo"
+msgstr "Neznámé"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:2818
 #, c-format
@@ -287,19 +285,19 @@ msgstr "Rozložení klávesnice \"%s\""
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
-msgstr[0] "rozložení \"%s\""
-msgstr[1] "rozložení \"%s\""
-msgstr[2] "rozložení \"%s\""
-msgstr[3] "rozložení \"%s\""
+msgstr[0] "rozložení „%s”"
+msgstr[1] "rozložení „%s”"
+msgstr[2] "rozložení „%s”"
+msgstr[3] "rozložení „%s”"
 
 #: libmatekbd/matekbd-keyboard-config.c:735
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
-msgstr[0] "volba \"%s\""
-msgstr[1] "volby \"%s\""
-msgstr[2] "volby \"%s\""
-msgstr[3] "volby \"%s\""
+msgstr[0] "volba „%s”"
+msgstr[1] "volby „%s”"
+msgstr[2] "volby „%s”"
+msgstr[3] "volby „%s”"
 
 #: libmatekbd/matekbd-keyboard-config.c:743
 #, c-format
@@ -394,7 +392,7 @@ msgstr "Načíst exotická, zřídka užívaná rozložení a možnosti"
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:63
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:64
 msgid "Suppress the \"X sysconfig changed\" warning message"
-msgstr "Nezobrazovat varovnou zprávu o změně systémového nastavení X"
+msgstr "Nezobrazovat varování o změně systémového nastavení X"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:68
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:69
@@ -405,7 +403,7 @@ msgstr ""
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:73
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:74
 msgid "Show keyboard leds indicator"
-msgstr "Zobrazit diodu LED indikátoru klávesnice"
+msgstr "Zobrazit klávesnicový LED indikátor"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:80
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:81

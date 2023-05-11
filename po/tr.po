@@ -4,22 +4,24 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Umut Barış GÖKMEN <umtbrsgkmn@gmail.com>, 2018
-# mauron, 2020
-# Stefano Karapetsas <stefano@karapetsas.com>, 2020
-# Emre FIRAT <emrefirat93@gmail.com>, 2020
-# Martin Wimpress <code@flexion.org>, 2020
-# 0d1bdb3b9a0d4e8f77bc854af8bf3dfc_e6913f4, 2020
-# Butterfly <gokhanlnx@gmail.com>, 2020
+# mauron, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Emre FIRAT <emrefirat93@gmail.com>, 2021
+# Butterfly <gokhanlnx@gmail.com>, 2021
+# Martin Wimpress <code@flexion.org>, 2021
+# Umut Barış GÖKMEN <umtbrsgkmn@gmail.com>, 2021
+# 0d1bdb3b9a0d4e8f77bc854af8bf3dfc_e6913f4, 2021
+# Gurbuzguven <6mehmet6@gmail.com>, 2021
+# Hüseyin Güç <huseyinguc@outlook.com>, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: libmatekbd 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/libmatekbd\n"
 "POT-Creation-Date: 2020-08-18 14:22+0200\n"
-"PO-Revision-Date: 2018-03-11 15:34+0000\n"
-"Last-Translator: Butterfly <gokhanlnx@gmail.com>, 2020\n"
-"Language-Team: Turkish (https://www.transifex.com/mate/teams/13566/tr/)\n"
+"PO-Revision-Date: 2021-09-18 19:49+0000\n"
+"Last-Translator: Hüseyin Güç <huseyinguc@outlook.com>, 2022\n"
+"Language-Team: Turkish (https://app.transifex.com/mate/teams/13566/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -40,36 +42,44 @@ msgid ""
 "Scroll\n"
 "Lock"
 msgstr ""
+"Scroll\n"
+"Lock"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:658
 msgid "Sys Rq"
-msgstr ""
+msgstr "Sys Rq"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:662
 msgid ""
 "Page\n"
 "Up"
 msgstr ""
+"Page\n"
+"Up"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:666
 msgid ""
 "Page\n"
 "Down"
 msgstr ""
+"Page\n"
+"Down"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:670
 msgid ""
 "Num\n"
 "Lock"
 msgstr ""
+"Num\n"
+"Lock"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:674
 msgid "Pg Up"
-msgstr ""
+msgstr "Pg Up"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:678
 msgid "Pg Dn"
-msgstr ""
+msgstr "Pg Dn"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:682
 #: libmatekbd/matekbd-keyboard-drawing.c:758
@@ -84,7 +94,7 @@ msgstr "Sol"
 #: libmatekbd/matekbd-keyboard-drawing.c:690
 #: libmatekbd/matekbd-keyboard-drawing.c:783
 msgid "End"
-msgstr ""
+msgstr "End"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:694
 #: libmatekbd/matekbd-keyboard-drawing.c:768
@@ -93,7 +103,7 @@ msgstr "Üst"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:698
 msgid "Begin"
-msgstr ""
+msgstr "Begin"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:702
 #: libmatekbd/matekbd-keyboard-drawing.c:773
@@ -107,32 +117,32 @@ msgstr "Eşittir"
 #: libmatekbd/matekbd-keyboard-drawing.c:710
 #: libmatekbd/matekbd-keyboard-drawing.c:778
 msgid "Down"
-msgstr ""
+msgstr "Aşağı ok"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:714
 msgid "Ins"
-msgstr ""
+msgstr "Ins"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:718
 msgid "Del"
-msgstr ""
+msgstr "Del"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:723
 msgid "ISO_Level3_Shift"
-msgstr ""
+msgstr "ISO_Level3_Shift"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:728
 #: libmatekbd/matekbd-keyboard-drawing.c:738
 msgid "Tab"
-msgstr ""
+msgstr "Sekme tuşu"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:733
 msgid "BackSpace"
-msgstr ""
+msgstr "Geriyi Sil tuşu"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:743
 msgid "Return"
-msgstr ""
+msgstr "Giriş tuşu"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:748
 msgid "Pause"
@@ -140,7 +150,7 @@ msgstr "Beklet"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:753
 msgid "Esc"
-msgstr ""
+msgstr "Esc"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:788
 msgid "Print"
@@ -160,27 +170,27 @@ msgstr "F1"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:808
 msgid "F2"
-msgstr ""
+msgstr "F2"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:813
 msgid "F3"
-msgstr ""
+msgstr "F3"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:818
 msgid "F4"
-msgstr ""
+msgstr "F4"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:823
 msgid "F5"
-msgstr ""
+msgstr "F5"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:828
 msgid "F6"
-msgstr ""
+msgstr "F6"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:833
 msgid "F7"
-msgstr ""
+msgstr "F7"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:838
 msgid "F8"
@@ -192,15 +202,15 @@ msgstr "F9"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:848
 msgid "F10"
-msgstr ""
+msgstr "F10"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:853
 msgid "F11"
-msgstr ""
+msgstr "F11"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:858
 msgid "F12"
-msgstr ""
+msgstr "F12"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:863
 #: libmatekbd/matekbd-keyboard-drawing.c:868
@@ -210,13 +220,17 @@ msgstr "Shift"
 #: libmatekbd/matekbd-keyboard-drawing.c:873
 #: libmatekbd/matekbd-keyboard-drawing.c:878
 msgid "Control"
-msgstr ""
+msgstr "Kontrol"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:883
 msgid ""
 "Caps\n"
 "Lock"
 msgstr ""
+"Büyük \n"
+"Harf \n"
+"Kilitleme \n"
+"Tuşu"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:888
 msgid "Meta"
@@ -240,14 +254,16 @@ msgid ""
 "horiz\n"
 "conn"
 msgstr ""
+"horiz\n"
+"conn"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:976
 msgid "AltGr"
-msgstr ""
+msgstr "AltGr"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:980
 msgid "Compose"
-msgstr ""
+msgstr "Compose"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:2690
 #, c-format
@@ -274,14 +290,14 @@ msgstr "\"%s\" Klavye Düzeni"
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
 msgstr[0] "düzen \"%s\""
-msgstr[1] "düzen \"%s\""
+msgstr[1] "düzenler \"%s\""
 
 #: libmatekbd/matekbd-keyboard-config.c:735
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
 msgstr[0] "seçenek \"%s\""
-msgstr[1] "seçenek \"%s\""
+msgstr[1] "seçenekler \"%s\""
 
 #: libmatekbd/matekbd-keyboard-config.c:743
 #, c-format
