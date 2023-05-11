@@ -1,9 +1,15 @@
+### libmatekbd 1.26.1
+
+  * tx: sync with transifex
+  * matekbd-keyboard-drawing: fix memory leak
+  * matekbd-keyboard-drawing: fix memory leak
+
 ### libmatekbd 1.26.0
 
   * tx: sync with transifex
-    build: show package name and version in configure summary
-    build: set GETTEXT_PACKAGE=AC_PACKAGE_NAME
-    Remove USE_MATE2_MACROS from autogen.sh (legacy)
+  * build: show package name and version in configure summary
+  * build: set GETTEXT_PACKAGE=AC_PACKAGE_NAME
+  * Remove USE_MATE2_MACROS from autogen.sh (legacy)
 
 ### libmatekbd 1.25.0
 
