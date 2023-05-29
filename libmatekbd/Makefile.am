@@ -14,7 +14,7 @@ common_CFLAGS =					\
 	-DLIBDIR=\"$(libdir)\"			\
 	$(NULL)
 
-common_LDFLAGS = -version-info @VERSION_INFO@ -no-undefined
+common_LDFLAGS = -version-number @VERSION_INFO@ -no-undefined
 
 common_LIBADD =					\
 	$(GDK_LIBS)				\
