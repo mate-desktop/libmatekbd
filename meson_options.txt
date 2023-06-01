@@ -1,0 +1,6 @@
+option('gir',
+       type: 'boolean', value: true,
+       description: 'Generate gir data (requires gobject-introspection)')
+option('tests',
+       type : 'boolean', value : true,
+       description: 'Enable tests')
