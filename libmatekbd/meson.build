@@ -56,6 +56,7 @@ pkg.generate(
   libmatekbd_lib,
   name: 'libmatekbd',
   description: 'MATE keyboard shared library',
+  requires: libmatekbd_deps,
   version: meson.project_version(),
 )
 
@@ -119,6 +120,7 @@ pkg.generate(
   name: 'libmatekbdui',
   description: 'MATE keyboard shared library',
   version: meson.project_version(),
+  requires: libmatekbd_lib,
 )
 
 libmatekbdui_dep = declare_dependency(
