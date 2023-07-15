@@ -1,3 +1,17 @@
+### libmatekbd 1.27.1
+
+  * tx: sync with transifex
+  * Fix pkg-config --libs libmatekbdui errors
+  * https://github.com/mate-desktop/mate-control-center/issues/707
+  * Add meson compilation support
+  * Use correct version information for dynamic libraries
+  * matekbd-keyboard-drawing: fix memory leak
+  * matekbd-keyboard-drawing-test: -Wmissing-field-initializers
+  * matekbd-keyboard-drawing: fix memory leak
+  * Use GLib's new g_clear_signal_handler() function to simplify code
+  * Signal handler IDs are gulong, not int
+  * build warning: AC_OUTPUT should be used without arguments
+
 ### libmatekbd 1.27.0
 
   * tx: sync with transifex
@@ -10,9 +24,9 @@
 ### libmatekbd 1.26.0
 
   * tx: sync with transifex
-    build: show package name and version in configure summary
-    build: set GETTEXT_PACKAGE=AC_PACKAGE_NAME
-    Remove USE_MATE2_MACROS from autogen.sh (legacy)
+  * build: show package name and version in configure summary
+  * build: set GETTEXT_PACKAGE=AC_PACKAGE_NAME
+  * Remove USE_MATE2_MACROS from autogen.sh (legacy)
 
 ### libmatekbd 1.25.0
 
