@@ -7,7 +7,7 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # Cédric Valmary <cvalmary@yahoo.fr>, 2020
 # 48c2de07903ce5a77a8e90265f95c4c2_8909374 <837c8d0ab97b27e737893c19f79bd4de_348476>, 2020
-# Quentin PAGÈS, 2022
+# Quentin PAGÈS, 2023
 # 
 msgid ""
 msgstr ""
@@ -15,8 +15,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/libmatekbd\n"
 "POT-Creation-Date: 2022-10-29 15:22+0200\n"
 "PO-Revision-Date: 2018-03-11 15:34+0000\n"
-"Last-Translator: Quentin PAGÈS, 2022\n"
-"Language-Team: Occitan (post 1500) (https://www.transifex.com/mate/teams/13566/oc/)\n"
+"Last-Translator: Quentin PAGÈS, 2023\n"
+"Language-Team: Occitan (post 1500) (https://app.transifex.com/mate/teams/13566/oc/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -38,7 +38,7 @@ msgid ""
 "Lock"
 msgstr ""
 "Arrèst\n"
-"desfil."
+"defil."
 
 #: libmatekbd/matekbd-keyboard-drawing.c:652
 msgid "Sys Rq"
