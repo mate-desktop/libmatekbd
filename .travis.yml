@@ -24,7 +24,7 @@ install:
   - ./docker-build --name ${DISTRO} --config .build.yml --install
 
 script:
-  - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then bash ./docker-build --name ${DISTRO} --verbose --config .build.yml --build scripts; fi'
+  - ./docker-build --name ${DISTRO} --verbose --config .build.yml --build scripts
 
 notifications:
   irc:
