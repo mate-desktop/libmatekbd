@@ -103,8 +103,6 @@ EXTRA_DIST =					\
 
 DISTCLEANFILES = $(gsettings_SCHEMAS)
 
-GLIB_GENMARSHAL = $(shell pkg-config --variable=glib_genmarshal glib-2.0)
-
 matekbd-indicator-marshal.h: matekbd-indicator-marshal.list
 	$(AM_V_GEN)$(GLIB_GENMARSHAL) --prefix=matekbd_indicator $(srcdir)/matekbd-indicator-marshal.list --header > $@
 
