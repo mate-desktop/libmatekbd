@@ -11,16 +11,16 @@
 # cb445fb3dfd1fe3c2b9f58ac5638f478, 2020
 # Tobias Lekare <lekare@linux.com>, 2020
 # Philip Andersen <renegadevi@codeofmagi.net>, 2020
-# Luna Jernberg <bittin@cafe8bitar.se>, 2020
 # Kristoffer Grundström <lovaren@gmail.com>, 2022
+# Luna Jernberg <droidbittin@gmail.com>, 2023
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: libmatekbd 1.26.0\n"
+"Project-Id-Version: libmatekbd 1.27.1\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/libmatekbd\n"
-"POT-Creation-Date: 2022-10-29 15:22+0200\n"
+"POT-Creation-Date: 2023-08-31 21:38+0200\n"
 "PO-Revision-Date: 2018-03-11 15:34+0000\n"
-"Last-Translator: Kristoffer Grundström <lovaren@gmail.com>, 2022\n"
+"Last-Translator: Luna Jernberg <droidbittin@gmail.com>, 2023\n"
 "Language-Team: Swedish (https://app.transifex.com/mate/teams/13566/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -129,7 +129,7 @@ msgstr "Del"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:717
 msgid "ISO_Level3_Shift"
-msgstr ""
+msgstr "ISO_Level3_Shift"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:722
 #: libmatekbd/matekbd-keyboard-drawing.c:732
@@ -261,7 +261,7 @@ msgstr "AltGr"
 msgid "Compose"
 msgstr "Komponera"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:2683
+#: libmatekbd/matekbd-keyboard-drawing.c:2689
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
@@ -272,39 +272,39 @@ msgstr ""
 "Copyright &#169; X.Org Foundation och XKeyboardConfig-bidragsgivarna\n"
 "Se paketets metadata för licensiering"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:2765
+#: libmatekbd/matekbd-keyboard-drawing.c:2771
 msgid "Unknown"
 msgstr "Okänt"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:2810
+#: libmatekbd/matekbd-keyboard-drawing.c:2816
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "Tangentbordslayout \"%s\""
 
-#: libmatekbd/matekbd-keyboard-config.c:717
+#: libmatekbd/matekbd-keyboard-config.c:724
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
 msgstr[0] "layout \"%s\""
 msgstr[1] "layouter \"%s\""
 
-#: libmatekbd/matekbd-keyboard-config.c:735
+#: libmatekbd/matekbd-keyboard-config.c:742
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
 msgstr[0] "alternativ \"%s\""
 msgstr[1] "alternativ \"%s\""
 
-#: libmatekbd/matekbd-keyboard-config.c:743
+#: libmatekbd/matekbd-keyboard-config.c:750
 #, c-format
 msgid "model \"%s\", %s and %s"
 msgstr "modell \"%s\", %s och %s"
 
-#: libmatekbd/matekbd-keyboard-config.c:744
+#: libmatekbd/matekbd-keyboard-config.c:751
 msgid "no layout"
 msgstr "ingen layout"
 
-#: libmatekbd/matekbd-keyboard-config.c:745
+#: libmatekbd/matekbd-keyboard-config.c:752
 msgid "no options"
 msgstr "inga alternativ"
 

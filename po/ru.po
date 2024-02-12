@@ -15,9 +15,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: libmatekbd 1.26.0\n"
+"Project-Id-Version: libmatekbd 1.27.1\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/libmatekbd\n"
-"POT-Creation-Date: 2022-10-29 15:22+0200\n"
+"POT-Creation-Date: 2023-08-31 21:38+0200\n"
 "PO-Revision-Date: 2018-03-11 15:34+0000\n"
 "Last-Translator: Cyber Tailor <cyber@sysrq.in>, 2020\n"
 "Language-Team: Russian (https://app.transifex.com/mate/teams/13566/ru/)\n"
@@ -262,7 +262,7 @@ msgstr "AltGr"
 msgid "Compose"
 msgstr "Compose"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:2683
+#: libmatekbd/matekbd-keyboard-drawing.c:2689
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
@@ -273,16 +273,16 @@ msgstr ""
 "Авторские права © X.Org Foundation и авторы XKeyboardConfig\n"
 "Сведения о лицензировании находятся в метаданных пакета"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:2765
+#: libmatekbd/matekbd-keyboard-drawing.c:2771
 msgid "Unknown"
 msgstr "Неизвестный"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:2810
+#: libmatekbd/matekbd-keyboard-drawing.c:2816
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "Раскладка клавиатуры «%s»"
 
-#: libmatekbd/matekbd-keyboard-config.c:717
+#: libmatekbd/matekbd-keyboard-config.c:724
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
@@ -291,7 +291,7 @@ msgstr[1] "раскладки «%s»"
 msgstr[2] "раскладки «%s»"
 msgstr[3] "раскладки «%s»"
 
-#: libmatekbd/matekbd-keyboard-config.c:735
+#: libmatekbd/matekbd-keyboard-config.c:742
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
@@ -300,16 +300,16 @@ msgstr[1] "параметры «%s»"
 msgstr[2] "параметры «%s»"
 msgstr[3] "параметры «%s»"
 
-#: libmatekbd/matekbd-keyboard-config.c:743
+#: libmatekbd/matekbd-keyboard-config.c:750
 #, c-format
 msgid "model \"%s\", %s and %s"
 msgstr "модель «%s», %s и %s"
 
-#: libmatekbd/matekbd-keyboard-config.c:744
+#: libmatekbd/matekbd-keyboard-config.c:751
 msgid "no layout"
 msgstr "нет раскладки"
 
-#: libmatekbd/matekbd-keyboard-config.c:745
+#: libmatekbd/matekbd-keyboard-config.c:752
 msgid "no options"
 msgstr "нет параметров"
 

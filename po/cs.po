@@ -16,9 +16,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: libmatekbd 1.26.0\n"
+"Project-Id-Version: libmatekbd 1.27.1\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/libmatekbd\n"
-"POT-Creation-Date: 2022-10-29 15:22+0200\n"
+"POT-Creation-Date: 2023-08-31 21:38+0200\n"
 "PO-Revision-Date: 2018-03-11 15:34+0000\n"
 "Last-Translator: Roman Horník <roman.hornik@debian-linux.cz>, 2021\n"
 "Language-Team: Czech (https://app.transifex.com/mate/teams/13566/cs/)\n"
@@ -263,7 +263,7 @@ msgstr "AltGr"
 msgid "Compose"
 msgstr "Klávesa Compose"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:2683
+#: libmatekbd/matekbd-keyboard-drawing.c:2689
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
@@ -274,16 +274,16 @@ msgstr ""
 "Copyright &#169; X.Org Foundation a přispívající k XKeyboardConfig\n"
 "Licencování viz metadata balíčku"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:2765
+#: libmatekbd/matekbd-keyboard-drawing.c:2771
 msgid "Unknown"
 msgstr "Neznámo"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:2810
+#: libmatekbd/matekbd-keyboard-drawing.c:2816
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "Rozložení klávesnice \"%s\""
 
-#: libmatekbd/matekbd-keyboard-config.c:717
+#: libmatekbd/matekbd-keyboard-config.c:724
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
@@ -292,7 +292,7 @@ msgstr[1] "rozložení \"%s\""
 msgstr[2] "rozložení \"%s\""
 msgstr[3] "rozložení \"%s\""
 
-#: libmatekbd/matekbd-keyboard-config.c:735
+#: libmatekbd/matekbd-keyboard-config.c:742
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
@@ -301,16 +301,16 @@ msgstr[1] "volby \"%s\""
 msgstr[2] "volby \"%s\""
 msgstr[3] "volby \"%s\""
 
-#: libmatekbd/matekbd-keyboard-config.c:743
+#: libmatekbd/matekbd-keyboard-config.c:750
 #, c-format
 msgid "model \"%s\", %s and %s"
 msgstr "model \"%s\", %s a %s"
 
-#: libmatekbd/matekbd-keyboard-config.c:744
+#: libmatekbd/matekbd-keyboard-config.c:751
 msgid "no layout"
 msgstr "bez rozložení"
 
-#: libmatekbd/matekbd-keyboard-config.c:745
+#: libmatekbd/matekbd-keyboard-config.c:752
 msgid "no options"
 msgstr "bez možností"
 

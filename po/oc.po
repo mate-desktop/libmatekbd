@@ -11,9 +11,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: libmatekbd 1.26.0\n"
+"Project-Id-Version: libmatekbd 1.27.1\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/libmatekbd\n"
-"POT-Creation-Date: 2022-10-29 15:22+0200\n"
+"POT-Creation-Date: 2023-08-31 21:38+0200\n"
 "PO-Revision-Date: 2018-03-11 15:34+0000\n"
 "Last-Translator: Quentin PAGÈS, 2023\n"
 "Language-Team: Occitan (post 1500) (https://app.transifex.com/mate/teams/13566/oc/)\n"
@@ -258,7 +258,7 @@ msgstr "AltGr"
 msgid "Compose"
 msgstr "Compose"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:2683
+#: libmatekbd/matekbd-keyboard-drawing.c:2689
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
@@ -269,39 +269,39 @@ msgstr ""
 "Copyright &#169; X.Org Foundation e contributors XKeyboardConfig\n"
 "Los detalhs de licéncia se tròban dins las metadonadas del paquet."
 
-#: libmatekbd/matekbd-keyboard-drawing.c:2765
+#: libmatekbd/matekbd-keyboard-drawing.c:2771
 msgid "Unknown"
 msgstr "Desconegut"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:2810
+#: libmatekbd/matekbd-keyboard-drawing.c:2816
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "Agençament de clavièr « %s »"
 
-#: libmatekbd/matekbd-keyboard-config.c:717
+#: libmatekbd/matekbd-keyboard-config.c:724
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
 msgstr[0] "agençament « %s »"
 msgstr[1] "agençaments « %s »"
 
-#: libmatekbd/matekbd-keyboard-config.c:735
+#: libmatekbd/matekbd-keyboard-config.c:742
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
 msgstr[0] "opcion « %s »"
 msgstr[1] "opcions « %s »"
 
-#: libmatekbd/matekbd-keyboard-config.c:743
+#: libmatekbd/matekbd-keyboard-config.c:750
 #, c-format
 msgid "model \"%s\", %s and %s"
 msgstr "modèl « %s », %s e %s"
 
-#: libmatekbd/matekbd-keyboard-config.c:744
+#: libmatekbd/matekbd-keyboard-config.c:751
 msgid "no layout"
 msgstr "pas cap d'agençament"
 
-#: libmatekbd/matekbd-keyboard-config.c:745
+#: libmatekbd/matekbd-keyboard-config.c:752
 msgid "no options"
 msgstr "pas cap d'opcions"
 

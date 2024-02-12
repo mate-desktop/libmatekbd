@@ -12,9 +12,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: libmatekbd 1.26.0\n"
+"Project-Id-Version: libmatekbd 1.27.1\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/libmatekbd\n"
-"POT-Creation-Date: 2022-10-29 15:22+0200\n"
+"POT-Creation-Date: 2023-08-31 21:38+0200\n"
 "PO-Revision-Date: 2018-03-11 15:34+0000\n"
 "Last-Translator: Martin Wimpress <code@flexion.org>, 2020\n"
 "Language-Team: Asturian (https://app.transifex.com/mate/teams/13566/ast/)\n"
@@ -247,7 +247,7 @@ msgstr ""
 msgid "Compose"
 msgstr ""
 
-#: libmatekbd/matekbd-keyboard-drawing.c:2683
+#: libmatekbd/matekbd-keyboard-drawing.c:2689
 #, c-format
 msgid ""
 "Keyboard layout \"%s\"\n"
@@ -258,39 +258,39 @@ msgstr ""
 "Copyright &#169; la Fundación X.Org y los contribuyidores de XKeyboardConfig\n"
 "Pa la llicencia mira los metadatos del paquete"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:2765
+#: libmatekbd/matekbd-keyboard-drawing.c:2771
 msgid "Unknown"
 msgstr "Desconocíu"
 
-#: libmatekbd/matekbd-keyboard-drawing.c:2810
+#: libmatekbd/matekbd-keyboard-drawing.c:2816
 #, c-format
 msgid "Keyboard Layout \"%s\""
 msgstr "Distribución del tecláu \"%s\""
 
-#: libmatekbd/matekbd-keyboard-config.c:717
+#: libmatekbd/matekbd-keyboard-config.c:724
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
 msgstr[0] ""
 msgstr[1] ""
 
-#: libmatekbd/matekbd-keyboard-config.c:735
+#: libmatekbd/matekbd-keyboard-config.c:742
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
 msgstr[0] ""
 msgstr[1] ""
 
-#: libmatekbd/matekbd-keyboard-config.c:743
+#: libmatekbd/matekbd-keyboard-config.c:750
 #, c-format
 msgid "model \"%s\", %s and %s"
 msgstr "modelu «%s», %s y %s"
 
-#: libmatekbd/matekbd-keyboard-config.c:744
+#: libmatekbd/matekbd-keyboard-config.c:751
 msgid "no layout"
 msgstr "ensin esquema"
 
-#: libmatekbd/matekbd-keyboard-config.c:745
+#: libmatekbd/matekbd-keyboard-config.c:752
 msgid "no options"
 msgstr "ensin opciones"
 
