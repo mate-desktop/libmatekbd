@@ -1,5 +1,5 @@
 project('libmatekbd', 'c',
-        version: '1.27.1',
+        version: '1.28.0',
         default_options: [
           'buildtype=debugoptimized',
           'warning_level=1',

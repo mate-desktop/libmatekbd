@@ -1,6 +1,10 @@
+### libmatekbd 1.28.0
+
+  * Translations update
+
 ### libmatekbd 1.27.1
 
-  * tx: sync with transifex
+  * Translations update
   * Fix pkg-config --libs libmatekbdui errors
   * https://github.com/mate-desktop/mate-control-center/issues/707
   * Add meson compilation support
@@ -14,7 +18,7 @@
 
 ### libmatekbd 1.27.0
 
-  * tx: sync with transifex
+  * Translations update
   * configure.ac: The macro 'AC_HELP_STRING' is obsolete
   * tx: update resource
   * tx: migrate config file
@@ -23,7 +27,7 @@
 
 ### libmatekbd 1.26.0
 
-  * tx: sync with transifex
+  * Translations update
   * build: show package name and version in configure summary
   * build: set GETTEXT_PACKAGE=AC_PACKAGE_NAME
   * Remove USE_MATE2_MACROS from autogen.sh (legacy)
@@ -38,7 +42,7 @@
 
 ### libmatekbd 1.24.0
 
-  * tx: sync with transifex
+  * Translations update
   * build: add configuration summary
   * Use gresources for UI files
   * matekbd-keyboard-config: Value stored to 'clen' is never read
