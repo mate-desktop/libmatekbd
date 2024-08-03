@@ -57,3 +57,5 @@ subdir('po')
 if get_option('tests')
   subdir('test')
 endif
+
+meson.add_install_script('meson-postinstall.sh')
