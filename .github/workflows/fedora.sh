@@ -1,0 +1,40 @@
+#!/usr/bin/bash
+
+# Use grouped output messages
+infobegin() {
+	echo "::group::${1}"
+}
+infoend() {
+	echo "::endgroup::"
+}
+
+# Required packages on Fedora
+requires=(
+	ccache # Use ccache to speed up build
+	meson  # Used for meson build
+)
+
+# https://src.fedoraproject.org/cgit/rpms/libmatekbd.git
+requires+=(
+	autoconf-archive
+	desktop-file-utils
+	gcc
+	gcc-c++
+	git
+	gobject-introspection-devel
+	gsettings-desktop-schemas-devel
+	gtk3-devel
+	libICE-devel
+	libxklavier-devel
+	make
+	mate-common
+	redhat-rpm-config
+)
+
+infobegin "Update system"
+dnf update -y
+infoend
+
+infobegin "Install dependency packages"
+dnf install -y ${requires[@]}
+infoend
