@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Adolfo Jayme-Barrientos, 2020
+# Adolfo Jayme Barrientos, 2020
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # Toni Estévez <toni.estevez@gmail.com>, 2021
 # 

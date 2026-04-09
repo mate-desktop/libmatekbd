@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Шаповалов Анатолій Романович <elrond.716.smith@gmail.com>, 2018
+# Анатолій Романович Шаповалов <elrond.716.smith@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # zubr139, 2020
 # Bohdan Kovalchuk <neostanniy@gmail.com>, 2020

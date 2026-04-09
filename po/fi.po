@@ -4,12 +4,13 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Lasse Liehu <larso@gmx.com>, 2018
+# Lasse Liehu-Inui <larso@gmx.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # Martin Wimpress <code@flexion.org>, 2020
 # Eslam Ali <talvikahvi@gmail.com>, 2020
 # Ammuu5, 2020
 # Kimmo Kujansuu <mrkujansuu@gmail.com>, 2020
+# Tommi Nieminen <translator@legisign.org>, 2026
 # 
 msgid ""
 msgstr ""
@@ -17,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/libmatekbd\n"
 "POT-Creation-Date: 2023-08-31 21:38+0200\n"
 "PO-Revision-Date: 2018-03-11 15:34+0000\n"
-"Last-Translator: Kimmo Kujansuu <mrkujansuu@gmail.com>, 2020\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>, 2026\n"
 "Language-Team: Finnish (https://app.transifex.com/mate/teams/13566/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -39,36 +40,44 @@ msgid ""
 "Scroll\n"
 "Lock"
 msgstr ""
+"Vieritys-\n"
+"lukko"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:652
 msgid "Sys Rq"
-msgstr ""
+msgstr "SysRq"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:656
 msgid ""
 "Page\n"
 "Up"
 msgstr ""
+"Page\n"
+"Up"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:660
 msgid ""
 "Page\n"
 "Down"
 msgstr ""
+"Page\n"
+"Down"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:664
 msgid ""
 "Num\n"
 "Lock"
 msgstr ""
+"Numero-\n"
+"lukko"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:668
 msgid "Pg Up"
-msgstr ""
+msgstr "PgUp"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:672
 msgid "Pg Dn"
-msgstr ""
+msgstr "PgDn"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:676
 #: libmatekbd/matekbd-keyboard-drawing.c:752
@@ -83,7 +92,7 @@ msgstr "vasen"
 #: libmatekbd/matekbd-keyboard-drawing.c:684
 #: libmatekbd/matekbd-keyboard-drawing.c:777
 msgid "End"
-msgstr ""
+msgstr "End"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:688
 #: libmatekbd/matekbd-keyboard-drawing.c:762
@@ -92,7 +101,7 @@ msgstr "Ylös"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:692
 msgid "Begin"
-msgstr ""
+msgstr "Begin"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:696
 #: libmatekbd/matekbd-keyboard-drawing.c:767
@@ -106,40 +115,40 @@ msgstr "Syöttö"
 #: libmatekbd/matekbd-keyboard-drawing.c:704
 #: libmatekbd/matekbd-keyboard-drawing.c:772
 msgid "Down"
-msgstr ""
+msgstr "Alas"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:708
 msgid "Ins"
-msgstr ""
+msgstr "Ins"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:712
 msgid "Del"
-msgstr ""
+msgstr "Del"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:717
 msgid "ISO_Level3_Shift"
-msgstr ""
+msgstr "ISO_taso3_Vaihto"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:722
 #: libmatekbd/matekbd-keyboard-drawing.c:732
 msgid "Tab"
-msgstr ""
+msgstr "Sarkain"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:727
 msgid "BackSpace"
-msgstr ""
+msgstr "Askelpalautin"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:737
 msgid "Return"
-msgstr ""
+msgstr "Enter"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:742
 msgid "Pause"
-msgstr ""
+msgstr "Keskeytä"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:747
 msgid "Esc"
-msgstr ""
+msgstr "Esc"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:782
 msgid "Print"
@@ -155,51 +164,51 @@ msgstr "Valikko"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:797
 msgid "F1"
-msgstr ""
+msgstr "F1"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:802
 msgid "F2"
-msgstr ""
+msgstr "F2"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:807
 msgid "F3"
-msgstr ""
+msgstr "F3"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:812
 msgid "F4"
-msgstr ""
+msgstr "F4"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:817
 msgid "F5"
-msgstr ""
+msgstr "F5"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:822
 msgid "F6"
-msgstr ""
+msgstr "F6"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:827
 msgid "F7"
-msgstr ""
+msgstr "F7"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:832
 msgid "F8"
-msgstr ""
+msgstr "F8"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:837
 msgid "F9"
-msgstr ""
+msgstr "F9"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:842
 msgid "F10"
-msgstr ""
+msgstr "F10"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:847
 msgid "F11"
-msgstr ""
+msgstr "F11"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:852
 msgid "F12"
-msgstr ""
+msgstr "F12"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:857
 #: libmatekbd/matekbd-keyboard-drawing.c:862
@@ -209,13 +218,15 @@ msgstr "Vaihto"
 #: libmatekbd/matekbd-keyboard-drawing.c:867
 #: libmatekbd/matekbd-keyboard-drawing.c:872
 msgid "Control"
-msgstr ""
+msgstr "Ctrl"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:877
 msgid ""
 "Caps\n"
 "Lock"
 msgstr ""
+"Vaihto-\n"
+"lukko"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:882
 msgid "Meta"
@@ -239,14 +250,16 @@ msgid ""
 "horiz\n"
 "conn"
 msgstr ""
+"vaaka-\n"
+"yhdistin"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:970
 msgid "AltGr"
-msgstr ""
+msgstr "AltGr"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:974
 msgid "Compose"
-msgstr ""
+msgstr "Compose"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:2689
 #, c-format
@@ -272,15 +285,15 @@ msgstr "Näppäimistöasettelu ”%s”"
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "asettelu ”%s”"
+msgstr[1] "asettelut ”%s”"
 
 #: libmatekbd/matekbd-keyboard-config.c:742
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "valinta ”%s”"
+msgstr[1] "valinnat ”%s”"
 
 #: libmatekbd/matekbd-keyboard-config.c:750
 #, c-format
@@ -379,12 +392,12 @@ msgstr "Älä näytä ”X sysconfig changed”-varoitusviestiä"
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:68
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:69
 msgid "Allow to disable the keyboard indicator tray icon"
-msgstr ""
+msgstr "Salli poistaa näppäimistön ilmoitusaluekuvake käytöstä"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:73
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:74
 msgid "Show keyboard leds indicator"
-msgstr ""
+msgstr "Näytä näppäimistön valo-osoittimet"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:80
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:81
@@ -413,13 +426,15 @@ msgstr "Toissijaiset ryhmät"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:110
 msgid "The font"
-msgstr ""
+msgstr "Fontti"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:111
 msgid ""
 "The font for the layout indicator. This should be in \"[FAMILY-LIST] [STYLE-"
 "OPTIONS] [SIZE]\" format."
 msgstr ""
+"Asetteluosoittimen fontti. Sen tulisi olla muodossa ”[PERHE] [TYYLIVALINNAT]"
+" [KOKO]”."
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:115
 msgid "The foreground color"
@@ -430,6 +445,8 @@ msgid ""
 "The foreground color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
 msgstr ""
+"Asetteluosoittimen edustaväri. Sen tulisi olla ”R G B”-muodossa, esimerkiksi"
+" ”255 0 0”."
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:120
 msgid "The background color"
@@ -440,6 +457,8 @@ msgid ""
 "The background color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
 msgstr ""
+"Asetteluosoittimen taustaväri. Sen tulisi olla ”R G B”-muodossa, esimerkiksi"
+" ”255 0 0”."
 
 #: libmatekbd/show-layout.ui:9
 msgid "Keyboard Layout"
