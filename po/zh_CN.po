@@ -9,7 +9,7 @@
 # shuyu liu <liushuyu011@gmail.com>, 2020
 # a73a47e368cc011d8f94528bd9d5d3f1_91fccdf <1b07f49e2a323989c85dd26d526f7bb9_871526>, 2020
 # Zkdc, 2021
-# OkayPJ <1535253694@qq.com>, 2021
+# OkayPJ <okaypjkk@outlook.com>, 2021
 # Wenbin Lv <wenbin816@gmail.com>, 2022
 # 
 msgid ""

@@ -5,6 +5,8 @@
 # 
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Fabio Tomat <f.t.public@gmail.com>, 2026
+# Transifex Bot <>, 2026
 # 
 msgid ""
 msgstr ""
@@ -12,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/libmatekbd\n"
 "POT-Creation-Date: 2023-08-31 21:38+0200\n"
 "PO-Revision-Date: 2018-03-11 15:34+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2020\n"
+"Last-Translator: Transifex Bot <>, 2026\n"
 "Language-Team: Friulian (https://app.transifex.com/mate/teams/13566/fur/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -138,11 +140,11 @@ msgstr ""
 
 #: libmatekbd/matekbd-keyboard-drawing.c:782
 msgid "Print"
-msgstr ""
+msgstr "Stampe"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:787
 msgid "Insert"
-msgstr ""
+msgstr "Inserìs"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:792
 msgid "Menu"
