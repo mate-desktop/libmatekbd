@@ -193,9 +193,13 @@ matekbd_status_render_cairo (cairo_t * cr, int group)
 
 	fo = cairo_font_options_copy (gdk_screen_get_font_options
 				      (gdk_screen_get_default ()));
-	/* SUBPIXEL antialiasing gives bad results on in-memory images */
+	/* SUBPIXEL antialiasing gives bad results on in-memory images.
+	 * DEFAULT is just as unsafe: cairo falls back to the font's own
+	 * fontconfig antialias mode in that case, which can be SUBPIXEL. */
 	if (cairo_font_options_get_antialias (fo) ==
-	    CAIRO_ANTIALIAS_SUBPIXEL)
+	    CAIRO_ANTIALIAS_SUBPIXEL ||
+	    cairo_font_options_get_antialias (fo) ==
+	    CAIRO_ANTIALIAS_DEFAULT)
 		cairo_font_options_set_antialias (fo,
 						  CAIRO_ANTIALIAS_GRAY);
 	pango_cairo_context_set_font_options (pcc, fo);
