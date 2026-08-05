@@ -46,6 +46,7 @@ typedef struct _gki_globals {
 
 	gint current_width;
 	gint current_height;
+	gint scale_factor;
 	int real_width;
 
 	GSList *icons;		/* list of GdkPixbuf */
@@ -294,6 +295,9 @@ matekbd_status_prepare_drawing (MatekbdStatus * gki, int group)
 	GError *gerror = NULL;
 	char *image_filename;
 	GdkPixbuf *image;
+	/* Render at the monitor's device scale, since GTK always treats our
+	 * pixbuf as scale 1 and would otherwise stretch it (blurry icon). */
+	gint scale = globals.scale_factor > 0 ? globals.scale_factor : 1;
 
 	if (globals.current_width == 0)
 		return NULL;
@@ -306,8 +310,8 @@ matekbd_status_prepare_drawing (MatekbdStatus * gki, int group)
 					       group);
 
 		image = gdk_pixbuf_new_from_file_at_size (image_filename,
-							  globals.current_width,
-							  globals.current_height,
+							  globals.current_width * scale,
+							  globals.current_height * scale,
 							  &gerror);
 
 		if (image == NULL) {
@@ -344,12 +348,21 @@ matekbd_status_prepare_drawing (MatekbdStatus * gki, int group)
 
 		return image;
 	} else {
+		/* matekbd_status_render_cairo() draws in logical coordinates;
+		 * cairo_surface_set_device_scale() maps them onto this
+		 * higher-resolution surface. */
+		gint phys_width = globals.current_width * scale;
+		gint phys_height = globals.current_height * scale;
+		gint phys_real_width;
 		cairo_surface_t *cs =
 		    cairo_image_surface_create (CAIRO_FORMAT_ARGB32,
-						globals.current_width,
-						globals.current_height);
+						phys_width,
+						phys_height);
 		unsigned char *cairo_data;
 		guchar *pixbuf_data;
+
+		cairo_surface_set_device_scale (cs, scale, scale);
+
 		matekbd_status_render_cairo (cairo_create (cs), group);
 		cairo_data = cairo_image_surface_get_data (cs);
 #if 0
@@ -357,14 +370,17 @@ matekbd_status_prepare_drawing (MatekbdStatus * gki, int group)
 		g_sprintf (pngfilename, "label%d.png", group);
 		cairo_surface_write_to_png (cs, pngfilename);
 #endif
+		/* globals.real_width is in logical units. */
+		phys_real_width = globals.real_width * scale;
+
 		pixbuf_data =
 		    g_new0 (guchar,
-			    4 * globals.real_width *
-			    globals.current_height);
+			    4 * phys_real_width *
+			    phys_height);
 		convert_bgra_to_rgba (cairo_data, pixbuf_data,
-				      globals.current_width,
-				      globals.current_height,
-				      globals.real_width);
+				      phys_width,
+				      phys_height,
+				      phys_real_width);
 
 		cairo_surface_destroy (cs);
 
@@ -372,9 +388,9 @@ matekbd_status_prepare_drawing (MatekbdStatus * gki, int group)
 						  GDK_COLORSPACE_RGB,
 						  TRUE,
 						  8,
-						  globals.real_width,
-						  globals.current_height,
-						  globals.real_width *
+						  phys_real_width,
+						  phys_height,
+						  phys_real_width *
 						  4,
 						  (GdkPixbufDestroyNotify)
 						  g_free, NULL);
@@ -613,10 +629,34 @@ matekbd_status_stop_listen (void)
 	     (GdkFilterFunc) matekbd_status_filter_x_evt, NULL);
 }
 
+static gint
+matekbd_status_get_scale_factor (MatekbdStatus * gki)
+{
+	GdkScreen *screen = gtk_status_icon_get_screen (GTK_STATUS_ICON (gki));
+	GdkDisplay *display;
+	GdkMonitor *monitor;
+
+	if (screen == NULL)
+		return 1;
+
+	display = gdk_screen_get_display (screen);
+	monitor = gdk_display_get_primary_monitor (display);
+	if (monitor == NULL)
+		monitor = gdk_display_get_monitor (display, 0);
+	if (monitor == NULL)
+		return 1;
+
+	return gdk_monitor_get_scale_factor (monitor);
+}
+
 static void
 matekbd_status_size_changed (MatekbdStatus * gki, gint size)
 {
-	if (globals.current_height != size) {
+	gint scale = matekbd_status_get_scale_factor (gki);
+
+	if (globals.current_height != size ||
+	    globals.scale_factor != scale) {
+		globals.scale_factor = scale;
 		globals.current_height = size;
 		globals.current_width = size * 3 / 2;
 		matekbd_status_reinit_ui (gki);
