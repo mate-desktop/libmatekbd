@@ -295,18 +295,23 @@ matekbd_status_prepare_drawing (MatekbdStatus * gki, int group)
 		return NULL;
 
 	if (globals.ind_cfg.show_flags) {
+		GdkPixbuf *loaded;
+		gint iw, ih, dx, dy;
 
 		image_filename =
 		    (char *) g_slist_nth_data (globals.
 					       ind_cfg.image_filenames,
 					       group);
 
-		image = gdk_pixbuf_new_from_file_at_size (image_filename,
-							  globals.current_width,
-							  globals.current_height,
-							  &gerror);
+		/* We load the file into a square box (height×height) so that
+		 * we can letterbox it. That way GTK doesn't have a change to
+		 * stretch the image. */
+		loaded = gdk_pixbuf_new_from_file_at_size (image_filename,
+							   globals.current_height,
+							   globals.current_height,
+							   &gerror);
 
-		if (image == NULL) {
+		if (loaded == NULL) {
 			GtkWidget *dialog = gtk_message_dialog_new (NULL,
 								    GTK_DIALOG_DESTROY_WITH_PARENT,
 								    GTK_MESSAGE_ERROR,
@@ -331,6 +336,31 @@ matekbd_status_prepare_drawing (MatekbdStatus * gki, int group)
 
 			return NULL;
 		}
+
+		iw = gdk_pixbuf_get_width (loaded);
+		ih = gdk_pixbuf_get_height (loaded);
+
+		if (iw == globals.current_height &&
+		    ih == globals.current_height) {
+			/* Already square, nothing to pad. */
+			image = loaded;
+		} else {
+			image = gdk_pixbuf_new (GDK_COLORSPACE_RGB, TRUE, 8,
+						globals.current_height,
+						globals.current_height);
+			gdk_pixbuf_fill (image, 0x00000000);
+
+			dx = (globals.current_height - iw) / 2;
+			dy = (globals.current_height - ih) / 2;
+
+			gdk_pixbuf_composite (loaded, image,
+					      dx, dy, iw, ih,
+					      dx, dy, 1.0, 1.0,
+					      GDK_INTERP_BILINEAR, 255);
+
+			g_object_unref (loaded);
+		}
+
 		xkl_debug (150,
 			   "Image %d[%s] loaded -> %p[%dx%d], alpha: %d\n",
 			   group, image_filename, image,
