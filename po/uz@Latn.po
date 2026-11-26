@@ -1,247 +1,261 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Desktop Environment team
 # This file is distributed under the same license as the libmatekbd package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# Shahlo Abdullayeva <shaxloabdullayeva@outlook.com>, 2026.
+#
 # Translators:
 # Transifex Bot <>, 2026
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: libmatekbd 1.27.1\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/libmatekbd\n"
 "POT-Creation-Date: 2023-08-31 21:38+0200\n"
-"PO-Revision-Date: 2018-03-11 15:34+0000\n"
-"Last-Translator: Transifex Bot <>, 2026\n"
-"Language-Team: Uzbek (Latin) (https://app.transifex.com/mate/teams/13566/uz@Latn/)\n"
+"PO-Revision-Date: 2026-07-06 19:17+0000\n"
+"Last-Translator: Shahlo Abdullayeva <shaxloabdullayeva@outlook.com>\n"
+"Language-Team: Uzbek (Latin script) <https://translate.fedoraproject.org/"
+"projects/mate-desktop/applications/libmatekbd/uz_Latn/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: uz@Latn\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2026.7.1.dev0\n"
 
 #: libmatekbd/matekbd-indicator.c:116 libmatekbd/matekbd-status.c:315
 #, c-format
 msgid "There was an error loading an image: %s"
-msgstr ""
+msgstr "Rasmni yuklashda xatolik ro'y berdi: %s"
 
 #: libmatekbd/matekbd-indicator.c:691 libmatekbd/matekbd-status.c:649
 msgid "XKB initialization error"
-msgstr ""
+msgstr "XKB ni ishga tushirib bo'lmadi"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:644
 msgid ""
 "Scroll\n"
 "Lock"
 msgstr ""
+"Scroll\n"
+"Lock"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:652
 msgid "Sys Rq"
-msgstr ""
+msgstr "Sys Rq"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:656
 msgid ""
 "Page\n"
 "Up"
 msgstr ""
+"Page\n"
+"Up"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:660
 msgid ""
 "Page\n"
 "Down"
 msgstr ""
+"Page\n"
+"Down"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:664
 msgid ""
 "Num\n"
 "Lock"
 msgstr ""
+"Num\n"
+"Lock"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:668
 msgid "Pg Up"
-msgstr ""
+msgstr "Pg Up"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:672
 msgid "Pg Dn"
-msgstr ""
+msgstr "Pg Dn"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:676
 #: libmatekbd/matekbd-keyboard-drawing.c:752
 msgid "Home"
-msgstr ""
+msgstr "Home"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:680
 #: libmatekbd/matekbd-keyboard-drawing.c:757
 msgid "Left"
-msgstr ""
+msgstr "Chap"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:684
 #: libmatekbd/matekbd-keyboard-drawing.c:777
 msgid "End"
-msgstr ""
+msgstr "End"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:688
 #: libmatekbd/matekbd-keyboard-drawing.c:762
 msgid "Up"
-msgstr ""
+msgstr "Tepa"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:692
 msgid "Begin"
-msgstr ""
+msgstr "Boshlash"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:696
 #: libmatekbd/matekbd-keyboard-drawing.c:767
 msgid "Right"
-msgstr ""
+msgstr "O'ng"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:700
 msgid "Enter"
-msgstr ""
+msgstr "Enter"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:704
 #: libmatekbd/matekbd-keyboard-drawing.c:772
 msgid "Down"
-msgstr ""
+msgstr "Past"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:708
 msgid "Ins"
-msgstr ""
+msgstr "Ins"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:712
 msgid "Del"
-msgstr ""
+msgstr "Del"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:717
 msgid "ISO_Level3_Shift"
-msgstr ""
+msgstr "ISO_Level3_Shift"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:722
 #: libmatekbd/matekbd-keyboard-drawing.c:732
 msgid "Tab"
-msgstr ""
+msgstr "Tab"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:727
 msgid "BackSpace"
-msgstr ""
+msgstr "BackSpace"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:737
 msgid "Return"
-msgstr ""
+msgstr "Return"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:742
 msgid "Pause"
-msgstr ""
+msgstr "Pause"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:747
 msgid "Esc"
-msgstr ""
+msgstr "Esc"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:782
 msgid "Print"
-msgstr ""
+msgstr "Print"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:787
 msgid "Insert"
-msgstr ""
+msgstr "Insert"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:792
 msgid "Menu"
-msgstr ""
+msgstr "Menu"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:797
 msgid "F1"
-msgstr ""
+msgstr "F1"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:802
 msgid "F2"
-msgstr ""
+msgstr "F2"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:807
 msgid "F3"
-msgstr ""
+msgstr "F3"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:812
 msgid "F4"
-msgstr ""
+msgstr "F4"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:817
 msgid "F5"
-msgstr ""
+msgstr "F5"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:822
 msgid "F6"
-msgstr ""
+msgstr "F6"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:827
 msgid "F7"
-msgstr ""
+msgstr "F7"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:832
 msgid "F8"
-msgstr ""
+msgstr "F8"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:837
 msgid "F9"
-msgstr ""
+msgstr "F9"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:842
 msgid "F10"
-msgstr ""
+msgstr "F10"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:847
 msgid "F11"
-msgstr ""
+msgstr "F11"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:852
 msgid "F12"
-msgstr ""
+msgstr "F12"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:857
 #: libmatekbd/matekbd-keyboard-drawing.c:862
 msgid "Shift"
-msgstr ""
+msgstr "Shift"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:867
 #: libmatekbd/matekbd-keyboard-drawing.c:872
 msgid "Control"
-msgstr ""
+msgstr "Control"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:877
 msgid ""
 "Caps\n"
 "Lock"
 msgstr ""
+"Caps\n"
+"Lock"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:882
 msgid "Meta"
-msgstr ""
+msgstr "Meta"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:887
 msgid "Alt"
-msgstr ""
+msgstr "Alt"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:892
 #: libmatekbd/matekbd-keyboard-drawing.c:897
 msgid "Super"
-msgstr ""
+msgstr "Super"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:902
 msgid "Delete"
-msgstr ""
+msgstr "Delete"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:966
 msgid ""
 "horiz\n"
 "conn"
 msgstr ""
+"horiz\n"
+"conn"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:970
 msgid "AltGr"
-msgstr ""
+msgstr "AltGr"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:974
 msgid "Compose"
-msgstr ""
+msgstr "Compose"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:2689
 #, c-format
@@ -250,192 +264,205 @@ msgid ""
 "Copyright &#169; X.Org Foundation and XKeyboardConfig contributors\n"
 "For licensing see package metadata"
 msgstr ""
+"Klaviatura joylashuvi \"%s\"\n"
+"Copyright © X.Org Foundation va XKeyboardConfig jamoasi\n"
+"Litsenziya uchun paket metama'lumotlariga qarang"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:2771
 msgid "Unknown"
-msgstr ""
+msgstr "Noma'lum"
 
 #: libmatekbd/matekbd-keyboard-drawing.c:2816
 #, c-format
 msgid "Keyboard Layout \"%s\""
-msgstr ""
+msgstr "Klaviatura joylashuvi \"%s\""
 
 #: libmatekbd/matekbd-keyboard-config.c:724
 #, c-format
 msgid "layout \"%s\""
 msgid_plural "layouts \"%s\""
-msgstr[0] ""
+msgstr[0] "joylashuv \"%s\""
 
 #: libmatekbd/matekbd-keyboard-config.c:742
 #, c-format
 msgid "option \"%s\""
 msgid_plural "options \"%s\""
-msgstr[0] ""
+msgstr[0] "Joylashuv \"%s\""
 
 #: libmatekbd/matekbd-keyboard-config.c:750
 #, c-format
 msgid "model \"%s\", %s and %s"
-msgstr ""
+msgstr "model \"%s\", %s va %s"
 
 #: libmatekbd/matekbd-keyboard-config.c:751
 msgid "no layout"
-msgstr ""
+msgstr "Klaviatura joylashuvi o'rnatilmagan"
 
 #: libmatekbd/matekbd-keyboard-config.c:752
 msgid "no options"
-msgstr ""
+msgstr "Klaviatura parametrlari o'rnatilmagan"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:11
 msgid "Keyboard model"
-msgstr ""
+msgstr "Klaviatura modeli"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:12
 msgid "keyboard model"
-msgstr ""
+msgstr "klaviature modeli"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:16
 msgid "Keyboard layout"
-msgstr ""
+msgstr "Klaviatura joylashuvi"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:17
 msgid "keyboard layout"
-msgstr ""
+msgstr "klaviatura joylashuvi"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:21
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:22
 msgid "Keyboard options"
-msgstr ""
+msgstr "Klaviatura parametrlari"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:28
 msgid "Keyboard Update Handlers"
-msgstr ""
+msgstr "Klaviatura holati o'zgarganda ishga tushadigan funksiyalar"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:29
 msgid ""
 "A collection of scripts to run whenever the keyboard state is reloaded. "
 "Useful for re-applying xmodmap based adjustments"
 msgstr ""
+"Klaviatura yangilanganda ishga tushiriladigan skriptlar to'plami. xmodmap "
+"asosidagi sozlamalarni qayta qo'llash uchun"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:33
 msgid "modmap file list"
-msgstr ""
+msgstr "modmap fayllari ro'yxati"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:34
 msgid "A list of modmap files available in the $HOME directory."
-msgstr ""
+msgstr "$HOME da mavjud bo'lgan modmap fayllari ro'yxati."
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:38
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:39
 msgid "Default group, assigned on window creation"
-msgstr ""
+msgstr "Oyna yaratilganda tayinlanadigan standart guruh"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:43
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:44
 msgid "Keep and manage separate group per window"
-msgstr ""
+msgstr "Har bir oyna uchun alohida guruh saqlang va boshqaring"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:48
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:49
 msgid "Save/restore indicators together with layout groups"
-msgstr ""
+msgstr "Indikatorlarni joylashuv guruhlari bilan birga saqlash/tiklash"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:53
 msgid "Show layout names instead of group names"
-msgstr ""
+msgstr "Guruh nomlari o'rniga joylashuv nomlarini ko'rsating"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:54
 msgid ""
 "Show layout names instead of group names (only for versions of XFree "
 "supporting multiple layouts)"
 msgstr ""
+"Guruh nomlari o'rniga joylashuv nomlarini ko'rsating (faqat bir nechta "
+"joylashuvni qo'llab-quvvatlaydigan XFree versiyalari uchun)"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:58
 msgid "Load extra configuration items"
-msgstr ""
+msgstr "Qo'shimcha konfiguratsiya elementlarini yuklang"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:59
 msgid "Load exotic, rarely used layouts and options"
-msgstr ""
+msgstr "Kam ishlatiladigan joylashuvlar va parametrlarni yuklang"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:63
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:64
 msgid "Suppress the \"X sysconfig changed\" warning message"
-msgstr ""
+msgstr "X sysconfig o'zgardi\" ogohlantirish xabarini ko'rsatilmasin"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:68
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:69
 msgid "Allow to disable the keyboard indicator tray icon"
-msgstr ""
+msgstr "Klaviatura indikatori tray belgisini o'chirishga ruxsat bering"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:73
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:74
 msgid "Show keyboard leds indicator"
-msgstr ""
+msgstr "Klaviatura LED indikatorini ko'rsating"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:80
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:81
 msgid "The Keyboard Preview, X offset"
-msgstr ""
+msgstr "Klaviatura ko'rinishi, X ofset"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:85
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:86
 msgid "The Keyboard Preview, Y offset"
-msgstr ""
+msgstr "Klaviatura ko'rinishi, Y ofset"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:90
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:91
 msgid "The Keyboard Preview, width"
-msgstr ""
+msgstr "Klaviatura ko'rinishi, kengligi"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:95
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:96
 msgid "The Keyboard Preview, height"
-msgstr ""
+msgstr "Klaviatura ko'rinishi, balandligi"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:102
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:103
 msgid "Secondary groups"
-msgstr ""
+msgstr "Ikkilamchi guruhlar"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:110
 msgid "The font"
-msgstr ""
+msgstr "Shrift"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:111
 msgid ""
 "The font for the layout indicator. This should be in \"[FAMILY-LIST] [STYLE-"
 "OPTIONS] [SIZE]\" format."
 msgstr ""
+"Joylashuv indikatori uchun shrift. Bu \"[FAMILY-LIST] [STYLE-OPTIONS] "
+"[SIZE]\" formatida bo'lishi kerak."
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:115
 msgid "The foreground color"
-msgstr ""
+msgstr "Matn rangi"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:116
 msgid ""
 "The foreground color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
 msgstr ""
+"Joylashuv indikatori uchun matn rangi. Bu \"R G B\" formatida bo'lishi "
+"kerak, masalan \"255 0 0\"."
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:120
 msgid "The background color"
-msgstr ""
+msgstr "Orqa fon rangi"
 
 #: libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in:121
 msgid ""
 "The background color for the layout indicator. This should be in \"R G B\" "
 "format, for example \"255 0 0\"."
 msgstr ""
+"Joylashuv indikatori uchun orqa fon rangi. Bu \"R G B\" formatida bo'lishi "
+"kerak, masalan \"255 0 0\"."
 
 #: libmatekbd/show-layout.ui:9
 msgid "Keyboard Layout"
-msgstr ""
+msgstr "Klaviatura joylashuvi"
 
 #: test/matekbd-indicator-test.c:55
 #, c-format
 msgid "Keyboard Indicator Test (%s)"
-msgstr ""
+msgstr "Klaviatura indikatori testi (%s)"
 
 #: test/matekbd-indicator-test.c:63
 msgid "Indicator:"
-msgstr ""
+msgstr "Indikator:"
